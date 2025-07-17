@@ -1,0 +1,66 @@
+::ng-deep .custom-bottom-sheet .mat-bottom-sheet-container {
+  margin-bottom: 70px;
+}
+::ng-deep .cdk-overlay-backdrop {
+  background: transparent !important;
+}
+::ng-deep .mat-bottom-sheet-container {
+  background: white !important; /* Ensures bottom sheet is clear */
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3); /* Keeps shadow effect */
+  padding: 0px;
+  border-radius: 24px;
+}
+
+.booking-summary {
+  background: transparent;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  h4{
+    margin: 0;
+  }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 300;
+}
+
+.box-section {
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 24px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 8px 0;
+  }
+  p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+    margin: 8px 0;
+  }
+  span,
+  strong {
+    font-weight: 600;
+  }
+}
+.discount-message{
+    margin-top: 24px;
+}

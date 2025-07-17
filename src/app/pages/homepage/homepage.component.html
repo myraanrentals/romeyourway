@@ -1,0 +1,284 @@
+<section>
+  <div
+    id="carouselExampleSlidesOnly"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+    data-bs-interval="2000"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-slide-to="3"
+        aria-label="Slide 4"
+      ></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          class="d-block w-100 carousel-img"
+          src="/assets/banners/Adventure-01.svg"
+          alt="First slide"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100 carousel-img"
+          src="/assets/banners/Cruise-01.svg"
+          alt="Second slide"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100 carousel-img"
+          src="/assets/banners/Scuba bnr-01.svg"
+          alt="Third slide"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100 carousel-img"
+          src="/assets/banners/Yatch-01.svg"
+          alt="Fourth slide"
+        />
+      </div>
+    </div>
+
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleSlidesOnly"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleSlidesOnly"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</section>
+<section id="listing-wrapper">
+  <div class="container">
+    <div class="card mt-4 m-ele" id="special-offer">
+      <div class="card-body">
+        <div class="d-flex gap-2 align-items-center">
+          <div class="offer-img"></div>
+          <div class="offer-content">
+            <h3>Big Group, Big Savings! Up to 50% Off - Join Now! 🎉</h3>
+            <p>
+              Because More is Always Better! 🌟 Join Us Now and Elevate Your
+              Experience!
+            </p>
+          </div>
+        </div>
+        <button
+          class="btn btn-light"
+          (click)="callPhoneNumber('+917715959917')"
+        >
+          Talk to Our Expert Now!
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="secondDiv">
+  <section>
+    <div class="offers-container">
+      <h2 class="offers-title">Offers for you</h2>
+      <div class="offers-wrapper">
+        <div *ngFor="let offer of offers" class="offer-card">
+          <img [src]="offer.image" [alt]="offer.title" class="offer-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container webFeatures">
+      <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
+        <h2 class="offers-title">Things to Do...</h2>
+        <div class="featuresContainer">
+          @for(feature of features; track feature){
+          <div class="card-main">
+            <div>
+              <img
+                [ngStyle]="{ width: '68px', height: '68px' }"
+                [src]="feature.icon"
+                alt="Icon"
+                class="card-main-img"
+              />
+            </div>
+            <div class="info">
+              <h3 class="featureTitle">{{ feature.title }}</h3>
+              <p>{{ feature.text }}</p>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="container mobFeatures">
+      <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
+        <h2 class="offers-title">Things to Do...</h2>
+        <div class="featuresContainer">
+          @for(feature of mobFeatures; track feature){
+          <div class="card-main">
+            <div>
+              <img
+                [ngStyle]="{ width: '68px', height: '68px' }"
+                [src]="feature.icon"
+                alt="Icon"
+                class="card-main-img"
+              />
+            </div>
+            <div class="info">
+              <h4 class="featureTitle">{{ feature.title }}</h4>
+              <p>{{ feature.text }}</p>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="travelers-section">
+  <div class="travelers-container">
+    <h2>Travelers' favorite choices</h2>
+    <div class="travelers-wrapper">
+      <mat-card
+        class="traveller-card"
+        *ngFor="let offer of hotelList | slice : 0 : 6"
+      >
+        <img mat-card-image [src]="offer.image" alt="offer image" />
+        <div class="offer-content">
+          <div>
+            <p class="category">{{ offer.category }}</p>
+            <h3 class="title">{{ offer.title }}</h3>
+            <p class="confirmation">Instant confirmation</p>
+            <p class="rating">
+              ⭐ {{ offer.rating }} ({{ offer.reviews }}) •
+              {{ offer.booked }} booked
+            </p>
+            <p class="price">
+              <span class="current-price">INR {{ offer.currentPrice }}</span>
+              <span class="old-price" *ngIf="offer.oldPrice"
+                >INR {{ offer.oldPrice }}</span
+              >
+            </p>
+          </div>
+          <!-- <button
+            mat-button
+            class="offer-button"
+            (click)="goToService(offer?.routingUrl)"
+          > -->
+          <button
+            mat-button
+            class="offer-button"
+            (click)="openWhatsApp('+917715959917')"
+          >
+          
+            {{ offer.buttonText }}
+
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <!-- <button class="seeMoreBtn" (click)="navigateToPage()">Talk To Our Expert Now!</button> -->
+   <button class="seeMoreBtn" (click)="callPhoneNumber('+917715959917')">Talk To Our Expert Now!</button>
+</section>
+<section>
+  <div class="custom-card-container">
+    <div *ngFor="let card of cardDataList" class="custom-card">
+      <h2 class="custom-card-title">
+        <span class="custom-card-text">{{ card.title }}</span>
+      </h2>
+      <hr class="custom-divider" />
+
+      <div class="custom-card-items">
+        <div
+          *ngFor="let place of card.places; let i = index"
+          class="custom-card-item"
+        >
+          <div class="custom-image-wrapper">
+            <span class="custom-badge">{{ i + 1 }}</span>
+            <img
+              [src]="place.image"
+              alt="Place Image"
+              class="custom-card-image"
+            />
+          </div>
+          <div class="custom-card-content">
+            <h3 class="custom-place-title">{{ place.name }}</h3>
+            <p class="custom-place-description">🔥 {{ place.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="itinerary-container">
+    <h2 class="inspiration">Inspiration for your itinerary</h2>
+    <div class="cards">
+      <div
+        class="card"
+        style="background-image: url('/assets/homepageImages/Inspiration.webp')"
+      >
+        <div class="overlay"></div>
+        <div class="card-content">
+          <div>
+            <h3>Best staycation deals</h3>
+            <p>Enjoy these cool staycation promotions in Goa</p>
+          </div>
+          <button class="custom-btn">See activities</button>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="
+          background-image: url('/assets/homepageImages/Inspiration2.webp');
+        "
+      >
+        <div class="overlay"></div>
+        <div class="card-content">
+          <div>
+            <h3>All Time Favourite Activities in Goa</h3>
+            <p>Don't forget to check out these activities while you're here</p>
+          </div>
+          <button class="custom-btn">See activities</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-faq></app-faq>

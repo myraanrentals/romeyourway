@@ -1,0 +1,686 @@
+@media screen and (max-width: 768px) {
+  .main-section {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .selection {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .leftPart {
+    display: flex;
+    flex-direction: column;
+  }
+  .date-selector {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .date-options {
+      display: flex;
+      gap: 10px;
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1px solid #e0e0e0;
+        padding: 7px;
+        min-width: 60px;
+        height: 64px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        span {
+          display: flex;
+          align-items: center;
+          color: #202020;
+          font-size: 23px;
+          font-weight: 600;
+          line-height: 30px;
+          letter-spacing: 1px;
+        }
+        label {
+          display: flex;
+          align-items: center;
+          color: #202020;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        &.active {
+          border-color: orange;
+          color: orange;
+          background-color: rgba(255, 165, 0, 0.2);
+          label,
+          span {
+            color: #ff7300;
+          }
+        }
+      }
+
+      .more-dates {
+        background: #f5f5f5;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        gap: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .hidden-datepicker {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+
+  .backNavigation {
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+    mat-icon {
+      color: rgb(90, 88, 88);
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+  .time-slot-container {
+    width: 100%;
+    background: #fff;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+
+  .section-title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .time-dropdown {
+    width: 100%;
+  }
+
+  .traveller-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .traveller-label {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .price {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .counter-btn {
+    background: #f5f5f5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-weight: 600;
+  }
+
+  .subtotal-section {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+
+  .subtotal-amount {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .pay-btn-div {
+    padding: 50%;
+  }
+  .pay-btn {
+    display: none;
+  }
+  .pay-btn-amount {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .price-box {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    text-align: center;
+    z-index: 10000 !important;
+
+    .price-div {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 10px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .old-price {
+      font-size: 14px;
+      margin-bottom: 0px;
+    }
+    .offer-button {
+      background-color: #f37002;
+      color: white;
+      width: 50%;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 500 !important;
+      border-radius: 6px !important;
+    }
+  }
+  .pay-btn:hover {
+    background: #e06200;
+  }
+  .packageOption {
+    display: flex;
+    align-items: center;
+    color: #515151;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: 48px;
+    margin-bottom: 12px;
+  }
+  .packageCards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .package-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &.selected {
+      border-color: orange;
+    background-color: #fefefb;
+
+    }
+    .selection-indicator {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      gap: 5px;
+      margin-right: 36px;
+
+      &.selected {
+        color: orange;
+      margin-right: 12px;
+
+      }
+    }
+
+    .package-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        display: flex;
+        gap: 8px;
+      }
+    }
+    .packageTitle {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .price {
+      margin-top: 24px;
+      display: flex;
+      gap: 8px;
+      justify-items: center;
+      .original-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+
+      .discounted-price {
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    .package-details {
+      margin: 10px 0;
+      padding-left: 20px;
+      font-size: 14px;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    .more-details {
+      color: #ff7300;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+
+  .offers-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .featureTitle {
+    font-size: 16px !important;
+  }
+  .info p{
+    font-size: 12px;
+
+  }
+  .innerContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+    text-align: center;
+  }
+  .container {
+    padding: 0 !important;
+  }
+
+}
+@media screen and (min-width: 768px) {
+  .main-section {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .selection {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .leftPart {
+    display: flex;
+    flex-direction: column;
+  }
+  .date-selector {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .date-options {
+      display: flex;
+      gap: 10px;
+
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1px solid #e0e0e0;
+        padding: 7px;
+        min-width: 80px;
+        height: 64px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        span {
+          display: flex;
+          align-items: center;
+          color: #202020;
+          font-size: 23px;
+          font-weight: 600;
+          line-height: 30px;
+          letter-spacing: 1px;
+        }
+        label {
+          display: flex;
+          align-items: center;
+          color: #202020;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        &.active {
+          border-color: orange;
+          color: orange;
+          background-color: rgba(255, 165, 0, 0.2);
+          label,
+          span {
+            color: #ff7300;
+          }
+        }
+      }
+
+      .more-dates {
+        background: #f5f5f5;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        gap: 5px;
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .hidden-datepicker {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+
+  .backNavigation {
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    gap: 4px;
+    margin-left: 92px;
+    mat-icon {
+      color: rgb(90, 88, 88);
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+  .time-slot-container {
+    width: 100%;
+    max-width: 350px;
+    background: #fff;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+
+  .section-title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .time-dropdown {
+    width: 100%;
+  }
+
+  .traveller-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .traveller-label {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .price {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .counter-btn {
+    background: #f5f5f5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-weight: 600;
+  }
+
+  .subtotal-section {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+
+  .subtotal-amount {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .pay-btn {
+    width: 100%;
+    background: #ff7300;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  .price-div,
+  .offer-button {
+    display: none;
+  }
+  .pay-btn:hover {
+    background: #e06200;
+  }
+  .packageOption {
+    display: flex;
+    align-items: center;
+    color: #515151;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: 48px;
+    margin-bottom: 12px;
+  }
+  .packageCards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .package-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &.selected {
+      border-color: orange;
+    background-color: #fefefb;
+
+    }
+    .selection-indicator {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      gap: 5px;
+      margin-right: 36px;
+
+      &.selected {
+        color: orange;
+      margin-right: 12px;
+
+      }
+    }
+
+    .package-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        display: flex;
+        gap: 8px;
+      }
+    }
+    .packageTitle {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .price {
+      margin-top: 24px;
+      display: flex;
+      gap: 8px;
+      justify-items: center;
+      .original-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+
+      .discounted-price {
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    .package-details {
+      margin: 10px 0;
+      padding-left: 20px;
+      font-size: 14px;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    .more-details {
+      color: #ff7300;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+  .innerContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .offers-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .featuresContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+  }
+  .featureTitle {
+    white-space: nowrap;
+    min-height: 4px;
+    margin-top: 12px;
+  }
+}

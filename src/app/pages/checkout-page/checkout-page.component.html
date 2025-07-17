@@ -1,0 +1,156 @@
+<section class="main-section">
+  <div class="backNavigation" (click)="goBack()">
+    <mat-icon class="material-symbols-outlined">arrow_back</mat-icon>
+  </div>
+  <div class="selection">
+    <div class="leftPart">
+      <div class="date-selector">
+        <label>Select Date</label>
+
+        <div class="date-options">
+          <button
+          *ngFor="let date of (isMobile ? dates.slice(0, 4) : dates)"
+          [class.active]="date.selected"
+          (click)="selectDate(date)"
+          >
+            <span>{{ date.day }}</span>
+            <label>{{ date.label }}</label>
+          </button>
+
+          <button class="more-dates" (click)="picker.open()">
+            <mat-icon class="material-symbols-outlined"> date_range </mat-icon>
+            More Dates
+          </button>
+        </div>
+
+        <mat-form-field class="hidden-datepicker custom-datepicker">
+          <input
+            matInput
+            [matDatepicker]="picker"
+            [min]="minDate"
+            (dateChange)="onDateSelected($event)"
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <span class="packageOption">Select Package Option </span>
+      <div class="packageCards">
+        <div
+          class="package-card"
+          *ngFor="let package of hotelDetails.transport; let i = index"
+          [class.selected]="package.isSelected"
+          (click)="toggleSelection(i)"
+        >
+          <div class="package-header">
+            <span class="packageTitle">
+              {{ package.title }} [{{ hotelDetails.title }}]
+            </span>
+            <div class="price">
+              <span class="original-price">INR {{ package.originalamt }}</span>
+              <span class="discounted-price"><strong>INR {{ package.discountedamt }}</strong></span>
+            </div>
+          </div>
+      
+          <ul class="package-details">
+            <li *ngFor="let detail of package.desc">{{ detail }}</li>
+          </ul>
+      
+          <p><strong>Age Policy:</strong></p>
+      
+          <button class="more-details" (click)="openSidePanel($event)">
+            More Details
+          </button>
+      
+          <div class="selection-indicator" [ngClass]="{ 'selected': package.isSelected, 'unselected': !package.isSelected }">
+            <mat-icon>{{ package.isSelected ? "check_circle" : "radio_button_unchecked" }}</mat-icon>
+            {{ package.isSelected ? "Selected" : "Select" }}
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="time-slot-container" #timeSlotContainer>
+      <div class="card">
+        <label class="section-title">Select Time Slot</label>
+        <mat-form-field appearance="outline" class="time-dropdown">
+          <mat-select [(ngModel)]="selectedTime" (selectionChange)="updateTime($event.value)">
+            <mat-option value="6pm">Starts at 06:00 PM</mat-option>
+            <mat-option value="7pm">Starts at 07:00 PM</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+
+        <label class="section-title">Select Travellers</label>
+        <div class="traveller-section" *ngFor="let traveller of sessionData.travellers">
+          <div>
+            <p class="traveller-label">{{ traveller.label }}</p>
+            <p class="price">
+              INR {{ traveller.price }}/{{ traveller.label.toLowerCase() }}
+            </p>
+          </div>
+          <div class="counter">
+            <button class="counter-btn" (click)="decreaseCount(traveller)">
+              -
+            </button>
+            <span class="count">{{ traveller.count }}</span>
+            <button class="counter-btn" (click)="increaseCount(traveller)">
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="subtotal-section">
+          <p>Sub Total</p>
+          <p class="subtotal-amount">INR {{ getSubtotal() }}</p>
+        </div>
+      </div>
+
+      <button class="pay-btn" (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)">Proceed To Pay</button>
+      <div class="price-box">
+        <div class="price-div">
+          <span>Total Amount </span>
+          <p class="pay-btn-amount"> INR {{ getSubtotal() }}</p>
+        </div>
+        <button   class="offer-button" (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)">
+          Proceed To pay
+        </button>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="flex innerContainer">
+        <h2 class="offers-title">Book With Confidence</h2>
+        <div class="featuresContainer">
+          @for(feature of features; track feature){
+          <div class="card-main">
+            <div>
+              <img
+                [ngStyle]="{ width: '68px', height: '68px' }"
+                [src]="feature.icon"
+                alt="Icon"
+                class="card-main-img"
+              />
+            </div>
+            <div class="info">
+              <h4 class="featureTitle">{{ feature.title }}</h4>
+              <p>{{ feature.text }}</p>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<app-package-card
+  *ngIf="isSidebarOpen"
+  [isSidebarOpen]="isSidebarOpen"
+  (closeSidebar)="closeSidebar()"
+></app-package-card>

@@ -1,0 +1,47 @@
+<mat-sidenav-container
+  class="side-panel-container"
+  [ngClass]="{ 'hidden-container': !isSidebarOpen }"
+>
+  <mat-sidenav
+    #sidenav
+    [mode]="'over'"
+    [opened]="isSidebarOpen"
+    [position]="'end'"
+    [ngClass]="{
+      'mobile-bottom-sheet': isMobileView,
+      'show-bottom-sheet': isSidebarOpen
+    }"
+    (opened)="scrollToTop()"
+    (closed)="isSidebarOpen = false"
+    (backdropClick)="closeSidePanel()"
+  >
+    <div #sidePanelContent class="side-panel-content">
+      <div class="fixed-image">
+        <mat-icon class="close-btn" (click)="closeSidePanel()">close</mat-icon>
+        <img src="/assets/dinnercruise/DC21.avif" alt="Cruise Image" />
+      </div>
+      <div class="content">
+        <h3>1-Hour at Sunset Cruise [With DJ Music]</h3>
+        <p>1-hour sunset cruise on the Mandovi River</p>
+        <p>Vibrant DJ music</p>
+        <p>Views of Fort Aguada, Mandovi Bridges, and Panaji City</p>
+        <p><strong>Age Policy:</strong></p>
+        <ul>
+          <li>Visitors under 3 years and below 3 feet join for free.1</li>
+          <li>Visitors under 3 years and below 3 feet join for free.2</li>
+          <li>Visitors under 3 years and below 3 feet join for free3.</li>
+          <li>Visitors under 3 years and below 3 feet join for free.4</li>
+          <li>Visitors under 3 years and below 3 feet join for free5.</li>
+          <li>Visitors under 3 years and below 3 feet join for free.6</li>
+          <li>Visitors under 3 years and below 3 feet join for free.7</li>
+          <li>Visitors under 3 years and below 3 feet join for free.8</li>
+          <li>Visitors under 3 years and below 3 feet join for free.9</li>
+          <li>Visitors under 3 years and below 3 feet join for free.10</li>
+          <li>Visitors under 3 years and below 3 feet join for free.</li>
+          <li>Visitors under 3 years and below 3 feet join for free.</li>
+          <li>Adult tickets apply for visitors 4 years and above.</li>
+        </ul>
+      </div>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>

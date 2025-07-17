@@ -1,0 +1,112 @@
+#banner{
+  padding:20px 0;
+  background:linear-gradient(rgba(243, 233, 255, 0) 0%, rgba(243, 233, 255, 0.5) 100%), rgb(255, 255, 255);
+  overflow: hidden;
+  .container >.flex >div{width: 50%;
+    margin-left: 10px;}
+  .rating-square {
+    display: inline-block;
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: 600;
+    color:#444
+  }
+  .img-wrapper img{
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+    max-height: 300px;
+  }
+  hr{
+    background: linear-gradient(90deg, rgb(161 161 161) 0%, rgb(255, 255, 255) 100%);
+    border: none;
+    height: 1px;
+    margin:5px 0
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    li {
+      list-style: none;
+      display: flex;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+.headerIcon{
+  height: 24px;
+}
+.headerIcon1{
+  height: 28px;
+}
+
+
+@media screen and (max-width:767px){
+  #banner {
+    display: none;
+    padding:0 0 100px;
+    position: relative;
+    margin-top: -20px;
+    .container{
+      padding: 0 !important;
+      > .flex {
+        flex-direction: column-reverse;
+        .img-wrapper:after {
+          content: '';
+          background: linear-gradient(rgba(247, 236, 255, 0) 1.39%, rgb(251, 244, 255) 85.29%);
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          width: 100vw;
+          height: 140px;
+        }
+
+        .img-wrapper {
+            position: relative;
+            width: 100%;
+            img{border-radius: 0;}
+        }
+        > div:first-child {
+          position: absolute;
+          bottom: 0;
+          width: 100% !important;
+          overflow:hidden;
+          z-index: 1;
+          padding: 0 20px;
+          .rating-square{
+            border:none;
+            padding:0;
+          }
+          ul{
+            display:flex;
+            li{
+              display: flex;
+              flex-wrap: nowrap;
+              white-space: nowrap;
+              padding-right: 50px;
+              margin:0;
+              font-size: 13px;
+              img{width: 16px;}
+            }
+          }
+      }
+    }
+  }
+
+    h2{font-size:18px !important;margin: 10px 0;}
+  }
+}
+
+

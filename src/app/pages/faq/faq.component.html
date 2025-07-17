@@ -1,0 +1,15 @@
+<section>
+  <div class="faq-container">
+    <h3>Frequently Asked Questions</h3>
+    <div *ngFor="let faq of faqs; let i = index" class="faq-item">
+      <div class="faq-question" (click)="toggleFaq(i)">
+        <span [ngClass]="{'open': faq.isOpen}">{{ faq.isOpen ? '−' : '+' }}</span>
+        {{ faq.question }}
+      </div>
+      <div class="faq-answer" *ngIf="faq.isOpen">
+        {{ faq.answer }}
+      </div>
+    </div>
+  </div>
+  
+</section>

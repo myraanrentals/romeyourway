@@ -1,0 +1,21 @@
+<header>
+  <div class="container">
+    <div class="flex flex-justify-between ">
+      <div routerLink=""><img  src="./assets/images/Logo1.png" class="logo" alt="Myraan"></div>
+      <div class="flex flex-center g-1">
+        <ul class="nav-links" id="navLinks">
+          <li class="m-ele">MENU</li>
+          <li (click)="toggleMegaMenu()"><a  routerLink="/">Home</a></li>
+          <li (click)="toggleMegaMenu()"><a  routerLink="/about-us">About Us</a></li>
+          <li (click)="toggleMegaMenu()"><a  routerLink="/book-dinner-cruise-in-goa">Activities</a></li>
+          <li (click)="toggleMegaMenu()"><a  routerLink="/contact-us">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" [class.open]="isVisible" id="hamburger" (click)="toggleMegaMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+          </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,31 @@
+const { single } = require("rxjs");
+
+const payload = {
+  payload: {
+    vehicleType: "ethu",
+    vehicleDetailsType: "teuht",
+    vehicleBrand: "teujh",
+    vehicleName: "tjt",
+    vehicleQuantity: 1,
+    countryCode: "+91",
+    customerMobile: "8800689752",
+    fromDate: "2024-07-03",
+    adultCount: 2,
+    childCount: 1,
+    infantCount: 1,
+    totalMemberCount: 3,
+    singleAdultAmt: 600,
+    singleChildAmt: 300,
+    singleInfantAmt: 100,
+    adultTotalAmt: 1200,
+    childTotalAmt: 300,
+    infantTotalAmt: 100,
+    "toDate":"",
+    fullName: "",
+    email: "",
+    totalAmount: 258,
+    discountedTotalAmount: 258,
+    selectedPackage: {},
+    createdBy: "ONLINE",
+  },
+};

@@ -1,0 +1,266 @@
+.info-card{
+  background: #fff8e5;
+  padding:15px;
+  color: #785800;
+  font-size: 14px;
+}
+.info-grey-card{
+  background: #efefef;
+  padding:15px;
+  color: #444;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.guest-details{
+  width: 60%;
+}
+.counter-wrapper > .flex{margin-bottom: 40px;}
+.counter-wrapper h4 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.counter-wrapper .category small {
+  font-size: 11px;
+}
+
+.counter-wrapper .category {
+  width: 70%;
+}
+
+.counter-wrapper .counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-wrapper .counter button {
+  padding: 7px;
+  border: none;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F3E9FF;
+  color: #FF5722;
+}
+
+.price {
+  width: 20%;
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.actual-price {
+  font-size: 12px;
+  color: #444;
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  font-weight: 500;
+}
+label{
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin: 0;
+}
+
+small{font-size: 11px;margin-bottom: 5px;position: relative;top:-5px}
+.promo{color:rgb(8, 130, 41);cursor: pointer;}
+button.apply-button {
+  background: rgb(8, 130, 41);
+  color: #fff;
+  border: 0;
+  padding: 8px 20px;
+  position: relative;
+  top: 0;
+  border-radius: 4px;
+  width: 120px;
+  font-size: 14px;
+  font-weight: 500;
+}
+h6 svg{width: 24px;position: relative;top:-2px}
+.payment-form {
+  .card-details-wrapper{max-width: 480px;}
+  label{margin-bottom: 5px;}
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-wrapper {
+    position: relative;
+  }
+
+  .input-wrapper img.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .security-info {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .security-info p {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .security-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .security-icons img {
+    height: 32px;
+  }
+
+
+}
+.final-details{
+  .card{
+    position: fixed;
+    top:115px;
+    width: 30%;
+  }
+  .pay-buttton{width: 100%;margin-top: 10px;}
+}
+
+.pay-buttton{
+  background: #FF5722;
+  color:#fff;
+  display: block;
+  padding:10px 15px;
+  border:0;
+  width: 200px;
+  text-align: center;
+  margin-top:10px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+.final-details .card{border-radius: 7px;overflow: hidden;}
+.final-details h4 {
+  font-size: 16px;
+  padding: 30px;
+  background: url('/assets/images/card-1.avif') 0 0 no-repeat;
+  position: relative;
+  background-size:cover;
+  margin: 0;
+  &:after{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  span{
+    position: relative;
+    color: #fff;
+    z-index: 10;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+.final-details {
+  font-size: 13px;
+}
+
+.final-details span {
+  margin-left: 6px;
+}
+.list-group{border-radius: 0;border:0}
+.list-group-item{padding: 15px;border-left: 0;border-right: 0;}
+.final-cost *{font-weight: 500;font-size: 16px;}
+.final-cost small{
+  font-size: 11px !important;
+  font-weight: 300;
+}
+
+.form-check-input-border {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the radio input and the label */
+  border: 1px solid #FF5722; /* Add border around the container */
+  padding: 10px; /* Add padding inside the container */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  width: fit-content; /* Optional: adjusts container size to content */
+}
+
+.form-check-input {
+  margin: 0; /* Remove default margins for radio button */
+  accent-color: #FF5722; /* Change radio button color */
+}
+
+.form-check-label {
+  margin: 0; /* Ensure the label aligns correctly */
+}
+
+.selectPaymentType {
+  margin-bottom: 0.5rem;
+}
+
+// .form-check-input-border{
+//   border: 1px solid #FF5722;
+//   border-radius: 5px;
+// }
+
+// input[type=radio]{
+//   outline: 1px solid red;
+// }
+.payment-type{
+ gap: 2px;
+}
+@media screen and (max-width:1024px) {
+  #checkout > div > .flex{
+    flex-direction: column-reverse;
+    .final-details .card{
+      position: relative;
+      top:0;
+      width: 100%;
+      button{display: none;}
+    }
+  }
+  .guest-contact-details .col {
+    flex: none;
+    margin-top: 12px;
+  }
+  .guest-details{width: 100%;}
+}

@@ -1,0 +1,120 @@
+<section id="footer" class="py-3">
+  <div class="headerDiv">
+    <div class="mainDiv">
+      <img src="./assets/images/Logo1.png" class="logo" alt="Myraan" />
+      <div class="flex flex-col topDiv">
+        <div class="scannerDiv webView">
+          <img
+            class="scannerImg"
+            src="../../../assets/images/scanner.jpg"
+            alt="scannerImg"
+          />
+          <h5 style="margin-top: 12px; color: black">Scan to Connect</h5>
+        </div>
+        <div class="company webView">
+          <h5>Company</h5>
+          <a href="/">Home</a>
+          <a href="/about-us">About Us</a>
+          <a href="/book-dinner-cruise-in-goa">Activities</a>
+          <a href="/contact-us">Contact Us</a>
+        </div>
+        <div class="company webView">
+          <h5>For travelers</h5>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-condition">Terms and Conditions</a>
+          <a href="/refund-cancellation">Refund Policy</a>
+        </div>
+        <div class="webView">
+          <h5>We are on social networks</h5>
+          <div class="mediaIcons">
+            <a
+              href="https://www.facebook.com/romeyourwayindia/"
+              class="fab fa-facebook-f"
+              style="font-size: 32px; color: black"
+            ></a>
+            <a
+              href="https://www.instagram.com/romeyourway/"
+              class="fab fa-instagram"
+              style="font-size: 32px; color: black"
+            ></a>
+            <a
+              href="https://www.youtube.com/@romeyourway"
+              class="fab fa-youtube"
+              style="font-size: 32px; color: black"
+            ></a>
+            <a
+              href="https://x.com/rome_your_way"
+              class="fab fa-twitter"
+              style="font-size: 32px; color: black"
+            ></a>
+          </div>
+        </div>
+        <div class="accordion">
+          <div *ngFor="let section of sections" class="accordion-item">
+            <h5 class="accordion-header" (click)="toggleDropdown(section.key)">
+              {{ section.title }}
+              <span [ngClass]="{ 'rotate-180': dropdowns[section.key] }"
+                >⌃</span
+              >
+            </h5>
+
+            <div *ngIf="dropdowns[section.key]" class="accordion-content">
+              <ng-container *ngIf="section.type === 'social'">
+                <div class="social-icons">
+                  <a
+                    *ngFor="let icon of section.icons"
+                    href="{{ icon.link }}"
+                    style="font-size: 32px; color: black"
+                    [class]="icon.class"
+                  ></a>
+                </div>
+              </ng-container>
+
+              <ng-container *ngIf="section.type === 'links'">
+                <a *ngFor="let link of section.links" href="#" class="block">{{
+                  link
+                }}</a>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-accordion">
+          <div *ngFor="let section of mobSections" class="accordion-item">
+            <h5 class="accordion-header" (click)="toggleDropdown(section.key)">
+              {{ section.title }}
+            </h5>
+
+            <div *ngIf="dropdowns[section.key]" class="accordion-content">
+              <ng-container>
+                <a
+                  *ngFor="let link of section.links; let i = index"
+                  [href]="section.href[i]"
+                  class="block"
+                  >{{ link }}</a
+                >
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobSocialIcons">
+      <a
+        *ngFor="let icon of sections[0].icons"
+        [href]="icon.link"
+        style="font-size: 32px; color: black"
+        [class]="icon.class"
+      ></a>
+    </div>
+    <span style="font-size: x-small; text-align: center" class="lastText">
+      <span style="font-size: medium"
+        >© Copyright 2025 Romeyourway.com. All rights reserved.</span
+      >
+    </span>
+  </div>
+  <a href="/" onclick="window.location.href='tel:7715959917'" class="flaticon-call footer-phone-icon" target="_blank" title="Chat on WhatsApp">
+    </a>
+<a href="https://wa.me/+917715959917" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+</a>
+</section>

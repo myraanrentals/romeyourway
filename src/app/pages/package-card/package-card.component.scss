@@ -1,0 +1,149 @@
+.side-panel-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hidden-container {
+  display: none;
+}
+
+mat-sidenav {
+  width: 350px;
+  background: transparent !important; /* Fully transparent sidebar */
+  border-left: none;
+  box-shadow: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel-content {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  height: 100%;
+}
+
+.fixed-image {
+  position: sticky;
+  background: white;
+  z-index: 10;
+  padding-bottom: 10px;
+}
+
+.fixed-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.content {
+  flex-grow: 1;
+  overflow-y: auto; /* Enables scrolling */
+  padding: 10px;
+  max-height: calc(100vh - 150px); /* Adjust based on image height */
+  padding-bottom: 20px; /* Adds gap at the bottom */
+  margin-bottom: 20px; /* Extra spacing */
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+li {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+button {
+  margin-top: 1rem;
+  align-self: flex-start;
+  background-color: #ff7300;
+  color: white !important;
+}
+button:hover {
+  background-color: #e06200;
+}
+
+.closeBtn {
+  border: none;
+  padding: 8px;
+  min-width: 85px;
+  border-radius: 10px;
+}
+
+.mat-sidenav {
+  width: 300px;
+}
+
+/* Mobile View */
+@media screen and (max-width: 767px) {
+  .side-panel-container {
+    overflow: hidden !important;
+  }
+
+  .mobile-bottom-sheet {
+    padding-top: 30vh;
+    width: 100%;
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%); /* Start hidden */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-bottom-sheet.show-bottom-sheet {
+    transform: translateY(0); /* Slide up when opened */
+  }
+
+  .fixed-image img {
+    margin-top: 44px;
+  }
+}
+
+/* Desktop View */
+@media screen and (min-width: 767px) {
+  .side-panel-content {
+    height: 100%;
+  }
+  .content{
+    overflow: hidden;
+  }
+  .fixed-image img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 38px;
+  }
+}

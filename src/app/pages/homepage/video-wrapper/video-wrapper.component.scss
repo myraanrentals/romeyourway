@@ -1,0 +1,12 @@
+.video-wrapper{
+  height: 600px;
+  width: 100%;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  object-fit: cover; /* Ensures the video covers the entire screen */
+}

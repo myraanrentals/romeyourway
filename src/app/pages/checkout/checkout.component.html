@@ -1,0 +1,451 @@
+<form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)">
+  <section id="checkout" class="py-5 mt-5">
+    <div class="container">
+      <div class="flex g-3">
+        <div class="guest-details">
+          <div class="info-grey-card">
+            You can cancel for free in 3 days of booking done
+          </div>
+          <h4 class="mb-3">Guests</h4>
+          <div class="info-card mb-4">
+            Infants aged 5 and under can enter for free. Simply show their ID at
+            the venue and enter.
+          </div>
+
+          @if(widthWin > 769) {
+            <div class="counter-wrapper">
+              <div class="flex">
+                <div class="category">
+                  <h4>Adult</h4>
+                  <small>Above 11 yrs</small>
+                </div>
+                <div class="counter">
+                  <button
+                    class="minus"
+                    type="button"
+                    (click)="_bookingService.updateCount('adult', false, bookingDetails)"
+                  >
+                    -
+                  </button>
+                  <div>{{ bookingDetails.adultCount }}</div>
+                  <button
+                    class="plus"
+                    type="button"
+                    (click)="_bookingService.updateCount('adult', true, bookingDetails)"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="price">
+                  <div class="discounted-price">
+                    ₹ {{ this.bookingDetails.singleAdultAmt * this.bookingDetails.adultCount }}
+                  </div>
+                  <div class="actual-price">
+                    ₹ {{ this.bookingDetails.fTotalAmount }}
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="category">
+                  <h4>Child</h4>
+                  <small>3 to 10 yrs</small>
+                </div>
+                <div class="counter">
+                  <button
+                    class="minus"
+                    type="button"
+                    (click)="_bookingService.updateCount('child', false, bookingDetails)"
+                  >
+                    -
+                  </button>
+                  <div>{{ bookingDetails.childCount }}</div>
+                  <button
+                    class="plus"
+                    type="button"
+                    (click)="_bookingService.updateCount('child', true, bookingDetails)"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="price">
+                  <div class="discounted-price">
+                    ₹ {{ this.bookingDetails.singleChildAmt * this.bookingDetails.childCount}}
+                  </div>
+                  <div class="actual-price">
+                    ₹ {{ this.bookingDetails.fTotalAmount }}
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="category">
+                  <h4>Infant</h4>
+                  <small>Below 2 yrs</small>
+                </div>
+                <div class="counter">
+                  <button
+                    class="minus"
+                    type="button"
+                    (click)="_bookingService.updateCount('infant', false, bookingDetails)"
+                  >
+                    -
+                  </button>
+                  <div>{{ bookingDetails.infantCount }}</div>
+                  <button
+                    class="plus"
+                    type="button"
+                    (click)="_bookingService.updateCount('infant', true, bookingDetails)"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="price">
+                  <div class="discounted-price">
+                    ₹ {{ this.bookingDetails.singleInfantAmt }}
+                  </div>
+                  <div class="actual-price">
+                    ₹ {{ this.bookingDetails.fTotalAmount }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+          <div class="guest-contact-details">
+            <h4>Lead guest details</h4>
+            <p>Booking on behalf of a friend? Enter their details.</p>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="">Full name</label>
+                <small>Must match ID</small>
+                <input
+                  id="customerName"
+                  name="customerName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Full Name"
+                  [(ngModel)]="bookingDetails.customerName"
+                  #customerName="ngModel"
+                  required
+                />
+                @if (customerName.invalid && (customerName.dirty ||
+                customerName.touched)) {
+                <small class="text-danger">Full name is required</small>
+                }
+              </div>
+              <div class="col">
+                <label for="">Email Address</label>
+                <small>We'll send your tickets here</small>
+                <input
+                  id="customerEmail"
+                  name="customerEmail"
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter Email Address"
+                  [(ngModel)]="bookingDetails.customerEmail"
+                  #customerEmail="ngModel"
+                  required
+                  email
+                />
+                @if (customerEmail.invalid && (customerEmail.dirty ||
+                customerEmail.touched)) { @if
+                (customerEmail.errors?.['required']) {
+                <small class="text-danger">Email address is required</small>
+                } @else if (customerEmail.errors?.['email']) {
+                <small class="text-danger"
+                  >Please enter a valid email address</small
+                >
+                } }
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="">Confirm email address</label>
+                <small>Just to ensure we've got this right</small>
+                <input
+                  id="confirmEmail"
+                  name="confirmEmail"
+                  type="email"
+                  class="form-control"
+                  placeholder="Confirm Email Address"
+                  [(ngModel)]="bookingDetails.customerEmail"
+                  #customerEmail="ngModel"
+                  required
+                  email
+                />
+              </div>
+              <div class="col">
+                <label for="">Phone number</label>
+                <small
+                  >We may reach out for booking updates here over
+                  SMS/Whatsapp</small
+                >
+                <input
+                  id="customerPhone"
+                  name="customerPhone"
+                  type="tel"
+                  class="form-control"
+                  [(ngModel)]="bookingDetails.customerPhone"
+                  #customerPhone="ngModel"
+                  required
+                />
+                @if (customerPhone.invalid && (customerPhone.dirty ||
+                customerPhone.touched)) { @if
+                (customerPhone.errors?.['required']) {
+                <small class="text-danger">Phone number is required</small>
+                } @else if (customerPhone.errors?.['pattern']) {
+                <small class="text-danger"
+                  >Please enter a valid 10-digit phone number</small
+                >
+                } }
+              </div>
+            </div>
+            <div>
+              <a class="promo" (click)="showPromoCode = true"
+                >Have a promo code?</a
+              >
+              @if(showPromoCode){
+              <div class="mt-3 row">
+                <div class="col">
+                  <label for="" class="mb-1">Enter promo code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col">
+                  <br /><button class="apply-button">Apply</button>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+          <div class="payment-details mt-5">
+            <div class="payment-form mt-3">
+              <h5>Total payable: ₹ {{ bookingDetails.totalPayableAmount - 200 }}</h5>
+              <hr />
+              <small
+                >By continuing, you agree to the general terms and the privacy
+                policy.</small
+              >
+              <button type="submit" class="pay-buttton">
+                Confirm &amp; Pay
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="final-details">
+          <div class="card">
+            <h4>
+              <span
+                >{{bookingDetails.packageName}}</span>
+            </h4>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between mb-2">
+                  <div>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="date and time"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M3 8H18"
+                            stroke="#444444"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M16.5 5H4.5C4.10218 5 3.72064 5.15804 3.43934 5.43934C3.15804 5.72064 3 6.10218 3 6.5V15.5C3 15.8978 3.15804 16.2794 3.43934 16.5607C3.72064 16.842 4.10218 17 4.5 17H16.5C16.8978 17 17.2794 16.842 17.5607 16.5607C17.842 16.2794 18 15.8978 18 15.5V6.5C18 6.10218 17.842 5.72064 17.5607 5.43934C17.2794 5.15804 16.8978 5 16.5 5Z"
+                            stroke="#444444"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M7 3V5"
+                            stroke="#444444"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            id="Vector_4"
+                            d="M14 3V5"
+                            stroke="#444444"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                    <span>{{this.travelDetails?.selectedDateDetails.day}}, {{this.travelDetails?.selectedDateDetails.date}}-Feb 2025</span>
+                  </div>
+                  <!-- <div><div class="link">EDIT</div></div> -->
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                  <div>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="tour preference"
+                      style="min-width: 20px; min-height: 20px"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M8 8H13"
+                            stroke="#444444"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M8 13H13"
+                            stroke="#444444"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M16 11C16 9.895 16.895 9 18 9V5C18 4.448 17.552 4 17 4H4C3.448 4 3 4.448 3 5V8.5C4.105 8.5 5 9.395 5 10.5C5 11.605 4.105 12.5 3 12.5V16C3 16.552 3.448 17 4 17H17C17.552 17 18 16.552 18 16V13C16.895 13 16 12.105 16 11Z"
+                            stroke="#444444"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                    <span></span>
+                  </div>
+                  <div><div class="link">EDIT</div></div>
+                </div> -->
+              </li>
+              @if(bookingDetails.adultCount) {
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <div>{{ bookingDetails.adultCount }} Adult</div>
+                  <div>
+                    <strong
+                      >₹
+                      {{
+                        bookingDetails.adultCount *
+                          bookingDetails.singleAdultAmt
+                      }}</strong
+                    >
+                  </div>
+                </div>
+              </li>
+              } @if(bookingDetails.childCount) {
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <div>{{ bookingDetails.childCount }} Child</div>
+                  <div>
+                    <strong
+                      >₹
+                      {{
+                        bookingDetails.childCount *
+                          bookingDetails.singleChildAmt
+                      }}</strong
+                    >
+                  </div>
+                </div>
+              </li>
+              } @if(bookingDetails.infantCount) {
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <div>{{ bookingDetails.infantCount }} Infant</div>
+                  <div>
+                    <strong
+                      >₹
+                      {{
+                        bookingDetails.infantCount *
+                          bookingDetails.singleInfantAmt
+                      }}</strong
+                    >
+                  </div>
+                </div>
+              </li>
+              }
+              <li
+                class="list-group-item"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgb(242, 253, 235) 0%,
+                    rgba(242, 253, 235, 0) 100%
+                  );
+                "
+              >
+                <div class="d-flex justify-content-between">
+                  <div>Discount(Online)</div>
+                  <div><strong>-₹ 200</strong></div>
+                </div>
+              </li>
+              <li class="list-group-item final-cost">
+                <div class="d-flex justify-content-between">
+                  <div><strong>Total Payable</strong></div>
+                  <div>
+                    @if(bookingDetails.paymentType === 'fullPayment'){
+                    <strong>₹ {{ bookingDetails.totalPayableAmount - 200 }} </strong>
+                    }
+                    @if(bookingDetails.paymentType === 'partialPayment'){
+                      <strong>₹ {{ bookingDetails.totalPayableAmount / 2 }} </strong>
+                    }
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item final-cost">
+                <div class="d-flex flex-column justify-content-between">
+                  <div class="selectPaymentType">
+                    <strong>Select Payment Type</strong>
+                  </div>
+                  <div  class="d-flex justify-content-around " style="margin-top: 5px; margin-bottom: 10px;">
+                    <div class="form-check form-check-input-border">
+                      <input
+                        class="form-check-input "
+                        type="radio"
+                        name="selectPaymentType"
+                        id="fullPaymentType"
+                        value="fullPayment"
+                        (onChange)="initializePaymentType()"
+                        [(ngModel)]="bookingDetails.paymentType"
+                        checked
+                      />
+                      <label class="form-check-label" for="fullPaymentType">
+                        Full Payment
+                      </label>
+                    </div>
+                    <div class="form-check form-check-input-border">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="selectPaymentType"
+                        id="partialPaymentType"
+                        value="partialPayment"
+                        (onChange)="initializePaymentType()"
+                        [(ngModel)]="bookingDetails.paymentType"
+                      />
+                      <label class="form-check-label" for="partialPaymentType">
+                        Partial Payment
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="pay-buttton my-3">
+                  Confirm &amp; pay
+                </button>
+                <small
+                  >By continuing, you agree to the general terms and the privacy
+                  policy.</small
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

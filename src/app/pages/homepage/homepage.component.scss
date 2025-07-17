@@ -1,0 +1,779 @@
+
+
+.inspiration {
+  margin-top: 40px;
+}
+.traveller-card {
+  background-color: white;
+  min-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.travelers-section {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.traveller-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+mat-card-image {
+  height: 180px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.offer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.category {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  min-height: 64px;
+}
+
+.confirmation {
+  font-size: 12px;
+  background-color: lightgray;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #ffa726;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.current-price {
+  color: #d32f2f;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.offer-button {
+  background-color: #ff5722;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+  border-color: transparent;
+}
+.seeMoreBtn {
+  display: flex;
+  justify-self: center;
+  background-color: transparent;
+  min-width: 320px;
+  padding: 8px;
+  border-width: 1px;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  border-radius: 12px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.m-ele {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .featureTitle{
+    font-size: 16px !important;
+  }
+
+  .innerContainer {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .carousel-img {
+    margin-top: 100px;
+    height: 300px; /* Adjust based on your design */
+    object-fit: cover;
+    /* Ensures images cover the area without stretching */
+  }
+  .custom-card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    padding: 22px;
+    white-space: nowrap;
+  }
+
+  /* Individual sliding card */
+  .custom-card {
+    flex: 0 0 90%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  .custom-card-title {
+    margin-top: 0 !important;
+    height: 88px;
+    object-fit: fill;
+    background-image: url("/assets/homepageImages/bg_ranking_card.webp");
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    border-radius: 10px; /* Optional for rounded corners */
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+  }
+  /* Make inner 3 divs inside card a column layout */
+  .custom-card-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .custom-card-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .custom-image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .custom-badge {
+    position: absolute;
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+  }
+
+  .custom-card-image {
+    width: 68px;
+    height: 68px;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .custom-card-content {
+    flex-grow: 1;
+  }
+
+  .custom-place-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .custom-place-description {
+    font-size: 14px;
+    color: #ff5722;
+  }
+
+
+  /* Hide scrollbar */
+  .custom-card-container::-webkit-scrollbar {
+    display: none;
+  }
+  .secondDiv{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #listing-wrapper {
+    h4 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .d-flex {
+      margin: 0 -10px;
+      padding: 0 10px;
+      overflow: auto;
+      -ms-overflow-style: none; 
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none; 
+      }
+    }
+    .card {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      border: none;
+      min-width: 240px;
+      box-shadow: 0 0 10px #00000026;
+      .features li {
+        font-size: 11px;
+        mat-icon {
+          color: #ff5722;
+        }
+      }
+      .ratings {
+        .checked {
+          color: #088943;
+        }
+      }
+      .ratings p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 22px;
+        margin-left: 5px;
+      }
+
+      hr {
+        margin: 7px 0 10px 0;
+      }
+      
+      .card-body p {
+        margin-bottom: 0;
+      }
+
+      p.amount {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ff5722;
+      }
+
+      .actual-price {
+        color: #444;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+
+      .explore-route {
+        font-size: 15px;
+        mat-icon {
+          color: #ff5722;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+  .itinerary-container {
+    padding: 22px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .card {
+    min-width: 80%;
+    flex: 0 0 auto;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    scroll-snap-align: start;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    color: #fff;
+    z-index: 2;
+  }
+
+  .custom-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .webFeatures,
+  .info p{
+    display: none;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:64px;
+    margin-bottom: 10px !important;
+  }
+  .travelers-container {
+    padding: 0;
+  }
+  .travelers-wrapper {
+    gap: 28px;
+    display: flex;
+    overflow-x: auto;
+    padding-left: 22px;
+    scrollbar-width: none;
+    padding-bottom: 12px;
+  }
+  div#special-offer {
+    background: #ff7b52;
+    border: 5px dashed #ffffff !important;
+    color: #fff;
+    margin-top: 68px !important;
+  }
+
+  div#special-offer button {
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: 500;
+  }
+ 
+
+ 
+
+  .m-ele {
+    display: block;
+  }
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+  }
+
+  .card-main {
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(20px);
+  }
+.featureTitle{
+  font-weight: 400 !important;
+}
+  .card-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+  }
+  .card-main-img {
+    width: 48px !important;
+    height: 48px !important;
+    margin-top: 18px;
+  }
+  .card-main:first-child .card-main-img {
+    width: 44px !important;
+    height: 44px !important;
+    margin-top: 18px;
+  }
+ 
+  .card-main img {
+    transition: transform 0.3s ease;
+  }
+
+  .card-main:hover img {
+    transform: scale(1.1);
+  }
+  
+  .offers-container {
+    margin-top: 24px;
+    padding: 12px;
+  }
+.offers-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.offer-card {
+  flex: 0 0 auto;
+  width: 80%; /* Adjust width as needed */
+  scroll-snap-align: center;
+}
+
+.offer-image {
+  width: 95%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Hide scrollbar for better UI */
+.offers-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.offers-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+  .top-image {
+    display: block;
+    object-fit: fill;
+    margin-top: 100px;
+  }
+
+}
+@media screen and (min-width: 767px) {
+  .mobFeatures{
+    display: none;
+  }
+  .innerContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .carousel-img {
+    height: 700px; /* Adjust based on your design */
+    object-fit: cover;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .card-main {
+    border-radius: 18px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  .card-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.15);
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  #listing-wrapper {
+    display: none;
+  }
+  .featuresContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+  }
+  .travelers-container {
+    padding: 20px;
+    padding-top: 84px;
+  }
+  .travelers-wrapper {
+    gap: 48px;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 12px;
+  }
+
+  .offers-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-top: 84px;
+    margin-bottom: 44px;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .offers-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  .offers-wrapper {
+    border-radius: 26px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .offer-card {
+    flex: 0 0 auto;
+    width: 400px;
+    background: #fff;
+    border-radius: 26px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .offer-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .offer-image {
+    object-fit: fill;
+  }
+
+  .custom-card-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    gap: 48px;
+    padding: 20px;
+    padding-top: 84px;
+    justify-content: space-evenly ;
+  }
+
+  .custom-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+
+   .custom-card-title {
+    height: 88px;
+    object-fit: fill;
+    background-image: url("/assets/homepageImages/bg_ranking_card.webp");
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    border-radius: 10px; /* Optional for rounded corners */
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+  }
+  .custom-card-text {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-right: 12px;
+  }
+
+  .custom-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 165, 0, 1) 0%,
+      rgba(255, 99, 71, 1) 100%
+    );
+    margin: 10px 0;
+  }
+
+  .custom-card-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .custom-card-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .custom-image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .custom-badge {
+    position: absolute;
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+  }
+
+  .custom-card-image {
+    width: 68px;
+    height: 68px;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .custom-card-content {
+    flex-grow: 1;
+  }
+
+  .custom-place-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .custom-place-description {
+    font-size: 14px;
+    color: #ff5722;
+  }
+  .itinerary-container {
+    text-align: left;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1320px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 48px;
+  }
+
+  .card {
+    position: relative;
+    width: 48%;
+    height: 334px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .card-content div {
+    margin-bottom: auto; /* Push the text to the top */
+  }
+
+  .custom-btn {
+    align-self: flex-start;
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 44px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}

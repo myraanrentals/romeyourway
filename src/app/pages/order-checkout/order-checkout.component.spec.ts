@@ -8,9 +8,8 @@ describe('OrderCheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OrderCheckoutComponent]
-    })
-    .compileComponents();
+      imports: [OrderCheckoutComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(OrderCheckoutComponent);
     component = fixture.componentInstance;

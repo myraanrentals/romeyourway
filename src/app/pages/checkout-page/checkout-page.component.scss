@@ -260,8 +260,7 @@
 
     &.selected {
       border-color: orange;
-    background-color: #fefefb;
-
+      background-color: #fefefb;
     }
     .selection-indicator {
       display: flex;
@@ -274,8 +273,7 @@
 
       &.selected {
         color: orange;
-      margin-right: 12px;
-
+        margin-right: 12px;
       }
     }
 
@@ -343,9 +341,8 @@
   .featureTitle {
     font-size: 16px !important;
   }
-  .info p{
+  .info p {
     font-size: 12px;
-
   }
   .innerContainer {
     flex-direction: column;
@@ -360,7 +357,6 @@
   .container {
     padding: 0 !important;
   }
-
 }
 @media screen and (min-width: 768px) {
   .main-section {
@@ -590,8 +586,7 @@
 
     &.selected {
       border-color: orange;
-    background-color: #fefefb;
-
+      background-color: #fefefb;
     }
     .selection-indicator {
       display: flex;
@@ -604,8 +599,7 @@
 
       &.selected {
         color: orange;
-      margin-right: 12px;
-
+        margin-right: 12px;
       }
     }
 

@@ -1,11 +1,5 @@
 import { CommonModule, formatDate } from '@angular/common';
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -43,7 +37,7 @@ export class CheckoutPageComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private HelperService: HelperService
+    private HelperService: HelperService,
   ) {}
   dates: any[] = [];
   hotelList = hotels;
@@ -68,10 +62,7 @@ export class CheckoutPageComponent implements OnInit {
       if (!id) return;
 
       this.selectedIdentity = this.HelperService.getIdFromURL(id);
-      this.hotelDetails = this.HelperService.getHotelByIndex(
-        this.selectedIdentity,
-        this.hotelList
-      );
+      this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
@@ -94,10 +85,10 @@ export class CheckoutPageComponent implements OnInit {
     });
   }
 
-  decreaseCount(traveller: any) {  
+  decreaseCount(traveller: any) {
     const isAdult = traveller.label === 'Adult';
     const minCount = isAdult ? 1 : 0;
-  
+
     if (traveller.count > minCount) {
       traveller.count--;
       this.HelperService.updateSessionStorage({
@@ -108,9 +99,8 @@ export class CheckoutPageComponent implements OnInit {
 
   getSubtotal() {
     const subtotal = this.sessionData.travellers.reduce(
-      (total: number, traveller: any) =>
-        total + traveller.count * traveller.price,
-      0
+      (total: number, traveller: any) => total + traveller.count * traveller.price,
+      0,
     );
     this.HelperService.updateSessionStorage({
       subtotal,
@@ -132,9 +122,7 @@ export class CheckoutPageComponent implements OnInit {
       pkg.isSelected = i === index ? !pkg.isSelected : false;
     });
 
-    const selectedTransport = this.hotelDetails.transport.find(
-      (pkg: any) => pkg.isSelected
-    );
+    const selectedTransport = this.hotelDetails.transport.find((pkg: any) => pkg.isSelected);
 
     this.HelperService.updateSessionStorage({
       selectedTransport: selectedTransport || null,
@@ -145,8 +133,7 @@ export class CheckoutPageComponent implements OnInit {
       if (selectedTransport && this.timeSlotContainer) {
         const element = this.timeSlotContainer.nativeElement;
         const offset = 100;
-        const elementPosition =
-          element.getBoundingClientRect().top + window.scrollY;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
       }
     }, 100);

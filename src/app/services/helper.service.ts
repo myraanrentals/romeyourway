@@ -15,10 +15,7 @@ export class HelperService {
   }
 
   getSessionStorage(key: string) {
-    if (
-      typeof window !== 'undefined' &&
-      typeof sessionStorage !== 'undefined'
-    ) {
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
       const value = sessionStorage.getItem(key);
       return value ? JSON.parse(value) : null;
     } else {
@@ -124,9 +121,7 @@ export class HelperService {
     selectedTime: '6pm',
     paymentType: 'full',
   };
-  updateSessionStorage(
-    updatedData: Partial<typeof this.defaultSessionPayload> = {}
-  ) {
+  updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');
     const currentSession = storedSession
       ? JSON.parse(storedSession)

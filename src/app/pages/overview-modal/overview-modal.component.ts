@@ -5,14 +5,14 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
 @Component({
   selector: 'app-overview-modal',
   standalone: true,
-  imports: [MatDialogModule,CommonModule], 
+  imports: [MatDialogModule, CommonModule],
   templateUrl: './overview-modal.component.html',
-  styleUrl: './overview-modal.component.scss'
+  styleUrl: './overview-modal.component.scss',
 })
 export class OverviewModalComponent {
   constructor(
     public dialogRef: MatDialogRef<OverviewModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) {}
 
   closeDialog(): void {

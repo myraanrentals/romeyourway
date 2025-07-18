@@ -13,14 +13,7 @@ import { HelperService } from '../../services/helper.service';
 @Component({
   selector: 'app-details-page',
   standalone: true,
-  imports: [
-    NgClass,
-    NgIf,
-    MatIconModule,
-    MatExpansionModule,
-    CommonModule,
-    MatCardModule,
-  ], // Add NgClass and NgIf here
+  imports: [NgClass, NgIf, MatIconModule, MatExpansionModule, CommonModule, MatCardModule], // Add NgClass and NgIf here
   templateUrl: './details-page.component.html',
   styleUrls: ['./details-page.component.scss'],
 })
@@ -31,7 +24,7 @@ export class DetailsPageComponent {
   constructor(
     public dialog: MatDialog,
     private _router: Router,
-    private HelperService: HelperService
+    private HelperService: HelperService,
   ) {}
   activeTab: string = 'mustKnow';
   selectedIdentity = 1;
@@ -39,10 +32,7 @@ export class DetailsPageComponent {
   ngOnInit() {
     const lastSegment = this._router.url.split('/').pop() || '';
     this.selectedIdentity = this.HelperService.getIdFromURL(lastSegment);
-    this.hotelDetails = this.HelperService.getHotelByIndex(
-      this.selectedIdentity,
-      this.hotelList
-    );
+    this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
 
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
   }
@@ -80,9 +70,7 @@ export class DetailsPageComponent {
     this.activeTab = tabId;
   }
   openWhatsApp(phoneNumber: string) {
-    const internationalNumber = phoneNumber.startsWith('+')
-      ? phoneNumber
-      : `+${phoneNumber}`;
+    const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
     window.location.href = `https://wa.me/${internationalNumber}`;
   }
   navigateToPage() {

@@ -13,9 +13,9 @@ hr {
 p {
   margin-bottom: 0;
 }
-.error{
-color: red;
-font-size: 12px;
+.error {
+  color: red;
+  font-size: 12px;
 }
 @media screen and (min-width: 768px) {
   .checkout-container {
@@ -197,7 +197,6 @@ font-size: 12px;
   }
 
   .payment-options {
-    
     display: flex;
     justify-content: space-between;
     gap: 15px;
@@ -356,13 +355,13 @@ font-size: 12px;
     padding: 15px;
   }
   .contact-details {
-    span{
+    span {
       font-size: 16px !important;
     }
-    p{
+    p {
       font-size: 12px !important;
-font-weight: 200;
-margin-bottom: 12px !important;
+      font-weight: 200;
+      margin-bottom: 12px !important;
     }
   }
   .contact-form input {

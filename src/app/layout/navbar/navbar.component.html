@@ -2,69 +2,80 @@
   <nav id="navbar">
     <div class="container">
       <ul class="flex g-4 flex-align-center m-0">
-        <li
-          (mouseover)="toggleMegaMenu(true)"
-          class="flex flex-align-center"><img src="./assets/images/svg/menu-ico.svg" alt="" class="menu-ico pe-1"> Explore</li>
+        <li (mouseover)="toggleMegaMenu(true)" class="flex flex-align-center">
+          <img src="./assets/images/svg/menu-ico.svg" alt="" class="menu-ico pe-1" />
+          Explore
+        </li>
         <li>About</li>
         <li>Attractions</li>
         <li>City Guides</li>
       </ul>
     </div>
   </nav>
-  @if(isMegaMenuVisible){
-    <div id="mega-menu"
-      (mouseover)="toggleMegaMenu(true)">
+  @if (isMegaMenuVisible) {
+    <div id="mega-menu" (mouseover)="toggleMegaMenu(true)">
       <div class="container">
         <div class="flex">
           <div class="levels level-1">
             <ul>
-              <li (mouseover)="showMenu(1)"><div>About <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt=""></div>
-                  <ul>
-                  @for(submenu of submenus;track submenu){
-                    <li>{{submenu.name}}</li>
+              <li (mouseover)="showMenu(1)">
+                <div>
+                  About
+                  <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt="" />
+                </div>
+                <ul>
+                  @for (submenu of submenus; track submenu) {
+                    <li>{{ submenu.name }}</li>
                   }
-                  </ul>
+                </ul>
               </li>
-              <li (mouseover)="showMenu(2)"><div>Attractions <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt=""></div>
-                  <ul>
-                  @for(submenu of submenus;track submenu){
-                    <li>{{submenu.name}}</li>
+              <li (mouseover)="showMenu(2)">
+                <div>
+                  Attractions
+                  <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt="" />
+                </div>
+                <ul>
+                  @for (submenu of submenus; track submenu) {
+                    <li>{{ submenu.name }}</li>
                   }
-                  </ul>
+                </ul>
               </li>
-              <li (mouseover)="showMenu(3)"><div>City Guides <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt=""></div>
-                  <ul>
-                  @for(submenu of submenus;track submenu){
-                    <li>{{submenu.name}}</li>
+              <li (mouseover)="showMenu(3)">
+                <div>
+                  City Guides
+                  <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt="" />
+                </div>
+                <ul>
+                  @for (submenu of submenus; track submenu) {
+                    <li>{{ submenu.name }}</li>
                   }
-                  </ul>
+                </ul>
               </li>
-              <li (mouseover)="showMenu(4)"><div>Themes <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt=""></div>
-                  <ul>
-                  @for(submenu of submenus;track submenu){
-                    <li>{{submenu.name}}</li>
+              <li (mouseover)="showMenu(4)">
+                <div>
+                  Themes
+                  <img src="./assets/images/svg/arrow-ico.svg" class="arrow" alt="" />
+                </div>
+                <ul>
+                  @for (submenu of submenus; track submenu) {
+                    <li>{{ submenu.name }}</li>
                   }
-                  </ul>
+                </ul>
               </li>
             </ul>
           </div>
           <div class="levels level-2">
-            @if(isSecondLevelVisible && !mobileMenuConfig){
+            @if (isSecondLevelVisible && !mobileMenuConfig) {
               <ul>
-                @for(submenu of submenus;track submenu){
-                  <li>{{submenu.name}}</li>
+                @for (submenu of submenus; track submenu) {
+                  <li>{{ submenu.name }}</li>
                 }
               </ul>
             }
           </div>
-          <div class="levels">
-
-          </div>
-          <div class="levels">
-
-          </div>
+          <div class="levels"></div>
+          <div class="levels"></div>
         </div>
-
       </div>
     </div>
   }

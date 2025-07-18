@@ -3,16 +3,14 @@
     <div class="container">
       <div class="flex g-3">
         <div class="guest-details">
-          <div class="info-grey-card">
-            You can cancel for free in 3 days of booking done
-          </div>
+          <div class="info-grey-card">You can cancel for free in 3 days of booking done</div>
           <h4 class="mb-3">Guests</h4>
           <div class="info-card mb-4">
-            Infants aged 5 and under can enter for free. Simply show their ID at
-            the venue and enter.
+            Infants aged 5 and under can enter for free. Simply show their ID at the venue and
+            enter.
           </div>
 
-          @if(widthWin > 769) {
+          @if (widthWin > 769) {
             <div class="counter-wrapper">
               <div class="flex">
                 <div class="category">
@@ -38,11 +36,10 @@
                 </div>
                 <div class="price">
                   <div class="discounted-price">
-                    ₹ {{ this.bookingDetails.singleAdultAmt * this.bookingDetails.adultCount }}
+                    ₹
+                    {{ this.bookingDetails.singleAdultAmt * this.bookingDetails.adultCount }}
                   </div>
-                  <div class="actual-price">
-                    ₹ {{ this.bookingDetails.fTotalAmount }}
-                  </div>
+                  <div class="actual-price">₹ {{ this.bookingDetails.fTotalAmount }}</div>
                 </div>
               </div>
               <div class="flex">
@@ -69,11 +66,10 @@
                 </div>
                 <div class="price">
                   <div class="discounted-price">
-                    ₹ {{ this.bookingDetails.singleChildAmt * this.bookingDetails.childCount}}
+                    ₹
+                    {{ this.bookingDetails.singleChildAmt * this.bookingDetails.childCount }}
                   </div>
-                  <div class="actual-price">
-                    ₹ {{ this.bookingDetails.fTotalAmount }}
-                  </div>
+                  <div class="actual-price">₹ {{ this.bookingDetails.fTotalAmount }}</div>
                 </div>
               </div>
               <div class="flex">
@@ -99,12 +95,8 @@
                   </button>
                 </div>
                 <div class="price">
-                  <div class="discounted-price">
-                    ₹ {{ this.bookingDetails.singleInfantAmt }}
-                  </div>
-                  <div class="actual-price">
-                    ₹ {{ this.bookingDetails.fTotalAmount }}
-                  </div>
+                  <div class="discounted-price">₹ {{ this.bookingDetails.singleInfantAmt }}</div>
+                  <div class="actual-price">₹ {{ this.bookingDetails.fTotalAmount }}</div>
                 </div>
               </div>
             </div>
@@ -126,9 +118,8 @@
                   #customerName="ngModel"
                   required
                 />
-                @if (customerName.invalid && (customerName.dirty ||
-                customerName.touched)) {
-                <small class="text-danger">Full name is required</small>
+                @if (customerName.invalid && (customerName.dirty || customerName.touched)) {
+                  <small class="text-danger">Full name is required</small>
                 }
               </div>
               <div class="col">
@@ -145,15 +136,13 @@
                   required
                   email
                 />
-                @if (customerEmail.invalid && (customerEmail.dirty ||
-                customerEmail.touched)) { @if
-                (customerEmail.errors?.['required']) {
-                <small class="text-danger">Email address is required</small>
-                } @else if (customerEmail.errors?.['email']) {
-                <small class="text-danger"
-                  >Please enter a valid email address</small
-                >
-                } }
+                @if (customerEmail.invalid && (customerEmail.dirty || customerEmail.touched)) {
+                  @if (customerEmail.errors?.['required']) {
+                    <small class="text-danger">Email address is required</small>
+                  } @else if (customerEmail.errors?.['email']) {
+                    <small class="text-danger">Please enter a valid email address</small>
+                  }
+                }
               </div>
             </div>
             <div class="row mb-3">
@@ -174,10 +163,7 @@
               </div>
               <div class="col">
                 <label for="">Phone number</label>
-                <small
-                  >We may reach out for booking updates here over
-                  SMS/Whatsapp</small
-                >
+                <small>We may reach out for booking updates here over SMS/Whatsapp</small>
                 <input
                   id="customerPhone"
                   name="customerPhone"
@@ -187,31 +173,25 @@
                   #customerPhone="ngModel"
                   required
                 />
-                @if (customerPhone.invalid && (customerPhone.dirty ||
-                customerPhone.touched)) { @if
-                (customerPhone.errors?.['required']) {
-                <small class="text-danger">Phone number is required</small>
-                } @else if (customerPhone.errors?.['pattern']) {
-                <small class="text-danger"
-                  >Please enter a valid 10-digit phone number</small
-                >
-                } }
+                @if (customerPhone.invalid && (customerPhone.dirty || customerPhone.touched)) {
+                  @if (customerPhone.errors?.['required']) {
+                    <small class="text-danger">Phone number is required</small>
+                  } @else if (customerPhone.errors?.['pattern']) {
+                    <small class="text-danger">Please enter a valid 10-digit phone number</small>
+                  }
+                }
               </div>
             </div>
             <div>
-              <a class="promo" (click)="showPromoCode = true"
-                >Have a promo code?</a
-              >
-              @if(showPromoCode){
-              <div class="mt-3 row">
-                <div class="col">
-                  <label for="" class="mb-1">Enter promo code</label>
-                  <input type="text" class="form-control" />
+              <a class="promo" (click)="showPromoCode = true">Have a promo code?</a>
+              @if (showPromoCode) {
+                <div class="mt-3 row">
+                  <div class="col">
+                    <label for="" class="mb-1">Enter promo code</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col"><br /><button class="apply-button">Apply</button></div>
                 </div>
-                <div class="col">
-                  <br /><button class="apply-button">Apply</button>
-                </div>
-              </div>
               }
             </div>
           </div>
@@ -219,21 +199,15 @@
             <div class="payment-form mt-3">
               <h5>Total payable: ₹ {{ bookingDetails.totalPayableAmount - 200 }}</h5>
               <hr />
-              <small
-                >By continuing, you agree to the general terms and the privacy
-                policy.</small
-              >
-              <button type="submit" class="pay-buttton">
-                Confirm &amp; Pay
-              </button>
+              <small>By continuing, you agree to the general terms and the privacy policy.</small>
+              <button type="submit" class="pay-buttton">Confirm &amp; Pay</button>
             </div>
           </div>
         </div>
         <div class="final-details">
           <div class="card">
             <h4>
-              <span
-                >{{bookingDetails.packageName}}</span>
+              <span>{{ bookingDetails.packageName }}</span>
             </h4>
             <ul class="list-group">
               <li class="list-group-item">
@@ -277,7 +251,10 @@
                         </g>
                       </g>
                     </svg>
-                    <span>{{this.travelDetails?.selectedDateDetails.day}}, {{this.travelDetails?.selectedDateDetails.date}}-Feb 2025</span>
+                    <span
+                      >{{ this.travelDetails?.selectedDateDetails.day }},
+                      {{ this.travelDetails?.selectedDateDetails.date }}-Feb 2025</span
+                    >
                   </div>
                   <!-- <div><div class="link">EDIT</div></div> -->
                 </div>
@@ -323,51 +300,41 @@
                   <div><div class="link">EDIT</div></div>
                 </div> -->
               </li>
-              @if(bookingDetails.adultCount) {
-              <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                  <div>{{ bookingDetails.adultCount }} Adult</div>
-                  <div>
-                    <strong
-                      >₹
-                      {{
-                        bookingDetails.adultCount *
-                          bookingDetails.singleAdultAmt
-                      }}</strong
-                    >
+              @if (bookingDetails.adultCount) {
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>{{ bookingDetails.adultCount }} Adult</div>
+                    <div>
+                      <strong
+                        >₹ {{ bookingDetails.adultCount * bookingDetails.singleAdultAmt }}</strong
+                      >
+                    </div>
                   </div>
-                </div>
-              </li>
-              } @if(bookingDetails.childCount) {
-              <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                  <div>{{ bookingDetails.childCount }} Child</div>
-                  <div>
-                    <strong
-                      >₹
-                      {{
-                        bookingDetails.childCount *
-                          bookingDetails.singleChildAmt
-                      }}</strong
-                    >
+                </li>
+              }
+              @if (bookingDetails.childCount) {
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>{{ bookingDetails.childCount }} Child</div>
+                    <div>
+                      <strong
+                        >₹ {{ bookingDetails.childCount * bookingDetails.singleChildAmt }}</strong
+                      >
+                    </div>
                   </div>
-                </div>
-              </li>
-              } @if(bookingDetails.infantCount) {
-              <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                  <div>{{ bookingDetails.infantCount }} Infant</div>
-                  <div>
-                    <strong
-                      >₹
-                      {{
-                        bookingDetails.infantCount *
-                          bookingDetails.singleInfantAmt
-                      }}</strong
-                    >
+                </li>
+              }
+              @if (bookingDetails.infantCount) {
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>{{ bookingDetails.infantCount }} Infant</div>
+                    <div>
+                      <strong
+                        >₹ {{ bookingDetails.infantCount * bookingDetails.singleInfantAmt }}</strong
+                      >
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
               }
               <li
                 class="list-group-item"
@@ -388,10 +355,10 @@
                 <div class="d-flex justify-content-between">
                   <div><strong>Total Payable</strong></div>
                   <div>
-                    @if(bookingDetails.paymentType === 'fullPayment'){
-                    <strong>₹ {{ bookingDetails.totalPayableAmount - 200 }} </strong>
+                    @if (bookingDetails.paymentType === 'fullPayment') {
+                      <strong>₹ {{ bookingDetails.totalPayableAmount - 200 }} </strong>
                     }
-                    @if(bookingDetails.paymentType === 'partialPayment'){
+                    @if (bookingDetails.paymentType === 'partialPayment') {
                       <strong>₹ {{ bookingDetails.totalPayableAmount / 2 }} </strong>
                     }
                   </div>
@@ -402,10 +369,13 @@
                   <div class="selectPaymentType">
                     <strong>Select Payment Type</strong>
                   </div>
-                  <div  class="d-flex justify-content-around " style="margin-top: 5px; margin-bottom: 10px;">
+                  <div
+                    class="d-flex justify-content-around"
+                    style="margin-top: 5px; margin-bottom: 10px"
+                  >
                     <div class="form-check form-check-input-border">
                       <input
-                        class="form-check-input "
+                        class="form-check-input"
                         type="radio"
                         name="selectPaymentType"
                         id="fullPaymentType"
@@ -414,9 +384,7 @@
                         [(ngModel)]="bookingDetails.paymentType"
                         checked
                       />
-                      <label class="form-check-label" for="fullPaymentType">
-                        Full Payment
-                      </label>
+                      <label class="form-check-label" for="fullPaymentType"> Full Payment </label>
                     </div>
                     <div class="form-check form-check-input-border">
                       <input
@@ -434,13 +402,8 @@
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="pay-buttton my-3">
-                  Confirm &amp; pay
-                </button>
-                <small
-                  >By continuing, you agree to the general terms and the privacy
-                  policy.</small
-                >
+                <button type="submit" class="pay-buttton my-3">Confirm &amp; pay</button>
+                <small>By continuing, you agree to the general terms and the privacy policy.</small>
               </li>
             </ul>
           </div>

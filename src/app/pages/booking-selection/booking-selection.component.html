@@ -4,69 +4,99 @@
     <small>All prices are in Rupees (INR)</small>
 
     <div id="upcoming-dates" class="flex">
-      @for(day of upcoming_days;track day;let i=$index){
-        <div class="day-container" (click)="onSelectDay(day)" [ngClass]="day.day==selectedDay? 'active':''">
-          <div class="day">{{day.day}}</div>
-          <div class="count">{{day.date}}</div>
-          <div class="price">{{day.seats}}</div>
+      @for (day of upcoming_days; track day; let i = $index) {
+        <div
+          class="day-container"
+          (click)="onSelectDay(day)"
+          [ngClass]="day.day == selectedDay ? 'active' : ''"
+        >
+          <div class="day">{{ day.day }}</div>
+          <div class="count">{{ day.date }}</div>
+          <div class="price">{{ day.seats }}</div>
         </div>
       }
       <div class="day-container open_datepicker" (click)="datepickerOpen()">
         <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" role="img" width="24px">
-          <path d="M12.6667 2.66675H3.33333C2.59695 2.66675 2 3.2637 2 4.00008V13.3334C2 14.0698 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0698 14 13.3334V4.00008C14 3.2637 13.403 2.66675 12.6667 2.66675Z" stroke="#777" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.6667 1.33337V4.00004" stroke="#777" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.33334 1.33337V4.00004" stroke="#777" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 6.66675H14" stroke="#777" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path
+            d="M12.6667 2.66675H3.33333C2.59695 2.66675 2 3.2637 2 4.00008V13.3334C2 14.0698 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0698 14 13.3334V4.00008C14 3.2637 13.403 2.66675 12.6667 2.66675Z"
+            stroke="#777"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M10.6667 1.33337V4.00004"
+            stroke="#777"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M5.33334 1.33337V4.00004"
+            stroke="#777"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M2 6.66675H14"
+            stroke="#777"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
         </svg>
-        <div class="more_dates" >
-          <strong>More<br>dates</strong>
+        <div class="more_dates">
+          <strong>More<br />dates</strong>
         </div>
-        <div style="position: absolute;">
+        <div style="position: absolute">
           <p-calendar
             [(ngModel)]="date"
             popup="true"
             [touchUI]="true"
             [numberOfMonths]="months"
-            (onSelect)="onSelect($event)">
+            (onSelect)="onSelect($event)"
+          >
             <ng-template pTemplate="date" let-date>
-                <span>
-                    {{ date.day }}
-                    <div class="small">180</div>
-                </span>
+              <span>
+                {{ date.day }}
+                <div class="small">180</div>
+              </span>
             </ng-template>
           </p-calendar>
+        </div>
       </div>
-      </div>
-
     </div>
 
     <h3>Select your preference</h3>
     <div class="flex g-3" id="packages">
-      @for(package of packages;track package){
+      @for (package of packages; track package) {
         <div class="card p-4">
-          <h4>{{package.title}}</h4>
-          <br>
-          <div><strong>₹ {{package.amt}}</strong></div>
-          <button 
-          (click)="onSelectPackage(package)" 
-          [style.backgroundColor]="package.selected ? 'rgb(255, 87, 34)' : 'initial'" 
-          [style.color]="package.selected ? 'white' : 'black'">
-          {{ package.selected ? 'Selected' : 'Select' }}
-        </button>          
-        <hr>
+          <h4>{{ package.title }}</h4>
+          <br />
+          <div>
+            <strong>₹ {{ package.amt }}</strong>
+          </div>
+          <button
+            (click)="onSelectPackage(package)"
+            [style.backgroundColor]="package.selected ? 'rgb(255, 87, 34)' : 'initial'"
+            [style.color]="package.selected ? 'white' : 'black'"
+          >
+            {{ package.selected ? 'Selected' : 'Select' }}
+          </button>
+          <hr />
           <ul>
-            @for(item of package.desc;track item){
-              <li>{{item}}</li>
+            @for (item of package.desc; track item) {
+              <li>{{ item }}</li>
             }
           </ul>
         </div>
       }
     </div>
 
-    <div style="max-width: 700px;">
+    <div style="max-width: 700px">
       <div class="time-info">
         <p>This experience is available only at this time</p>
         <h4>8:30 PM</h4>
       </div>
-      <br>
-      <hr>
+      <br />
+      <hr />
       <div class="flex flex-justify-between">
         <div>
           <strong>Click next to proceed</strong>
@@ -74,7 +104,7 @@
         </div>
         <button class="next-btn" (click)="onNextClick()">Next</button>
       </div>
-      <hr>
+      <hr />
     </div>
   </div>
 </section>
@@ -83,12 +113,15 @@
   <div class="overlay">
     <div class="inner-container">
       <div class="guest-details">
-        <div class="d-flex justify-content-between mb-3" style="border-bottom: 1px solid #eee;">
-
+        <div class="d-flex justify-content-between mb-3" style="border-bottom: 1px solid #eee">
           <h3>Select numbers of tickets</h3>
-          <button  type="button" aria-label="Close" class="btn-close" (click)="closePopup()"></button>
+          <button
+            type="button"
+            aria-label="Close"
+            class="btn-close"
+            (click)="closePopup()"
+          ></button>
         </div>
-
 
         <div class="counter-wrapper">
           <div class="flex">
@@ -115,11 +148,10 @@
             </div>
             <div class="price">
               <div class="discounted-price">
-                ₹ {{ this.bookingDetails.singleAdultAmt * this.bookingDetails.adultCount }}
+                ₹
+                {{ this.bookingDetails.singleAdultAmt * this.bookingDetails.adultCount }}
               </div>
-              <div class="actual-price">
-                ₹ {{ this.bookingDetails.fTotalAmount }}
-              </div>
+              <div class="actual-price">₹ {{ this.bookingDetails.fTotalAmount }}</div>
             </div>
           </div>
           <div class="flex">
@@ -146,11 +178,10 @@
             </div>
             <div class="price">
               <div class="discounted-price">
-                ₹ {{ this.bookingDetails.singleChildAmt * this.bookingDetails.childCount}}
+                ₹
+                {{ this.bookingDetails.singleChildAmt * this.bookingDetails.childCount }}
               </div>
-              <div class="actual-price">
-                ₹ {{ this.bookingDetails.fTotalAmount }}
-              </div>
+              <div class="actual-price">₹ {{ this.bookingDetails.fTotalAmount }}</div>
             </div>
           </div>
           <div class="flex">
@@ -176,15 +207,14 @@
               </button>
             </div>
             <div class="price">
-              <div class="discounted-price">
-                ₹ {{ this.bookingDetails.singleInfantAmt }}
-              </div>
-              <div class="actual-price">
-                ₹ {{ this.bookingDetails.fTotalAmount }}
-              </div>
+              <div class="discounted-price">₹ {{ this.bookingDetails.singleInfantAmt }}</div>
+              <div class="actual-price">₹ {{ this.bookingDetails.fTotalAmount }}</div>
             </div>
           </div>
-          <div class="flex justify-content-between align-item-center pt-2" style="border-top:1px solid #eee ;">
+          <div
+            class="flex justify-content-between align-item-center pt-2"
+            style="border-top: 1px solid #eee"
+          >
             <div class="category">
               <h4>Total Payable</h4>
               <small>Below 2 yrs</small>
@@ -197,13 +227,11 @@
           <div class="flex justify-content-between align-item-center" id="next-btn-info-price">
             <div>
               <p><strong>Click Next To Proceed</strong></p>
-              
             </div>
             <button (click)="onNextRoute()">Next</button>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 }

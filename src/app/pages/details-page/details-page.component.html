@@ -50,32 +50,16 @@
 
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              src="/assets/banners/Adventure-01.svg"
-              class="carousel-item-img"
-              alt=""
-            />
+            <img src="/assets/banners/Adventure-01.svg" class="carousel-item-img" alt="" />
           </div>
           <div class="carousel-item">
-            <img
-              src="/assets/banners/Adventure-01.svg"
-              class="carousel-item-img"
-              alt=""
-            />
+            <img src="/assets/banners/Adventure-01.svg" class="carousel-item-img" alt="" />
           </div>
           <div class="carousel-item">
-            <img
-              src="/assets/banners/Adventure-01.svg"
-              class="carousel-item-img"
-              alt=""
-            />
+            <img src="/assets/banners/Adventure-01.svg" class="carousel-item-img" alt="" />
           </div>
           <div class="carousel-item">
-            <img
-              src="/assets/banners/Adventure-01.svg"
-              class="carousel-item-img"
-              alt=""
-            />
+            <img src="/assets/banners/Adventure-01.svg" class="carousel-item-img" alt="" />
           </div>
         </div>
       </div>
@@ -87,9 +71,7 @@
 
         <div class="features">
           <div class="feature-item" *ngFor="let feature of topFeatures">
-            <mat-icon class="material-symbols-outlined">{{
-              feature.icon
-            }}</mat-icon>
+            <mat-icon class="material-symbols-outlined">{{ feature.icon }}</mat-icon>
             <div>
               <h3>{{ feature.title }}</h3>
               <p>{{ feature.description }}</p>
@@ -99,17 +81,14 @@
 
         <hr />
         <div>
-          <h2 style="font-size: 22px">
-            Unwind with a Magical Dinner Cruise in Goa
-          </h2>
+          <h2 style="font-size: 22px">Unwind with a Magical Dinner Cruise in Goa</h2>
           <span style="font-size: 16px">
-            Treat yourself to an evening of indulgence with a dinner cruise
-            along the serene Mandovi River. Step aboard and dive into a lavish
-            spread of unlimited culinary delights, featuring a vibrant mix of
-            vegetarian and meaty dishes that promise to tantalize your taste
-            buds. As the boat glides through the water, prepare to be captivated
-            by the glowing skyline of Panjim City. This 2-hour journey offers a
-            front-row seat to Goa’s charm, revealing its beauty
+            Treat yourself to an evening of indulgence with a dinner cruise along the serene Mandovi
+            River. Step aboard and dive into a lavish spread of unlimited culinary delights,
+            featuring a vibrant mix of vegetarian and meaty dishes that promise to tantalize your
+            taste buds. As the boat glides through the water, prepare to be captivated by the
+            glowing skyline of Panjim City. This 2-hour journey offers a front-row seat to Goa’s
+            charm, revealing its beauty
           </span>
         </div>
         <hr />
@@ -177,11 +156,8 @@
                 ><strong>Starting Point</strong>
               </p>
               <p>
-                <a
-                  href="https://maps.app.goo.gl/haox34oScXH93L8D7"
-                  target="_blank"
-                  >Santa Monica Jetty, Panjim Goa
-                  <mat-icon>open_in_new</mat-icon></a
+                <a href="https://maps.app.goo.gl/haox34oScXH93L8D7" target="_blank"
+                  >Santa Monica Jetty, Panjim Goa <mat-icon>open_in_new</mat-icon></a
                 >
               </p>
               <p>Santa Monica Jetty, Panjim Goa, India</p>
@@ -208,27 +184,24 @@
         <hr />
         <section>
           <div class="container">
-            <div
-              class="flex innerContainer"
-              (click)="openWhatsApp('+917715959917')"
-            >
+            <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
               <h2 class="offers-title">Why Choose Rome Your Way...</h2>
               <div class="featuresContainer">
-                @for(feature of features; track feature){
-                <div class="card-main">
-                  <div>
-                    <img
-                      [ngStyle]="{ width: '68px', height: '68px' }"
-                      [src]="feature.icon"
-                      alt="Icon"
-                      class="card-main-img"
-                    />
+                @for (feature of features; track feature) {
+                  <div class="card-main">
+                    <div>
+                      <img
+                        [ngStyle]="{ width: '68px', height: '68px' }"
+                        [src]="feature.icon"
+                        alt="Icon"
+                        class="card-main-img"
+                      />
+                    </div>
+                    <div class="info">
+                      <h4 class="featureTitle">{{ feature.title }}</h4>
+                      <p>{{ feature.text }}</p>
+                    </div>
                   </div>
-                  <div class="info">
-                    <h4 class="featureTitle">{{ feature.title }}</h4>
-                    <p>{{ feature.text }}</p>
-                  </div>
-                </div>
                 }
               </div>
             </div>
@@ -295,10 +268,7 @@
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -333,10 +303,7 @@
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -371,10 +338,7 @@
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -409,10 +373,7 @@
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -447,10 +408,7 @@
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -482,9 +440,7 @@
             <div class="RatingStats_reviewRatingLabel__Sik8h">
               {{ hotelDetails.rating }}
             </div>
-            <div class="RatingStats_reviewCountLabel__32J4_">
-              From 65+ countries
-            </div>
+            <div class="RatingStats_reviewCountLabel__32J4_">From 65+ countries</div>
           </div>
 
           <!-- Right Section: Star Ratings Breakdown -->
@@ -650,9 +606,7 @@
           <h3>INR {{ hotelDetails.currentPrice }} <span>Per Person</span></h3>
           <p class="old-price">INR {{ hotelDetails.oldPrice }}</p>
           <div class="rating">
-            <span
-              >⭐ {{ hotelDetails.rating }} ({{ hotelDetails.reviews }})</span
-            >
+            <span>⭐ {{ hotelDetails.rating }} ({{ hotelDetails.reviews }})</span>
           </div>
         </div>
         <button
@@ -666,28 +620,23 @@
     </section>
   </div>
   <div class="clientSlider">
-    <img src="/assets/banners/Adventure-01.svg" alt="">
-    <img src="/assets/banners/Adventure-01.svg" alt="">
-    <img src="/assets/banners/Adventure-01.svg" alt="">
-    <img src="/assets/banners/Adventure-01.svg" alt="">
-    <img src="/assets/banners/Adventure-01.svg" alt="">
+    <img src="/assets/banners/Adventure-01.svg" alt="" />
+    <img src="/assets/banners/Adventure-01.svg" alt="" />
+    <img src="/assets/banners/Adventure-01.svg" alt="" />
+    <img src="/assets/banners/Adventure-01.svg" alt="" />
+    <img src="/assets/banners/Adventure-01.svg" alt="" />
   </div>
   <section class="travelers-section">
     <div class="travelers-container">
       <h2>Travelers' favorite choices</h2>
       <div class="travelers-wrapper">
-        <mat-card
-          class="traveller-card"
-          *ngFor="let offer of hotelList | slice : 0 : 6"
-        >
+        <mat-card class="traveller-card" *ngFor="let offer of hotelList | slice: 0 : 6">
           <img mat-card-image [src]="offer.image" alt="offer image" />
           <div class="offer-content">
             <h3 class="title">{{ offer.title }}</h3>
             <p class="price">
               <span class="current-price">INR {{ offer.currentPrice }}</span>
-              <span class="old-price" *ngIf="offer.oldPrice"
-                >INR {{ offer.oldPrice }}</span
-              >
+              <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
             </p>
             <button mat-button class="offer-button">
               {{ offer.buttonText }}

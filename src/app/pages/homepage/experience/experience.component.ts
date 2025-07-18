@@ -9,11 +9,12 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HelperService } from '@services/helper.service';
 import $ from 'jquery';
 import { hotels } from '../../../constants/hotels';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-experience',
@@ -27,6 +28,7 @@ import { hotels } from '../../../constants/hotels';
 export class ExperienceComponent {
   @Input() experienceData: any;
   private modalService = inject(NgbModal);
+  private routerSub!: Subscription;
   closeResult = '';
   mobFlag: boolean = false;
   images: any = '';
@@ -37,7 +39,7 @@ export class ExperienceComponent {
   constructor(
     private _router: Router,
     private route: ActivatedRoute,
-    private _helperService: HelperService
+    private _helperService: HelperService,
   ) {
     let winWidth = window.innerWidth;
     if (winWidth < 768) {
@@ -46,7 +48,14 @@ export class ExperienceComponent {
       this.mobFlag = false;
     }
   }
-
+  ngOnInit(): void {
+    this.href = this._router.url;
+    this.routerSub = this._router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.href = event.urlAfterRedirects;
+      }
+    });
+  }
   ngAfterViewInit() {
     this.href = this._router.url;
   }
@@ -67,7 +76,7 @@ export class ExperienceComponent {
         },
         (reason) => {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-        }
+        },
       );
   }
 
@@ -80,7 +89,7 @@ export class ExperienceComponent {
         },
         (reason) => {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-        }
+        },
       );
   }
 
@@ -95,10 +104,7 @@ export class ExperienceComponent {
     }
   }
   goToService(link: string) {
-    if (
-      this.href === '/private-yachts-in-goa' ||
-      this.href === '/best-dinner-cruise-in-goa'
-    ) {
+    if (this.href === '/private-yachts-in-goa' || this.href === '/best-dinner-cruise-in-goa') {
       window.location.href = 'tel:+917715959917';
     } else {
       this._router.navigate([link]);

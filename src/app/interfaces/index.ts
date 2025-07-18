@@ -1,5 +1,5 @@
 export interface BookingDetails {
-  packageName:string;
+  packageName: string;
   customerName: string;
   customerEmail: string;
   customerPhone: string;

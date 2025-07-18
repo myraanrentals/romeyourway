@@ -8,9 +8,8 @@ describe('RefundCancellationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RefundCancellationComponent]
-    })
-    .compileComponents();
+      imports: [RefundCancellationComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RefundCancellationComponent);
     component = fixture.componentInstance;

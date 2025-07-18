@@ -7,10 +7,10 @@ import { MatIcon } from '@angular/material/icon';
   standalone: true,
   imports: [MatIcon],
   templateUrl: './app-booking-summary.component.html',
-  styleUrl: './app-booking-summary.component.scss'
+  styleUrl: './app-booking-summary.component.scss',
 })
 export class AppBookingSummaryComponent {
-  totalAmount = 550; 
+  totalAmount = 550;
   discountAmount = 950;
 
   constructor(private bottomSheetRef: MatBottomSheetRef<AppBookingSummaryComponent>) {}

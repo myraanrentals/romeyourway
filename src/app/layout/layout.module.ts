@@ -11,7 +11,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from '../pages/contact/contact.component';
 import { MatCardModule } from '@angular/material/card';
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -19,15 +18,7 @@ import { MatCardModule } from '@angular/material/card';
     NavbarComponent,
     LayoutComponent,
     ContactComponent,
-    
-    
-
   ],
-  imports: [
-    CommonModule,
-    LayoutRoutingModule,
-    MatIconModule,
-    ReactiveFormsModule,MatCardModule
-  ]
+  imports: [CommonModule, LayoutRoutingModule, MatIconModule, ReactiveFormsModule, MatCardModule],
 })
-export class LayoutModule { }
+export class LayoutModule {}

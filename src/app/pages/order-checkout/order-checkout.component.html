@@ -30,17 +30,11 @@
       <div class="booking-card">
         <div class="booking-header">
           <div class="booking-top">
-            <img
-              [src]="this.hotelDetails.image"
-              alt="Cruise Image"
-              class="booking-image"
-            />
+            <img [src]="this.hotelDetails.image" alt="Cruise Image" class="booking-image" />
             <div class="booking-name">
               <span>{{ this.hotelDetails.title }}</span>
               <span class="rating"
-                >⭐ {{ this.hotelDetails.rating }} ({{
-                  this.hotelDetails.reviews
-                }})</span
+                >⭐ {{ this.hotelDetails.rating }} ({{ this.hotelDetails.reviews }})</span
               >
             </div>
           </div>
@@ -62,9 +56,7 @@
                   ></path>
                 </svg>
               </span>
-              {{ this.hotelDetails.category }} [{{
-                this.sessionData.selectedTransport.title
-              }}]
+              {{ this.hotelDetails.category }} [{{ this.sessionData.selectedTransport.title }}]
             </p>
             <p class="booking-info-p">
               <span
@@ -140,20 +132,14 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>
-                  <path
-                    d="M18.125 6.25H1.875"
-                    stroke="black"
-                    stroke-linejoin="round"
-                  ></path>
+                  <path d="M18.125 6.25H1.875" stroke="black" stroke-linejoin="round"></path>
                 </svg>
               </span>
               {{ sessionData.selectedDate.label }} at
               {{ sessionData.selectedTime }}
             </p>
             <hr />
-            <p  class="instant-confirmation">
-              ⚡ Instant Confirmation
-            </p>
+            <p class="instant-confirmation">⚡ Instant Confirmation</p>
           </div>
         </div>
       </div>
@@ -167,9 +153,7 @@
               (click)="selectPayment('full')"
             >
               <mat-icon>{{
-                this.sessionData.paymentType === "full"
-                  ? "check_circle"
-                  : "radio_button_unchecked"
+                this.sessionData.paymentType === 'full' ? 'check_circle' : 'radio_button_unchecked'
               }}</mat-icon>
               Full Payment
             </div>
@@ -180,9 +164,9 @@
               (click)="selectPayment('partial')"
             >
               <mat-icon>{{
-                this.sessionData.paymentType === "partial"
-                  ? "check_circle"
-                  : "radio_button_unchecked"
+                this.sessionData.paymentType === 'partial'
+                  ? 'check_circle'
+                  : 'radio_button_unchecked'
               }}</mat-icon>
               Partial Payment
             </div>
@@ -210,10 +194,7 @@
             </svg>
             <span class="time">{{ minutes }}m : {{ seconds }}s</span>
             <div class="progress-bar">
-              <div
-                class="progress-fill"
-                [style.width]="minutes * 5 + '%'"
-              ></div>
+              <div class="progress-fill" [style.width]="minutes * 5 + '%'"></div>
             </div>
           </div>
         </div>
@@ -237,10 +218,7 @@
                 required
                 (input)="updateTravellerDetails()"
               />
-              <span
-                class="error"
-                *ngIf="showErrors && !travellerDetails.firstName"
-              >
+              <span class="error" *ngIf="showErrors && !travellerDetails.firstName">
                 First Name is required
               </span>
             </div>
@@ -256,10 +234,7 @@
                 required
                 (input)="updateTravellerDetails()"
               />
-              <span
-                class="error"
-                *ngIf="showErrors && !travellerDetails.lastName"
-              >
+              <span class="error" *ngIf="showErrors && !travellerDetails.lastName">
                 Last Name is required
               </span>
             </div>
@@ -294,10 +269,7 @@
                 required
                 (input)="updateTravellerDetails()"
               />
-              <span
-                class="error"
-                *ngIf="showErrors && !travellerDetails.countryCode"
-              >
+              <span class="error" *ngIf="showErrors && !travellerDetails.countryCode">
                 Country Code is required
               </span>
             </div>
@@ -334,14 +306,10 @@
             </p>
             <p class="final-price">
               INR {{ sessionData.payableAmount }}
-              <span (click)="openBookingSummary()" class="mobile viewDetails"
-                >View Details ></span
-              >
+              <span (click)="openBookingSummary()" class="mobile viewDetails">View Details ></span>
             </p>
           </div>
-          <button class="confirm-pay-btn" (click)="validateAndSubmit()">
-            Confirm & Pay
-          </button>
+          <button class="confirm-pay-btn" (click)="validateAndSubmit()">Confirm & Pay</button>
         </div>
       </div>
     </div>
@@ -355,11 +323,10 @@
         </p>
         <hr />
         <p>
-          Total Payable Amount: <strong>INR {{ sessionData.payableAmount }}</strong>
+          Total Payable Amount:
+          <strong>INR {{ sessionData.payableAmount }}</strong>
         </p>
-        <div class="discount-message">
-          🎉 Woohoo! You saved INR {{ 500 }} on this booking!!
-        </div>
+        <div class="discount-message">🎉 Woohoo! You saved INR {{ 500 }} on this booking!!</div>
       </div>
       <!-- Partial/full Payment -->
       <div class="payment-container">
@@ -371,9 +338,7 @@
             (click)="selectPayment('full')"
           >
             <mat-icon>{{
-              this.sessionData.paymentType === "full"
-                ? "check_circle"
-                : "radio_button_unchecked"
+              this.sessionData.paymentType === 'full' ? 'check_circle' : 'radio_button_unchecked'
             }}</mat-icon>
             Full Payment
           </div>
@@ -384,9 +349,7 @@
             (click)="selectPayment('partial')"
           >
             <mat-icon>{{
-              this.sessionData.paymentType === "partial"
-                ? "check_circle"
-                : "radio_button_unchecked"
+              this.sessionData.paymentType === 'partial' ? 'check_circle' : 'radio_button_unchecked'
             }}</mat-icon>
             Partial Payment
           </div>
@@ -435,9 +398,7 @@
               <span class="mobile viewDetails">View Details ></span>
             </p>
           </div>
-          <button class="confirm-pay-btn" (click)="validateAndSubmit()">
-            Confirm & Pay
-          </button>
+          <button class="confirm-pay-btn" (click)="validateAndSubmit()">Confirm & Pay</button>
         </div>
       </div>
     </div>
@@ -447,21 +408,21 @@
       <div class="flex innerContainer">
         <h2 class="offers-title">Why Choose Rome Your Way...</h2>
         <div class="featuresContainer">
-          @for(feature of features; track feature){
-          <div class="card-main">
-            <div>
-              <img
-                [ngStyle]="{ width: '68px', height: '68px' }"
-                [src]="feature.icon"
-                alt="Icon"
-                class="card-main-img"
-              />
+          @for (feature of features; track feature) {
+            <div class="card-main">
+              <div>
+                <img
+                  [ngStyle]="{ width: '68px', height: '68px' }"
+                  [src]="feature.icon"
+                  alt="Icon"
+                  class="card-main-img"
+                />
+              </div>
+              <div class="info">
+                <h4 class="featureTitle">{{ feature.title }}</h4>
+                <p>{{ feature.text }}</p>
+              </div>
             </div>
-            <div class="info">
-              <h4 class="featureTitle">{{ feature.title }}</h4>
-              <p>{{ feature.text }}</p>
-            </div>
-          </div>
           }
         </div>
       </div>

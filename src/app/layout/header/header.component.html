@@ -1,21 +1,36 @@
 <header>
   <div class="container">
-    <div class="flex flex-justify-between ">
-      <div routerLink=""><img  src="./assets/images/Logo1.png" class="logo" alt="Myraan"></div>
+    <div class="flex flex-justify-between">
+      <div routerLink="">
+        <img src="./assets/images/Logo1.png" class="logo" alt="Myraan" />
+      </div>
       <div class="flex flex-center g-1">
         <ul class="nav-links" id="navLinks">
           <li class="m-ele">MENU</li>
-          <li (click)="toggleMegaMenu()"><a  routerLink="/">Home</a></li>
-          <li (click)="toggleMegaMenu()"><a  routerLink="/about-us">About Us</a></li>
-          <li (click)="toggleMegaMenu()"><a  routerLink="/book-dinner-cruise-in-goa">Activities</a></li>
-          <li (click)="toggleMegaMenu()"><a  routerLink="/contact-us">Contact Us</a></li>
+          <li (click)="toggleMegaMenu()"><a routerLink="/">Home</a></li>
+          <li (click)="toggleMegaMenu()">
+            <a routerLink="/about-us">About Us</a>
+          </li>
+          <li class="dropdown">
+            <button (click)="toggleDropdown()" class="dropdown-btn">
+              Activities
+              <span class="arrow" [class.rotate]="dropdownOpen">▼</span>
+            </button>
+            <ul class="dropdown-menu" [class.show]="dropdownOpen">
+              <li (click)="navigateTo('/book-dinner-cruise-in-goa')">Book Dinner Cruise</li>
+              <li (click)="navigateTo('/private-yachts-in-goa')">Book Private Yachts</li>
+            </ul>
+          </li>
+          <li (click)="toggleMegaMenu()">
+            <a routerLink="/contact-us">Contact Us</a>
+          </li>
         </ul>
         <div class="hamburger" [class.open]="isVisible" id="hamburger" (click)="toggleMegaMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-          </div>
+      </div>
     </div>
   </div>
 </header>

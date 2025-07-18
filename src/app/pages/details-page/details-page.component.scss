@@ -23,7 +23,7 @@ hr {
 .traveller-card:hover {
   transform: translateY(-5px);
 }
-.clientSlider{
+.clientSlider {
   display: flex;
   overflow-x: auto;
   scrollbar-width: none;
@@ -165,9 +165,8 @@ mat-card-image {
   .featureTitle {
     font-size: 16px !important;
   }
-  .info p{
+  .info p {
     font-size: 12px;
-
   }
   .feature-item .mat-icon {
     font-size: 28px;
@@ -416,7 +415,6 @@ mat-card-image {
   .RatingBars_rightSection__hxJz9 {
     letter-spacing: 1px;
   }
-
 }
 @media screen and (min-width: 768px) {
   .mobile-view {

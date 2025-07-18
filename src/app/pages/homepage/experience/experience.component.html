@@ -1,102 +1,96 @@
 <section id="experience">
   <div class="container">
     <h2>Select Your Package</h2>
-    @for(offer of hotels;track offer){
-    <div class="card">
-      <div class="flex g-1">
-        @if(mobFlag){
-        <div class="slider">
-          <div navigation="true" pagination="true" autoplay="true" loop="true">
-            <div>
-              <div class="cardImg">
-                <img src="{{ offer.image }}" alt="" />
+    @for (offer of hotels; track offer) {
+      <div class="card">
+        <div class="flex g-1">
+          @if (mobFlag) {
+            <div class="slider">
+              <div navigation="true" pagination="true" autoplay="true" loop="true">
+                <div>
+                  <div class="cardImg">
+                    <img src="{{ offer.image }}" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        }@else {
-        <div class="slider">
-          <div navigation="true" pagination="true" autoplay="true" loop="true">
-            <div><img src="{{ offer.image }}" alt="" /></div>
-          </div>
-        </div>
-        }
+          } @else {
+            <div class="slider">
+              <div navigation="true" pagination="true" autoplay="true" loop="true">
+                <div><img src="{{ offer.image }}" alt="" /></div>
+              </div>
+            </div>
+          }
 
-        <div class="info">
-          <span class="rating">
-            <strong>
-              <svg id="star-full" viewBox="0 0 475.075 475.075">
-                <path
-                  data-card-section="Reviews"
-                  fill="#FFA500"
-                  d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z"
-                ></path>
-              </svg>
-              {{ offer.rating }}
-            </strong>
-            ({{ offer.reviews }})
-          </span>
-          <h3>{{ offer.title }}</h3>
-          <div class="detail-content d-ele">
-            <ul>
-              <li *ngFor="let item of offer.mustKnow">
-                {{ item.about1 }}
-              </li>
-            </ul>
-          </div>
-          <div class="show-full-info">
-            <div
-              (click)="goToService(offer?.routingUrl)"
-              class="link link-cursor"
-            >
-              Show inclusions & important info
-              <img src="./assets/images/svg/arrow-ico.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="payments">
-          <div *ngIf="href !== '/private-yachts-in-goa'" class="amount">
-            <h3>
-              INR {{ offer.currentPrice }}
-              <div class="tag">15% OFF</div>
-            </h3>
-          </div>
-          <div class="flex flex-column mobile-reverse">
-            <div class="button-group">
-              <button
-                class="primary-button"
-                (click)="goToService(offer?.routingUrl)"
-              >
-                Book Now
-              </button>
-              <button
-                class="secondary-button m-ele"
-                (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
-              >
-                Get Details
-              </button>
-            </div>
-            <div class="features">
-              <div *ngFor="let feature of offer.features" class="feature-item">
-                <img [src]="feature.image" alt="{{ feature.name }}" />
-                <span>{{ feature.name }}</span>
-              </div>
+          <div class="info">
+            <span class="rating">
+              <strong>
+                <svg id="star-full" viewBox="0 0 475.075 475.075">
+                  <path
+                    data-card-section="Reviews"
+                    fill="#FFA500"
+                    d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z"
+                  ></path>
+                </svg>
+                {{ offer.rating }}
+              </strong>
+              ({{ offer.reviews }})
+            </span>
+            <h3>{{ offer.title }}</h3>
+            <div class="detail-content d-ele">
+              <ul>
+                <li *ngFor="let item of offer.mustKnow">
+                  {{ item.about1 }}
+                </li>
+              </ul>
             </div>
             <div class="show-full-info">
-              <div
-                (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
-                class="whatsapp link link-cursor"
-              >
-                <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
-
-                Get more details
+              <div (click)="goToService(offer?.routingUrl)" class="link link-cursor">
+                Show inclusions & important info
                 <img src="./assets/images/svg/arrow-ico.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="payments">
+            <div *ngIf="href !== '/private-yachts-in-goa'" class="amount">
+              <h3>
+                INR {{ offer.currentPrice }}
+                <div class="tag">15% OFF</div>
+              </h3>
+            </div>
+            <div class="flex flex-column mobile-reverse">
+              <div class="button-group">
+                <button class="primary-button" (click)="goToService(offer?.routingUrl)">
+                  Book Now
+                </button>
+                <button
+                  class="secondary-button m-ele"
+                  (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
+                >
+                  Get Details
+                </button>
+              </div>
+              <div class="features">
+                <div *ngFor="let feature of offer.features" class="feature-item">
+                  <img [src]="feature.image" alt="{{ feature.name }}" />
+                  <span>{{ feature.name }}</span>
+                </div>
+              </div>
+              <div class="show-full-info">
+                <div
+                  (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
+                  class="whatsapp link link-cursor"
+                >
+                  <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
+
+                  Get more details
+                  <img src="./assets/images/svg/arrow-ico.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     }
   </div>
   <ng-template #content let-offer="offer" let-modal>
@@ -111,29 +105,14 @@
           ></button>
         </div>
         <div class="flex" id="modal-nav" #scrollableNav>
-          <a (click)="scrollToElement('highlight')" id="highlight-anchor"
-            >Highlights</a
-          >
-          <a (click)="scrollToElement('inclusions')" id="inclusions-anchor"
-            >Inclusion</a
-          >
-          <a (click)="scrollToElement('needtoknow')" id="needtoknow-anchor"
-            >Need to know</a
-          >
-          <a (click)="scrollToElement('policy')" id="policy-anchor"
-            >Cancellation Policy</a
-          >
-          <a (click)="scrollToElement('reviews')" id="reviews-anchor"
-            >Reviews</a
-          >
+          <a (click)="scrollToElement('highlight')" id="highlight-anchor">Highlights</a>
+          <a (click)="scrollToElement('inclusions')" id="inclusions-anchor">Inclusion</a>
+          <a (click)="scrollToElement('needtoknow')" id="needtoknow-anchor">Need to know</a>
+          <a (click)="scrollToElement('policy')" id="policy-anchor">Cancellation Policy</a>
+          <a (click)="scrollToElement('reviews')" id="reviews-anchor">Reviews</a>
         </div>
       </div>
-      <div
-        class="modal-body pt-0"
-        id="scrollBody"
-        #scrollableDiv
-        (scroll)="onScroll($event)"
-      >
+      <div class="modal-body pt-0" id="scrollBody" #scrollableDiv (scroll)="onScroll($event)">
         <div class="modal-slider">
           <img src="./assets/images/c1.png" alt="" />
         </div>
@@ -169,10 +148,7 @@
             {{ getItemById(selectedIdentity)?.headingOne }}
           </h4>
           <div class="features-container">
-            <div
-              class="feature"
-              *ngFor="let feature of getItemById(selectedIdentity)?.features"
-            >
+            <div class="feature" *ngFor="let feature of getItemById(selectedIdentity)?.features">
               <div>
                 <img src="{{ feature.image }}" alt="" />
                 {{ feature.name }}
@@ -188,36 +164,24 @@
           <hr />
           <div id="highlight">
             <h3>Highlights</h3>
-            <ul
-              *ngFor="
-                let highlight of getItemById(selectedIdentity)?.highlights
-              "
-            >
+            <ul *ngFor="let highlight of getItemById(selectedIdentity)?.highlights">
               <li>{{ highlight.highlights1 }}</li>
             </ul>
           </div>
           <hr />
           <h3 id="inclusions">Inclusions</h3>
-          <ul
-            *ngFor="let inclusion of getItemById(selectedIdentity)?.inclusions"
-          >
+          <ul *ngFor="let inclusion of getItemById(selectedIdentity)?.inclusions">
             <li>{{ inclusion.inclusion1 }}</li>
           </ul>
           <br />
           <h4 id="inclusions">Exclusions</h4>
-          <ul
-            *ngFor="let exclusion of getItemById(selectedIdentity)?.exclusions"
-          >
+          <ul *ngFor="let exclusion of getItemById(selectedIdentity)?.exclusions">
             <li>{{ exclusion.exclusion1 }}</li>
           </ul>
           <hr />
           <div id="needtoknow">
             <h3>Need to know</h3>
-            <ul
-              *ngFor="
-                let needToKnow of getItemById(selectedIdentity)?.needToKnows
-              "
-            >
+            <ul *ngFor="let needToKnow of getItemById(selectedIdentity)?.needToKnows">
               <li>{{ needToKnow.needToKnow }}</li>
             </ul>
           </div>
@@ -226,8 +190,8 @@
             <h3>Cancellation Policy</h3>
             <ul>
               <li>
-                You can cancel these tickets up to 24 hours before the
-                experience begins and get a full refund.
+                You can cancel these tickets up to 24 hours before the experience begins and get a
+                full refund.
               </li>
             </ul>
           </div>
@@ -244,34 +208,17 @@
                   ></path>
                 </svg>
                 {{ getItemById(selectedIdentity)?.ratings }}
-                <small class="d-ele"
-                  >{{ getItemById(selectedIdentity)?.rated }} Ratings</small
-                >
+                <small class="d-ele">{{ getItemById(selectedIdentity)?.rated }} Ratings</small>
               </div>
               <div class="rating-bar">
                 <div>
                   <div class="flex g-2 flex-align-center">
                     <div class="flex flex-align-center">
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
                     </div>
                     <div class="progress">
                       <div
@@ -289,26 +236,11 @@
                 <div>
                   <div class="flex g-2 flex-align-center">
                     <div class="flex flex-align-center">
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
                       <div
@@ -326,26 +258,11 @@
                 <div>
                   <div class="flex g-2 flex-align-center">
                     <div class="flex flex-align-center">
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
                       <div
@@ -363,26 +280,11 @@
                 <div>
                   <div class="flex g-2 flex-align-center">
                     <div class="flex flex-align-center">
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
                       <div
@@ -400,26 +302,11 @@
                 <div>
                   <div class="flex g-2 flex-align-center">
                     <div class="flex flex-align-center">
-                      <img
-                        src="./assets/images/svg/star-pink-fill.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/images/svg/star-pink-outlined.svg"
-                        alt=""
-                      />
+                      <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
+                      <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
                       <div
@@ -457,12 +344,11 @@
                   <div class="review-date flex-justify-end">Aug, 2024</div>
                 </div>
                 <div class="review-text">
-                  Very nice cruise and buffet food with great variety of foods.
-                  The only thing I did not like was the tour taken from the ship
-                  with only a view of ain Dubai (the wheel) and the skyscrapers
-                  of Dubai Marina. I thought it went at least as far as the
-                  atlantis to see the most beautiful part of Dubai at night, but
-                  all in all a good experience
+                  Very nice cruise and buffet food with great variety of foods. The only thing I did
+                  not like was the tour taken from the ship with only a view of ain Dubai (the
+                  wheel) and the skyscrapers of Dubai Marina. I thought it went at least as far as
+                  the atlantis to see the most beautiful part of Dubai at night, but all in all a
+                  good experience
                 </div>
               </div>
             </div>
@@ -471,26 +357,10 @@
       </div>
       <div class="modal-footer">
         <div class="modal-footer-container">
-          <div
-            class="price-div"
-            style="display: block; text-align: left; font-size: large"
-          >
-            <div
-              style="
-                font-size: medium;
-                text-align: left;
-                display: block;
-                justify-content: left;
-              "
-            >
+          <div class="price-div" style="display: block; text-align: left; font-size: large">
+            <div style="font-size: medium; text-align: left; display: block; justify-content: left">
               <span style="margin-left: 6px">From</span>
-              <strong
-                style="
-                  text-decoration: line-through;
-                  margin-left: 5px;
-                  font-size: small;
-                "
-              >
+              <strong style="text-decoration: line-through; margin-left: 5px; font-size: small">
                 ₹ {{ getItemById(selectedIdentity)?.amount }}
               </strong>
             </div>
@@ -547,10 +417,9 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              At Rome your Way, we offer a diverse range of water sports,
-              including jet skiing, parasailing, banana boat rides, and more.
-              Whether you're seeking an adrenaline rush or a leisurely ride, we
-              have something for everyone.
+              At Rome your Way, we offer a diverse range of water sports, including jet skiing,
+              parasailing, banana boat rides, and more. Whether you're seeking an adrenaline rush or
+              a leisurely ride, we have something for everyone.
             </div>
           </div>
         </div>
@@ -573,9 +442,9 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Yes, absolutely! Our luxury cruises offer the perfect opportunity
-              to explore the stunning coastline of Goa while enjoying delicious
-              meals and witnessing breathtaking sunsets over the Arabian Sea.
+              Yes, absolutely! Our luxury cruises offer the perfect opportunity to explore the
+              stunning coastline of Goa while enjoying delicious meals and witnessing breathtaking
+              sunsets over the Arabian Sea.
             </div>
           </div>
         </div>
@@ -598,10 +467,9 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Our adventure activities, such as trekking, kayaking, and ATV
-              rides, are designed to cater to adventurers of all skill levels.
-              Whether you're a beginner or an experienced thrill-seeker, we have
-              the perfect adventure for you.
+              Our adventure activities, such as trekking, kayaking, and ATV rides, are designed to
+              cater to adventurers of all skill levels. Whether you're a beginner or an experienced
+              thrill-seeker, we have the perfect adventure for you.
             </div>
           </div>
         </div>
@@ -624,10 +492,9 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Yes, we offer scuba diving expeditions for those looking to
-              explore Goa's vibrant underwater world. Our experienced
-              instructors will guide you as you discover the hidden treasures of
-              the ocean, including colorful coral reefs and marine life.
+              Yes, we offer scuba diving expeditions for those looking to explore Goa's vibrant
+              underwater world. Our experienced instructors will guide you as you discover the
+              hidden treasures of the ocean, including colorful coral reefs and marine life.
             </div>
           </div>
         </div>
@@ -650,11 +517,10 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Absolutely! At Rome your Way, safety is our top priority. We have
-              a team of experienced professionals, state-of-the-art equipment,
-              and adhere to strict safety standards to ensure that every moment
-              with us is filled with excitement, wonder, and unforgettable
-              memories.
+              Absolutely! At Rome your Way, safety is our top priority. We have a team of
+              experienced professionals, state-of-the-art equipment, and adhere to strict safety
+              standards to ensure that every moment with us is filled with excitement, wonder, and
+              unforgettable memories.
             </div>
           </div>
         </div>

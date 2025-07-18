@@ -88,11 +88,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -225,11 +229,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -362,11 +370,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -499,11 +511,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -636,11 +652,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -730,7 +750,6 @@ export const hotels: any[] = [
         about1:
           'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
-      
     ],
     features: [
       {
@@ -773,11 +792,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -866,7 +889,7 @@ export const hotels: any[] = [
       {
         about1:
           'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      }
+      },
     ],
 
     features: [
@@ -910,11 +933,15 @@ export const hotels: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -958,7 +985,6 @@ export const hotels: any[] = [
       },
     ],
   },
-  
 ];
 
 export const cancellationPolicy: string[] = [

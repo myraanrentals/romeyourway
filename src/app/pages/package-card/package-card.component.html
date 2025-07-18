@@ -9,7 +9,7 @@
     [position]="'end'"
     [ngClass]="{
       'mobile-bottom-sheet': isMobileView,
-      'show-bottom-sheet': isSidebarOpen
+      'show-bottom-sheet': isSidebarOpen,
     }"
     (opened)="scrollToTop()"
     (closed)="isSidebarOpen = false"

@@ -20,11 +20,11 @@ export class CheckoutComponent implements OnInit {
   bookingDetails!: BookingDetails;
   widthWin: any = '';
   packageNameOne: any;
-  packageTempId:any;
+  packageTempId: any;
 
   constructor(
     private _helperService: HelperService,
-    public _bookingService: BookingService
+    public _bookingService: BookingService,
   ) {
     this.bookingDetails = this._bookingService.bookingDetails;
     this.widthWin = window.innerWidth;
@@ -34,8 +34,8 @@ export class CheckoutComponent implements OnInit {
     (async () => {
       this.travelDetails = '';
       this.travelDetails = this._helperService.getSessionStorage('travelDetails');
-      this.packageTempId = this._helperService.getSessionStorage('packageId');   
-      
+      this.packageTempId = this._helperService.getSessionStorage('packageId');
+
       this.packageNameOne = this.packageTempId.HeadingThree;
       this.initializeBookingDetails();
     })();
@@ -45,7 +45,7 @@ export class CheckoutComponent implements OnInit {
     let travellersDetails = this._helperService.getSessionStorage('travellersDetails');
     let travelDetails = this._helperService.getSessionStorage('travelDetails');
     this.bookingDetails = {
-      packageName:this.packageNameOne,
+      packageName: this.packageNameOne,
       customerName: '',
       customerEmail: '',
       customerPhone: '',
@@ -63,16 +63,16 @@ export class CheckoutComponent implements OnInit {
       fTotalAmount: Number(travelDetails?.selectedPackage?.amt) || 0,
       discountedTotalAmount: Number(travelDetails?.selectedPackage?.amt) || 0,
       totalPayableAmount: 0,
-      paymentType: this.bookingDetails.paymentType
+      paymentType: this.bookingDetails.paymentType,
     };
-      this._bookingService.updateTotalAmount.call(this.bookingDetails, this.bookingDetails);
+    this._bookingService.updateTotalAmount.call(this.bookingDetails, this.bookingDetails);
   }
 
   initializePaymentType() {
     let travellersDetails = this._helperService.getSessionStorage('travellersDetails');
     let travelDetails = this._helperService.getSessionStorage('travelDetails');
     this.bookingDetails = {
-      packageName:this.packageNameOne,
+      packageName: this.packageNameOne,
       customerName: '',
       customerEmail: '',
       customerPhone: '',
@@ -90,9 +90,9 @@ export class CheckoutComponent implements OnInit {
       fTotalAmount: Number(travelDetails?.selectedPackage?.amt),
       discountedTotalAmount: Number(travelDetails?.selectedPackage?.amt),
       totalPayableAmount: 0,
-      paymentType: this.bookingDetails.paymentType
+      paymentType: this.bookingDetails.paymentType,
     };
-      this._bookingService.updateTotalAmount.call(this.bookingDetails, this.bookingDetails);
+    this._bookingService.updateTotalAmount.call(this.bookingDetails, this.bookingDetails);
   }
 
   onSubmit(checkoutForm: NgForm) {
@@ -117,10 +117,10 @@ export class CheckoutComponent implements OnInit {
       vehicleName: this.travelDetails.name,
       selectedPackage: { ...this.travelDetails.selectedPackage },
     };
-    
+
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
-        if (res?.responseCode === 200 && res?.responseMessage === "SUCCESS") {
+        if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentLink;
           this.bookingPay(payLink);
         }

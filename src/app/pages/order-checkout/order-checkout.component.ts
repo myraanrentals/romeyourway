@@ -23,7 +23,7 @@ export class OrderCheckoutComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private HelperService: HelperService,
-    private _bookingService: BookingService
+    private _bookingService: BookingService,
   ) {}
 
   selectedPaymentOption: 'partial' | 'full' = 'full';
@@ -70,7 +70,7 @@ export class OrderCheckoutComponent implements OnInit {
       this.sessionData = JSON.parse(storedSession);
       this.hotelDetails = this.HelperService.getHotelByIndex(
         this.sessionData.cruiseId,
-        this.hotelList
+        this.hotelList,
       );
     }
   }
@@ -105,10 +105,7 @@ export class OrderCheckoutComponent implements OnInit {
     });
   }
   updateTravellerDetails() {
-    sessionStorage.setItem(
-      'travellerDetails',
-      JSON.stringify(this.travellerDetails)
-    );
+    sessionStorage.setItem('travellerDetails', JSON.stringify(this.travellerDetails));
   }
   validateAndSubmit() {
     this.showErrors = !(
@@ -219,31 +216,22 @@ export class OrderCheckoutComponent implements OnInit {
   //   rzp.open();
   // }
   initiatePayment() {
-    const { firstName, lastName, countryCode, phone, email } =
-      this.travellerDetails;
-    const {
-      payableAmount,
-      selectedDate,
-      travellers,
-      subtotal,
-      paymentType,
-      selectedTransport,
-    } = this.sessionData;
+    const { firstName, lastName, countryCode, phone, email } = this.travellerDetails;
+    const { payableAmount, selectedDate, travellers, subtotal, paymentType, selectedTransport } =
+      this.sessionData;
     const { title } = this.hotelDetails;
     const payloadData = {
       vehicleType: 'WATERSPORTS',
       vehicleName: title,
       transportType: selectedTransport?.title || 'N/A',
-      vehicleQuantity:
-        travellers[0]?.count + travellers[1]?.count + travellers[2]?.count,
+      vehicleQuantity: travellers[0]?.count + travellers[1]?.count + travellers[2]?.count,
       countryCode: countryCode,
       customerMobile: phone,
       fromDate: selectedDate?.dateFormat,
       noOfAdult: travellers[0]?.count || 0,
       noOfChild: travellers[1]?.count || 0,
       noOfInfant: travellers[2]?.count || 0,
-      totalMemberCount:
-        travellers[0]?.count + travellers[1]?.count + travellers[2]?.count,
+      totalMemberCount: travellers[0]?.count + travellers[1]?.count + travellers[2]?.count,
       amountForAdult: travellers[0]?.price,
       amountForChild: travellers[1]?.price,
       amountForInfant: travellers[2]?.price,
@@ -254,7 +242,7 @@ export class OrderCheckoutComponent implements OnInit {
       customerName: `${firstName} ${lastName}`,
       email,
       totalAmount: payableAmount,
-      discountedTotalAmount: subtotal ,
+      discountedTotalAmount: subtotal,
       totalPayableAmount: subtotal,
       paymentType,
       selectedPackage: selectedTransport,

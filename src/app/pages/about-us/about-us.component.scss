@@ -1,76 +1,74 @@
-.mainSection{
-    max-width: 1320px;
-    margin: 0 auto;
-    margin-top: 100px;
-    text-align: center;
-
+.mainSection {
+  max-width: 1320px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
 }
 .cruise-card {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.cruise-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #c70039;
+  font-weight: bold;
+}
+
+.star {
+  color: #c70039;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.score {
+  margin-right: 6px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.image-container img {
+  width: 320px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .cruise-card {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   .cruise-content {
-    flex: 1;
-    padding-right: 20px;
+    padding-right: 0;
   }
-  
-  .rating {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #c70039;
-    font-weight: bold;
-  }
-  
-  .star {
-    color: #c70039;
-    font-size: 16px;
-    margin-right: 4px;
-  }
-  
-  .score {
-    margin-right: 6px;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin: 8px 0;
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: #555;
-  }
-  
+
   .image-container img {
-    width: 320px;
-    border-radius: 12px;
-    object-fit: cover;
+    width: 100%;
+    margin-top: 15px;
   }
-  
-  @media (max-width: 768px) {
-    .cruise-card {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .cruise-content {
-      padding-right: 0;
-    }
-  
-    .image-container img {
-      width: 100%;
-      margin-top: 15px;
-    }
-  }
-  
+}

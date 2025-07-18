@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HelperService } from '@services/helper.service';
 import { MatCardModule } from '@angular/material/card';
 import { FaqComponent } from '../faq/faq.component';
-import {hotels} from '../../constants/hotels'
+import { hotels } from '../../constants/hotels';
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -26,74 +26,74 @@ import {hotels} from '../../constants/hotels'
   styleUrl: './homepage.component.scss',
 })
 export class HomepageComponent implements OnInit {
-  hotelList = hotels; 
+  hotelList = hotels;
   navigateToPage() {
     window.location.href = '/book-dinner-cruise-in-goa';
   }
 
-cardDataList = [
-  {
-    title: 'Famous Activities in Goa',
-    places: [
+  cardDataList = [
     {
-      name: 'Baga Beach Nightlife',
-      description: 'Lively beach parties',
-      image: '/assets/icons/01.avif',
+      title: 'Famous Activities in Goa',
+      places: [
+        {
+          name: 'Baga Beach Nightlife',
+          description: 'Lively beach parties',
+          image: '/assets/icons/01.avif',
+        },
+        {
+          name: 'Dudhsagar Waterfalls',
+          description: 'Majestic jungle falls',
+          image: '/assets/icons/02.avif',
+        },
+        {
+          name: 'Spice Plantation Tour',
+          description: 'Fragrant nature walk',
+          image: '/assets/icons/03.avif',
+        },
+      ],
     },
     {
-      name: 'Dudhsagar Waterfalls',
-      description: 'Majestic jungle falls',
-      image: '/assets/icons/02.avif',
+      title: 'Top things to do in North Goa',
+      places: [
+        {
+          name: 'Calangute Beach',
+          description: 'Sun, sand, and surf',
+          image: '/assets/icons/04.avif',
+        },
+        {
+          name: 'Fort Aguada',
+          description: 'Historic sea-facing fort',
+          image: '/assets/icons/05.avif',
+        },
+        {
+          name: 'Anjuna Flea Market',
+          description: 'Boho shopping paradise',
+          image: '/assets/icons/06.avif',
+        },
+      ],
     },
     {
-      name: 'Spice Plantation Tour',
-      description: 'Fragrant nature walk',
-      image: '/assets/icons/03.avif',
-    }
-    ]
-  },
-  {
-  title: 'Top things to do in North Goa',
-  places: [
-    {
-      name: 'Calangute Beach',
-      description: 'Sun, sand, and surf',
-      image: '/assets/icons/04.avif',
+      title: 'Top things to do in South Goa',
+      places: [
+        {
+          name: 'Palolem Beach',
+          description: 'Scenic crescent beach',
+          image: '/assets/icons/07.avif',
+        },
+        {
+          name: 'Colva Beach',
+          description: 'Popular sunset spot',
+          image: '/assets/icons/08.avif',
+        },
+        {
+          name: 'Cabo de Rama Fort',
+          description: 'Clifftop ocean views',
+          image: '/assets/icons/09.avif',
+        },
+      ],
     },
-    {
-      name: 'Fort Aguada',
-      description: 'Historic sea-facing fort',
-      image: '/assets/icons/05.avif',
-    },
-    {
-      name: 'Anjuna Flea Market',
-      description: 'Boho shopping paradise',
-      image: '/assets/icons/06.avif',
-    },
-  ],
-},
-{
-  title: 'Top things to do in South Goa',
-  places: [
-    {
-      name: 'Palolem Beach',
-      description: 'Scenic crescent beach',
-      image: '/assets/icons/07.avif',
-    },
-    {
-      name: 'Colva Beach',
-      description: 'Popular sunset spot',
-      image: '/assets/icons/08.avif',
-    },
-    {
-      name: 'Cabo de Rama Fort',
-      description: 'Clifftop ocean views',
-      image: '/assets/icons/09.avif',
-    },
-  ],
-}
-];
- 
+  ];
+
   features: any[] = [
     {
       icon: '/assets/icons/Cruise icon png.png',
@@ -148,7 +148,6 @@ cardDataList = [
     },
   ];
 
-
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -171,12 +170,9 @@ cardDataList = [
   }
 
   openWhatsApp(phoneNumber: string) {
-    const internationalNumber = phoneNumber.startsWith('+')
-      ? phoneNumber
-      : `+${phoneNumber}`;
+    const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
     window.location.href = `https://wa.me/${internationalNumber}`;
   }
-
 
   goToDetailedPage(hotelDetails: any, offer: any) {
     let travelDetails = {
@@ -192,5 +188,4 @@ cardDataList = [
   goToService(link: string) {
     this.router.navigate([link], { relativeTo: this.route });
   }
-
 }

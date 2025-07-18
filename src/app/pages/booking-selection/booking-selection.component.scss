@@ -12,31 +12,34 @@
 
 div#upcoming-dates {
   gap: 10px;
-  margin:20px 0 30px;
+  margin: 20px 0 30px;
 }
-.more_dates{text-decoration: underline;font-size: 14px;}
+.more_dates {
+  text-decoration: underline;
+  font-size: 14px;
+}
 ul {
   padding-left: 15px;
-  margin-top:10px
+  margin-top: 10px;
 }
-li{
+li {
   list-style: circle;
   line-height: 24px;
   font-size: 14px;
 }
-#upcoming-dates{
-  .day-container{
-    &:hover{
+#upcoming-dates {
+  .day-container {
+    &:hover {
       background-color: #f1f1f1;
       border-color: #cfcfcf;
     }
-    &.active{
+    &.active {
       color: rgb(255, 87, 34);
       background: rgb(243, 233, 255);
-      border:1px solid rgb(255, 87, 34);
+      border: 1px solid rgb(255, 87, 34);
     }
-    color:#444;
-    &.open_datepicker{
+    color: #444;
+    &.open_datepicker {
       position: relative;
     }
   }
@@ -50,22 +53,26 @@ li{
     text-transform: uppercase;
     padding-top: 7px;
   }
-  .price{
+  .price {
     font-size: 12px;
     padding-bottom: 7px;
   }
 }
 #packages {
   overflow: auto;
-  padding:10px;
-  margin:0 -10px;
-  .card{
+  padding: 10px;
+  margin: 0 -10px;
+  .card {
     min-width: 280px;
-    border:none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 2px 8px;
-    h4{font-size: 18px;}
-    button{
-      border:1px solid rgb(255, 87, 34);
+    border: none;
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0px 0px 1px,
+      rgba(0, 0, 0, 0.1) 0px 2px 8px;
+    h4 {
+      font-size: 18px;
+    }
+    button {
+      border: 1px solid rgb(255, 87, 34);
       border-radius: 4px;
       color: rgb(255, 87, 34);
       font-size: 16px;
@@ -73,7 +80,7 @@ li{
       text-align: center;
       padding: 7px;
       background: none;
-      margin-top:10px;
+      margin-top: 10px;
     }
   }
 }
@@ -82,8 +89,16 @@ li{
   color: white; /* Make text visible */
 }
 
-.datetime{font-size: 13px;}
-.next-btn{background: #FF5722;color:#fff;padding: 10px 20px;border: none;border-radius: 4px;}
+.datetime {
+  font-size: 13px;
+}
+.next-btn {
+  background: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
 .time-info {
   background: rgb(255, 248, 239);
   padding: 20px;
@@ -94,16 +109,16 @@ li{
 .time-info p {
   margin: 0;
 }
-.overlay{
-  background:rgba(0, 0, 0, 0.5);
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   z-index: 99;
-  .inner-container{
-    background:#fff;
+  .inner-container {
+    background: #fff;
     border-radius: 10px;
     padding: 15px;
     position: fixed;
@@ -112,7 +127,9 @@ li{
     width: 100%;
   }
 }
-.counter-wrapper > .flex{margin-bottom: 40px;}
+.counter-wrapper > .flex {
+  margin-bottom: 40px;
+}
 .counter-wrapper h4 {
   font-size: 16px;
   margin-bottom: 0;
@@ -143,8 +160,8 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F3E9FF;
-  color: #FF5722;
+  background: #f3e9ff;
+  color: #ff5722;
 }
 
 .price {
@@ -164,8 +181,13 @@ li{
 .discounted-price {
   font-weight: 500;
 }
-.guest-details h3{font-size: 16px;padding-bottom:10px;}
-.guest-details h4{font-size: 14px;}
+.guest-details h3 {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.guest-details h4 {
+  font-size: 14px;
+}
 #next-btn-info-price p {
   margin: 0;
 }
@@ -173,7 +195,7 @@ li{
 #next-btn-info-price button {
   padding: 10px;
   min-width: 130px;
-  background: #FF5722;
+  background: #ff5722;
   border: 0;
   color: #fff;
   border-radius: 4px;
@@ -185,12 +207,25 @@ li{
   border-top: 1px solid #eee;
 }
 
-div#next-btn-info-price p strong {width: 200px;overflow: hidden;text-overflow: ellipsis;display: block;white-space: nowrap;}
+div#next-btn-info-price p strong {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
 
-@media screen and (max-width:768px) {
-  li{font-size: 12px;}
+@media screen and (max-width: 768px) {
+  li {
+    font-size: 12px;
+  }
   #packages .card {
-    h4{font-size: 15px;font-weight: 500;}
-    button{font-size: 14px;}
+    h4 {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    button {
+      font-size: 14px;
+    }
   }
 }

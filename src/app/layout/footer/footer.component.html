@@ -4,11 +4,7 @@
       <img src="./assets/images/Logo1.png" class="logo" alt="Myraan" />
       <div class="flex flex-col topDiv">
         <div class="scannerDiv webView">
-          <img
-            class="scannerImg"
-            src="../../../assets/images/scanner.jpeg"
-            alt="scannerImg"
-          />
+          <img class="scannerImg" src="../../../assets/images/scanner.jpeg" alt="scannerImg" />
           <h5 style="margin-top: 12px; color: black">Scan to Connect</h5>
         </div>
         <div class="company webView">
@@ -53,9 +49,7 @@
           <div *ngFor="let section of sections" class="accordion-item">
             <h5 class="accordion-header" (click)="toggleDropdown(section.key)">
               {{ section.title }}
-              <span [ngClass]="{ 'rotate-180': dropdowns[section.key] }"
-                >⌃</span
-              >
+              <span [ngClass]="{ 'rotate-180': dropdowns[section.key] }">⌃</span>
             </h5>
 
             <div *ngIf="dropdowns[section.key]" class="accordion-content">
@@ -71,9 +65,7 @@
               </ng-container>
 
               <ng-container *ngIf="section.type === 'links'">
-                <a *ngFor="let link of section.links" href="#" class="block">{{
-                  link
-                }}</a>
+                <a *ngFor="let link of section.links" href="#" class="block">{{ link }}</a>
               </ng-container>
             </div>
           </div>
@@ -107,14 +99,23 @@
       ></a>
     </div>
     <span style="font-size: x-small; text-align: center" class="lastText">
-      <span style="font-size: medium"
-        >© Copyright 2025 Romeyourway.com. All rights reserved.</span
-      >
+      <span style="font-size: medium">© Copyright 2025 Romeyourway.com. All rights reserved.</span>
     </span>
   </div>
-  <a href="/" onclick="window.location.href='tel:7715959917'" class="flaticon-call footer-phone-icon" target="_blank" title="Chat on WhatsApp">
-    </a>
-<a href="https://wa.me/+917715959917" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-</a>
+  <a
+    href="/"
+    onclick="window.location.href='tel:7715959917'"
+    class="flaticon-call footer-phone-icon"
+    target="_blank"
+    title="Chat on WhatsApp"
+  >
+  </a>
+  <a
+    href="https://wa.me/+917715959917"
+    class="whatsapp-float"
+    target="_blank"
+    title="Chat on WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </section>

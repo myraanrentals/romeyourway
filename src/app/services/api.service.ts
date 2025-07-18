@@ -10,8 +10,7 @@ export class ApiService {
 
   httpPOST<T>(url: string, payload: any, headers?: HttpHeaders): Observable<T> {
     let options = {
-      headers:
-        headers || new HttpHeaders({ 'Content-Type': 'application/json' }),
+      headers: headers || new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
     return this._http.post<T>(url, payload, options);
   }

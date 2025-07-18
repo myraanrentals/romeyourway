@@ -22,13 +22,13 @@ export class BookingSelectionComponent {
   number: number = 0;
   selectedDateDetails: any;
   selectedPackage: any;
-  packages: any[] = [] ;
+  packages: any[] = [];
   upcoming_days: any = [];
   widthWin: any = '';
   popup: boolean = false;
   bookingDetails!: BookingDetails;
   travelDetails: any;
-  packageTempId:any;
+  packageTempId: any;
   @ViewChild('datepicker') datepicker!: ElementRef;
   packageNameOne: any;
 
@@ -36,7 +36,7 @@ export class BookingSelectionComponent {
     private _router: Router,
     private route: ActivatedRoute,
     private _helperService: HelperService,
-    public _bookingService: BookingService
+    public _bookingService: BookingService,
   ) {
     this.widthWin = window.innerWidth;
     this.bookingDetails = this._bookingService.bookingDetails;
@@ -44,8 +44,8 @@ export class BookingSelectionComponent {
 
   ngOnInit() {
     this.getNextWeekDays();
-    this.travelDetails = this._helperService.getSessionStorage('travelDetails');  
-    this.packageTempId = this._helperService.getSessionStorage('packageId');   
+    this.travelDetails = this._helperService.getSessionStorage('travelDetails');
+    this.packageTempId = this._helperService.getSessionStorage('packageId');
     this.packages = this.packageTempId.transport;
     this.packageNameOne = this.packageTempId.HeadingThree;
     this.initializeBookingDetails();
@@ -53,9 +53,9 @@ export class BookingSelectionComponent {
 
   private initializeBookingDetails() {
     let travellersDetails = this._helperService.getSessionStorage('travellersDetails');
-    
+
     this.bookingDetails = {
-      packageName:this.packageNameOne,
+      packageName: this.packageNameOne,
       customerName: '',
       customerEmail: '',
       customerPhone: '',
@@ -73,7 +73,7 @@ export class BookingSelectionComponent {
       fTotalAmount: 0,
       discountedTotalAmount: 0,
       totalPayableAmount: 0,
-      paymentType: 'fullPayment'
+      paymentType: 'fullPayment',
     };
     this._bookingService.updateTotalAmount(this.bookingDetails);
   }
@@ -118,7 +118,7 @@ export class BookingSelectionComponent {
       day: day.day,
       date: day.date,
       month: day.month,
-      year: day.year
+      year: day.year,
     };
   }
 
@@ -160,14 +160,12 @@ export class BookingSelectionComponent {
     for (let item of this.packages) {
       item.selected = false;
     }
-    let selectedPackage: any = this.packages.filter(
-      (x) => x.title === data.title
-    );
+    let selectedPackage: any = this.packages.filter((x) => x.title === data.title);
     selectedPackage[0].selected = true;
     this.selectedPackage = data;
     let travellersDetails = this._helperService.getSessionStorage('travellersDetails');
     this.bookingDetails = {
-      packageName:this.packageNameOne,
+      packageName: this.packageNameOne,
       customerName: '',
       customerEmail: '',
       customerPhone: '',
@@ -185,10 +183,9 @@ export class BookingSelectionComponent {
       fTotalAmount: 0,
       discountedTotalAmount: 0,
       totalPayableAmount: 0,
-      paymentType: 'fullPayment'
+      paymentType: 'fullPayment',
     };
     this._bookingService.updateTotalAmount(this.bookingDetails);
-
   }
 
   onNextClick() {
@@ -206,7 +203,7 @@ export class BookingSelectionComponent {
       adultCount: this.bookingDetails?.adultCount || 1,
       childCount: this.bookingDetails?.childCount || 0,
       infantCount: this.bookingDetails?.infantCount || 0,
-    }
+    };
     this._helperService.setSessionStorage('travellersDetails', travellersDetails);
     this.onNextRoute();
   }
@@ -220,7 +217,7 @@ export class BookingSelectionComponent {
       ...this._helperService.getSessionStorage('travelDetails'),
       selectedDateDetails: this.selectedDateDetails,
       selectedPackage: this.selectedPackage,
-      bookingDetails: this.bookingDetails
+      bookingDetails: this.bookingDetails,
     };
     this._helperService.setSessionStorage('travelDetails', travelDetails);
     this._router.navigate(['/checkout'], { relativeTo: this.route });

@@ -12,15 +12,18 @@ export class PaymentSuccessComponent implements OnInit {
   public paymentDetails: any = {};
   getRazorPayId: any;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
-    console.log("{first}")
-    this.route.queryParamMap.subscribe(params => {
-      params.keys.forEach(key => {
+    console.log('{first}');
+    this.route.queryParamMap.subscribe((params) => {
+      params.keys.forEach((key) => {
         this.paymentDetails[key] = params.get(key);
       });
-      if (this.paymentDetails?.razorpay_payment_link_status !== "paid") {
+      if (this.paymentDetails?.razorpay_payment_link_status !== 'paid') {
         this.router.navigate(['/book-dinner-cruise-in-goa']);
       }
     });
@@ -33,5 +36,5 @@ export class PaymentSuccessComponent implements OnInit {
   //   } else {
   //     this.router.navigate(['/payment-failure']);
   //   }
-  // }  
+  // }
 }

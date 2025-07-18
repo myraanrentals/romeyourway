@@ -1,10 +1,7 @@
 <section class="contactUsTop">
   <div>
     <div class="bannerImg">
-      <img
-        src="../../../assets/images/contact_image.jpeg"
-        alt="contact_image"
-      />
+      <img src="../../../assets/images/contact_image.jpeg" alt="contact_image" />
     </div>
     <div class="topDiv">
       <div class="startConvo webFlag">
@@ -15,39 +12,47 @@
           <h2>Points of Contact</h2>
           <div>
             <h5>Address</h5>
-            <span>Unit No. 71/195/A, Sattari, Ward No. 7, Hathwada, <br>Near Marathi School, Valpoi, Goa - 403506</span>
+            <span
+              >Unit No. 71/195/A, Sattari, Ward No. 7, Hathwada, <br />Near Marathi School, Valpoi,
+              Goa - 403506</span
+            >
             <h5>Contact number</h5>
             <span>+91 771-595-9917</span>
             <h5>Email Address</h5>
-            <span>{{email}}</span>
+            <span>{{ email }}</span>
           </div>
         </div>
-        <div class=" mobFlag">
-            <h2>Lets Start a Conversation</h2>
-          </div>
+        <div class="mobFlag">
+          <h2>Lets Start a Conversation</h2>
+        </div>
         <div class="form-container">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Enter your name" />
-            </div>
-          
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Enter your email" />
-            </div>
-          
-            <div class="form-group">
-              <label for="number">Phone Number</label>
-              <input type="tel" id="number" placeholder="Enter your phone number" />
-            </div>
-            <div class="form-group">
-                <label for="number">Remarks</label>
-                <textarea type="text" id="remarks" rows="8"  cols="29" placeholder="Enter your remarks" ></textarea>
-              </div>
-              <button class="submit-btn" (click)="success()">Submit</button>
-              <span *ngIf="isSuccess" class="success-message">Submit successfully!</span>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+
+          <div class="form-group">
+            <label for="number">Phone Number</label>
+            <input type="tel" id="number" placeholder="Enter your phone number" />
+          </div>
+          <div class="form-group">
+            <label for="number">Remarks</label>
+            <textarea
+              type="text"
+              id="remarks"
+              rows="8"
+              cols="29"
+              placeholder="Enter your remarks"
+            ></textarea>
+          </div>
+          <button class="submit-btn" (click)="success()">Submit</button>
+          <span *ngIf="isSuccess" class="success-message">Submit successfully!</span>
         </div>
-          
       </div>
     </div>
   </div>

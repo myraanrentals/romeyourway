@@ -103,11 +103,15 @@ export const dinnerCruise: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -256,11 +260,15 @@ export const dinnerCruise: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -409,11 +417,15 @@ export const dinnerCruise: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -562,11 +574,15 @@ export const dinnerCruise: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -715,11 +731,15 @@ export const dinnerCruise: any[] = [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -792,32 +812,40 @@ export const dinnerCruise: any[] = [
         description: 'Get tickets delivered to your Inbox',
       },
     ],
-mustKnow: [
-  {
-    about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-  },
-  {
-    about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-  },
-  {
-    about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-  },
-  {
-    about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-  },
-  {
-    about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
-  },
-  {
-    about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
-  },
-  {
-    about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
-  },
-  {
-    about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
-  },
-],
+    mustKnow: [
+      {
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+      },
+      {
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+      },
+      {
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+      },
+      {
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+      },
+      {
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+      },
+      {
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+      },
+      {
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+      },
+      {
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+      },
+    ],
 
     features: [
       {
@@ -860,11 +888,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -937,32 +969,40 @@ mustKnow: [
         description: 'Get tickets delivered to your Inbox',
       },
     ],
-mustKnow: [
-  {
-    about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-  },
-  {
-    about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-  },
-  {
-    about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-  },
-  {
-    about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-  },
-  {
-    about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
-  },
-  {
-    about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
-  },
-  {
-    about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
-  },
-  {
-    about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
-  },
-],
+    mustKnow: [
+      {
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+      },
+      {
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+      },
+      {
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+      },
+      {
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+      },
+      {
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+      },
+      {
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+      },
+      {
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+      },
+      {
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+      },
+    ],
 
     features: [
       {
@@ -1005,11 +1045,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1084,31 +1128,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 1 Hours',
@@ -1150,11 +1202,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1229,31 +1285,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 1 Hours',
@@ -1295,11 +1359,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1374,31 +1442,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -1440,11 +1516,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1519,31 +1599,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 2 Hours',
@@ -1585,11 +1673,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1664,31 +1756,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 2 Hours',
@@ -1730,11 +1830,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1809,31 +1913,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -1875,11 +1987,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -1954,31 +2070,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -2020,11 +2144,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -2099,31 +2227,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -2165,11 +2301,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -2244,31 +2384,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -2310,11 +2458,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -2389,31 +2541,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 1 Hours',
@@ -2455,11 +2615,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -2534,31 +2698,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -2600,11 +2772,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:
@@ -2679,31 +2855,39 @@ mustKnow: [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+        about1:
+          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+        about1:
+          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+        about1:
+          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+        about1:
+          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
       },
       {
-        about1: 'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
+        about1:
+          'Delight in a variety of snacks, delicious desserts, and a lavish buffet dinner with both veg and non-veg options.',
       },
       {
-        about1: 'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
+        about1:
+          'Take in Goa’s best scenic views while enjoying a premium dining experience on the cruise.',
       },
       {
-        about1: 'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
+        about1:
+          'Capture stunning selfies and videos at the iconic Atal Setu Bridge, a picture-perfect location.',
       },
       {
-        about1: 'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
+        about1:
+          'Sail through the Goa River, passing by famous sights like the casinos and Aguada Bay for a memorable voyage.',
       },
     ],
-    
+
     features: [
       {
         name: 'Duration 3 Hours',
@@ -2745,11 +2929,15 @@ mustKnow: [
       { inclusion1: 'Hotel transfers (optional upgrade)' },
     ],
     thingsToCarry: [
-  { exclusion1: 'Parking charges are not included in the package.' },
-  { exclusion1: 'Additional drinks are not included but can be purchased onboard.' },
-  { exclusion1: 'Self-travel dinner cruise packages do not include pickup and drop-off services.' },
-]
-,
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
     needToKnows: [
       {
         needToKnow:

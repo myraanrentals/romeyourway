@@ -23,20 +23,51 @@ const routes: Routes = [
     children: [
       { path: '', component: HomepageComponent, pathMatch: 'full' },
       { path: 'book-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-premium-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-family-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-luxury-dinner-cruise-in-goa', component: DetailsPageComponent },
+      {
+        path: 'book-premium-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-family-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-luxury-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
       { path: 'book-sunset-cruise-in-goa', component: DetailsPageComponent },
       { path: 'book-party-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-nautiamigo-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-paradise-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-swastik-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-vihaan-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-ohana-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-azulbarco-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-aarushi-dinner-cruise-in-goa', component: DetailsPageComponent },
+      {
+        path: 'book-nautiamigo-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-paradise-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-swastik-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-vihaan-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-ohana-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-azulbarco-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
+      {
+        path: 'book-aarushi-dinner-cruise-in-goa',
+        component: DetailsPageComponent,
+      },
       { path: 'book-river-cruise-in-goa', component: DetailsPageComponent },
       { path: 'lunch-cruise-in-goa', component: DetailsPageComponent },
+      { path: 'candle-light-dinner-cruise-in-goa', component: DetailsPageComponent },
       { path: 'adventure-boat-party-in-goa', component: DetailsPageComponent },
       { path: 'dolphin-sightseeing-in-goa', component: DetailsPageComponent }, // Fixed Typo
       { path: 'goa-adventure-offers', component: ListingComponent },
@@ -55,7 +86,6 @@ const routes: Routes = [
       { path: 'contact-us', component: ContactComponent },
       { path: 'payment-success', component: PaymentSuccessComponent },
       { path: 'payment-failure', component: PaymentFailureComponent },
-
     ],
   },
 ];

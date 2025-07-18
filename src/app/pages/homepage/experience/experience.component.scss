@@ -33,7 +33,7 @@ li {
   color: white !important;
   border-radius: 12px;
 }
-.accordion-flush > .accordion-item > .accordion-header .accordion-button, 
+.accordion-flush > .accordion-item > .accordion-header .accordion-button,
 .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
   border-radius: 12px;
 }
@@ -189,16 +189,12 @@ svg#star-full-big {
 .detail-content.d-ele:after {
   height: 100px;
   width: 100%;
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    hsla(0, 0%, 100%, 1) 0%,
-    hsla(0, 45%, 10%, 0) 100%
-  );
+  background: linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 45%, 10%, 0) 100%);
 }
 .reviews-wrapper > div:first-child {
   font-size: 28px;
@@ -268,7 +264,7 @@ svg#star-full-big {
   border-bottom: 10px solid transparent;
   border-left: 10px solid #088943;
   border-top: 10px solid transparent;
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -390,7 +386,7 @@ svg#star-full-big {
       padding: 0 15px !important;
     }
   }
-  .amount{
+  .amount {
     margin-left: 12px;
   }
   #scrollBody {

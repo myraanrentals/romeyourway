@@ -52,8 +52,7 @@ export class FooterComponent {
       title: 'Company',
       type: 'links',
       links: ['Home', 'About Us', 'Activities', 'Contact Us'],
-      href: ['/','/about-us', '/book-dinner-cruise-in-goa', '/contact-us'],
-
+      href: ['/', '/about-us', '/book-dinner-cruise-in-goa', '/contact-us'],
     },
     {
       key: 'forTravelers',

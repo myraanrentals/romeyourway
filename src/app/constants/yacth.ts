@@ -1,8 +1,7 @@
 export const yacth: any[] = [
   {
     cruiseId: 5,
-    whatsappMsg:
-      'Hello, I would like to enquire about MANDOVI LOUNGE PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about MANDOVI LOUNGE PRIVATE YACHT in Goa!',
     title: 'Mandovi Lounge Boat : Discover Serenity',
     category: 'Premium Dinner Cruise in Goa',
     routingUrl: 'book-premium-dinner-cruise-in-goa',
@@ -32,8 +31,7 @@ export const yacth: any[] = [
     ],
     mustKnow: [
       {
-        about1:
-          'Cabin: Spacious and comfortable, perfect for relaxation or entertainment.',
+        about1: 'Cabin: Spacious and comfortable, perfect for relaxation or entertainment.',
       },
       {
         about1: 'Music: State-of-the-art sound system to set the perfect mood.',
@@ -92,8 +90,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -145,8 +142,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 2,
-    whatsappMsg:
-      'Hello, I would like to enquire about WAVE RIDER PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about WAVE RIDER PRIVATE YACHT in Goa!',
     title: 'Wave Rider : Your Exclusive Ocean Escape',
     image: '/assets/dinnercruise/Wave Rider.avif',
     category: 'Yacht in Goa',
@@ -233,8 +229,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -286,8 +281,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 1,
-    whatsappMsg:
-      'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
     image: '/assets/dinnercruise/DC03.jpeg',
     routingUrl: 'lunch-cruise-in-goa',
     title: 'Blue Fin : Luxury Beyond the Horizon',
@@ -374,8 +368,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -427,8 +420,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 3,
-    whatsappMsg:
-      'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
     title: 'Manta Ray : Sail Into Unforgettable Adventures',
     category: 'Dolphin Seightseeing in Goa',
     routingUrl: 'dolphin-sightseeing-in-goa',
@@ -515,8 +507,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -568,8 +559,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 7,
-    whatsappMsg:
-      'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
     title: 'Sea Ray 330 : Elegant Sailing, Unmatched Views',
     category: 'Luxury Dinner Cruise',
     routingUrl: 'book-luxury-dinner-cruise-in-goa',
@@ -656,8 +646,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -709,8 +698,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 4,
-    whatsappMsg:
-      'Hello, I would like to enquire about PRESTIGE 36 PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about PRESTIGE 36 PRIVATE YACHT in Goa!',
     title: 'Prestige 36 : A Journey in Pure Luxury',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'dinner-cruise-in-goa',
@@ -797,8 +785,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -850,8 +837,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 8,
-    whatsappMsg:
-      'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
     title: 'Funliner : Explore the Seas in Style',
     category: 'Sunset Cruise in Goa',
     routingUrl: 'book-sunset-cruise-in-goa',
@@ -938,8 +924,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -991,8 +976,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 14,
-    whatsappMsg:
-      'Hello, I would like to enquire about ORCA PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about ORCA PRIVATE YACHT in Goa!',
     title: 'Orca : Luxury on Water',
     category: 'Ohana Dinner Cruise in Goa',
     routingUrl: 'book-ohana-dinner-cruise-in-goa',
@@ -1079,8 +1063,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -1132,8 +1115,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 13,
-    whatsappMsg:
-      'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Shantam Catamaran : Indulge in Oceanic Luxury',
     category: 'Vihaan Dinner Cruise in Goa',
     routingUrl: 'book-vihaan-dinner-cruise-in-goa',
@@ -1220,8 +1202,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -1273,8 +1254,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 13,
-    whatsappMsg:
-      'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Shantam Catamaran : Indulge in Oceanic Luxury',
     category: 'Vihaan Dinner Cruise in Goa',
     routingUrl: 'book-vihaan-dinner-cruise-in-goa',
@@ -1361,8 +1341,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -1414,8 +1393,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 17,
-    whatsappMsg:
-      'Hello, I would like to enquire about POLARIS PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about POLARIS PRIVATE YACHT in Goa!',
     title: 'Polaris : Adventure Awaits Here',
     category: 'River Party Cruise in Goa',
     routingUrl: 'book-river-cruise-in-goa',
@@ -1502,8 +1480,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -1555,8 +1532,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 15,
-    whatsappMsg:
-      'Hello, I would like to enquire about RALSTON 1 PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about RALSTON 1 PRIVATE YACHT in Goa!',
     title: 'Ralston-1 : Explore the Seas',
     category: 'Azul Barco Dinner Cruise in Goa',
     routingUrl: 'book-azulbarco-dinner-cruise-in-goa',
@@ -1643,8 +1619,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:
@@ -1696,8 +1671,7 @@ export const yacth: any[] = [
   },
   {
     cruiseId: 16,
-    whatsappMsg:
-      'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
+    whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
     title: 'Ralston-2 : Sail in Style',
     category: 'Aarushi Dinner Cruise in Goa',
     routingUrl: 'book-aarushi-dinner-cruise-in-goa',
@@ -1784,8 +1758,7 @@ export const yacth: any[] = [
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
-        exclusion1:
-          'Additional drinks are not included but can be purchased onboard.',
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
       },
       {
         exclusion1:

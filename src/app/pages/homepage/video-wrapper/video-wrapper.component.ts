@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './video-wrapper.component.html',
-  styleUrl: './video-wrapper.component.scss'
+  styleUrl: './video-wrapper.component.scss',
 })
-export class VideoWrapperComponent {
-
-}
+export class VideoWrapperComponent {}

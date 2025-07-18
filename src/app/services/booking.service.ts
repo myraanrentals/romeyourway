@@ -33,7 +33,7 @@ export class BookingService {
 
   constructor(
     private _apiService: ApiService,
-    private _helperService: HelperService
+    private _helperService: HelperService,
   ) {}
 
   vehicleBooking(payloadData: any): Observable<any> {
@@ -47,26 +47,16 @@ export class BookingService {
   }
 
   updateTotalAmount(bookingDetails: BookingDetails) {
-    const {
-      adultCount,
-      childCount,
-      infantCount,
-      singleAdultAmt,
-      singleChildAmt,
-      singleInfantAmt,
-    } = bookingDetails;
+    const { adultCount, childCount, infantCount, singleAdultAmt, singleChildAmt, singleInfantAmt } =
+      bookingDetails;
     bookingDetails.totalMemberCount = adultCount + childCount + infantCount;
     bookingDetails.totalAmountForAdult = adultCount * singleAdultAmt;
     bookingDetails.totalAmountForChild = childCount * singleChildAmt;
     bookingDetails.totalAmountForInfant = infantCount * singleInfantAmt;
     bookingDetails.totalPayableAmount =
-      adultCount * singleAdultAmt +
-      childCount * singleChildAmt +
-      infantCount * singleInfantAmt;
+      adultCount * singleAdultAmt + childCount * singleChildAmt + infantCount * singleInfantAmt;
     bookingDetails.totalAmount =
-      adultCount * singleAdultAmt +
-      childCount * singleChildAmt +
-      infantCount * singleInfantAmt;
+      adultCount * singleAdultAmt + childCount * singleChildAmt + infantCount * singleInfantAmt;
     if (bookingDetails.paymentType === 'partialPayment') {
       bookingDetails.totalPayableAmount = this.bookingDetails.totalAmount * 0.2;
       bookingDetails.totalAmount = this.bookingDetails.totalAmount * 0.2;
@@ -76,7 +66,7 @@ export class BookingService {
   updateCount(
     type: 'adult' | 'child' | 'infant',
     increment: boolean,
-    bookingDetails: BookingDetails
+    bookingDetails: BookingDetails,
   ) {
     const countKey: CountKey = `${type}Count` as CountKey;
     const currentValue = bookingDetails[countKey];

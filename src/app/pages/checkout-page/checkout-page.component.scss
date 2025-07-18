@@ -1,4 +1,40 @@
 @media screen and (max-width: 768px) {
+  .pickup-location li:first-child {
+    list-style-type: none; /* no bullet for the first li */
+  }
+  .location-modal {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .location-modal h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .location-options {
+    grid-template-columns: 1fr; /* single column on small screens */
+    gap: 10px;
+  }
+
+  .location-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .modal-actions button {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .pickup-location {
+    padding-left: 20px;
+  }
+  .pickup-location li {
+    font-size: 14px;
+  }
+
   .main-section {
     max-width: 1320px;
     margin: 0 auto;
@@ -260,8 +296,7 @@
 
     &.selected {
       border-color: orange;
-    background-color: #fefefb;
-
+      background-color: #fefefb;
     }
     .selection-indicator {
       display: flex;
@@ -274,9 +309,11 @@
 
       &.selected {
         color: orange;
-      margin-right: 12px;
-
+        margin-right: 12px;
       }
+    }
+    .pickup-location li:first-child {
+      list-style-type: none; /* no bullet for the first li */
     }
 
     .package-header {
@@ -343,9 +380,8 @@
   .featureTitle {
     font-size: 16px !important;
   }
-  .info p{
+  .info p {
     font-size: 12px;
-
   }
   .innerContainer {
     flex-direction: column;
@@ -360,9 +396,193 @@
   .container {
     padding: 0 !important;
   }
+  .modal-backdrop {
+    padding: 0; /* remove extra padding on mobile */
+    display: flex;
+    align-items: flex-end; /* modal slides from bottom */
+    justify-content: center;
+  }
 
+  /* 🔹 Modal container for mobile */
+  .location-modal {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
+    border-radius: 16px 16px 0 0; /* rounded only top corners */
+    background: #fff;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease-out;
+  }
+
+  /* 🔹 Title */
+  .location-modal h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  /* 🔹 Options stack in one column */
+  .location-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* 🔹 Option boxes */
+  .location-box {
+    font-size: 16px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: all 0.2s ease;
+  }
+  .location-box.selected {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+
+  /* 🔹 Modal action buttons */
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 12px;
+  }
+  .modal-actions button {
+    flex: 1;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+  }
+  .modal-actions button:first-child {
+    background: #f0f0f0;
+    color: #333;
+  }
+  .modal-actions button:last-child {
+    background: #007bff;
+    color: #fff;
+  }
+
+  /* 🔹 Optional animation for modal slide up */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .pickup-text {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 768px) {
+  .pickup-location {
+    list-style-type: disc;
+    margin: 8px 0;
+    padding-left: 20px;
+  }
+  .pickupLocation {
+    color: black;
+    font-size: 16px;
+    text-decoration: none !important;
+  }
+  .pickup-text {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 16px;
+  }
+
+  /* Modal backdrop */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  /* Modal container */
+  .location-modal {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .location-modal h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  /* Location options grid */
+  .location-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .location-box {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  .location-box:hover {
+    border-color: #007bff;
+  }
+  .location-box.selected {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+
+  /* Modal actions */
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .modal-actions button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .modal-actions button:first-child {
+    background: #f2f2f2;
+  }
+  .modal-actions button:last-child {
+    background: #007bff;
+    color: #fff;
+  }
+
   .main-section {
     max-width: 1320px;
     margin: 0 auto;
@@ -590,8 +810,7 @@
 
     &.selected {
       border-color: orange;
-    background-color: #fefefb;
-
+      background-color: #fefefb;
     }
     .selection-indicator {
       display: flex;
@@ -604,8 +823,7 @@
 
       &.selected {
         color: orange;
-      margin-right: 12px;
-
+        margin-right: 12px;
       }
     }
 

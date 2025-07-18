@@ -115,8 +115,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
+        originalamt: '1399',
+        discountedamt: '1199',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -128,8 +128,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
+        originalamt: '1199',
+        discountedamt: '999',
         kidAmt: '900',
         desc: [
           'Access to lower deck',
@@ -141,10 +141,10 @@ export const hotels: any[] = [
     ],
   },
   {
-    cruiseId: 4,
+    cruiseId: 8,
     title: 'Sunset Cruise in Goa',
     category: 'Sunset Cruise in Goa',
-    routingUrl: 'book-cruise-in-goa',
+    routingUrl: 'book-sunset-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
     oldPrice: '1199',
@@ -256,8 +256,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
+        originalamt: '899',
+        discountedamt: '699',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -269,8 +269,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
+        originalamt: '699',
+        discountedamt: '499',
         kidAmt: '900',
         desc: [
           'Access to lower deck',
@@ -397,8 +397,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
+        originalamt: '1499',
+        discountedamt: '1299',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -410,8 +410,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
+        originalamt: '1299',
+        discountedamt: '1099',
         kidAmt: '900',
         desc: [
           'Access to lower deck',
@@ -538,8 +538,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
+        originalamt: '2399',
+        discountedamt: '2199',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -551,8 +551,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
+        originalamt: '2199',
+        discountedamt: '1999',
         kidAmt: '900',
         desc: [
           'Access to lower deck',
@@ -564,13 +564,13 @@ export const hotels: any[] = [
     ],
   },
   {
-    cruiseId: 1,
+    cruiseId: 18,
     title: 'Candle Light Dinner Cruise',
     category: 'Dinner Cruise in Goa',
-    routingUrl: 'lunch-cruise-in-goa',
+    routingUrl: 'candle-light-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1699',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     currentPrice: '1499',
@@ -679,8 +679,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
+        originalamt: '1899',
+        discountedamt: '1699',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -692,8 +692,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
+        originalamt: '1699',
+        discountedamt: '1499',
         kidAmt: '900',
         desc: [
           'Access to lower deck',
@@ -960,8 +960,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
+        originalamt: '1499',
+        discountedamt: '1299',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -973,8 +973,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
+        originalamt: '1299',
+        discountedamt: '1099',
         kidAmt: '900',
         desc: [
           'Access to lower deck',
@@ -996,8 +996,8 @@ export const cancellationPolicy: string[] = [
 
 export const travellers = [
   { label: 'Adult', price: 550, count: 1 },
-  { label: 'Child', price: 300, count: 0 },
-  { label: 'Infant', price: 150, count: 0 },
+  { label: 'Child (4-10 year old)', price: 300, count: 0 },
+  { label: 'Infant (0-4 year old)', price: 0, count: 0 },
 ];
 
 export const razorpay_key = 'rzp_live_udlCDMeLep9nk2';

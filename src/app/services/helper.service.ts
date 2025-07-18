@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { hotels } from '../constants/hotels';
+import { hotels, travellers } from '../constants/hotels';
 import { dinnerCruise } from '../constants/dinnerCruise';
 import { yacth } from '../constants/yacth';
 import { formatDate } from '@angular/common';
@@ -60,6 +60,7 @@ export class HelperService {
     'book-azulbarco-dinner-cruise-in-goa': 15,
     'book-aarushi-dinner-cruise-in-goa': 16,
     'book-river-cruise-in-goa': 17,
+    'candle-light-dinner-cruise-in-goa': 18,
   };
   getIdFromURL(value: string): number {
     return this.urlMap[value] || 1;
@@ -103,23 +104,21 @@ export class HelperService {
     selectedTime: any;
     payableAmount: number;
     paymentType: string;
+    pickupLocation: string;
   } = {
     selectedDate: {
       day: formatDate(new Date(), 'dd', 'en'),
       label: formatDate(new Date(), 'MMM dd', 'en'),
       selected: true,
     },
-    travellers: [
-      { label: 'Adult', price: 550, count: 1 },
-      { label: 'Child', price: 300, count: 0 },
-      { label: 'Infant', price: 150, count: 0 },
-    ],
+    travellers: travellers,
     selectedTransport: null,
     cruiseId: null,
     subtotal: 550,
     payableAmount: 0,
     selectedTime: '6pm',
     paymentType: 'full',
+    pickupLocation: '',
   };
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');

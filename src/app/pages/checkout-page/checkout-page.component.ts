@@ -53,6 +53,9 @@ export class CheckoutPageComponent implements OnInit {
   hotelDetails: any;
   features: any;
   sessionData: any = {};
+  locations: string[] = ['Calangute', 'Candolim', 'Baga', 'Arpora'];
+  showLocationModal = false;
+  selectedLocation: string | null = null;
 
   ngOnInit() {
     this.generateDates(new Date());
@@ -68,6 +71,7 @@ export class CheckoutPageComponent implements OnInit {
         ...this.HelperService.defaultSessionPayload,
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[1],
+        subtotal: this.hotelDetails.transport[0].discountedamt,
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
@@ -97,15 +101,29 @@ export class CheckoutPageComponent implements OnInit {
     }
   }
 
-  getSubtotal() {
+  getTravellerPrice(traveller: any): number {
+    // same logic as template
+    if (traveller.label === 'Adult') {
+      return this.sessionData.selectedTransport?.discountedamt || 0;
+    } else if (traveller.label === 'Child (4-10 year old)') {
+      return (this.sessionData.selectedTransport?.discountedamt || 0) - 200;
+    } else {
+      return 0;
+    }
+  }
+
+  getSubtotal(): number {
     const subtotal = this.sessionData.travellers.reduce(
-      (total: number, traveller: any) => total + traveller.count * traveller.price,
+      (total: number, traveller: any) =>
+        total + traveller.count * this.getTravellerPrice(traveller),
       0,
     );
+
     this.HelperService.updateSessionStorage({
       subtotal,
       payableAmount: subtotal,
     });
+
     return subtotal;
   }
 
@@ -118,12 +136,16 @@ export class CheckoutPageComponent implements OnInit {
     this.isSidebarOpen = false;
   }
   toggleSelection(index: number) {
+    if (index === 1) {
+      this.sessionData.pickupLocation = '';
+      this.selectedLocation = '';
+    }
     this.hotelDetails.transport.forEach((pkg: any, i: number) => {
-      pkg.isSelected = i === index ? !pkg.isSelected : false;
+      pkg.isSelected = i !== index ? !pkg.isSelected : false;
     });
 
     const selectedTransport = this.hotelDetails.transport.find((pkg: any) => pkg.isSelected);
-
+    this.sessionData.selectedTransport = selectedTransport;
     this.HelperService.updateSessionStorage({
       selectedTransport: selectedTransport || null,
       cruiseId: this.hotelDetails.cruiseId,
@@ -185,5 +207,28 @@ export class CheckoutPageComponent implements OnInit {
   }
   navigateToPaymentPage(id: string) {
     this.router.navigate([`/${id}/checkout`]);
+  }
+  openLocationModal(event: MouseEvent) {
+    // prevent card click
+    event.stopPropagation();
+    this.showLocationModal = true;
+  }
+
+  closeLocationModal() {
+    this.showLocationModal = false;
+  }
+
+  selectLocation(loc: string) {
+    this.selectedLocation = loc;
+  }
+
+  confirmLocation() {
+    this.sessionData.pickupLocation = this.selectedLocation;
+    if (this.selectedLocation) {
+      this.HelperService.updateSessionStorage({
+        pickupLocation: this.selectedLocation,
+      });
+      this.showLocationModal = false;
+    }
   }
 }

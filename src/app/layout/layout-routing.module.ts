@@ -67,6 +67,7 @@ const routes: Routes = [
       },
       { path: 'book-river-cruise-in-goa', component: DetailsPageComponent },
       { path: 'lunch-cruise-in-goa', component: DetailsPageComponent },
+      { path: 'candle-light-dinner-cruise-in-goa', component: DetailsPageComponent },
       { path: 'adventure-boat-party-in-goa', component: DetailsPageComponent },
       { path: 'dolphin-sightseeing-in-goa', component: DetailsPageComponent }, // Fixed Typo
       { path: 'goa-adventure-offers', component: ListingComponent },

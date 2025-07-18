@@ -38,7 +38,7 @@
       <div class="packageCards">
         <div
           class="package-card"
-          *ngFor="let package of hotelDetails.transport; let i = index"
+          *ngFor="let package of hotelDetails.transport.slice().reverse(); let i = index"
           [class.selected]="package.isSelected"
           (click)="toggleSelection(i)"
         >
@@ -55,7 +55,23 @@
           <ul class="package-details">
             <li *ngFor="let detail of package.desc">{{ detail }}</li>
           </ul>
-
+          <ul
+            *ngIf="
+              package.title === 'With Transport' &&
+              this.sessionData.selectedTransport.title === 'With Transport'
+            "
+            class="pickup-location"
+          >
+            <li (click)="openLocationModal($event)">
+              <span class="pickup-text"> Select Pickup and Drop Location </span>
+            </li>
+            <li *ngIf="this.sessionData.pickupLocation !== ''" (click)="openLocationModal($event)">
+              <span class="pickupLocation">
+                Your selected Pickup and Drop Location is
+                {{ this.sessionData.pickupLocation }}</span
+              >
+            </li>
+          </ul>
           <p><strong>Age Policy:</strong></p>
 
           <button class="more-details" (click)="openSidePanel($event)">More Details</button>
@@ -90,7 +106,17 @@
         <div class="traveller-section" *ngFor="let traveller of sessionData.travellers">
           <div>
             <p class="traveller-label">{{ traveller.label }}</p>
-            <p class="price">INR {{ traveller.price }}/{{ traveller.label.toLowerCase() }}</p>
+            <p class="price">
+              INR
+              {{
+                traveller.label === 'Adult'
+                  ? sessionData.selectedTransport?.discountedamt
+                  : traveller.label === 'Child (4-10 year old)'
+                    ? (sessionData.selectedTransport?.discountedamt || 0) - 200
+                    : 0
+              }}
+              /{{ traveller.label.toLowerCase() }}
+            </p>
           </div>
           <div class="counter">
             <button class="counter-btn" (click)="decreaseCount(traveller)">-</button>
@@ -150,3 +176,23 @@
   [isSidebarOpen]="isSidebarOpen"
   (closeSidebar)="closeSidebar()"
 ></app-package-card>
+<!-- Location Modal -->
+<div class="modal-backdrop" *ngIf="showLocationModal">
+  <div class="location-modal">
+    <h3>Select Pickup & Drop Location</h3>
+    <div class="location-options">
+      <div
+        class="location-box"
+        *ngFor="let loc of locations"
+        [class.selected]="selectedLocation === loc"
+        (click)="selectLocation(loc)"
+      >
+        {{ loc }}
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button (click)="closeLocationModal()">Cancel</button>
+      <button [disabled]="!selectedLocation" (click)="confirmLocation()">Confirm</button>
+    </div>
+  </div>
+</div>

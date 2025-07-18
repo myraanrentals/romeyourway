@@ -6,30 +6,18 @@
       <div class="flex g-1">
         @if(mobFlag){
         <div class="slider">
-          <div
-            navigation="true"
-            pagination="true"
-            autoplay="true"
-            loop="true"
-          >
+          <div navigation="true" pagination="true" autoplay="true" loop="true">
             <div>
               <div class="cardImg">
-                <img src="{{ offer.image }}" alt=""/>
+                <img src="{{ offer.image }}" alt="" />
               </div>
             </div>
           </div>
         </div>
         }@else {
         <div class="slider">
-          <div
-            navigation="true"
-            pagination="true"
-            autoplay="true"
-            loop="true"
-          >
-            <div
-              ><img src="{{ offer.image }}" alt=""
-            /></div>
+          <div navigation="true" pagination="true" autoplay="true" loop="true">
+            <div><img src="{{ offer.image }}" alt="" /></div>
           </div>
         </div>
         }
@@ -58,9 +46,7 @@
           </div>
           <div class="show-full-info">
             <div
-              (click)="
-                goToService(offer?.routingUrl)
-              "
+              (click)="goToService(offer?.routingUrl)"
               class="link link-cursor"
             >
               Show inclusions & important info
@@ -69,12 +55,12 @@
           </div>
         </div>
         <div class="payments">
-          <!-- <div class="amount">
+          <div *ngIf="href !== '/private-yachts-in-goa'" class="amount">
             <h3>
               INR {{ offer.currentPrice }}
               <div class="tag">15% OFF</div>
             </h3>
-          </div> -->
+          </div>
           <div class="flex flex-column mobile-reverse">
             <div class="button-group">
               <button
@@ -85,7 +71,7 @@
               </button>
               <button
                 class="secondary-button m-ele"
-                (click)="openWhatsApp('+917715959917',offer.whatsappMsg)"
+                (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
               >
                 Get Details
               </button>
@@ -96,24 +82,24 @@
                 <span>{{ feature.name }}</span>
               </div>
             </div>
-            <div class=" show-full-info">
+            <div class="show-full-info">
               <div
-              (click)="openWhatsApp('+917715959917',offer.whatsappMsg)"
-                class="whatsapp  link link-cursor"
+                (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
+                class="whatsapp link link-cursor"
               >
-              <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
+                <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
 
-              Get more details
+                Get more details
                 <img src="./assets/images/svg/arrow-ico.svg" alt="" />
               </div>
-            </div>            
+            </div>
           </div>
         </div>
       </div>
     </div>
     }
   </div>
-  <ng-template #content let-offer="offer" let-modal >
+  <ng-template #content let-offer="offer" let-modal>
     <div id="experience-modal" class="modal-experience">
       <div class="modal-header" style="display: block">
         <div class="flex">
@@ -179,21 +165,25 @@
             </strong>
             ({{ getItemById(selectedIdentity)?.rated }})
           </span>
-          <h4 style="font: size 12px;; margin-top: 5px;">{{ getItemById(selectedIdentity)?.headingOne }}</h4>
+          <h4 style="font: size 12px; margin-top: 5px">
+            {{ getItemById(selectedIdentity)?.headingOne }}
+          </h4>
           <div class="features-container">
             <div
               class="feature"
               *ngFor="let feature of getItemById(selectedIdentity)?.features"
             >
-              <div >
+              <div>
                 <img src="{{ feature.image }}" alt="" />
                 {{ feature.name }}
               </div>
             </div>
           </div>
           <hr />
-          <div class="desc" style="text-align: left;">
-            <p style="font-weight: 100;">{{ getItemById(selectedIdentity)?.desc }}</p>
+          <div class="desc" style="text-align: left">
+            <p style="font-weight: 100">
+              {{ getItemById(selectedIdentity)?.desc }}
+            </p>
           </div>
           <hr />
           <div id="highlight">
@@ -481,16 +471,45 @@
       </div>
       <div class="modal-footer">
         <div class="modal-footer-container">
-          <div class="price-div" style="display: block; text-align: left;font-size: large;">
-            <div style="font-size: medium; text-align: left; display: block; justify-content: left;">
-              <span style="margin-left: 6px;">From</span> 
-            <strong style="text-decoration: line-through;margin-left: 5px; font-size: small;" > ₹ {{ getItemById(selectedIdentity)?.amount }} </strong>
+          <div
+            class="price-div"
+            style="display: block; text-align: left; font-size: large"
+          >
+            <div
+              style="
+                font-size: medium;
+                text-align: left;
+                display: block;
+                justify-content: left;
+              "
+            >
+              <span style="margin-left: 6px">From</span>
+              <strong
+                style="
+                  text-decoration: line-through;
+                  margin-left: 5px;
+                  font-size: small;
+                "
+              >
+                ₹ {{ getItemById(selectedIdentity)?.amount }}
+              </strong>
             </div>
-            <strong style="color: rgb(255, 123, 0); font-weight: 800; letter-spacing: 1px; margin-left: 5px; text-wrap: nowrap;" > ₹ {{ getItemById(selectedIdentity)?.amount }} </strong>
-            <span style="text-wrap: nowrap; font-size: small;">per person</span>
+            <strong
+              style="
+                color: rgb(255, 123, 0);
+                font-weight: 800;
+                letter-spacing: 1px;
+                margin-left: 5px;
+                text-wrap: nowrap;
+              "
+            >
+              ₹ {{ getItemById(selectedIdentity)?.amount }}
+            </strong>
+            <span style="text-wrap: nowrap; font-size: small">per person</span>
           </div>
           <div>
-            <button style="margin-left: 64px;"
+            <button
+              style="margin-left: 64px"
               (click)="
                 redirectToBooking(hotels, getItemById(selectedIdentity));
                 modal.dismiss('Cross click')
@@ -501,10 +520,8 @@
             </button>
           </div>
         </div>
-        
       </div>
     </div>
-    
   </ng-template>
 
   <div id="about" class="bg-white pt-5 pb-5 border-top">
@@ -513,61 +530,131 @@
       <div class="accordion accordion-flush" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
               What types of water sports do you offer?
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
-              At Rome your Way, we offer a diverse range of water sports, including jet skiing, parasailing, banana boat rides, and more. Whether you're seeking an adrenaline rush or a leisurely ride, we have something for everyone.
+              At Rome your Way, we offer a diverse range of water sports,
+              including jet skiing, parasailing, banana boat rides, and more.
+              Whether you're seeking an adrenaline rush or a leisurely ride, we
+              have something for everyone.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
               Can I book a cruise with Rome your Way?
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
-              Yes, absolutely! Our luxury cruises offer the perfect opportunity to explore the stunning coastline of Goa while enjoying delicious meals and witnessing breathtaking sunsets over the Arabian Sea.
+              Yes, absolutely! Our luxury cruises offer the perfect opportunity
+              to explore the stunning coastline of Goa while enjoying delicious
+              meals and witnessing breathtaking sunsets over the Arabian Sea.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
               Are your adventure activities suitable for all skill levels?
             </button>
           </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
-              Our adventure activities, such as trekking, kayaking, and ATV rides, are designed to cater to adventurers of all skill levels. Whether you're a beginner or an experienced thrill-seeker, we have the perfect adventure for you.
+              Our adventure activities, such as trekking, kayaking, and ATV
+              rides, are designed to cater to adventurers of all skill levels.
+              Whether you're a beginner or an experienced thrill-seeker, we have
+              the perfect adventure for you.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
               Do you provide scuba diving expeditions?
             </button>
           </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
-              Yes, we offer scuba diving expeditions for those looking to explore Goa's vibrant underwater world. Our experienced instructors will guide you as you discover the hidden treasures of the ocean, including colorful coral reefs and marine life.
+              Yes, we offer scuba diving expeditions for those looking to
+              explore Goa's vibrant underwater world. Our experienced
+              instructors will guide you as you discover the hidden treasures of
+              the ocean, including colorful coral reefs and marine life.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
               Is safety a priority at Rome your Way?
             </button>
           </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
-              Absolutely! At Rome your Way, safety is our top priority. We have a team of experienced professionals, state-of-the-art equipment, and adhere to strict safety standards to ensure that every moment with us is filled with excitement, wonder, and unforgettable memories.
+              Absolutely! At Rome your Way, safety is our top priority. We have
+              a team of experienced professionals, state-of-the-art equipment,
+              and adhere to strict safety standards to ensure that every moment
+              with us is filled with excitement, wonder, and unforgettable
+              memories.
             </div>
           </div>
         </div>

@@ -1,0 +1,59 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Node
+/node_modules
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# Environment files (optional - if you don't want to commit them)
+# uncomment if you want to ignore your envs
+# src/environments/environment.ts
+# src/environments/environment.prod.ts
+
+# Coverage reports
+/coverage
+
+# Angular build cache
+/.angular/cache
+
+# Optional npm/yarn cache
+.npm
+.yarn-integrity
+
+# Compiled TypeScript
+*.tsbuildinfo
+
+# Temporary
+*.temp
+*.log
+
+# Others
+*.tgz
+*.zip

@@ -33,7 +33,7 @@ export class DetailsPageComponent {
     const lastSegment = this._router.url.split('/').pop() || '';
     this.selectedIdentity = this.HelperService.getIdFromURL(lastSegment);
     this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
-
+    sessionStorage.setItem('packagePrice', this.hotelDetails?.currentPrice);
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
   }
   topFeatures = [

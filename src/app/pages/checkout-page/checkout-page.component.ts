@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PackageCardComponent } from '../package-card/package-card.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { hotels, travellers } from '../../constants/hotels';
+import { hotels, getTravellers, Traveller } from '../../constants/hotels';
 import { HelperService } from '@services/helper.service';
 import { FormsModule } from '@angular/forms';
 @Component({
@@ -41,7 +41,7 @@ export class CheckoutPageComponent implements OnInit {
   ) {}
   dates: any[] = [];
   hotelList = hotels;
-  travellers = travellers;
+  travellers: Traveller[] = [];
   minDate: Date = new Date();
   selectedDate: Date | null = null;
   count: number = 1;
@@ -72,9 +72,12 @@ export class CheckoutPageComponent implements OnInit {
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[1],
         subtotal: this.hotelDetails.transport[0].discountedamt,
+        travellers: getTravellers(Number(this.hotelDetails.transport[1].discountedamt)),
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
+    console.log({ test: this.sessionData });
+    this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt);
   }
 
   @HostListener('window:resize', ['$event'])

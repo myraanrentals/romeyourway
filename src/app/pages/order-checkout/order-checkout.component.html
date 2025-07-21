@@ -395,7 +395,7 @@
             </p>
             <p class="final-price">
               INR {{ sessionData.payableAmount }}
-              <span class="mobile viewDetails">View Details ></span>
+              <span (click)="openBookingSummary()" class="viewDetails">View Details ></span>
             </p>
           </div>
           <button class="confirm-pay-btn" (click)="validateAndSubmit()">Confirm & Pay</button>

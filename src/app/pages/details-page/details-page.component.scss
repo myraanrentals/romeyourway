@@ -148,6 +148,22 @@ mat-card-image {
     border-radius: 10px;
     margin-top: 22px;
   }
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin-top: 347px;
+    margin-left: 88px;
+  }
+
+  /* hover/focus styling */
+  .carousel-control-prev:hover,
+  .carousel-control-prev:focus,
+  .carousel-control-next:hover,
+  .carousel-control-next:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+  }
 
   .features {
     display: flex;

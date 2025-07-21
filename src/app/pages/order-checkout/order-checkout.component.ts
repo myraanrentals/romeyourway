@@ -102,6 +102,10 @@ export class OrderCheckoutComponent implements OnInit {
   openBookingSummary() {
     this.bottomSheet.open(AppBookingSummaryComponent, {
       panelClass: 'custom-bottom-sheet',
+      data: {
+        totalAmount: this.sessionData.payableAmount,
+        discountAmount: 500,
+      },
     });
   }
   updateTravellerDetails() {

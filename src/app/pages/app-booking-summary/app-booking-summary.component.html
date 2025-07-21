@@ -1,17 +1,19 @@
 <div class="booking-summary">
   <div class="header">
-    <h4>Booking Summary</h4>
+    <h4>Payment Summary</h4>
   </div>
-  <div class="box-section">
-    <p>
-      Total Basic Amount: <span>INR {{ totalAmount }}</span>
-    </p>
-    1 Adult
-    <hr />
-    <p>
-      Total Payable Amount: <strong>INR {{ totalAmount }}</strong>
-    </p>
+  <div class="person-list">
+    <div class="person-row" *ngFor="let item of bookingDetails">
+      <div class="person-label">{{ item.count }} x {{ item.label }}</div>
+      <div class="person-price">INR {{ item.count * item.price }}</div>
+    </div>
   </div>
+
+  <div class="total-section">
+    <p>Total Payable Amount:</p>
+    <strong>INR {{ totalAmount }}</strong>
+  </div>
+
   <div class="discount-message">
     🎉 Woohoo! You saved INR {{ discountAmount }} on this booking!!
   </div>

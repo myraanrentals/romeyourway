@@ -17,6 +17,12 @@ p {
   color: red;
   font-size: 12px;
 }
+.viewDetails {
+  font-size: 12px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .checkout-container {
     display: flex;

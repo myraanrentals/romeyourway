@@ -64,3 +64,68 @@
 .discount-message {
   margin-top: 24px;
 }
+.person-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.person-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  .person-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    word-break: break-word;
+  }
+
+  .person-count {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .person-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff5722;
+    text-align: right;
+  }
+}
+
+.total-section {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+  }
+
+  strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: #d32f2f;
+  }
+}

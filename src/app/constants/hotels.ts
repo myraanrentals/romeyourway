@@ -993,12 +993,18 @@ export const cancellationPolicy: string[] = [
   'If cancellation is made 0 to 7 days before, 100.0% will be charged.',
   'Unforeseen conditions may result in cancellation, and no cash refund will be provided.',
 ];
-
-export const travellers = [
-  { label: 'Adult', price: 550, count: 1 },
-  { label: 'Child (4-10 year old)', price: 300, count: 0 },
-  { label: 'Infant (0-4 year old)', price: 0, count: 0 },
-];
+export interface Traveller {
+  label: string;
+  price: number;
+  count: number;
+}
+export function getTravellers(price: number): Traveller[] {
+  return [
+    { label: 'Adult', price: price, count: 1 },
+    { label: 'Child (4-10 year old)', price: price - 200, count: 0 },
+    { label: 'Infant (0-4 year old)', price: 0, count: 0 },
+  ];
+}
 
 export const razorpay_key = 'rzp_live_udlCDMeLep9nk2';
 export const key_secret = 'S0z7n1X96xlkCKURtlxmqoGn';

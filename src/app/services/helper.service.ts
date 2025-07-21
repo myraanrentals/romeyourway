@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { hotels, travellers } from '../constants/hotels';
+import { hotels, getTravellers } from '../constants/hotels';
 import { dinnerCruise } from '../constants/dinnerCruise';
 import { yacth } from '../constants/yacth';
 import { formatDate } from '@angular/common';
@@ -111,7 +111,7 @@ export class HelperService {
       label: formatDate(new Date(), 'MMM dd', 'en'),
       selected: true,
     },
-    travellers: travellers,
+    travellers: [],
     selectedTransport: null,
     cruiseId: null,
     subtotal: 550,
@@ -122,9 +122,16 @@ export class HelperService {
   };
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');
+    const sessionPackagePrice = sessionStorage.getItem('packagePrice');
+
     const currentSession = storedSession
       ? JSON.parse(storedSession)
-      : { ...this.defaultSessionPayload };
+      : sessionPackagePrice
+        ? {
+            ...this.defaultSessionPayload,
+            travellers: getTravellers(JSON.parse(sessionPackagePrice)),
+          }
+        : { ...this.defaultSessionPayload };
 
     const updatedSession = { ...currentSession, ...updatedData };
     sessionStorage.setItem('checkoutSession', JSON.stringify(updatedSession));

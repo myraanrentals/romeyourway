@@ -63,9 +63,7 @@ export class CheckoutPageComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       if (!id) return;
-
-      this.selectedIdentity = this.HelperService.getIdFromURL(id);
-      this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
+      this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
@@ -76,7 +74,6 @@ export class CheckoutPageComponent implements OnInit {
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
-    console.log({ test: this.sessionData });
     this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt);
   }
 

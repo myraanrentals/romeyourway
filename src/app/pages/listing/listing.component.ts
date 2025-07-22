@@ -17,6 +17,7 @@ export class ListingComponent implements OnInit {
   constructor(private _helperService: HelperService) {}
 
   ngOnInit() {
+    sessionStorage.clear();
     this.experience = this._helperService.renderPackageData();
   }
 }

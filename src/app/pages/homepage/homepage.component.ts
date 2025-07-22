@@ -155,6 +155,7 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    sessionStorage.clear();
     (async () => {
       if (this._helperService.getSessionStorage('travelDetails') !== null) {
         this._helperService.deleteSessionStorage('travelDetails');

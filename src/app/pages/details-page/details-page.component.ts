@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CommonModule } from '@angular/common';
 import { OverviewModalComponent } from '../overview-modal/overview-modal.component';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { hotels, cancellationPolicy } from '../../constants/hotels';
 import { HelperService } from '../../services/helper.service';
@@ -24,15 +24,16 @@ export class DetailsPageComponent {
   constructor(
     public dialog: MatDialog,
     private _router: Router,
+    private route: ActivatedRoute,
     private HelperService: HelperService,
   ) {}
   activeTab: string = 'mustKnow';
   selectedIdentity = 1;
   hotelDetails: any;
   ngOnInit() {
-    const lastSegment = this._router.url.split('/').pop() || '';
-    this.selectedIdentity = this.HelperService.getIdFromURL(lastSegment);
-    this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
+    const routeId = this.route.snapshot.paramMap.get('id');
+    if (!routeId) return;
+    this.hotelDetails = this.HelperService.getHotelByID(routeId, this.hotelList);
     sessionStorage.setItem('packagePrice', this.hotelDetails?.currentPrice);
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
   }

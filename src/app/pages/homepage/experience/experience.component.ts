@@ -107,7 +107,7 @@ export class ExperienceComponent {
     if (this.href === '/private-yachts-in-goa' || this.href === '/best-dinner-cruise-in-goa') {
       window.location.href = 'tel:+917715959917';
     } else {
-      this._router.navigate([link]);
+      this._router.navigate([`/details/${link}`]);
     }
   }
   @ViewChild('scrollableDiv') scrollableDiv!: ElementRef;

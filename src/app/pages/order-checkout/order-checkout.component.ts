@@ -68,8 +68,8 @@ export class OrderCheckoutComponent implements OnInit {
     }
     if (storedSession) {
       this.sessionData = JSON.parse(storedSession);
-      this.hotelDetails = this.HelperService.getHotelByIndex(
-        this.sessionData.cruiseId,
+      this.hotelDetails = this.HelperService.getHotelByID(
+        this.sessionData.routingUrl,
         this.hotelList,
       );
     }

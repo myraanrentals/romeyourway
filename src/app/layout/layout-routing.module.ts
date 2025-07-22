@@ -13,6 +13,7 @@ import { CheckoutPageComponent } from '../pages/checkout-page/checkout-page.comp
 import { OrderCheckoutComponent } from '../pages/order-checkout/order-checkout.component';
 import { AboutUsComponent } from '../pages/about-us/about-us.component';
 import { DetailsPageComponent } from '../pages/details-page/details-page.component';
+import { ProtectRouteGuard } from './auth/protect-route.guard';
 
 const routes: Routes = [
   {
@@ -20,68 +21,33 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: HomepageComponent, pathMatch: 'full' },
-      { path: 'book-cruise-in-goa', component: DetailsPageComponent },
-      {
-        path: 'book-premium-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-family-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-luxury-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      { path: 'book-sunset-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'book-party-cruise-in-goa', component: DetailsPageComponent },
-      {
-        path: 'book-nautiamigo-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-paradise-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-swastik-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-vihaan-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-ohana-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-azulbarco-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      {
-        path: 'book-aarushi-dinner-cruise-in-goa',
-        component: DetailsPageComponent,
-      },
-      { path: 'book-river-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'lunch-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'candle-light-dinner-cruise-in-goa', component: DetailsPageComponent },
-      { path: 'adventure-boat-party-in-goa', component: DetailsPageComponent },
-      { path: 'dolphin-sightseeing-in-goa', component: DetailsPageComponent }, // Fixed Typo
       { path: 'goa-adventure-offers', component: ListingComponent },
-      { path: 'about-us', component: AboutUsComponent },
       { path: 'book-dinner-cruise-in-goa', component: ListingComponent },
       { path: 'private-yachts-in-goa', component: ListingComponent },
       { path: 'best-dinner-cruise-in-goa', component: ListingComponent },
       { path: 'book-personal-goa', component: ListingComponent },
-      { path: ':id/check-availability', component: CheckoutPageComponent },
-      { path: ':id/checkout', component: OrderCheckoutComponent },
+      { path: 'details/:id', component: DetailsPageComponent },
+      {
+        path: ':id/check-availability',
+        component: CheckoutPageComponent,
+        canActivate: [ProtectRouteGuard],
+      },
+      { path: ':id/checkout', component: OrderCheckoutComponent, canActivate: [ProtectRouteGuard] },
+      { path: 'about-us', component: AboutUsComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'terms-and-condition', component: TermsComponent },
       { path: 'refund-cancellation', component: RefundCancellationComponent },
       { path: 'contact-us', component: ContactComponent },
-      { path: 'payment-success', component: PaymentSuccessComponent },
-      { path: 'payment-failure', component: PaymentFailureComponent },
+      {
+        path: 'payment-success',
+        component: PaymentSuccessComponent,
+        canActivate: [ProtectRouteGuard],
+      },
+      {
+        path: 'payment-failure',
+        component: PaymentFailureComponent,
+        canActivate: [ProtectRouteGuard],
+      },
     ],
   },
 ];

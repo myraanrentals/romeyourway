@@ -245,16 +245,16 @@ export class OrderCheckoutComponent implements OnInit {
       toDate: selectedDate?.dateFormat,
       customerName: `${firstName} ${lastName}`,
       email,
-      totalAmount: payableAmount,
-      discountedTotalAmount: subtotal,
-      totalPayableAmount: subtotal,
+      totalAmount: 1,
+      discountedTotalAmount: 1,
+      totalPayableAmount: 1,
       paymentType,
       selectedPackage: selectedTransport,
     };
     this.handlePaymentResponse('response', payloadData);
     const options = {
       key: razorpay_key,
-      amount: 1 * 100,
+      amount: 1,
       currency: 'INR',
       expire_by: 1750346930,
       reference_id: phone,

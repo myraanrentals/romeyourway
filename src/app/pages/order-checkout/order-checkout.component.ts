@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatIcon } from '@angular/material/icon';
@@ -17,7 +17,8 @@ declare var Razorpay: any;
   templateUrl: './order-checkout.component.html',
   styleUrl: './order-checkout.component.scss',
 })
-export class OrderCheckoutComponent implements OnInit {
+export class OrderCheckoutComponent implements OnInit,AfterViewInit {
+  @ViewChild('contactDetails') contactDetails!: ElementRef;
   constructor(
     private bottomSheet: MatBottomSheet,
     private router: Router,
@@ -46,7 +47,7 @@ export class OrderCheckoutComponent implements OnInit {
     firstName: '',
     lastName: '',
     email: '',
-    countryCode: '',
+    countryCode: '+91',
     phone: '',
   };
   showErrors = false;
@@ -59,6 +60,11 @@ export class OrderCheckoutComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
     });
+  }
+   ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.contactDetails?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 0);
   }
   setSession() {
     const storedSession = sessionStorage.getItem('checkoutSession');

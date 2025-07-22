@@ -200,7 +200,7 @@
         </div>
       </div>
       <!-- Contact Details -->
-      <div class="contact-details">
+      <div class="contact-details" #contactDetails>
         <span>Contact Details</span>
         <p>All communications will be sent to this contact</p>
         <!-- Contact Form -->
@@ -258,7 +258,7 @@
           </div>
 
           <div class="phone-input">
-            <div class="form-group">
+            <div class="form-group code-group">
               <label for="countryCode">Country Code</label>
               <input
                 id="countryCode"
@@ -274,13 +274,13 @@
               </span>
             </div>
 
-            <div class="form-group">
+            <div class="form-group phone-group">
               <label for="phone">Phone Number</label>
               <input
                 id="phone"
                 type="text"
                 class="phone-number"
-                [(ngModel)]="travellerDetails.phone"
+                [(ngModel)]="travellerDetails.phone "
                 name="phone"
                 required
                 (input)="updateTravellerDetails()"

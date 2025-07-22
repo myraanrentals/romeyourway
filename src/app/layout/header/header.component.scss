@@ -40,6 +40,7 @@ header {
 
 .nav-links li {
   margin-left: 2rem;
+  align-self: center;
 }
 
 .nav-links a {
@@ -53,6 +54,13 @@ header {
   flex-direction: column;
   cursor: pointer;
   z-index: 10;
+}
+.phone-no {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 8px;
+  padding: 4px;
+  border-radius: 12px;
+  letter-spacing: 1px;
 }
 
 .hamburger span {
@@ -123,9 +131,14 @@ header {
 .dropdown-menu.show {
   display: block;
 }
-
+.web{
+  display: block;
+}
 /* Responsive styling */
 @media (max-width: 768px) {
+  .web{
+    display: none;
+  }
   .nav-links {
     position: absolute;
     right: 0;

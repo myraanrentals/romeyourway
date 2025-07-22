@@ -20,12 +20,10 @@ export class PaymentSuccessComponent implements OnInit {
   ngOnInit() {
     console.log('{first}');
     this.route.queryParamMap.subscribe((params) => {
+      console.log({ params });
       params.keys.forEach((key) => {
         this.paymentDetails[key] = params.get(key);
       });
-      if (this.paymentDetails?.razorpay_payment_link_status !== 'paid') {
-        this.router.navigate(['/book-dinner-cruise-in-goa']);
-      }
     });
   }
   // ngOnInit() {

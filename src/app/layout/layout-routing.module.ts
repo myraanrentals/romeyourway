@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { HomepageComponent } from '../pages/homepage/homepage.component';
-import { BookingSelectionComponent } from '../pages/booking-selection/booking-selection.component';
-import { CheckoutComponent } from '../pages/checkout/checkout.component';
 import { PrivacyPolicyComponent } from '../pages/privacy-policy/privacy-policy.component';
 import { TermsComponent } from '../pages/terms/terms.component';
 import { ContactComponent } from '../pages/contact/contact.component';
@@ -78,8 +76,6 @@ const routes: Routes = [
       { path: 'book-personal-goa', component: ListingComponent },
       { path: ':id/check-availability', component: CheckoutPageComponent },
       { path: ':id/checkout', component: OrderCheckoutComponent },
-      { path: 'booking', component: BookingSelectionComponent },
-      { path: 'checkout', component: CheckoutComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'terms-and-condition', component: TermsComponent },
       { path: 'refund-cancellation', component: RefundCancellationComponent },

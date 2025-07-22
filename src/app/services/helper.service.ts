@@ -23,13 +23,12 @@ export class HelperService {
       return null;
     }
   }
-  renderPackageData() {
-    const href = this.router.url;
-    if (href === '/book-dinner-cruise-in-goa') {
+  renderPackageData(category: string) {
+    if (category === 'book-dinner-cruise-in-goa') {
       return hotels;
-    } else if (href === '/private-yachts-in-goa') {
+    } else if (category === 'private-yachts-in-goa') {
       return yacth;
-    } else if (href === '/best-dinner-cruise-in-goa') {
+    } else if (category === 'best-dinner-cruise-in-goa') {
       return dinnerCruise;
     } else {
       return hotels;

@@ -206,7 +206,8 @@ export class CheckoutPageComponent implements OnInit {
     this.router.navigate(['/']);
   }
   navigateToPaymentPage(id: string) {
-    this.router.navigate([`/${id}/checkout`]);
+    const category = this.route.snapshot.paramMap.get('category');
+    this.router.navigate([`/${category}/details/${id}/checkout`]);
   }
   openLocationModal(event: MouseEvent) {
     // prevent card click

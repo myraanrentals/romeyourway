@@ -21,18 +21,6 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: HomepageComponent, pathMatch: 'full' },
-      { path: 'goa-adventure-offers', component: ListingComponent },
-      { path: 'book-dinner-cruise-in-goa', component: ListingComponent },
-      { path: 'private-yachts-in-goa', component: ListingComponent },
-      { path: 'best-dinner-cruise-in-goa', component: ListingComponent },
-      { path: 'book-personal-goa', component: ListingComponent },
-      { path: 'details/:id', component: DetailsPageComponent },
-      {
-        path: ':id/check-availability',
-        component: CheckoutPageComponent,
-        canActivate: [ProtectRouteGuard],
-      },
-      { path: ':id/checkout', component: OrderCheckoutComponent, canActivate: [ProtectRouteGuard] },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'terms-and-condition', component: TermsComponent },
@@ -48,6 +36,19 @@ const routes: Routes = [
         component: PaymentFailureComponent,
         canActivate: [ProtectRouteGuard],
       },
+
+      {
+        path: ':category/details/:id/check-availability',
+        component: CheckoutPageComponent,
+        canActivate: [ProtectRouteGuard],
+      },
+      {
+        path: ':category/details/:id/checkout',
+        component: OrderCheckoutComponent,
+        canActivate: [ProtectRouteGuard],
+      },
+      { path: ':category/details/:id', component: DetailsPageComponent },
+      { path: ':category', component: ListingComponent },
     ],
   },
 ];

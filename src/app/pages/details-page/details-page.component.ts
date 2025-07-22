@@ -21,6 +21,8 @@ export class DetailsPageComponent {
   hotelList = hotels;
   cancellationPolicy = cancellationPolicy;
   features: any;
+  category: string = '';
+
   constructor(
     public dialog: MatDialog,
     private _router: Router,
@@ -31,11 +33,15 @@ export class DetailsPageComponent {
   selectedIdentity = 1;
   hotelDetails: any;
   ngOnInit() {
+    const category = this.route.snapshot.paramMap.get('category');
+    if (!category) return;
+    this.category = category;
     const routeId = this.route.snapshot.paramMap.get('id');
     if (!routeId) return;
     this.hotelDetails = this.HelperService.getHotelByID(routeId, this.hotelList);
     sessionStorage.setItem('packagePrice', this.hotelDetails?.currentPrice);
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
+    this.hotelList = this.HelperService.renderPackageData(category);
   }
   topFeatures = [
     {
@@ -56,7 +62,8 @@ export class DetailsPageComponent {
   ];
 
   navigateToCheckout(id: string) {
-    this._router.navigate([`/${id}/check-availability`]);
+    const routeId = this.route.snapshot.paramMap.get('id');
+    this._router.navigate([`/${this.category}/details/${routeId}/check-availability`]);
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(OverviewModalComponent, {

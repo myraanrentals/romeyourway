@@ -5,7 +5,13 @@
   <div class="person-list">
     <div class="person-row" *ngFor="let item of bookingDetails">
       <div class="person-label">{{ item.count }} x {{ item.label }}</div>
-      <div class="person-price">INR {{ item.count * item.price }}</div>
+      <div class="person-price">
+        INR
+        {{
+          item.count *
+            (selectedTransport?.title === 'With Transport' ? item.price + 200 : item.price)
+        }}
+      </div>
     </div>
   </div>
 

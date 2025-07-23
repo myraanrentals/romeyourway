@@ -81,6 +81,7 @@ export class HelperService {
     payableAmount: number;
     paymentType: string;
     pickupLocation: string;
+    amountWithGST: number;
   } = {
     selectedDate: {
       day: formatDate(new Date(), 'dd', 'en'),
@@ -95,6 +96,7 @@ export class HelperService {
     selectedTime: '6pm',
     paymentType: 'full',
     pickupLocation: '',
+    amountWithGST: 0,
   };
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');

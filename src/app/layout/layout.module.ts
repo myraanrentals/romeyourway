@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from '../pages/contact/contact.component';
 import { MatCardModule } from '@angular/material/card';
+import { PaymentStatusComponent } from '../pages/payment-status/payment-status.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     NavbarComponent,
     LayoutComponent,
     ContactComponent,
+    PaymentStatusComponent
   ],
   imports: [CommonModule, LayoutRoutingModule, MatIconModule, ReactiveFormsModule, MatCardModule],
 })

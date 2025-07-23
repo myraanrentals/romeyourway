@@ -127,13 +127,17 @@ export class CheckoutPageComponent implements OnInit {
         total + traveller.count * this.getTravellerPrice(traveller),
       0,
     );
+    const gstRate = 0.18;
+    const gstAmount = +(subtotal * gstRate).toFixed(2);
+    const amountWithGST = +(subtotal + gstAmount).toFixed(2);
 
     this.HelperService.updateSessionStorage({
-      subtotal,
-      payableAmount: subtotal,
+      subtotal: +subtotal.toFixed(2),
+      payableAmount: +subtotal.toFixed(2),
+      amountWithGST,
     });
 
-    return subtotal;
+    return +subtotal.toFixed(2);
   }
 
   openSidePanel(event: Event) {
@@ -154,6 +158,7 @@ export class CheckoutPageComponent implements OnInit {
     });
 
     const selectedTransport = this.hotelDetails.transport.find((pkg: any) => pkg.isSelected);
+    this.sessionData.travellers;
     this.sessionData.selectedTransport = selectedTransport;
     this.HelperService.updateSessionStorage({
       selectedTransport: selectedTransport || null,

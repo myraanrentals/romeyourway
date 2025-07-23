@@ -9,6 +9,7 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
     currentPrice: '1',
     image: '/assets/home/01.avif',
     topFeatures: [
@@ -150,6 +151,7 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 200,
     currentPrice: '499',
     image: '/assets/home/02.avif',
     topFeatures: [
@@ -291,6 +293,7 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
     currentPrice: '1099',
     image: '/assets/home/03.avif',
     topFeatures: [
@@ -432,6 +435,7 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
     currentPrice: '1999',
     image: '/assets/home/04.avif',
     topFeatures: [
@@ -573,6 +577,7 @@ export const hotels: any[] = [
     oldPrice: '1699',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
     currentPrice: '1499',
     image: '/assets/dinnercruise/DC23.avif',
     topFeatures: [
@@ -714,6 +719,7 @@ export const hotels: any[] = [
     reviews: '3867',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
     currentPrice: '999',
     oldPrice: '1499',
     topFeatures: [
@@ -855,6 +861,7 @@ export const hotels: any[] = [
     oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
     currentPrice: '1099',
     topFeatures: [
       {

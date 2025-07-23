@@ -16,7 +16,7 @@ import { BookingService } from '@services/booking.service';
   templateUrl: './order-checkout.component.html',
   styleUrl: './order-checkout.component.scss',
 })
-export class OrderCheckoutComponent implements OnInit,AfterViewInit {
+export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   @ViewChild('contactDetails') contactDetails!: ElementRef;
   constructor(
     private bottomSheet: MatBottomSheet,
@@ -64,7 +64,7 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
       this.isLoading = false;
     });
   }
-   ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
     setTimeout(() => {
       this.contactDetails?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 0);
@@ -75,12 +75,10 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
     if (storedDetails) {
       this.travellerDetails = JSON.parse(storedDetails);
     }
-    if (storedSession) {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (storedSession && id) {
       this.sessionData = JSON.parse(storedSession);
-      this.hotelDetails = this.HelperService.getHotelByID(
-        this.sessionData.routingUrl,
-        this.hotelList,
-      );
+      this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
     }
   }
   startCountdown() {
@@ -97,17 +95,41 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
   }
   selectPayment(option: 'full' | 'partial') {
     this.selectedPaymentOption = option;
-    option === 'full'
-      ? this.HelperService.updateSessionStorage({
-          payableAmount: this.sessionData.subtotal,
-          paymentType: option,
-        })
-      : this.HelperService.updateSessionStorage({
-          payableAmount: this.sessionData.subtotal / 2,
-          paymentType: option,
-        });
+    const subtotal = this.sessionData.subtotal;
+    const reportPrice = this.hotelDetails.reportPrice;
+    const gstRate = 0.18;
+
+    if (option === 'full') {
+      const gstAmount = +(subtotal * gstRate).toFixed(2);
+      const amountWithGST = +(subtotal + gstAmount).toFixed(2);
+
+      this.HelperService.updateSessionStorage({
+        payableAmount: +subtotal.toFixed(2),
+        paymentType: option,
+        amountWithGST,
+      });
+    } else {
+      const { travellers, selectedTransport } = this.sessionData;
+      const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
+      console.log({ vehicleQuantity });
+      const finalReportPrice =
+        selectedTransport?.title === 'With Transport'
+          ? subtotal - vehicleQuantity * (reportPrice + 200)
+          : subtotal - vehicleQuantity * reportPrice;
+      const partialSubtotal = finalReportPrice;
+      const partialGST = +(partialSubtotal * gstRate).toFixed(2);
+      const amountWithGST = +(partialSubtotal + partialGST).toFixed(2);
+
+      this.HelperService.updateSessionStorage({
+        payableAmount: +partialSubtotal.toFixed(2),
+        paymentType: option,
+        amountWithGST,
+      });
+    }
+
     this.setSession();
   }
+
   openBookingSummary() {
     this.bottomSheet.open(AppBookingSummaryComponent, {
       panelClass: 'custom-bottom-sheet',
@@ -230,8 +252,15 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
   // }
   initiatePayment() {
     const { firstName, lastName, countryCode, phone, email } = this.travellerDetails;
-    const { payableAmount, selectedDate, travellers, subtotal, paymentType, selectedTransport } =
-      this.sessionData;
+    const {
+      payableAmount,
+      selectedDate,
+      travellers,
+      subtotal,
+      paymentType,
+      selectedTransport,
+      amountWithGST,
+    } = this.sessionData;
     const { title } = this.hotelDetails;
     const payloadData = {
       vehicleType: 'WATERSPORTS',
@@ -254,9 +283,10 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
       toDate: selectedDate?.dateFormat,
       customerName: `${firstName} ${lastName}`,
       email,
-      totalAmount: 1,
-      discountedTotalAmount: 1,
-      totalPayableAmount: 1,
+      totalAmount: amountWithGST,
+      discountedTotalAmount: subtotal,
+      totalPayableAmount: subtotal,
+      balanceAmount: subtotal - payableAmount,
       paymentType,
       selectedPackage: selectedTransport,
     };
@@ -280,7 +310,6 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
   handlePaymentResponse(response: any, payloadData: any) {
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
-        console.log('Booking successful', res);
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentLink;
           this.bookingPay(payLink);

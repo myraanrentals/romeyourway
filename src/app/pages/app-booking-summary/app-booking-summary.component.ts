@@ -14,6 +14,10 @@ export class AppBookingSummaryComponent {
   totalAmount: number;
   discountAmount: number;
   bookingDetails: any;
+  selectedTransport: any;
+  gstRate = 0.18;
+  gstAmount = 0;
+  finalAmount = 0;
 
   constructor(
     private bottomSheetRef: MatBottomSheetRef<AppBookingSummaryComponent>,
@@ -21,14 +25,15 @@ export class AppBookingSummaryComponent {
   ) {
     this.totalAmount = data.totalAmount;
     this.discountAmount = data.discountAmount;
+    this.gstAmount = +(this.totalAmount * this.gstRate).toFixed(2);
+    this.finalAmount = +(this.totalAmount + this.gstAmount).toFixed(2);
   }
   ngOnInit(): void {
     const data = sessionStorage.getItem('checkoutSession');
     if (data) {
       const parsedData = JSON.parse(data);
       this.bookingDetails = parsedData?.travellers;
-
-      console.log({ test: this.bookingDetails });
+      this.selectedTransport = parsedData?.selectedTransport;
     } else {
       this.bookingDetails = null;
     }

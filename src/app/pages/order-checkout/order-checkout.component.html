@@ -305,7 +305,7 @@
               <s>INR {{ sessionData.subtotal + 500 }}</s>
             </p>
             <p class="final-price">
-              INR {{ sessionData.payableAmount }}
+              INR {{ sessionData.amountWithGST }}
               <span (click)="openBookingSummary()" class="mobile viewDetails">View Details ></span>
             </p>
           </div>
@@ -394,7 +394,7 @@
               <s>INR {{ sessionData.subtotal + 500 }}</s>
             </p>
             <p class="final-price">
-              INR {{ sessionData.payableAmount }}
+              INR {{ sessionData.amountWithGST }}
               <span (click)="openBookingSummary()" class="viewDetails">View Details ></span>
             </p>
           </div>

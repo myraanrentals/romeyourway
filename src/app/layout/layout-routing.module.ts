@@ -14,6 +14,7 @@ import { OrderCheckoutComponent } from '../pages/order-checkout/order-checkout.c
 import { AboutUsComponent } from '../pages/about-us/about-us.component';
 import { DetailsPageComponent } from '../pages/details-page/details-page.component';
 import { ProtectRouteGuard } from './auth/protect-route.guard';
+import { PaymentStatusComponent } from '../pages/payment-status/payment-status.component';
 
 const routes: Routes = [
   {
@@ -26,10 +27,11 @@ const routes: Routes = [
       { path: 'terms-and-condition', component: TermsComponent },
       { path: 'refund-cancellation', component: RefundCancellationComponent },
       { path: 'contact-us', component: ContactComponent },
+      { path: 'payment-status/:paymentId', component: PaymentStatusComponent },
       {
         path: 'payment-success',
         component: PaymentSuccessComponent,
-        canActivate: [ProtectRouteGuard],
+        // canActivate: [ProtectRouteGuard],
       },
       {
         path: 'payment-failure',

@@ -81,7 +81,4 @@ export class DetailsPageComponent {
     const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
     window.location.href = `https://wa.me/${internationalNumber}`;
   }
-  navigateToPage() {
-    window.location.href = '/book-dinner-cruise-in-goa';
-  }
 }

@@ -27,10 +27,6 @@ import { hotels } from '../../constants/hotels';
 })
 export class HomepageComponent implements OnInit {
   hotelList = hotels;
-  navigateToPage() {
-    window.location.href = '/book-dinner-cruise-in-goa';
-  }
-
   cardDataList = [
     {
       title: 'Famous Activities in Goa',

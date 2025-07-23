@@ -56,9 +56,13 @@ export class CheckoutPageComponent implements OnInit {
   locations: string[] = ['Calangute', 'Candolim', 'Baga', 'Arpora'];
   showLocationModal = false;
   selectedLocation: string | null = null;
+  category: string = '';
 
   ngOnInit() {
     this.generateDates(new Date());
+    const category = this.route.snapshot.paramMap.get('category');
+    if (!category) return;
+    this.category = category;
 
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
@@ -75,6 +79,7 @@ export class CheckoutPageComponent implements OnInit {
       this.HelperService.updateSessionStorage(this.sessionData);
     });
     this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt);
+    this.hotelList = this.HelperService.renderPackageData(category);
   }
 
   @HostListener('window:resize', ['$event'])
@@ -206,8 +211,7 @@ export class CheckoutPageComponent implements OnInit {
     this.router.navigate(['/']);
   }
   navigateToPaymentPage(id: string) {
-    const category = this.route.snapshot.paramMap.get('category');
-    this.router.navigate([`/${category}/details/${id}/checkout`]);
+    this.router.navigate([`/${this.category}/details/${id}/checkout`]);
   }
   openLocationModal(event: MouseEvent) {
     // prevent card click

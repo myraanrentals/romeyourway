@@ -8,7 +8,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HelperService } from '@services/helper.service';
 import { hotels, razorpay_key, key_secret } from '../../constants/hotels';
 import { BookingService } from '@services/booking.service';
-declare var Razorpay: any;
 
 @Component({
   selector: 'app-order-checkout',
@@ -21,7 +20,6 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
   @ViewChild('contactDetails') contactDetails!: ElementRef;
   constructor(
     private bottomSheet: MatBottomSheet,
-    private router: Router,
     private route: ActivatedRoute,
     private HelperService: HelperService,
     private _bookingService: BookingService,
@@ -52,8 +50,13 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
   };
   showErrors = false;
   isLoading = true;
+  category: string = '';
 
   ngOnInit() {
+    const category = this.route.snapshot.paramMap.get('category');
+    if (!category) return;
+    this.category = category;
+    this.hotelList = this.HelperService.renderPackageData(category);
     this.startCountdown();
     this.setSession();
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
@@ -74,8 +77,8 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
     }
     if (storedSession) {
       this.sessionData = JSON.parse(storedSession);
-      this.hotelDetails = this.HelperService.getHotelByIndex(
-        this.sessionData.cruiseId,
+      this.hotelDetails = this.HelperService.getHotelByID(
+        this.sessionData.routingUrl,
         this.hotelList,
       );
     }
@@ -272,24 +275,15 @@ export class OrderCheckoutComponent implements OnInit,AfterViewInit {
       prefill: { name: `${firstName} ${lastName}`, email, contact: phone },
       theme: { color: '#3399cc' },
     };
-
-    // new Razorpay(options).open();
   }
 
   handlePaymentResponse(response: any, payloadData: any) {
-    // sessionStorage.setItem('paymentResponse', JSON.stringify(response));
-
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
         console.log('Booking successful', res);
-        if (
-          // response.razorpay_payment_id &&
-          res?.responseCode === 200 &&
-          res?.responseMessage === 'SUCCESS'
-        ) {
+        if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentLink;
           this.bookingPay(payLink);
-          // this.router.navigate(['/payment-success']);
         } else {
         }
       },

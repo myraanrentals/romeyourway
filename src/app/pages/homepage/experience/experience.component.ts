@@ -33,7 +33,6 @@ export class ExperienceComponent {
   mobFlag: boolean = false;
   images: any = '';
   selectedIdentity = 1;
-  hotels: any = hotels;
   href: string = '';
 
   constructor(
@@ -58,11 +57,6 @@ export class ExperienceComponent {
   }
   ngAfterViewInit() {
     this.href = this._router.url;
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['experienceData'] && this.experienceData) {
-      this.hotels = this.experienceData;
-    }
   }
 
   openFullScreen(content: TemplateRef<any>, offer: any) {
@@ -104,10 +98,11 @@ export class ExperienceComponent {
     }
   }
   goToService(link: string) {
-    if (this.href === '/private-yachts-in-goa' || this.href === '/best-dinner-cruise-in-goa') {
+    const category = this.route.snapshot.paramMap.get('category');
+    if (category === 'private-yachts-in-goa' || category === 'best-dinner-cruise-in-goa') {
       window.location.href = 'tel:+917715959917';
     } else {
-      this._router.navigate([link]);
+      this._router.navigate([`/${category}/details/${link}`]);
     }
   }
   @ViewChild('scrollableDiv') scrollableDiv!: ElementRef;
@@ -166,6 +161,6 @@ export class ExperienceComponent {
   }
 
   getItemById(identity: number) {
-    return this.hotels.find((item: any) => item.cruiseId === identity);
+    return this.experienceData.find((item: any) => item.cruiseId === identity);
   }
 }

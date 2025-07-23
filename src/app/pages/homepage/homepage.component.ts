@@ -27,10 +27,6 @@ import { hotels } from '../../constants/hotels';
 })
 export class HomepageComponent implements OnInit {
   hotelList = hotels;
-  navigateToPage() {
-    window.location.href = '/book-dinner-cruise-in-goa';
-  }
-
   cardDataList = [
     {
       title: 'Famous Activities in Goa',
@@ -155,6 +151,7 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    sessionStorage.clear();
     (async () => {
       if (this._helperService.getSessionStorage('travelDetails') !== null) {
         this._helperService.deleteSessionStorage('travelDetails');

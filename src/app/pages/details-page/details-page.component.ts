@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CommonModule } from '@angular/common';
 import { OverviewModalComponent } from '../overview-modal/overview-modal.component';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { hotels, cancellationPolicy } from '../../constants/hotels';
 import { HelperService } from '../../services/helper.service';
@@ -21,20 +21,27 @@ export class DetailsPageComponent {
   hotelList = hotels;
   cancellationPolicy = cancellationPolicy;
   features: any;
+  category: string = '';
+
   constructor(
     public dialog: MatDialog,
     private _router: Router,
+    private route: ActivatedRoute,
     private HelperService: HelperService,
   ) {}
   activeTab: string = 'mustKnow';
   selectedIdentity = 1;
   hotelDetails: any;
   ngOnInit() {
-    const lastSegment = this._router.url.split('/').pop() || '';
-    this.selectedIdentity = this.HelperService.getIdFromURL(lastSegment);
-    this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
+    const category = this.route.snapshot.paramMap.get('category');
+    if (!category) return;
+    this.category = category;
+    const routeId = this.route.snapshot.paramMap.get('id');
+    if (!routeId) return;
+    this.hotelDetails = this.HelperService.getHotelByID(routeId, this.hotelList);
     sessionStorage.setItem('packagePrice', this.hotelDetails?.currentPrice);
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
+    this.hotelList = this.HelperService.renderPackageData(category);
   }
   topFeatures = [
     {
@@ -55,7 +62,8 @@ export class DetailsPageComponent {
   ];
 
   navigateToCheckout(id: string) {
-    this._router.navigate([`/${id}/check-availability`]);
+    const routeId = this.route.snapshot.paramMap.get('id');
+    this._router.navigate([`/${this.category}/details/${routeId}/check-availability`]);
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(OverviewModalComponent, {
@@ -72,8 +80,5 @@ export class DetailsPageComponent {
   openWhatsApp(phoneNumber: string) {
     const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
     window.location.href = `https://wa.me/${internationalNumber}`;
-  }
-  navigateToPage() {
-    window.location.href = '/book-dinner-cruise-in-goa';
   }
 }

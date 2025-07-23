@@ -23,13 +23,12 @@ export class HelperService {
       return null;
     }
   }
-  renderPackageData() {
-    const href = this.router.url;
-    if (href === '/book-dinner-cruise-in-goa') {
+  renderPackageData(category: string) {
+    if (category === 'book-dinner-cruise-in-goa') {
       return hotels;
-    } else if (href === '/private-yachts-in-goa') {
+    } else if (category === 'private-yachts-in-goa') {
       return yacth;
-    } else if (href === '/best-dinner-cruise-in-goa') {
+    } else if (category === 'best-dinner-cruise-in-goa') {
       return dinnerCruise;
     } else {
       return hotels;
@@ -42,31 +41,8 @@ export class HelperService {
   clearSessionStorage() {
     sessionStorage.clear();
   }
-  private urlMap: { [key: string]: number } = {
-    'lunch-cruise-in-goa': 1,
-    'adventure-boat-party-in-goa': 2,
-    'dolphin-sightseeing-in-goa': 3,
-    'book-cruise-in-goa': 4,
-    'book-premium-dinner-cruise-in-goa': 5,
-    'book-family-dinner-cruise-in-goa': 6,
-    'book-luxury-dinner-cruise-in-goa': 7,
-    'book-sunset-cruise-in-goa': 8,
-    'book-party-cruise-in-goa': 9,
-    'book-nautiamigo-dinner-cruise-in-goa': 10,
-    'book-paradise-dinner-cruise-in-goa': 11,
-    'book-swastik-dinner-cruise-in-goa': 12,
-    'book-vihaan-dinner-cruise-in-goa': 13,
-    'book-ohana-dinner-cruise-in-goa': 14,
-    'book-azulbarco-dinner-cruise-in-goa': 15,
-    'book-aarushi-dinner-cruise-in-goa': 16,
-    'book-river-cruise-in-goa': 17,
-    'candle-light-dinner-cruise-in-goa': 18,
-  };
-  getIdFromURL(value: string): number {
-    return this.urlMap[value] || 1;
-  }
-  getHotelByIndex(index: number, hotelList: any[]) {
-    const matchedHotel = hotelList.find((hotel) => hotel.cruiseId === index);
+  getHotelByID(id: string, hotelList: any[]) {
+    const matchedHotel = hotelList.find((hotel) => hotel.routingUrl === id);
     return matchedHotel || hotelList[0];
   }
   getFeatureList(hotelDetails?: { rating?: number }): any[] {

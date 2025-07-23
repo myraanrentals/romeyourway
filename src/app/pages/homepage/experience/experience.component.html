@@ -1,7 +1,7 @@
 <section id="experience">
   <div class="container">
     <h2>Select Your Package</h2>
-    @for (offer of hotels; track offer) {
+    @for (offer of experienceData; track offer) {
       <div class="card">
         <div class="flex g-1">
           @if (mobFlag) {
@@ -381,7 +381,7 @@
             <button
               style="margin-left: 64px"
               (click)="
-                redirectToBooking(hotels, getItemById(selectedIdentity));
+                redirectToBooking(experienceData, getItemById(selectedIdentity));
                 modal.dismiss('Cross click')
               "
               class="availability-button"

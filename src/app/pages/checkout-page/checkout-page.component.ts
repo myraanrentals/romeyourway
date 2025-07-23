@@ -56,17 +56,19 @@ export class CheckoutPageComponent implements OnInit {
   locations: string[] = ['Calangute', 'Candolim', 'Baga', 'Arpora'];
   showLocationModal = false;
   selectedLocation: string | null = null;
+  category: string = '';
   public showProceedButton = false;
 
   ngOnInit() {
     this.generateDates(new Date());
+    const category = this.route.snapshot.paramMap.get('category');
+    if (!category) return;
+    this.category = category;
     this.showProceedButton = window.innerWidth > 768;
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       if (!id) return;
-
-      this.selectedIdentity = this.HelperService.getIdFromURL(id);
-      this.hotelDetails = this.HelperService.getHotelByIndex(this.selectedIdentity, this.hotelList);
+      this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
@@ -77,8 +79,8 @@ export class CheckoutPageComponent implements OnInit {
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
-    console.log({ test: this.sessionData });
     this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt);
+    this.hotelList = this.HelperService.renderPackageData(category);
   }
 
   @HostListener('window:resize', ['$event'])
@@ -213,7 +215,7 @@ export class CheckoutPageComponent implements OnInit {
     this.router.navigate(['/']);
   }
   navigateToPaymentPage(id: string) {
-    this.router.navigate([`/${id}/checkout`]);
+    this.router.navigate([`/${this.category}/details/${id}/checkout`]);
   }
   openLocationModal(event: MouseEvent) {
     // prevent card click

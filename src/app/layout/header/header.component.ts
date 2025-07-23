@@ -38,7 +38,7 @@ export class HeaderComponent {
   }
 
   navigateTo(route: string) {
-    this.router.navigate([route]);
+    this.router.navigate([`/${route}`]);
     this.closeMenu();
   }
   @HostListener('document:click', ['$event'])

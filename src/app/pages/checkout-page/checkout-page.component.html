@@ -139,8 +139,16 @@
           <span>Total Amount </span>
           <p class="pay-btn-amount">INR {{ getSubtotal() }}</p>
         </div>
-        <button class="offer-button" (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)">
-          Proceed To pay
+        <button class="offer-button" *ngIf="!showProceedButton" (click)="scrollToTimeSlot()">
+          Next
+        </button>
+
+        <button
+          class="offer-button"
+          *ngIf="showProceedButton"
+          (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
+        >
+          Proceed To Pay
         </button>
       </div>
     </div>

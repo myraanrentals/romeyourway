@@ -9,7 +9,7 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    currentPrice: '999',
+    currentPrice: '1',
     image: '/assets/home/01.avif',
     topFeatures: [
       {
@@ -129,7 +129,7 @@ export const hotels: any[] = [
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1199',
-        discountedamt: '999',
+        discountedamt: '1',
         kidAmt: '900',
         desc: [
           'Access to lower deck',

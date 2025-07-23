@@ -122,12 +122,12 @@ p {
     gap: 10px;
   }
 
-  .country-code {
-    width: 60px;
+  .code-group {
+    white-space: nowrap;
+    width: 20%;
   }
-
-  .phone-number {
-    flex: 1;
+  .phone-group{
+    width: 80%;
   }
 
   .discount-message {
@@ -383,7 +383,13 @@ p {
     flex-direction: column;
     margin-bottom: 10px;
   }
-
+  .code-group {
+    white-space: nowrap;
+    width: 25%;
+  }
+  .phone-group{
+    width: 75%;
+  }
   label {
     font-size: 12px;
     font-weight: 300;
@@ -397,14 +403,6 @@ p {
   .phone-input {
     display: flex;
     gap: 10px;
-  }
-
-  .country-code {
-    width: 60px;
-  }
-
-  .phone-number {
-    flex: 1;
   }
 
   .discount-message {

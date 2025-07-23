@@ -57,13 +57,14 @@ export class CheckoutPageComponent implements OnInit {
   showLocationModal = false;
   selectedLocation: string | null = null;
   category: string = '';
+  public showProceedButton = false;
 
   ngOnInit() {
     this.generateDates(new Date());
     const category = this.route.snapshot.paramMap.get('category');
     if (!category) return;
     this.category = category;
-
+    this.showProceedButton = window.innerWidth > 768;
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       if (!id) return;
@@ -105,7 +106,10 @@ export class CheckoutPageComponent implements OnInit {
       });
     }
   }
-
+  scrollToTimeSlot() {
+    this.timeSlotContainer.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.showProceedButton = true;
+  }
   getTravellerPrice(traveller: any): number {
     // same logic as template
     if (traveller.label === 'Adult') {

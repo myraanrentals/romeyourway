@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatIcon } from '@angular/material/icon';
@@ -16,7 +16,8 @@ import { BookingService } from '@services/booking.service';
   templateUrl: './order-checkout.component.html',
   styleUrl: './order-checkout.component.scss',
 })
-export class OrderCheckoutComponent implements OnInit {
+export class OrderCheckoutComponent implements OnInit,AfterViewInit {
+  @ViewChild('contactDetails') contactDetails!: ElementRef;
   constructor(
     private bottomSheet: MatBottomSheet,
     private route: ActivatedRoute,
@@ -44,7 +45,7 @@ export class OrderCheckoutComponent implements OnInit {
     firstName: '',
     lastName: '',
     email: '',
-    countryCode: '',
+    countryCode: '+91',
     phone: '',
   };
   showErrors = false;
@@ -62,6 +63,11 @@ export class OrderCheckoutComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
     });
+  }
+   ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.contactDetails?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 0);
   }
   setSession() {
     const storedSession = sessionStorage.getItem('checkoutSession');
@@ -248,16 +254,16 @@ export class OrderCheckoutComponent implements OnInit {
       toDate: selectedDate?.dateFormat,
       customerName: `${firstName} ${lastName}`,
       email,
-      totalAmount: payableAmount,
-      discountedTotalAmount: subtotal,
-      totalPayableAmount: subtotal,
+      totalAmount: 1,
+      discountedTotalAmount: 1,
+      totalPayableAmount: 1,
       paymentType,
       selectedPackage: selectedTransport,
     };
     this.handlePaymentResponse('response', payloadData);
     const options = {
       key: razorpay_key,
-      amount: 1 * 100,
+      amount: 1,
       currency: 'INR',
       expire_by: 1750346930,
       reference_id: phone,

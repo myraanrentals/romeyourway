@@ -16,3 +16,16 @@
     <a href="/" class="back-home-btn">Go to Home</a>
   </div>
 </div>
+
+<script>
+  window.addEventListener('load', function () {
+    if (window.location.href.indexOf('/payment-success') != -1) {
+      gtag('event', 'conversion', {
+        send_to: 'AW-744972798/nJi1CKq_xvYaEP7DneMC',
+        value: 1.0,
+        currency: 'INR',
+        transaction_id: '',
+      });
+    }
+  });
+</script>

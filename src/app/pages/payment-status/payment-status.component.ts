@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { BookingService } from '@services/booking.service';
 
 @Component({
   selector: 'app-payment-status',
@@ -15,17 +16,20 @@ export class PaymentStatusComponent implements OnInit {
     private route: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
+    private _bookingService: BookingService,
   ) {}
 
   ngOnInit(): void {
     const paymentId = this.route.snapshot.paramMap.get('paymentId');
-    if (!paymentId) {
+    const previousBookingID = sessionStorage.getItem('paymentResponse');
+    console.log({ paymentId, previousBookingID });
+    if (!paymentId || !previousBookingID || previousBookingID !== paymentId) {
       this.error = 'Missing payment ID';
       this.isLoading = false;
       return;
     }
 
-    this.http.get<{ status: string }>(`/api/payment-status/${paymentId}`).subscribe({
+    this._bookingService.paymentStatus(paymentId).subscribe({
       next: (res) => {
         this.isLoading = false;
         switch (res.status.toLowerCase()) {

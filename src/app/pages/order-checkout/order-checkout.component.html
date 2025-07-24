@@ -73,10 +73,11 @@
                   ></path>
                 </svg>
               </span>
-              <span *ngFor="let traveller of this.sessionData.travellers">
-                {{ traveller.displayLabel }}: {{ traveller.count }}
-              </span>
-              |
+              <ng-container *ngFor="let traveller of sessionData.travellers; let last = last">
+                <span> {{ traveller.displayLabel }}: {{ traveller.count }} </span>
+                <span *ngIf="!last"> | </span>
+              </ng-container>
+<br>
               <span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"

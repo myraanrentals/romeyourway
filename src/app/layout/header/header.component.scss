@@ -213,6 +213,11 @@ header {
     justify-self: center;
     color: #fff;
   }
+  @supports (-webkit-touch-callout: none) {
+    .dropdown-btn {
+      margin-left: 40px;
+    }
+  }
   .dropdown-menu {
     position: static;
     display: none;

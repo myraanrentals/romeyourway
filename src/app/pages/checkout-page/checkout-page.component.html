@@ -105,7 +105,7 @@
         <label class="section-title">Select Travellers</label>
         <div class="traveller-section" *ngFor="let traveller of sessionData.travellers">
           <div>
-            <p class="traveller-label">{{ traveller.label }}</p>
+            <p class="traveller-label">{{ traveller.displayLabel }}</p>
             <p class="price">
               INR
               {{
@@ -115,7 +115,7 @@
                     ? (sessionData.selectedTransport?.discountedamt || 0) - 200
                     : 0
               }}
-              /{{ traveller.displayLabel.toLowerCase() }}
+              /{{ traveller.label.toLowerCase() }}
             </p>
           </div>
           <div class="counter">

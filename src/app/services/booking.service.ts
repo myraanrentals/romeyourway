@@ -45,7 +45,14 @@ export class BookingService {
     };
     return this._apiService.httpPOST(APIROUTES.WATERSPORTSBOOKING, payload);
   }
-
+  paymentStatus(bookingId: any): Observable<any> {
+    let payload = {
+      payload: {
+        bookingId: bookingId,
+      },
+    };
+    return this._apiService.httpPOST(APIROUTES.PAYMENTSTATUS, payload);
+  }
   updateTotalAmount(bookingDetails: BookingDetails) {
     const { adultCount, childCount, infantCount, singleAdultAmt, singleChildAmt, singleInfantAmt } =
       bookingDetails;

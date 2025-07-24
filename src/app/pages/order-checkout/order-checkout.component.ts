@@ -312,6 +312,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       next: (res: any) => {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentLink;
+          console.log({ res });
+          sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
           this.bookingPay(payLink);
         } else {
         }

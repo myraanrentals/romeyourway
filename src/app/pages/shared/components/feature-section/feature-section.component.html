@@ -1,0 +1,25 @@
+<section>
+  <div class="container">
+    <div class="flex innerContainer" (click)="openWhatsApp(whatsappNumber)">
+      <h2 class="offers-title">{{ title }}</h2>
+      <div class="featuresContainer">
+        @for (feature of features; track feature) {
+          <div class="card-main">
+            <div>
+              <img
+                [ngStyle]="{ width: '68px', height: '68px' }"
+                [src]="feature.icon"
+                alt="Icon"
+                class="card-main-img"
+              />
+            </div>
+            <div class="info">
+              <h4 class="featureTitle">{{ feature.title }}</h4>
+              <p>{{ feature.text }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PaymentSuccessComponent implements OnInit {
   public paymentDetails: any = {};
-  getRazorPayId: any;
+  orderId: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,21 +18,9 @@ export class PaymentSuccessComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log('{first}');
-    this.route.queryParamMap.subscribe((params) => {
-      console.log({ params });
-      params.keys.forEach((key) => {
-        this.paymentDetails[key] = params.get(key);
-      });
-    });
+    const paymentStatusResponse = sessionStorage.getItem('paymentStatusResponse');
+    if (!paymentStatusResponse) return;
+    const { orderId } = JSON.parse(paymentStatusResponse);
+    this.orderId = orderId;
   }
-  // ngOnInit() {
-  //   const sessionData = sessionStorage.getItem('paymentResponse');
-  //   if (sessionData) {
-  //     this.getRazorPayId = JSON.parse(sessionData);
-  //     sessionStorage.removeItem('paymentResponse');
-  //   } else {
-  //     this.router.navigate(['/payment-failure']);
-  //   }
-  // }
 }

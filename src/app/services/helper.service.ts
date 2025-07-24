@@ -82,10 +82,12 @@ export class HelperService {
     paymentType: string;
     pickupLocation: string;
     amountWithGST: number;
+    location: string;
   } = {
     selectedDate: {
       day: formatDate(new Date(), 'dd', 'en'),
       label: formatDate(new Date(), 'MMM dd', 'en'),
+      dateFormat: formatDate(new Date(), 'yyyy-MM-dd', 'en'),
       selected: true,
     },
     travellers: [],
@@ -97,6 +99,7 @@ export class HelperService {
     paymentType: 'full',
     pickupLocation: '',
     amountWithGST: 0,
+    location: 'Calangute',
   };
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');

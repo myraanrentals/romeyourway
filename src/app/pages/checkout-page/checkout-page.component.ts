@@ -13,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { hotels, getTravellers, Traveller } from '../../constants/hotels';
 import { HelperService } from '@services/helper.service';
 import { FormsModule } from '@angular/forms';
+import { FeatureSectionComponent } from "../shared/components/feature-section/feature-section.component";
 @Component({
   selector: 'app-checkout-page',
   standalone: true,
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatButtonModule,
     PackageCardComponent,
-  ],
+    FeatureSectionComponent
+],
   templateUrl: './checkout-page.component.html',
   styleUrl: './checkout-page.component.scss',
 })

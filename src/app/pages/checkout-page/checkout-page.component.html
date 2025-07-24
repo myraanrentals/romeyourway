@@ -158,31 +158,12 @@
       </div>
     </div>
   </div>
-  <section>
-    <div class="container">
-      <div class="flex innerContainer">
-        <h2 class="offers-title">Book With Confidence</h2>
-        <div class="featuresContainer">
-          @for (feature of features; track feature) {
-            <div class="card-main">
-              <div>
-                <img
-                  [ngStyle]="{ width: '68px', height: '68px' }"
-                  [src]="feature.icon"
-                  alt="Icon"
-                  class="card-main-img"
-                />
-              </div>
-              <div class="info">
-                <h4 class="featureTitle">{{ feature.title }}</h4>
-                <p>{{ feature.text }}</p>
-              </div>
-            </div>
-          }
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-feature-section
+    [title]="'Book With Confidence'"
+    [features]="features"
+    [whatsappNumber]="' +917715959917 '"
+  />
+
 </section>
 <app-package-card
   *ngIf="isSidebarOpen"

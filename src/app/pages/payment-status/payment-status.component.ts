@@ -31,19 +31,24 @@ export class PaymentStatusComponent implements OnInit {
 
     this._bookingService.paymentStatus(paymentId).subscribe({
       next: (res) => {
-        this.isLoading = false;
-        switch (res.status.toLowerCase()) {
-          case 'success':
-            this.router.navigate(['/payment-success']);
-            break;
-          case 'failed':
-            this.router.navigate(['/payment-failure']);
-            break;
-          case 'pending':
-            this.router.navigate(['/payment-pending']);
-            break;
-          default:
-            this.error = 'Unknown status';
+        if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
+          this.isLoading = false;
+          switch (res.payload.state.toLowerCase()) {
+            case 'success':
+              sessionStorage.setItem('paymentStatusResponse', res?.payload);
+
+              this.router.navigate(['/payment-success']);
+              break;
+            case 'failed':
+              this.router.navigate(['/payment-failure']);
+              break;
+            case 'pending':
+              this.error = 'Payment is still pending '
+              // this.router.navigate([`/payment-status/${previousBookingID}`]);
+              break;
+            default:
+              this.error = 'Unknown status';
+          }
         }
       },
       error: () => {

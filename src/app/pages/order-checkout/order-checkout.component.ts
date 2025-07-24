@@ -8,11 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HelperService } from '@services/helper.service';
 import { hotels, razorpay_key, key_secret } from '../../constants/hotels';
 import { BookingService } from '@services/booking.service';
+import { FeatureSectionComponent } from '../shared/components/feature-section/feature-section.component';
 
 @Component({
   selector: 'app-order-checkout',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatIcon],
+  imports: [CommonModule, FormsModule, MatIcon, FeatureSectionComponent],
   templateUrl: './order-checkout.component.html',
   styleUrl: './order-checkout.component.scss',
 })
@@ -156,100 +157,6 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // bookingConfirmation() {
-  //   const payloadData = {
-  //     packageName: this.hotelDetails.title,
-  //     customerName: `${this.travellerDetails.firstName} ${this.travellerDetails.lastName}`,
-  //     customerEmail: this.travellerDetails.email,
-  //     customerPhone: this.travellerDetails.phone,
-  //     adultCount: 1,
-  //     childCount: 0,
-  //     infantCount: 0,
-  //     singleAdultAmt: 1500,
-  //     singleChildAmt: 700,
-  //     singleInfantAmt: 0,
-  //     totalMemberCount: 1,
-  //     totalAmountForAdult: 1500,
-  //     totalAmountForChild: 0,
-  //     totalAmountForInfant: 0,
-  //     totalAmount: 1500,
-  //     fTotalAmount: 1500,
-  //     discountedTotalAmount: 1500,
-  //     totalPayableAmount: 1500,
-  //     paymentType: 'fullPayment',
-  //     vehicleType: 'WATERSPORTS',
-  //     selectedPackage: {
-  //       title: 'Without Transport',
-  //       amt: '1500',
-  //       kidAmt: '700',
-  //       desc: [
-  //         'Access to all decks',
-  //         '2-hour cruise in Goa Marina',
-  //         'Goan buffet dinner.',
-  //         'Goan dance show',
-  //       ],
-  //       selected: true,
-  //     },
-  //   };
-  // }
-  // initiatePayment() {
-  //   const options = {
-  //     key: razorpay_key,
-  //     key_secret: key_secret,
-  //     amount: this.sessionData.payableAmount * 100,
-  //     currency: 'INR',
-  //     expire_by: 1750346930,
-  //     reference_id: this.travellerDetails.phone,
-  //     name: 'Myraan Adventures',
-  //     description: 'Booking Payment',
-
-  //     handler: (response: any) => {
-  //       sessionStorage.setItem('paymentResponse', JSON.stringify(response));
-  //       const payloadData = {
-  //         name: `${this.travellerDetails.firstName} ${this.travellerDetails.lastName}`,
-  //         number: this.travellerDetails.phone,
-  //         email: this.travellerDetails.email,
-  //         dateOfActivity: this.sessionData.selectedDate.label,
-  //         packageName: this.hotelDetails.title,
-  //         noOfAdults: this.sessionData.travellers[0].count,
-  //         noOfChild: this.sessionData.travellers[1].count,
-  //         noOfInfants: this.sessionData.travellers[2].count,
-  //         totalAmount: this.sessionData.subtotal,
-  //         paidAmount: this.sessionData.payableAmount,
-  //         paymentType: this.sessionData.paymentType,
-  //         transportType: this.sessionData.selectedTransport.title,
-  //       };
-  //       this._bookingService.vehicleBooking(payloadData).subscribe({
-  //         next: (res: any) => {
-  //           console.log('Booking successful', res);
-  //           if (
-  //             response.razorpay_payment_id &&
-  //             res?.responseCode === 200 &&
-  //             res?.responseMessage === 'SUCCESS'
-  //           ) {
-  //             this.router.navigate(['/payment-success']);
-  //           } else {
-  //             this.router.navigate(['/payment-failure']);
-  //           }
-  //         },
-  //         error: (err: any) => {
-  //           console.error('Booking failed', err);
-  //         },
-  //       });
-  //     },
-  //     prefill: {
-  //       name: `${this.travellerDetails.firstName} ${this.travellerDetails.lastName}`,
-  //       email: this.travellerDetails.email,
-  //       contact: this.travellerDetails.phone,
-  //     },
-  //     theme: {
-  //       color: '#3399cc',
-  //     },
-  //   };
-
-  //   const rzp = new Razorpay(options);
-  //   rzp.open();
-  // }
   initiatePayment() {
     const { firstName, lastName, countryCode, phone, email } = this.travellerDetails;
     const {
@@ -260,6 +167,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       paymentType,
       selectedTransport,
       amountWithGST,
+      location,
     } = this.sessionData;
     const { title } = this.hotelDetails;
     const payloadData = {
@@ -289,6 +197,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       balanceAmount: subtotal - payableAmount,
       paymentType,
       selectedPackage: selectedTransport,
+      location,
     };
     this.handlePaymentResponse('response', payloadData);
     const options = {

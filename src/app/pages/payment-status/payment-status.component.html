@@ -1,5 +1,5 @@
 <div class="payment-status-wrapper">
-  <div *ngIf="true" class="loading-container">
+  <div *ngIf="isLoading" class="loading-container">
     <p>Checking payment status...</p>
     <div class="spinner"></div>
     <p>Do not refresh or navigate back</p>
@@ -8,4 +8,5 @@
   <div *ngIf="error && !isLoading" class="error-container">
     <p>{{ error }}</p>
   </div>
+  <a href="/" class="back-home-btn">Go to Home</a>
 </div>

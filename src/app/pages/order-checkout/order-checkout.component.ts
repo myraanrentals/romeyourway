@@ -314,7 +314,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
           const payLink = res?.payload?.paymentLink;
           console.log({ res });
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
-          // this.bookingPay(payLink);
+          this.bookingPay(payLink);
         } else {
         }
       },

@@ -4,7 +4,7 @@
   </div>
   <div class="person-list">
     <div class="person-row" *ngFor="let item of bookingDetails">
-      <div class="person-label">{{ item.count }} x {{ item.label }}</div>
+      <div class="person-label">{{ item.count }} x {{ item.displayLabel }}</div>
       <div class="person-price">
         INR
         {{

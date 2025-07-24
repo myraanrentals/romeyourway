@@ -74,7 +74,7 @@
                 </svg>
               </span>
               <span *ngFor="let traveller of this.sessionData.travellers">
-                {{ traveller.label }}: {{ traveller.count }}
+                {{ traveller.displayLabel }}: {{ traveller.count }}
               </span>
               |
               <span
@@ -280,7 +280,7 @@
                 id="phone"
                 type="text"
                 class="phone-number"
-                [(ngModel)]="travellerDetails.phone "
+                [(ngModel)]="travellerDetails.phone"
                 name="phone"
                 required
                 (input)="updateTravellerDetails()"

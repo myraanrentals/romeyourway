@@ -1004,12 +1004,13 @@ export interface Traveller {
   label: string;
   price: number;
   count: number;
+  displayLabel: string;
 }
 export function getTravellers(price: number): Traveller[] {
   return [
-    { label: 'Adult', price: price, count: 1 },
-    { label: 'Child (4-10 year old)', price: price - 200, count: 0 },
-    { label: 'Infant (0-4 year old)', price: 0, count: 0 },
+    { label: 'Adult', price: price, count: 1, displayLabel: 'Adult' },
+    { label: 'Child (4-10 year old)', price: price - 200, count: 0, displayLabel: 'Child' },
+    { label: 'Infant (0-4 year old)', price: 0, count: 0, displayLabel: 'Infant' },
   ];
 }
 

@@ -19,7 +19,7 @@ import { PaymentStatusComponent } from '../pages/payment-status/payment-status.c
     NavbarComponent,
     LayoutComponent,
     ContactComponent,
-    PaymentStatusComponent
+    PaymentStatusComponent,
   ],
   imports: [CommonModule, LayoutRoutingModule, MatIconModule, ReactiveFormsModule, MatCardModule],
 })

@@ -14,7 +14,7 @@ export class PaymentStatusComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -25,28 +25,27 @@ export class PaymentStatusComponent implements OnInit {
       return;
     }
 
-    this.http.get<{ status: string }>(`/api/payment-status/${paymentId}`)
-      .subscribe({
-        next: (res) => {
-          this.isLoading = false;
-          switch (res.status.toLowerCase()) {
-            case 'success':
-              this.router.navigate(['/payment-success']);
-              break;
-            case 'failed':
-              this.router.navigate(['/payment-failure']);
-              break;
-            case 'pending':
-              this.router.navigate(['/payment-pending']);
-              break;
-            default:
-              this.error = 'Unknown status';
-          }
-        },
-        error: () => {
-          this.error = 'Failed to check payment status';
-          this.isLoading = false;
+    this.http.get<{ status: string }>(`/api/payment-status/${paymentId}`).subscribe({
+      next: (res) => {
+        this.isLoading = false;
+        switch (res.status.toLowerCase()) {
+          case 'success':
+            this.router.navigate(['/payment-success']);
+            break;
+          case 'failed':
+            this.router.navigate(['/payment-failure']);
+            break;
+          case 'pending':
+            this.router.navigate(['/payment-pending']);
+            break;
+          default:
+            this.error = 'Unknown status';
         }
-      });
+      },
+      error: () => {
+        this.error = 'Failed to check payment status';
+        this.isLoading = false;
+      },
+    });
   }
 }

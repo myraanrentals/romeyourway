@@ -115,7 +115,7 @@
                     ? (sessionData.selectedTransport?.discountedamt || 0) - 200
                     : 0
               }}
-              /{{ traveller.label.toLowerCase() }}
+              /{{ traveller.displayLabel.toLowerCase() }}
             </p>
           </div>
           <div class="counter">
@@ -131,7 +131,11 @@
         </div>
       </div>
 
-      <button class="pay-btn" (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)">
+      <button
+        class="pay-btn"
+        [disabled]="!getSubtotal()"
+        (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
+      >
         Proceed To Pay
       </button>
       <div class="price-box">
@@ -145,6 +149,7 @@
 
         <button
           class="offer-button"
+          [disabled]="!getSubtotal()"
           *ngIf="showProceedButton"
           (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
         >

@@ -15,11 +15,12 @@ import { HelperService } from '@services/helper.service';
 import $ from 'jquery';
 import { hotels } from '../../../constants/hotels';
 import { Subscription } from 'rxjs';
+import { FaqComponent } from '../../faq/faq.component';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FaqComponent],
   providers: [HelperService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './experience.component.html',

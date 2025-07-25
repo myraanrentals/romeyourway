@@ -9,18 +9,41 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './payment-success.component.scss',
 })
 export class PaymentSuccessComponent implements OnInit {
-  public paymentDetails: any = {};
-  orderId: any;
+  public paymentDetails: {
+    transactionId?: string;
+    paymentMode?: string;
+    name?: string;
+    mobileNo?: string;
+    orderId?: string;
+    bookingId?: string;
+  } = {};
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     const paymentStatusResponse = sessionStorage.getItem('paymentStatusResponse');
-    if (!paymentStatusResponse) return;
-    const { orderId } = JSON.parse(paymentStatusResponse);
-    this.orderId = orderId;
+    const paymentResponse = sessionStorage.getItem('paymentResponse');
+    if (!(paymentStatusResponse && paymentResponse)) return;
+
+    try {
+      const data = JSON.parse(paymentStatusResponse);
+      const orderId = data?.orderId;
+      const paymentDetail = data?.paymentDetails?.[0];
+      const metaInfo = data?.metaInfo;
+
+      this.paymentDetails = {
+        transactionId: paymentDetail?.transactionId,
+        paymentMode: paymentDetail?.paymentMode,
+        name: metaInfo?.udf1,
+        mobileNo: metaInfo?.udf2,
+        orderId: orderId,
+        bookingId: paymentResponse,
+      };
+    } catch (error) {
+      console.error('Error parsing payment status response:', error);
+    }
   }
 }

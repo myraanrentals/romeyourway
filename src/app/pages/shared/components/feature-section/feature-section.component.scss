@@ -1,13 +1,13 @@
 .featuresContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 28px;
-  }
-  .container{
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-  }
-  .innerContainer{
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.innerContainer {
+  flex-direction: column;
+}

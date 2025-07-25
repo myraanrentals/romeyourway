@@ -9,12 +9,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { hotels, cancellationPolicy } from '../../constants/hotels';
 import { HelperService } from '../../services/helper.service';
-import { FeatureSectionComponent } from "../shared/components/feature-section/feature-section.component";
+import { FeatureSectionComponent } from '../shared/components/feature-section/feature-section.component';
 
 @Component({
   selector: 'app-details-page',
   standalone: true,
-  imports: [NgClass, NgIf, MatIconModule, MatExpansionModule, CommonModule, MatCardModule, FeatureSectionComponent], // Add NgClass and NgIf here
+  imports: [
+    NgClass,
+    NgIf,
+    MatIconModule,
+    MatExpansionModule,
+    CommonModule,
+    MatCardModule,
+    FeatureSectionComponent,
+  ], // Add NgClass and NgIf here
   templateUrl: './details-page.component.html',
   styleUrls: ['./details-page.component.scss'],
 })

@@ -34,17 +34,18 @@ export class PaymentStatusComponent implements OnInit {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           this.isLoading = false;
           switch (res.payload.state.toLowerCase()) {
-            case 'success':
-              sessionStorage.setItem('paymentStatusResponse', res?.payload);
+            case 'completed':
+              sessionStorage.setItem('paymentStatusResponse', JSON.stringify(res?.payload));
 
               this.router.navigate(['/payment-success']);
               break;
             case 'failed':
+              sessionStorage.setItem('paymentStatusResponse', JSON.stringify(res?.payload));
               this.router.navigate(['/payment-failure']);
               break;
             case 'pending':
-              this.error = 'Payment is still pending '
-              // this.router.navigate([`/payment-status/${previousBookingID}`]);
+              this.error = 'Payment is still pending ';
+              this.router.navigate([`/payment-status/${previousBookingID}`]);
               break;
             default:
               this.error = 'Unknown status';

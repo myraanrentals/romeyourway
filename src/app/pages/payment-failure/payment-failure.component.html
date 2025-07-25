@@ -1,5 +1,5 @@
 <div class="payment-success-container">
-  <div class="payment-success-card">
+  <div class="payment-failure-card">
     <svg
       class="failure-icon"
       xmlns="http://www.w3.org/2000/svg"
@@ -8,10 +8,24 @@
       stroke-width="2"
       stroke="currentColor"
     >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
-    <h1>Payment Failure!</h1>
-    <p>Try Again Later</p>
-    <a href="/" class="back-home-btn">Go to Home</a>
+
+    <h1>Payment Failed</h1>
+    <p>Unfortunately, your payment could not be processed.</p>
+
+    <div class="failure-details" *ngIf="failureDetails.orderId">
+      <p><strong>Booking ID:</strong> {{ failureDetails.bookingId }}</p>
+      <p><strong>Order ID:</strong> {{ failureDetails.orderId }}</p>
+      <p><strong>Name:</strong> {{ failureDetails.name }}</p>
+      <p><strong>Mobile No:</strong> {{ failureDetails.mobileNo }}</p>
+    </div>
+
+    <p class="disclaimer">
+      ⚠️ Please save your <strong>Order ID</strong> and <strong>Mobile Number</strong> for future
+      support.
+    </p>
+
+    <a href="/" class="back-home-btn">Try Again / Go to Home</a>
   </div>
 </div>

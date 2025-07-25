@@ -12,14 +12,13 @@ export class ProtectRouteGuard implements CanActivate {
 
     if (isPaymentRoute) {
       if (!this.isPaymentSuccessFull()) {
-        this.router.navigate(['/']); 
+        this.router.navigate(['/']);
         return false;
       }
     } else {
-      console.log("first")
       const isValidSession = sessionStorage.getItem('packagePrice') !== null;
       if (!isValidSession) {
-        this.router.navigate(['/']); 
+        this.router.navigate(['/']);
         return false;
       }
     }
@@ -32,7 +31,7 @@ export class ProtectRouteGuard implements CanActivate {
     if (!paymentStatusResponse) return false;
     try {
       const parsedData = JSON.parse(paymentStatusResponse);
-      return parsedData.orderId && parsedData.state === 'SUCCESS';
+      return parsedData.orderId && parsedData.state === 'COMPLETED';
     } catch (e) {
       return false;
     }

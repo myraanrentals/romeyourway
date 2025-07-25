@@ -5,69 +5,71 @@
   height: 100vh;
   background: linear-gradient(to right, #d4fc79, #ff5722);
 }
-
-.payment-success-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+.payment-failure-card {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
   text-align: center;
-  width: 400px;
-  max-width: 90%;
-  animation: fadeIn 0.5s ease-in-out;
-}
+  border-radius: 12px;
+  background-color: #fff5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 
-.success-icon {
-  color: #28a745;
-  font-size: 50px;
-  animation: popIn 0.5s ease-in-out;
-}
-
-.order-id {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ff6600;
-  background: rgba(255, 102, 0, 0.1);
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.back-home-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease-in-out;
-}
-
-.back-home-btn:hover {
-  background: #0056b3;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+  .failure-icon {
+    width: 64px;
+    height: 64px;
+    color: #dc3545;
+    margin-bottom: 1rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
+  h1 {
+    font-size: 1.8rem;
+    color: #dc3545;
+    margin-bottom: 0.5rem;
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+
+  p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.25rem 0;
+  }
+
+  .failure-details {
+    margin-top: 1.5rem;
+    text-align: left;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .disclaimer {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: #856404;
+    background: #fff3cd;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ffeeba;
+    text-align: center;
+  }
+
+  .back-home-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #c82333;
+    }
   }
 }

@@ -83,14 +83,17 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
   }
 
   .accordion-content {
     padding-top: 8px;
+    font-size: 12px;
   }
-
+  .copyright {
+    font-size: small;
+  }
   .block {
     display: block;
     padding: 3px 0;
@@ -128,6 +131,9 @@
   .mobSocialIcons,
   .mobile-accordion {
     display: none;
+  }
+  .copyright {
+    font-size: medium;
   }
   #footer {
     background: #fdfaf6;

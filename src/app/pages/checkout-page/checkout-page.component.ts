@@ -77,11 +77,14 @@ export class CheckoutPageComponent implements OnInit {
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[1],
         subtotal: this.hotelDetails.transport[0].discountedamt,
-        travellers: getTravellers(Number(this.hotelDetails.transport[1].discountedamt)),
+        travellers: getTravellers(
+          Number(this.hotelDetails.transport[1].discountedamt),
+          Number(this.hotelDetails.transport[1].kidAmt),
+        ),
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
-    this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt);
+    this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt,this.sessionData.selectedTransport?.kidAmt);
     this.hotelList = this.HelperService.renderPackageData(category);
   }
 
@@ -117,7 +120,7 @@ export class CheckoutPageComponent implements OnInit {
     if (traveller.label === 'Adult') {
       return this.sessionData.selectedTransport?.discountedamt || 0;
     } else if (traveller.label === 'Child (4-10 year old)') {
-      return (this.sessionData.selectedTransport?.discountedamt || 0) - 200;
+      return this.sessionData.selectedTransport?.kidAmt || 0;
     } else {
       return 0;
     }

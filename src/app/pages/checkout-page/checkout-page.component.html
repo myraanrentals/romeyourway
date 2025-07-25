@@ -112,7 +112,7 @@
                 traveller.label === 'Adult'
                   ? sessionData.selectedTransport?.discountedamt
                   : traveller.label === 'Child (4-10 year old)'
-                    ? (sessionData.selectedTransport?.discountedamt || 0) - 200
+                    ? sessionData.selectedTransport?.kidAmt || 0
                     : 0
               }}
               /{{ traveller.label.toLowerCase() }}

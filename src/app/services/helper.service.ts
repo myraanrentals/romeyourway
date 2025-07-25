@@ -104,13 +104,14 @@ export class HelperService {
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');
     const sessionPackagePrice = sessionStorage.getItem('packagePrice');
-
+    const {adultPrice,kidPrice} = sessionPackagePrice && JSON.parse(sessionPackagePrice);
+    
     const currentSession = storedSession
       ? JSON.parse(storedSession)
       : sessionPackagePrice
         ? {
             ...this.defaultSessionPayload,
-            travellers: getTravellers(JSON.parse(sessionPackagePrice)),
+            travellers: getTravellers(adultPrice,kidPrice),
           }
         : { ...this.defaultSessionPayload };
 

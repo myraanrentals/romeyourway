@@ -48,7 +48,13 @@ export class DetailsPageComponent {
     const routeId = this.route.snapshot.paramMap.get('id');
     if (!routeId) return;
     this.hotelDetails = this.HelperService.getHotelByID(routeId, this.hotelList);
-    sessionStorage.setItem('packagePrice', this.hotelDetails?.currentPrice);
+
+    const hotelPackage = {
+      adultPrice: this.hotelDetails.transport[0].discountedamt,
+      kidPrice: this.hotelDetails.transport[0].kidAmt,
+    };
+
+    sessionStorage.setItem('packagePrice', JSON.stringify(hotelPackage));
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
     this.hotelList = this.HelperService.renderPackageData(category);
   }

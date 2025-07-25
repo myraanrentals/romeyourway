@@ -118,7 +118,7 @@ export const hotels: any[] = [
         isSelected: false,
         originalamt: '1399',
         discountedamt: '1199',
-        kidAmt: '700',
+        kidAmt: '900',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -131,7 +131,7 @@ export const hotels: any[] = [
         isSelected: true,
         originalamt: '1199',
         discountedamt: '1',
-        kidAmt: '900',
+        kidAmt: '700',
         desc: [
           'Access to lower deck',
           '2-hour cruise in Goa Marina',
@@ -1006,10 +1006,10 @@ export interface Traveller {
   count: number;
   displayLabel: string;
 }
-export function getTravellers(price: number): Traveller[] {
+export function getTravellers(adultPrice: number, kidPrice: number): Traveller[] {
   return [
-    { label: 'Adult', price: price, count: 1, displayLabel: 'Adult' },
-    { label: 'Child (4-10 year old)', price: price - 200, count: 0, displayLabel: 'Child' },
+    { label: 'Adult', price: adultPrice, count: 1, displayLabel: 'Adult' },
+    { label: 'Child (4-10 year old)', price: kidPrice, count: 0, displayLabel: 'Child' },
     { label: 'Infant (0-4 year old)', price: 0, count: 0, displayLabel: 'Infant' },
   ];
 }

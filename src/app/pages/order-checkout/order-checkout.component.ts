@@ -122,12 +122,23 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   clearCouponMessage() {
     this.couponMessage = '';
   }
+  findProfit() {
+    const { travellers } = this.sessionData;
 
+    const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
+    const profit = vehicleQuantity * this.hotelDetails.reportPrice;
+    return profit;
+  }
   async applyCoupon(couponCode: string) {
     this.iscouponLoading = true;
     const result = await this.validateCoupon(couponCode);
     if (result) {
       this.couponCode = result.couponCode;
+      const profit = this.findProfit();
+      if (result.couponDiscount > profit) {
+        this.couponMessage = `This Coupon cannot be applied.`;
+        return;
+      }
       this.couponMessage = `Coupon applied! You saved ₹${result.couponDiscount}`;
       this.HelperService.updateSessionStorage({
         couponCode: result.couponCode,
@@ -228,10 +239,12 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         amountWithGST,
       });
     } else {
+      const isYacht = this.category === 'private-yachts-in-goa';
       const { travellers, selectedTransport } = this.sessionData;
       const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
-      const finalReportPrice =
-        selectedTransport?.title === 'With Transport'
+      const finalReportPrice = isYacht
+        ? this.calculatePrice()
+        : selectedTransport?.title === 'With Transport'
           ? subtotal - vehicleQuantity * (reportPrice + 200)
           : subtotal - vehicleQuantity * reportPrice;
       const partialSubtotal = finalReportPrice;
@@ -247,6 +260,24 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     }
 
     this.setSession();
+  }
+  calculatePrice(): number {
+    const { travellers, selectedTransport } = this.sessionData;
+
+    const priceMap: Record<string, number> = {
+      Cruising: selectedTransport?.cruisingReportPrice || 0,
+      Anchoring: selectedTransport?.anchoringReportPrice || 0,
+    };
+
+    const total = travellers.reduce(
+      (sum: number, traveller: { displayLabel: string | number; count: number }) => {
+        const pricePerUnit = priceMap[traveller.displayLabel] || 0;
+        return sum + traveller.count * pricePerUnit;
+      },
+      0,
+    );
+
+    return total;
   }
 
   openBookingSummary() {

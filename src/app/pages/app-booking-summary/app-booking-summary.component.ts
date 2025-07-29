@@ -19,6 +19,7 @@ export class AppBookingSummaryComponent {
   gstAmount = 0;
   finalAmount = 0;
   discountedAmount = 0;
+  paymentType: string = '';
   constructor(
     private bottomSheetRef: MatBottomSheetRef<AppBookingSummaryComponent>,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
@@ -31,15 +32,23 @@ export class AppBookingSummaryComponent {
   }
   ngOnInit(): void {
     const data = sessionStorage.getItem('checkoutSession');
+
     if (data) {
       const parsedData = JSON.parse(data);
       this.bookingDetails = parsedData?.travellers;
       this.selectedTransport = parsedData?.selectedTransport;
+      this.paymentType = parsedData.paymentType;
+      console.log({ parsedData });
     } else {
       this.bookingDetails = null;
     }
   }
   close() {
     this.bottomSheetRef.dismiss();
+  }
+  get filteredBookingDetails() {
+    return this.bookingDetails.filter(
+      (item: { displayLabel: string }) => item.displayLabel !== 'Full Capacity',
+    );
   }
 }

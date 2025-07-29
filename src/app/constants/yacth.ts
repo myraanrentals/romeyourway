@@ -120,7 +120,12 @@ export const yacth: any[] = [
         timeSlots: ['7:00 AM to 3:30 PM'],
         isSelected: true,
         originalamt: '1700',
-        discountedamt: '1200',
+        discountedamt: '7000',
+        actualPaxCount: 8,
+        cruising: 7000,
+        anchoring: 3000,
+        cruisingReportPrice: 5000,
+        anchoringReportPrice: 2000,
         kidAmt: '900',
         desc: [
           'Access to lower deck',

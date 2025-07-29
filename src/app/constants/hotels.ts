@@ -12,6 +12,26 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1',
     image: '/assets/home/01.avif',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -154,6 +174,26 @@ export const hotels: any[] = [
     reportPrice: 200,
     currentPrice: '499',
     image: '/assets/home/02.avif',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -296,6 +336,26 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1099',
     image: '/assets/home/03.avif',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -438,6 +498,26 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1999',
     image: '/assets/home/04.avif',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -580,6 +660,26 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1499',
     image: '/assets/dinnercruise/DC23.avif',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -722,6 +822,26 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '999',
     oldPrice: '1499',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -863,6 +983,26 @@ export const hotels: any[] = [
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
     currentPrice: '1099',
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
     topFeatures: [
       {
         icon: 'event_available',
@@ -1011,6 +1151,17 @@ export function getTravellers(adultPrice: number, kidPrice: number): Traveller[]
     { label: 'Adult', price: adultPrice, count: 1, displayLabel: 'Adult' },
     { label: 'Child (4-10 year old)', price: kidPrice, count: 0, displayLabel: 'Child' },
     { label: 'Infant (0-4 year old)', price: 0, count: 0, displayLabel: 'Infant' },
+  ];
+}
+export function getTravellersForYacth(
+  actualPaxCount: number,
+  Cruising: number,
+  Anchoring: number,
+): Traveller[] {
+  return [
+    { label: 'Actual Pax Count', price: 0, count: actualPaxCount, displayLabel: 'Full Capacity' },
+    { label: ' hr', price: Cruising, count: 1, displayLabel: 'Cruising' },
+    { label: ' hr', price: Anchoring, count: 1, displayLabel: 'Anchoring' },
   ];
 }
 

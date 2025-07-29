@@ -105,6 +105,7 @@ export class HelperService {
     discountAmount: 0,
     couponCode: '',
   };
+
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');
     const sessionPackagePrice = sessionStorage.getItem('packagePrice');

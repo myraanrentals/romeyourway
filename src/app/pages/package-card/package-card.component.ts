@@ -8,6 +8,7 @@ import {
   ElementRef,
   AfterViewInit,
   ChangeDetectorRef,
+  OnInit,
 } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,13 +22,17 @@ import { MatIcon } from '@angular/material/icon';
   templateUrl: './package-card.component.html',
   styleUrls: ['./package-card.component.scss'],
 })
-export class PackageCardComponent implements AfterViewInit {
+export class PackageCardComponent implements AfterViewInit, OnInit {
   @Input() isSidebarOpen!: boolean;
+  @Input() hotelDetails!: any;
+  @Input() sessionData!: any;
   @Output() closeSidebar = new EventEmitter<void>();
   @ViewChild('sidePanelContent') sidePanelContent!: ElementRef;
 
   isMobileView = false;
-
+  ngOnInit(): void {
+    console.log({ tes: this.hotelDetails, test2: this.sessionData });
+  }
   constructor(private cdr: ChangeDetectorRef) {
     this.checkScreenSize();
   }

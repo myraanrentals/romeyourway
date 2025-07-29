@@ -21,26 +21,31 @@
         <img src="/assets/dinnercruise/DC21.avif" alt="Cruise Image" />
       </div>
       <div class="content">
-        <h3>1-Hour at Sunset Cruise [With DJ Music]</h3>
-        <p>1-hour sunset cruise on the Mandovi River</p>
-        <p>Vibrant DJ music</p>
-        <p>Views of Fort Aguada, Mandovi Bridges, and Panaji City</p>
-        <p><strong>Age Policy:</strong></p>
-        <ul>
-          <li>Visitors under 3 years and below 3 feet join for free.1</li>
-          <li>Visitors under 3 years and below 3 feet join for free.2</li>
-          <li>Visitors under 3 years and below 3 feet join for free3.</li>
-          <li>Visitors under 3 years and below 3 feet join for free.4</li>
-          <li>Visitors under 3 years and below 3 feet join for free5.</li>
-          <li>Visitors under 3 years and below 3 feet join for free.6</li>
-          <li>Visitors under 3 years and below 3 feet join for free.7</li>
-          <li>Visitors under 3 years and below 3 feet join for free.8</li>
-          <li>Visitors under 3 years and below 3 feet join for free.9</li>
-          <li>Visitors under 3 years and below 3 feet join for free.10</li>
-          <li>Visitors under 3 years and below 3 feet join for free.</li>
-          <li>Visitors under 3 years and below 3 feet join for free.</li>
-          <li>Adult tickets apply for visitors 4 years and above.</li>
-        </ul>
+        <h3>{{ this.hotelDetails.title }}</h3>
+        <div class="details-container">
+          <h4>What we provide:</h4>
+          <ul>
+            <li *ngFor="let rule of this.sessionData.selectedTransport.desc">{{ rule }}</li>
+          </ul>
+          <h4>Age Policy:</h4>
+          <ul>
+            <li>Below 5 Year Complimentary,</li>
+            <li>Child between 5 to 9 years will be charged on child price</li>
+            <li>Child Above 9 years will be charged on adult price</li>
+          </ul>
+
+          <h4 class="includes-title">{{ this.hotelDetails.priceIncludes.title }}</h4>
+
+          <div
+            *ngFor="let section of this.hotelDetails.priceIncludes.sections"
+            class="category-section"
+          >
+            <p class="category-title"><span class="tick">✔</span> {{ section.category }}</p>
+            <ul class="item-list">
+              <li *ngFor="let item of section.items"><span class="tick">✔</span> {{ item }}</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </mat-sidenav>

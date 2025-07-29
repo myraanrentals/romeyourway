@@ -44,7 +44,7 @@
         >
           <div class="package-header">
             <span *ngIf="this.category !== 'private-yachts-in-goa'" class="packageTitle">
-              {{ package.title }} [{{ hotelDetails.title }}]
+              {{ hotelDetails.title }} [{{ package.title }}]
             </span>
             <span *ngIf="this.category === 'private-yachts-in-goa'" class="packageTitle">
               {{ package.title }} [Capacity: {{ package.capacity }}]
@@ -129,7 +129,23 @@
         <div class="traveller-section" *ngFor="let traveller of sessionData.travellers">
           <div>
             <p class="traveller-label">{{ traveller.displayLabel }}</p>
-            <p class="price">
+            <p class="price" *ngIf="this.category === 'private-yachts-in-goa'">
+              <span *ngIf="traveller.label !== 'Actual Pax Count'">INR</span>
+              <span *ngIf="traveller.label !== 'Actual Pax Count'">
+                {{
+                  traveller.label === 'Actual Pax Count'
+                    ? sessionData.selectedTransport?.actualPaxCount
+                    : traveller.displayLabel === 'Cruising'
+                      ? sessionData.selectedTransport?.cruising || 0
+                      : traveller.displayLabel === 'Anchoring'
+                        ? sessionData.selectedTransport?.anchoring || 0
+                        : 0
+                }}
+              </span>
+              <span *ngIf="traveller.label !== 'Actual Pax Count'">/</span>
+              {{ traveller.label }}
+            </p>
+            <p class="price" *ngIf="this.category !== 'private-yachts-in-goa'">
               INR
               {{
                 traveller.label === 'Adult'
@@ -150,13 +166,15 @@
 
         <div class="subtotal-section">
           <p>Sub Total</p>
-          <p class="subtotal-amount">INR {{ getSubtotal() }}</p>
+          <p class="subtotal-amount">
+            INR {{ category === 'private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
+          </p>
         </div>
       </div>
 
       <button
         class="pay-btn"
-        [disabled]="!getSubtotal()"
+        [disabled]="category === 'private-yachts-in-goa' ? !getSubtotalForYacth() : !getSubtotal()"
         (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
       >
         Proceed To Pay
@@ -164,7 +182,9 @@
       <div class="price-box">
         <div class="price-div">
           <span>Total Amount </span>
-          <p class="pay-btn-amount">INR {{ getSubtotal() }}</p>
+          <p class="pay-btn-amount">
+            INR {{ category === 'private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
+          </p>
         </div>
         <button class="offer-button" *ngIf="!showProceedButton" (click)="scrollToTimeSlot()">
           Next
@@ -172,7 +192,9 @@
 
         <button
           class="offer-button"
-          [disabled]="!getSubtotal()"
+          [disabled]="
+            category === 'private-yachts-in-goa' ? !getSubtotalForYacth() : !getSubtotal()
+          "
           *ngIf="showProceedButton"
           (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
         >
@@ -191,6 +213,8 @@
   *ngIf="isSidebarOpen"
   [isSidebarOpen]="isSidebarOpen"
   (closeSidebar)="closeSidebar()"
+  [hotelDetails]="hotelDetails"
+  [sessionData]="sessionData"
 ></app-package-card>
 <!-- Location Modal -->
 <div class="modal-backdrop" *ngIf="showLocationModal">

@@ -10,10 +10,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PackageCardComponent } from '../package-card/package-card.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { hotels, getTravellers, Traveller } from '../../constants/hotels';
+import { hotels, getTravellers, Traveller, getTravellersForYacth } from '../../constants/hotels';
 import { HelperService } from '@services/helper.service';
 import { FormsModule } from '@angular/forms';
 import { FeatureSectionComponent } from '../shared/components/feature-section/feature-section.component';
+
+interface SelectedTransport {
+  anchoring?: number;
+  cruising?: number;
+}
+
+interface SessionData {
+  travellers: Traveller[];
+  selectedTransport: SelectedTransport;
+}
 @Component({
   selector: 'app-checkout-page',
   standalone: true,
@@ -82,10 +92,17 @@ export class CheckoutPageComponent implements OnInit {
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[0],
         subtotal: this.hotelDetails.transport[0].discountedamt,
-        travellers: getTravellers(
-          Number(this.hotelDetails.transport[0].discountedamt),
-          Number(this.hotelDetails.transport[0].kidAmt),
-        ),
+        travellers:
+          this.category !== 'private-yachts-in-goa'
+            ? getTravellers(
+                Number(this.hotelDetails.transport[0].discountedamt),
+                Number(this.hotelDetails.transport[0].kidAmt),
+              )
+            : getTravellersForYacth(
+                Number(this.hotelDetails.transport[0].actualPaxCount),
+                Number(this.hotelDetails.transport[0].cruising),
+                Number(this.hotelDetails.transport[0].anchoring),
+              ),
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
@@ -104,16 +121,24 @@ export class CheckoutPageComponent implements OnInit {
     this.isMobile = window.innerWidth <= 768;
   }
 
-  increaseCount(traveller: any) {
-    traveller.count++;
-    this.HelperService.updateSessionStorage({
-      travellers: this.sessionData.travellers,
-    });
+  increaseCount(traveller: any): void {
+    const isActualPaxCount = traveller.label === 'Actual Pax Count';
+    const isYacht = this.category === 'private-yachts-in-goa';
+
+    const maxCount = isYacht ? (isActualPaxCount ? traveller.price : Infinity) : Infinity;
+
+    if (traveller.count < maxCount) {
+      traveller.count++;
+      this.HelperService.updateSessionStorage({
+        travellers: this.sessionData.travellers,
+      });
+    }
   }
 
   decreaseCount(traveller: any) {
     const isAdult = traveller.label === 'Adult';
-    const minCount = isAdult ? 1 : 0;
+    const isYacth = this.category === 'private-yachts-in-goa';
+    const minCount = isAdult || isYacth ? 1 : 0;
 
     if (traveller.count > minCount) {
       traveller.count--;
@@ -138,11 +163,38 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   getSubtotal(): number {
+    const isYacth = this.category === 'private-yachts-in-goa';
+    if (isYacth) return 0;
     const subtotal = this.sessionData.travellers.reduce(
       (total: number, traveller: any) =>
         total + traveller.count * this.getTravellerPrice(traveller),
       0,
     );
+    const gstRate = 0.18;
+    const gstAmount = +(subtotal * gstRate).toFixed(2);
+    const amountWithGST = +(subtotal + gstAmount).toFixed(2);
+
+    this.HelperService.updateSessionStorage({
+      subtotal: +subtotal.toFixed(2),
+      payableAmount: +subtotal.toFixed(2),
+      amountWithGST,
+    });
+
+    return +subtotal.toFixed(2);
+  }
+
+  getSubtotalForYacth(): number {
+    const { travellers, selectedTransport }: SessionData = this.sessionData;
+
+    const priceMap: Record<string, number> = {
+      Anchoring: selectedTransport?.anchoring ?? 0,
+      Cruising: selectedTransport?.cruising ?? 0,
+    };
+
+    const subtotal = travellers.reduce((total: number, traveller: Traveller) => {
+      const unitPrice = priceMap[traveller.displayLabel] ?? 0;
+      return total + traveller.count * unitPrice;
+    }, 0);
     const gstRate = 0.18;
     const gstAmount = +(subtotal * gstRate).toFixed(2);
     const amountWithGST = +(subtotal + gstAmount).toFixed(2);

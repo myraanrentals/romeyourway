@@ -47,6 +47,7 @@ export class DetailsPageComponent {
     this.category = category;
     const routeId = this.route.snapshot.paramMap.get('id');
     if (!routeId) return;
+    this.hotelList = this.HelperService.renderPackageData(category);
     this.hotelDetails = this.HelperService.getHotelByID(routeId, this.hotelList);
 
     const hotelPackage = {
@@ -56,7 +57,6 @@ export class DetailsPageComponent {
 
     sessionStorage.setItem('packagePrice', JSON.stringify(hotelPackage));
     this.features = this.HelperService.getFeatureList(this.hotelDetails);
-    this.hotelList = this.HelperService.renderPackageData(category);
   }
   topFeatures = [
     {

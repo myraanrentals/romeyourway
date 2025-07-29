@@ -18,13 +18,14 @@ export class AppBookingSummaryComponent {
   gstRate = 0.18;
   gstAmount = 0;
   finalAmount = 0;
-
+  discountedAmount = 0;
   constructor(
     private bottomSheetRef: MatBottomSheetRef<AppBookingSummaryComponent>,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
   ) {
     this.totalAmount = data.totalAmount;
     this.discountAmount = data.discountAmount;
+    this.discountedAmount = this.totalAmount - this.discountAmount;
     this.gstAmount = +(this.totalAmount * this.gstRate).toFixed(2);
     this.finalAmount = +(this.totalAmount + this.gstAmount).toFixed(2);
   }

@@ -114,19 +114,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1399',
-        discountedamt: '1199',
-        kidAmt: '900',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1199',
@@ -134,6 +121,19 @@ export const hotels: any[] = [
         kidAmt: '700',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '1399',
+        discountedamt: '1199',
+        kidAmt: '900',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',
@@ -256,19 +256,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '899',
-        discountedamt: '699',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '699',
@@ -276,6 +263,19 @@ export const hotels: any[] = [
         kidAmt: '900',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '899',
+        discountedamt: '699',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',
@@ -398,19 +398,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1299',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1299',
@@ -418,6 +405,19 @@ export const hotels: any[] = [
         kidAmt: '900',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '1499',
+        discountedamt: '1299',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',
@@ -540,19 +540,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '2399',
-        discountedamt: '2199',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '2199',
@@ -560,6 +547,19 @@ export const hotels: any[] = [
         kidAmt: '900',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '2399',
+        discountedamt: '2199',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',
@@ -682,19 +682,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1899',
-        discountedamt: '1699',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1699',
@@ -702,6 +689,19 @@ export const hotels: any[] = [
         kidAmt: '900',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '1899',
+        discountedamt: '1699',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',
@@ -823,19 +823,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '2000',
-        discountedamt: '1500',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1700',
@@ -843,6 +830,19 @@ export const hotels: any[] = [
         kidAmt: '900',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '2000',
+        discountedamt: '1500',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',
@@ -965,19 +965,6 @@ export const hotels: any[] = [
     ],
     transport: [
       {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1299',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1299',
@@ -985,6 +972,19 @@ export const hotels: any[] = [
         kidAmt: '900',
         desc: [
           'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '1499',
+        discountedamt: '1299',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
           '2-hour cruise in Goa Marina',
           'Goan buffet dinner.',
           'Goan dance show',

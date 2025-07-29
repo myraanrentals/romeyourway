@@ -85,4 +85,12 @@ export class BookingService {
     this.updateTotalAmount(bookingDetails);
     this._helperService.setSessionStorage('travellersDetails', bookingDetails);
   }
+  validateCouponDetails(coupon: any): Observable<any> {
+    let payload = {
+      payload: {
+        coupon: coupon,
+      },
+    };
+    return this._apiService.httpPOST(APIROUTES.VALIDATECOUPON, payload);
+  }
 }

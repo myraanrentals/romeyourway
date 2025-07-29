@@ -55,7 +55,7 @@ export class CheckoutPageComponent implements OnInit {
   hotelDetails: any;
   features: any;
   sessionData: any = {};
-  locations: string[] = ['Calangute', 'Candolim', 'Baga', 'Arpora'];
+  locations: string[] = ['Arpora', 'Baga', 'Calangute', 'Candolim'];
   showLocationModal = false;
   selectedLocation: string | null = null;
   category: string = '';
@@ -70,22 +70,33 @@ export class CheckoutPageComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       if (!id) return;
+      this.hotelList = this.HelperService.renderPackageData(category);
       this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
+        selectedTime:
+          category !== 'private-yachts-in-goa'
+            ? this.selectedTime
+            : this.hotelDetails.transport[0].timeSlots[0],
         cruiseId: this.hotelDetails.cruiseId,
-        selectedTransport: this.hotelDetails.transport[1],
+        selectedTransport: this.hotelDetails.transport[0],
         subtotal: this.hotelDetails.transport[0].discountedamt,
         travellers: getTravellers(
-          Number(this.hotelDetails.transport[1].discountedamt),
-          Number(this.hotelDetails.transport[1].kidAmt),
+          Number(this.hotelDetails.transport[0].discountedamt),
+          Number(this.hotelDetails.transport[0].kidAmt),
         ),
       };
       this.HelperService.updateSessionStorage(this.sessionData);
     });
-    this.travellers = getTravellers(this.sessionData.selectedTransport?.discountedamt,this.sessionData.selectedTransport?.kidAmt);
-    this.hotelList = this.HelperService.renderPackageData(category);
+    this.travellers = getTravellers(
+      this.sessionData.selectedTransport?.discountedamt,
+      this.sessionData.selectedTransport?.kidAmt,
+    );
+    this.selectedTime =
+      category !== 'private-yachts-in-goa'
+        ? this.selectedTime
+        : this.sessionData.selectedTransport.timeSlots[0];
   }
 
   @HostListener('window:resize', ['$event'])
@@ -154,21 +165,29 @@ export class CheckoutPageComponent implements OnInit {
     this.isSidebarOpen = false;
   }
   toggleSelection(index: number) {
+    this.showLocationModal = true;
     if (index === 1) {
       this.sessionData.pickupLocation = '';
       this.selectedLocation = '';
     }
     this.hotelDetails.transport.forEach((pkg: any, i: number) => {
-      pkg.isSelected = i !== index ? !pkg.isSelected : false;
+      pkg.isSelected = i === index ? true : false;
     });
 
     const selectedTransport = this.hotelDetails.transport.find((pkg: any) => pkg.isSelected);
+    this.showLocationModal = selectedTransport.title === 'With Transport' ? true : false;
+
     this.sessionData.travellers;
     this.sessionData.selectedTransport = selectedTransport;
     this.HelperService.updateSessionStorage({
       selectedTransport: selectedTransport || null,
       cruiseId: this.hotelDetails.cruiseId,
     });
+    this.selectedTime =
+      this.category !== 'private-yachts-in-goa'
+        ? this.selectedTime
+        : this.sessionData.selectedTransport.timeSlots[0];
+    this.updateTime(this.selectedTime);
 
     setTimeout(() => {
       if (selectedTransport && this.timeSlotContainer) {
@@ -228,7 +247,6 @@ export class CheckoutPageComponent implements OnInit {
     this.router.navigate([`/${this.category}/details/${id}/checkout`]);
   }
   openLocationModal(event: MouseEvent) {
-    // prevent card click
     event.stopPropagation();
     this.showLocationModal = true;
   }

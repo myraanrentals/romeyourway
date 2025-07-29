@@ -33,12 +33,13 @@ p {
   .leftDiv {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 42px;
   }
   .rightDiv {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    justify-content: space-evenly;
+    gap: 17px;
   }
 
   .booking-card {
@@ -170,8 +171,8 @@ p {
   }
 
   .progress-bar {
-    width: 60px;
-    height: 6px;
+    width: 120px;
+    height: 20px;
     background: #f0f0f0;
     border-radius: 5px;
     overflow: hidden;
@@ -182,6 +183,10 @@ p {
     height: 100%;
     background: linear-gradient(90deg, #f97316, #ffc107);
     transition: width 1s linear;
+    span {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
   }
 
   .payment-section {
@@ -202,6 +207,7 @@ p {
     font-size: 16px;
     padding: 15px;
     border-radius: 8px;
+    margin-top: 24px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -279,9 +285,142 @@ p {
     margin-top: 12px;
   }
   .mobile {
-    display: none;
+    display: none !important;
   }
 }
+.applied-coupon-card {
+  display: flex;
+  align-items: center;
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.applied-coupon-card .icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+.applied-coupon-card .details {
+  flex: 1;
+}
+.applied-coupon-card .title {
+  font-weight: 600;
+  color: #388e3c;
+}
+.applied-coupon-card .subtext {
+  font-size: 13px;
+  color: #555;
+}
+.applied-coupon-card .arrow {
+  font-size: 20px;
+  color: #777;
+}
+.coupon-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coupon-modal-box {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+}
+.coupon-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.coupon-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+
+  .coupon-input {
+    width: 100%;
+    padding: 10px 90px 10px 12px; // Right padding to make space for the button
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .manual-apply-btn {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    padding: 6px 14px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
+
+.apply-btn,
+.close-btn {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.coupon-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+
+  .left,
+  .right {
+    flex: 1;
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .apply-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.coupon-title {
+  font-weight: 600;
+}
+.coupon-description {
+  font-size: 13px;
+  color: #666;
+}
+
 @media screen and (max-width: 768px) {
   .web {
     display: none !important;

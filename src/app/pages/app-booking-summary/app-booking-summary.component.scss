@@ -109,14 +109,30 @@
 .total-section {
   margin-top: 16px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 12px 16px;
   background: #ffffff;
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 16px;
-
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .taxDiv {
+    white-space: nowrap;
+    padding-left: 50%;
+    p {
+      font-style: italic;
+    }
+    strong {
+      font-size: 12px;
+      font-weight: 500;
+      color: black;
+    }
+  }
   p {
     margin: 0;
     font-weight: 500;
@@ -127,5 +143,14 @@
     font-size: 18px;
     font-weight: 700;
     color: #d32f2f;
+  }
+}
+@media screen and (max-width: 768px) {
+  .taxDiv {
+    white-space: nowrap;
+    padding-left: 25% !important;
+    p {
+      font-style: italic;
+    }
   }
 }

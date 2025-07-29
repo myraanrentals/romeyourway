@@ -9,6 +9,7 @@ import { HelperService } from '@services/helper.service';
 import { hotels, razorpay_key, key_secret } from '../../constants/hotels';
 import { BookingService } from '@services/booking.service';
 import { FeatureSectionComponent } from '../shared/components/feature-section/feature-section.component';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-order-checkout',
@@ -49,9 +50,33 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     countryCode: '+91',
     phone: '',
   };
+  errors: {
+    [key: string]: { hasError: boolean; message: string };
+  } = {};
   showErrors = false;
   isLoading = true;
+  iscouponLoading = false;
   category: string = '';
+  couponCode: string = '';
+  couponMessage: string = '';
+  showCouponModal: boolean = false;
+  availableCoupons = [
+    {
+      title: 'Get 10% off',
+      code: 'DIGISMART',
+      description: 'Applicable with Standard Chartered cards. Max ₹200 off.',
+    },
+    {
+      title: 'Up to ₹100 Cashback',
+      code: 'PHONEPERUPAYCC',
+      description: 'Valid on PhonePe with Rupay Credit Cards.',
+    },
+    {
+      title: 'Flat ₹200 Cashback',
+      code: 'PAYTMUPI',
+      description: 'Valid on Paytm UPI above ₹150.',
+    },
+  ];
 
   ngOnInit() {
     const category = this.route.snapshot.paramMap.get('category');
@@ -94,7 +119,100 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       }
     }, 1000);
   }
+  clearCouponMessage() {
+    this.couponMessage = '';
+  }
+
+  async applyCoupon(couponCode: string) {
+    this.iscouponLoading = true;
+    const result = await this.validateCoupon(couponCode);
+    if (result) {
+      this.couponCode = result.couponCode;
+      this.couponMessage = `Coupon applied! You saved ₹${result.couponDiscount}`;
+      this.HelperService.updateSessionStorage({
+        couponCode: result.couponCode,
+        discountAmount: result.couponDiscount,
+        subtotal: this.sessionData.subtotal - result.couponDiscount,
+        amountWithGST: this.calculateAfterTaxDiscount(
+          this.sessionData.amountWithGST,
+          18,
+          result.couponDiscount,
+        ).finalTotal,
+      });
+      this.sessionData = {
+        ...this.sessionData,
+        couponCode: result.couponCode,
+        discountAmount: result.couponDiscount,
+        subtotal: this.sessionData.subtotal - result.couponDiscount,
+        amountWithGST: this.calculateAfterTaxDiscount(
+          this.sessionData.amountWithGST,
+          18,
+          result.couponDiscount,
+        ).finalTotal,
+      };
+
+      this.showCouponModal = false;
+      this.iscouponLoading = false;
+    } else {
+      this.iscouponLoading = false;
+      this.couponMessage = 'Invalid or expired coupon code.';
+    }
+  }
+  calculateAfterTaxDiscount(
+    totalWithTax: number,
+    taxRate: number,
+    discount: number,
+  ): {
+    basePrice: number;
+    discountedBase: number;
+    taxAmount: number;
+    finalTotal: number;
+  } {
+    // Step 1: Calculate base price (before tax)
+    const basePrice = totalWithTax / (1 + taxRate / 100);
+
+    // Step 2: Deduct discount from base price
+    const discountedBase = Math.max(basePrice - discount, 0);
+
+    // Step 3: Recalculate tax on discounted base
+    const taxAmount = discountedBase * (taxRate / 100);
+    const finalTotal = discountedBase + taxAmount;
+
+    return {
+      basePrice: parseFloat(basePrice.toFixed(2)),
+      discountedBase: parseFloat(discountedBase.toFixed(2)),
+      taxAmount: parseFloat(taxAmount.toFixed(2)),
+      finalTotal: parseFloat(finalTotal.toFixed(2)),
+    };
+  }
+
+  onCouponSelect(event: Event) {
+    const selectedCode = (event.target as HTMLSelectElement).value;
+    this.couponCode = selectedCode;
+    this.clearCouponMessage();
+  }
+  openCouponModal() {
+    this.showCouponModal = true;
+  }
+
+  closeCouponModal() {
+    this.showCouponModal = false;
+  }
+
   selectPayment(option: 'full' | 'partial') {
+    this.showCouponModal = false;
+    this.couponCode = '';
+    this.HelperService.updateSessionStorage({
+      couponCode: '',
+      discountAmount: 0,
+      subtotal: this.sessionData.subtotal + this.sessionData.discountAmount,
+    });
+    this.sessionData = {
+      ...this.sessionData,
+      couponCode: '',
+      discountAmount: 0,
+      subtotal: this.sessionData.subtotal + this.sessionData.discountAmount,
+    };
     this.selectedPaymentOption = option;
     const subtotal = this.sessionData.subtotal;
     const reportPrice = this.hotelDetails.reportPrice;
@@ -112,12 +230,12 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     } else {
       const { travellers, selectedTransport } = this.sessionData;
       const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
-      console.log({ vehicleQuantity });
       const finalReportPrice =
         selectedTransport?.title === 'With Transport'
           ? subtotal - vehicleQuantity * (reportPrice + 200)
           : subtotal - vehicleQuantity * reportPrice;
       const partialSubtotal = finalReportPrice;
+
       const partialGST = +(partialSubtotal * gstRate).toFixed(2);
       const amountWithGST = +(partialSubtotal + partialGST).toFixed(2);
 
@@ -136,21 +254,51 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       panelClass: 'custom-bottom-sheet',
       data: {
         totalAmount: this.sessionData.payableAmount,
-        discountAmount: 500,
+        discountAmount: this.couponCode ? this.sessionData.discountAmount : 0,
       },
     });
   }
   updateTravellerDetails() {
+    this.showErrors = false;
+    this.errors = {};
     sessionStorage.setItem('travellerDetails', JSON.stringify(this.travellerDetails));
   }
   validateAndSubmit() {
-    this.showErrors = !(
-      this.travellerDetails.firstName &&
-      this.travellerDetails.lastName &&
-      this.travellerDetails.email &&
-      this.travellerDetails.countryCode &&
-      this.travellerDetails.phone
-    );
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{6,15}$/;
+
+    this.errors = {
+      firstName: {
+        hasError: !this.travellerDetails.firstName,
+        message: 'First Name is required',
+      },
+      lastName: {
+        hasError: !this.travellerDetails.lastName,
+        message: 'Last Name is required',
+      },
+      emailRequired: {
+        hasError: !this.travellerDetails.email,
+        message: 'Email is required',
+      },
+      emailInvalid: {
+        hasError: !!this.travellerDetails.email && !emailRegex.test(this.travellerDetails.email),
+        message: 'Email format is invalid',
+      },
+      countryCode: {
+        hasError: !this.travellerDetails.countryCode,
+        message: 'Country code is required',
+      },
+      phoneRequired: {
+        hasError: !this.travellerDetails.phone,
+        message: 'Phone Number is required',
+      },
+      phoneInvalid: {
+        hasError: !!this.travellerDetails.phone && !phoneRegex.test(this.travellerDetails.phone),
+        message: 'Phone Number is invalid',
+      },
+    };
+
+    this.showErrors = Object.values(this.errors).some((e) => e.hasError);
 
     if (!this.showErrors) {
       this.initiatePayment();
@@ -221,9 +369,9 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       next: (res: any) => {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentLink;
-          console.log({ res });
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
-          this.bookingPay(payLink);
+          console.log({ res });
+          // this.bookingPay(payLink);
         } else {
         }
       },
@@ -233,7 +381,22 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     });
   }
   bookingPay(paymentLink: string) {
-    // Implement payment logic here
     window.location.href = paymentLink;
+  }
+  async validateCoupon(
+    coupon: string,
+  ): Promise<{ couponDiscount: number; couponCode: string } | false> {
+    try {
+      const res: any = await firstValueFrom(this._bookingService.validateCouponDetails(coupon));
+      if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
+        if (res.payload?.respCode === 200) {
+          return { couponDiscount: res.payload.couponAmount, couponCode: res.payload.coupon };
+        }
+      }
+      return false;
+    } catch (error) {
+      console.error('Coupon validation failed', error);
+      return false;
+    }
   }
 }

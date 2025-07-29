@@ -16,8 +16,26 @@
   </div>
 
   <div class="total-section">
-    <p>Total Payable Amount:</p>
-    <strong>INR {{ totalAmount }}</strong>
+    <div>
+      <p>Total Amount:</p>
+      <strong>INR {{ totalAmount }}</strong>
+    </div>
+    <div>
+      <p>Coupon Discount(INR {{ discountAmount }})</p>
+      <strong>INR {{ totalAmount - discountAmount }}</strong>
+    </div>
+    <div class="taxDiv">
+      <p>TAX CGST 9%</p>
+      <strong> + INR {{ discountedAmount * 0.09 }}</strong>
+    </div>
+    <div class="taxDiv">
+      <p>TAX SGST 9%</p>
+      <strong> + INR {{ discountedAmount * 0.09 }}</strong>
+    </div>
+    <div>
+      <p>Total Payable Amount:</p>
+      <strong>INR {{ discountedAmount + discountedAmount * 0.18 }}</strong>
+    </div>
   </div>
 
   <div class="discount-message">

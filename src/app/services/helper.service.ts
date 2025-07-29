@@ -83,6 +83,8 @@ export class HelperService {
     pickupLocation: string;
     amountWithGST: number;
     location: string;
+    discountAmount: number;
+    couponCode: string;
   } = {
     selectedDate: {
       day: formatDate(new Date(), 'dd', 'en'),
@@ -100,18 +102,20 @@ export class HelperService {
     pickupLocation: '',
     amountWithGST: 0,
     location: 'Calangute',
+    discountAmount: 0,
+    couponCode: '',
   };
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');
     const sessionPackagePrice = sessionStorage.getItem('packagePrice');
-    const {adultPrice,kidPrice} = sessionPackagePrice && JSON.parse(sessionPackagePrice);
-    
+    const { adultPrice, kidPrice } = sessionPackagePrice && JSON.parse(sessionPackagePrice);
+
     const currentSession = storedSession
       ? JSON.parse(storedSession)
       : sessionPackagePrice
         ? {
             ...this.defaultSessionPayload,
-            travellers: getTravellers(adultPrice,kidPrice),
+            travellers: getTravellers(adultPrice, kidPrice),
           }
         : { ...this.defaultSessionPayload };
 

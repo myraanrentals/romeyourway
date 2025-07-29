@@ -38,12 +38,17 @@
       <div class="packageCards">
         <div
           class="package-card"
-          *ngFor="let package of hotelDetails.transport.slice().reverse(); let i = index"
+          *ngFor="let package of hotelDetails.transport; let i = index"
           [class.selected]="package.isSelected"
           (click)="toggleSelection(i)"
         >
           <div class="package-header">
-            <span class="packageTitle"> {{ package.title }} [{{ hotelDetails.title }}] </span>
+            <span *ngIf="this.category !== 'private-yachts-in-goa'" class="packageTitle">
+              {{ package.title }} [{{ hotelDetails.title }}]
+            </span>
+            <span *ngIf="this.category === 'private-yachts-in-goa'" class="packageTitle">
+              {{ package.title }} [Capacity: {{ package.capacity }}]
+            </span>
             <div class="price">
               <span class="original-price">INR {{ package.originalamt }}</span>
               <span class="discounted-price"
@@ -94,11 +99,29 @@
 
     <div class="time-slot-container" #timeSlotContainer>
       <div class="card">
-        <label class="section-title">Select Time Slot</label>
-        <mat-form-field appearance="outline" class="time-dropdown">
+        <label class="section-title">{{ this.sessionData.selectedTransport.header }}</label>
+        <mat-form-field
+          *ngIf="this.category !== 'private-yachts-in-goa'"
+          appearance="outline"
+          class="time-dropdown"
+        >
           <mat-select [(ngModel)]="selectedTime" (selectionChange)="updateTime($event.value)">
             <mat-option value="6pm">Starts at 06:00 PM</mat-option>
             <mat-option value="7pm">Starts at 07:00 PM</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field
+          *ngIf="this.category === 'private-yachts-in-goa'"
+          appearance="outline"
+          class="time-dropdown"
+        >
+          <mat-select [(ngModel)]="selectedTime" (selectionChange)="updateTime($event.value)">
+            <mat-option
+              *ngFor="let timeSlot of sessionData.selectedTransport.timeSlots"
+              [value]="timeSlot"
+            >
+              Starts at {{ timeSlot }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
 

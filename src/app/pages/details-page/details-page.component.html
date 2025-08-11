@@ -2,13 +2,11 @@
   <div>
     <div class="bannerImg">
       <div>
-        <img src="/assets/detailimages/Adventure-01.webp" alt="" />
+        <img [src]="hotelDetails.bannerImgs[0]" alt="" />
       </div>
+
       <div class="bannerImg2">
-        <img src="/assets/detailimages/Adventure-02.webp" alt="" />
-        <img src="/assets/detailimages/Adventure-03.webp" alt="" />
-        <img src="/assets/detailimages/Adventure-04.webp" alt="" />
-        <img src="/assets/detailimages/Adventure-05.webp" alt="" />
+        <img *ngFor="let src of hotelDetails.bannerImgs.slice(1)" [src]="src" alt="" />
       </div>
     </div>
     <div class="mobile-view">
@@ -600,11 +598,7 @@
     </section>
   </div>
   <div class="clientSlider">
-    <img src="/assets/banners/Adventure-01.svg" alt="" />
-    <img src="/assets/banners/Adventure-01.svg" alt="" />
-    <img src="/assets/banners/Adventure-01.svg" alt="" />
-    <img src="/assets/banners/Adventure-01.svg" alt="" />
-    <img src="/assets/banners/Adventure-01.svg" alt="" />
+    <img *ngFor="let src of hotelDetails.bannerImgs" [src]="src" alt="" />
   </div>
   <section class="travelers-section">
     <div class="travelers-container">

@@ -12,6 +12,14 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1',
     image: '/assets/home/01.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
+
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -174,6 +182,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -336,6 +351,13 @@ export const hotels: any[] = [
     reportPrice: 3500,
     currentPrice: '4000',
     image: '/assets/home/04.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -498,6 +520,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -660,6 +689,13 @@ export const hotels: any[] = [
     reportPrice: 3500,
     currentPrice: '4000',
     image: '/assets/home/04.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -822,6 +858,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1',
     image: '/assets/detailimages/N.webp',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -861,20 +904,16 @@ export const hotels: any[] = [
     ],
     mustKnow: [
       {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring ',
+        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring ',
       },
       {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances ',
+        about1: 'Experience fun games, engaging entertainment, and various dance performances ',
       },
       {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter',
+        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter',
       },
       {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks',
+        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks',
       },
     ],
 
@@ -984,6 +1023,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -1146,6 +1192,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -1308,6 +1361,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -1470,6 +1530,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -1632,6 +1699,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -1794,6 +1868,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -1956,6 +2037,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -2118,6 +2206,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -2280,6 +2375,13 @@ export const hotels: any[] = [
     reportPrice: 700,
     currentPrice: '1000',
     image: '/assets/home/03.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -2442,6 +2544,13 @@ export const hotels: any[] = [
     reportPrice: 200,
     currentPrice: '499',
     image: '/assets/home/02.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -2604,6 +2713,13 @@ export const hotels: any[] = [
     reportPrice: 200,
     currentPrice: '499',
     image: '/assets/home/02.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -2766,6 +2882,13 @@ export const hotels: any[] = [
     reportPrice: 9000,
     currentPrice: '11000',
     image: '/assets/home/02.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -2928,6 +3051,13 @@ export const hotels: any[] = [
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
     currentPrice: '1099',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     priceIncludes: {
       title: 'Price Includes',
       sections: [
@@ -3076,7 +3206,7 @@ export const hotels: any[] = [
         ],
       },
     ],
-  }
+  },
 ];
 
 export const cancellationPolicy: string[] = [

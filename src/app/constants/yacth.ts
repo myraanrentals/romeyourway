@@ -13,6 +13,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '10350',
     image: '/assets/dinnercruise/Mandovi Lounge.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -182,6 +189,13 @@ export const yacth: any[] = [
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
     currentPrice: '11999',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -344,6 +358,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '14500',
     oldPrice: '15000',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -506,6 +527,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '17250',
     image: '/assets/dinnercruise/Manta Ray.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -668,6 +696,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '19750',
     image: '/assets/dinnercruise/Sea Ray 330.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -830,6 +865,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '20700',
     image: '/assets/dinnercruise/Prestige 360.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -992,6 +1034,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '20700',
     image: '/assets/dinnercruise/Funliner.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -1154,6 +1203,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '25300',
     image: '/assets/dinnercruise/Orca.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -1316,6 +1372,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '34500',
     image: '/assets/dinnercruise/Shantam Cat.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -1478,6 +1541,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '34500',
     image: '/assets/dinnercruise/Shantam Cat.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -1640,6 +1710,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '34500',
     image: '/assets/dinnercruise/PolaRis.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -1802,6 +1879,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '25000',
     image: '/assets/dinnercruise/Ralston.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',
@@ -1964,6 +2048,13 @@ export const yacth: any[] = [
     reportPrice: 700,
     currentPrice: '25000',
     image: '/assets/dinnercruise/DC13.jpeg',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
     topFeatures: [
       {
         icon: 'event_available',

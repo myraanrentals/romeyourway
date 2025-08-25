@@ -4,20 +4,20 @@ export const hotels: any[] = [
     title: 'Dinner Cruise in Goa',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-cruise-in-goa',
-    rating: '4.8',
+    rating: '4.6',
     reviews: '3867',
-    oldPrice: '800',
+    oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1',
-    image: '/assets/home/01.avif',
+    reportPrice: 600,
+    currentPrice: '899',
+    image: '/assets/detailimages/NIR.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/NIR01.webp',
+      '/assets/detailimages/NIR02.webp',
+      '/assets/detailimages/NIR03.webp',
+      '/assets/detailimages/NIR04.webp',
+      '/assets/detailimages/NIR05.webp',
     ],
 
     priceIncludes: {
@@ -49,7 +49,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -58,21 +58,21 @@ export const hotels: any[] = [
       },
     ],
     mustKnow: [
-      {
+       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Enjoy 3-Hours with friends, family, or loved ones, all while enjoying the vibrant sights and sounds of Goa.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Savor a selection of gourmet dishes as you glide over glistening waters for a delightful experience.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Enjoy fun-filled games, dance & groove to retro classics and Bollywood hits spun by a dynamic DJ.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'This cruise promises to be the perfect setting for an unforgettable night dinner cruise party.',
       },
     ],
 
@@ -87,24 +87,6 @@ export const hotels: any[] = [
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
       { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
     ],
     overviewDesc:
       'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
@@ -144,9 +126,9 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '999',
-        discountedamt: '1',
-        kidAmt: '700',
+        originalamt: '1499',
+        discountedamt: '899',
+        kidAmt: '699',
         desc: [
           'Access to lower deck',
           '2-hour cruise in Goa Marina',
@@ -157,9 +139,9 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1199',
-        discountedamt: '1000',
-        kidAmt: '900',
+        originalamt: '1699',
+        discountedamt: '1099',
+        kidAmt: '899',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -171,23 +153,23 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 2,
-    title: 'Premium Dinner Cruise in Goa',
-    category: 'Premium Dinner Cruise in Goa',
+    title: 'Premium Dinner Cruise',
+    category: 'Premium Dinner Cruise',
     routingUrl: 'book-premium-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1800',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    reportPrice: 650,
+    currentPrice: '1099',
+    image: '/assets/detailimages/VIH.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/VIH01.webp',
+      '/assets/detailimages/VIH02.webp',
+      '/assets/detailimages/VIH03.webp',
+      '/assets/detailimages/VIH04.webp',
+      '/assets/detailimages/VIH05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -218,7 +200,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -229,19 +211,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          '3-hour journey filled with music, dancing, delectable cuisine, and exhilarating entertainment.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Unlimited Buffet Dinner – Enjoy an array of vegetarian and non-vegetarian dishes.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Expect engaging games and entertainment for all ages, ensuring every family member enjoys the trip.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Relax and enjoy the cruise in comfort with reserved table seating for you and your party.',
       },
     ],
 
@@ -313,8 +295,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
+        originalamt: '1800',
+        discountedamt: '1099',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -326,8 +308,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1200',
+        originalamt: '1800',
+        discountedamt: '1299',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -340,23 +322,23 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 3,
-    title: 'Luxury Dinner Cruise in Goa',
+    title: 'Luxury Dinner Cruise[UNLIMITED FOOD & DRINKS]',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-luxury-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '5000',
+    oldPrice: '4999',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 3500,
-    currentPrice: '4000',
-    image: '/assets/home/04.avif',
+    reportPrice: 3000,
+    currentPrice: '3999',
+   image: '/assets/detailimages/NIR.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/NIR01.webp',
+      '/assets/detailimages/NIR02.webp',
+      '/assets/detailimages/NIR03.webp',
+      '/assets/detailimages/NIR04.webp',
+      '/assets/detailimages/NIR05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -387,7 +369,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -398,19 +380,356 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'An Exclusive 4-Hour Luxury Party Experience with unlimited food & Drinks.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Bollywood Dance Performances, Live DJ, Fun Games & Fire Show Extravaganza.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Serene ambience and vibrant energy of the cruise createa a perfect setting for romantic evenings.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Air-Conditioned Lower Deck with sofa seating & Open-Air Upper Deck for breathtaking views of Goa’s skylin.',
+      },
+    ],
+    features: [
+      {
+        name: 'Duration 3 Hours',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
+      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+  },
+  {
+    cruiseId: 16,
+    title: 'Sunset & Party Cruise',
+    category: 'Sunset Cruise in Goa',
+    routingUrl: 'book-sunset-cruise-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    oldPrice: '799',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 200,
+    currentPrice: '399',
+    image: '/assets/home/02.avif',
+    bannerImgs: [
+      '/assets/detailimages/VIH01.webp',
+      '/assets/detailimages/VIH02.webp',
+      '/assets/detailimages/VIH03.webp',
+      '/assets/detailimages/VIH04.webp',
+      '/assets/detailimages/VIH05.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Sail past iconic landmarks like Fort Aguada, Governors Palace, and Miramar Beach.',
+      },
+      {
+        about1:
+          'Groove to live DJ music on a double-deck cruiser with a lively atmosphere.',
+      },
+      {
+        about1:
+          'Relax with family, friends and soak in stunning sunset views over the Mandovi River.',
+      },
+      {
+        about1:
+          'Relax with family, friends and soak in stunning sunset views over the Mandovi River.',
+      },
+    ],
+
+    features: [
+      {
+        name: 'Duration 1 Hours',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
+      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '699',
+        discountedamt: '399',
+        kidAmt: '300',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '899',
+        discountedamt: '699',
+        kidAmt: '600',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+  },
+  {
+    cruiseId: 5,
+    title: 'Nauti Amigo Luxury Dinner Cruise',
+    category: 'Dinner Cruise in Goa',
+    routingUrl: 'book-nauti-amigo-luxury-dinner-cruise-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    oldPrice: '4999',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 3000,
+    currentPrice: '3999',
+    image: '/assets/home/04.avif',
+    bannerImgs: [
+      '/assets/detailimages/VIH01.webp',
+      '/assets/detailimages/VIH02.webp',
+      '/assets/detailimages/VIH03.webp',
+      '/assets/detailimages/VIH04.webp',
+      '/assets/detailimages/VIH05.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+      },
+      {
+        about1:
+          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+      },
+      {
+        about1:
+          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+      },
+      {
+        about1:
+          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
       },
     ],
 
@@ -482,8 +801,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '5000',
-        discountedamt: '4000',
+        originalamt: '4999',
+        discountedamt: '3999',
         kidAmt: '2500',
         desc: [
           'Access to lower deck',
@@ -495,8 +814,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '5000',
-        discountedamt: '4000',
+        originalamt: '4999',
+        discountedamt: '3999',
         kidAmt: '2500',
         desc: [
           'Access to all decks',
@@ -509,23 +828,23 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 4,
-    title: 'Vihaan Family Dinner Cruise in goa',
+    title: 'Vihaan Dinner Cruise[Family & Couple]',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-vihaan-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    currentPrice: '1099',
+    image: '/assets/detailimages/VIH01.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/VIH.webp',
+      '/assets/detailimages/VIH02.webp',
+      '/assets/detailimages/VIH03.webp',
+      '/assets/detailimages/VIH04.webp',
+      '/assets/detailimages/VIH05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -556,7 +875,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -567,19 +886,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'A spacious, three-deck cruise designed to provide breathtaking views, ample seating, and a great ambiance.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Enjoy a buffet dinner with both veg and non-veg options, complemented by plated snacks and two complimentary drinks.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Witness iconic Atal Setu Bridge, sparkling riverfront casinos, and the lush banks of the Mandovi River.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'With games, activities, and entertainment for all ages, Vihaan Cruise caters to everyone.',
       },
     ],
 
@@ -651,8 +970,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
+        originalamt: '1499',
+        discountedamt: '1099',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -665,177 +984,8 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '1299',
         kidAmt: '900',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 5,
-    title: 'Nauti Amigo Luxury Dinner Cruise in Goa',
-    category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-nauti-amigo-luxury-dinner-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '5000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 3500,
-    currentPrice: '4000',
-    image: '/assets/home/04.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '5000',
-        discountedamt: '4000',
-        kidAmt: '2500',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '5000',
-        discountedamt: '4000',
-        kidAmt: '2500',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -847,23 +997,23 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 6,
-    title: 'Nirwana Dinner Cruise in Goa',
+    title: 'Nirwana Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-nirwana-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '800',
+    oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1',
-    image: '/assets/detailimages/N.webp',
+    reportPrice: 650,
+    currentPrice: '799',
+    image: '/assets/detailimages/NIR.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/NIR01.webp',
+      '/assets/detailimages/NIR02.webp',
+      '/assets/detailimages/NIR03.webp',
+      '/assets/detailimages/NIR04.webp',
+      '/assets/detailimages/NIR05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -894,7 +1044,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -904,16 +1054,20 @@ export const hotels: any[] = [
     ],
     mustKnow: [
       {
-        about1: 'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring ',
+        about1:
+          'Nirvana dinner cruise in Goa offers a vibrant experience with live music, cultural performances, and scenic views.',
       },
       {
-        about1: 'Experience fun games, engaging entertainment, and various dance performances ',
+        about1:
+          'The cruise includes plated snacks, a buffet with vegetarian and non-vegetarian options, and complimentary drinks and mineral water.',
       },
       {
-        about1: 'Kids will love the mascots onboard, adding a special touch of fun and laughter',
+        about1:
+          'Live music from a DJ, Goan folk dances, and Portuguese dance performances create a lively atmosphere.',
       },
       {
-        about1: 'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks',
+        about1:
+          'Whether you’re seeking a romantic evening, a memorable experience with family, or a party cruise with friends, this is the perfect fit for all.',
       },
     ],
 
@@ -985,9 +1139,9 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '999',
-        discountedamt: '1',
-        kidAmt: '700',
+        originalamt: '1499',
+        discountedamt: '799',
+        kidAmt: '699',
         desc: [
           'Access to lower deck',
           '2-hour cruise in Goa Marina',
@@ -998,9 +1152,9 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1199',
-        discountedamt: '1000',
-        kidAmt: '900',
+        originalamt: '1699',
+        discountedamt: '999',
+        kidAmt: '899',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -1012,23 +1166,23 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 7,
-    title: 'Paradise Family Dinner Cruise in goa',
+    title: 'Paradise Dinner Cruise[FAMILY & COUPLE]',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-paradise-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    currentPrice: '1099',
+    image: '/assets/detailimages/PAR.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/PAR01.webp',
+      '/assets/detailimages/PAR02.webp',
+      '/assets/detailimages/PAR03.webp',
+      '/assets/detailimages/PAR04.webp',
+      '/assets/detailimages/PAR05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -1059,7 +1213,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1070,19 +1224,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Embarking on the Paradise Dinner Cruise in Goa offers a blend of cultural immersion, entertainment, and scenic beauty.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Enjoy the comfort of reserved tables, ensuring a personalized dining experience as you cruise along the Mandovi River.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Be captivated by Live DJ, authentic Goan folk dances and traditional Portuguese performances, providing a glimpse into the regions rich cultural heritage.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'The cruise caters to guests of all ages, making it an ideal outing for families seeking a memorable evening together.',
       },
     ],
 
@@ -1154,8 +1308,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
+        originalamt: '1499',
+        discountedamt: '1099',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -1168,176 +1322,7 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 8,
-    title: 'Swastik Family Dinner Cruise in goa',
-    category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-swastik-dinner-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '1199',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '1299',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -1350,23 +1335,23 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 9,
-    title: 'Princesa Dinner Cruise in goa',
+    title: 'Princesa Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-princesa-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    currentPrice: '1099',
+    image: '/assets/detailimages/PRI01.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/PRI.webp',
+      '/assets/detailimages/PRI02.webp',
+      '/assets/detailimages/PRI03.webp',
+      '/assets/detailimages/PRI04.webp',
+      '/assets/detailimages/PRI05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -1397,7 +1382,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1408,19 +1393,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Princesa dinner cruise in Goa offers a luxurious experience on the Mandovi River, combining scenic views with entertainment and dining.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Indulge in a lavish buffet dinner offering both veg and non-veg options. Enjoy complimentary refreshments along with complimentary plated snacks to tantalize your taste buds.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Experience a vibrant atmosphere with live Bollywood DJ music, traditional Goan and Portuguese folk dances, and engaging games with prizes, ensuring a lively and memorable evening for all.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Enjoy the comfort and elegance of a modern double-decker boat. The cruise offers a good balance of luxury and value, making it a popular choice for couples, families, and groups seeking a memorable Goan evening.',
       },
     ],
 
@@ -1492,8 +1477,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
+        originalamt: '1499',
+        discountedamt: '1099',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -1506,345 +1491,7 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 10,
-    title: 'Calma Romantic Dinner Cruise in goa',
-    category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-calma-dinner-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '1199',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 11,
-    title: 'Kapitol Dinner Cruise in goa',
-    category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-kapitol-dinner-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '1199',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '1299',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -1857,7 +1504,7 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 12,
-    title: 'Corel Queen Dinner Cruise in goa',
+    title: 'Corel Queen Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-coral-queen-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1865,15 +1512,15 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    reportPrice: 650,
+    currentPrice: '999',
+    image: '/assets/home/A1.jpeg',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+     '/assets/detailimages/VIH01.webp',
+      '/assets/detailimages/VIH02.webp',
+      '/assets/detailimages/VIH03.webp',
+      '/assets/detailimages/VIH04.webp',
+      '/assets/detailimages/VIH05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -1904,7 +1551,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1915,19 +1562,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'The Coral Queen is presented as a premier luxury dinner cruise in Goa, offering a comprehensive experience that includes entertainment, dining, and sightseeing on the Mandovi River.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'The cruise features an unlimited buffet with both veg and non-veg choices, alongside two complimentary drinks. Options for private tables and premium upper deck seating are also available.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Guests can enjoy a variety of entertainment such as Russian and Bollywood dance performances, a traditional Goan welcome dance, and a live DJ with a dance floor.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'As a triple-deck vessel, it boasts the largest capacity in Goa and offers scenic views of landmarks like Panjim City, Fort Aguada, and floating casinos during the journey.',
       },
     ],
 
@@ -2000,7 +1647,7 @@ export const hotels: any[] = [
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1299',
-        discountedamt: '1000',
+        discountedamt: '999',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -2013,7 +1660,7 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '1199',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -2025,24 +1672,193 @@ export const hotels: any[] = [
     ],
   },
   {
-    cruiseId: 13,
-    title: 'Lexicon Family Dinner Cruise in goa',
+    cruiseId: 10,
+    title: 'Calma Dinner Cruise',
     category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-lexican-dinner-cruise-in-goa',
+    routingUrl: 'book-calma-dinner-cruise-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    oldPrice: '1199',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 650,
+    currentPrice: '999',
+    image: '/assets/home/CAL.jpeg',
+    bannerImgs: [
+      '/assets/detailimages/CAL.webp',
+      '/assets/detailimages/CAL02.webp',
+      '/assets/detailimages/CAL03.webp',
+      '/assets/detailimages/CAL01.webp',
+      '/assets/detailimages/NIR05.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Calma Dinner Cruise offers a delightful experience along the Mandovi River, complemented by engaging entertainment such as live DJ music, Goan folk dances, and interactive games.',
+      },
+      {
+        about1:
+          'Indulge in a varied buffet dinner, featuring both veg and non-veg options, along with snacks and complimentary drinks, ensuring a satisfying culinary experience.',
+      },
+      {
+        about1:
+          'The cruise offers picturesque views of Goas landmarks along the Mandovi River, allowing guests to appreciate the regions beauty from a unique vantage point.',
+      },
+      {
+        about1:
+          'The cruise provides a relaxing atmosphere on the water with cool breezes, while simultaneously offering a lively environment perfect for celebrating special occasions or simply enjoying an evening out.',
+      },
+    ],
+
+    features: [
+      {
+        name: 'Duration 3 Hours',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
+      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '1299',
+        discountedamt: '999',
+        kidAmt: '700',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '1499',
+        discountedamt: '1199',
+        kidAmt: '900',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+  },
+  {
+    cruiseId: 11,
+    title: 'Kapitol Dinner Cruise',
+    category: 'Dinner Cruise in Goa',
+    routingUrl: 'book-kapitol-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    currentPrice: '999',
+    image: '/assets/home/KAP.jpeg',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/VIH01.webp',
+      '/assets/detailimages/VIH02.webp',
+      '/assets/detailimages/VIH03.webp',
+      '/assets/detailimages/VIH04.webp',
+      '/assets/detailimages/VIH05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -2073,7 +1889,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -2084,19 +1900,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Discover an unforgettable blend of culture, cuisine, and celebration aboard the Kapitol Dinner Cruise.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Treat your taste buds to a lavish buffet featuring an array of Goan delicacies and international favorites.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'With activities and entertainment for all age groups, the Kapitol Dinner Cruise creates a welcoming atmosphere for families, couples, and groups of friends, ensuring a delightful time for everyone.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Kapitol Cruise goes beyond a simple river journey—it’s an evening filled with culture, entertainment, and luxury.',
       },
     ],
 
@@ -2169,7 +1985,7 @@ export const hotels: any[] = [
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1299',
-        discountedamt: '1000',
+        discountedamt: '999',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -2182,7 +1998,7 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '1199',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -2194,24 +2010,24 @@ export const hotels: any[] = [
     ],
   },
   {
-    cruiseId: 14,
-    title: 'Ohana Family Dinner Cruise in goa',
+    cruiseId: 8,
+    title: 'Swastik Family Dinner Cruise[CURRENTLY NOT AVAILABLE]',
     category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-ohana-dinner-cruise-in-goa',
+    routingUrl: 'book-swastik-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1800',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    currentPrice: '999',
+    image: '/assets/detailimages/SWA.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/SWA01.webp',
+      '/assets/detailimages/SWA02.webp',
+      '/assets/detailimages/SWA03.webp',
+      '/assets/detailimages/SWA04.webp',
+      '/assets/detailimages/SWA05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -2242,7 +2058,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -2253,19 +2069,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Swastik ia a Floating Wonderland on the Mandovi and with three expansive decks, Swastik Cruise offers a seamless combination of elegance and fun.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Culinary delights with stunning views. Entertainment for Everyone from foot-tapping Bollywood beats to live performances, Swastik Cruise keeps the energy alive with a variety of entertainment.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Three Hours of Bliss, unlike quick excursions, Swastik Cruise offers a generous three-hour journey that lets you truly relax and enjoy the experience.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Memories that Last a Lifetime, whether you’re celebrating a special occasion or simply exploring Goa in a unique way, Swastik Cruise promises moments that will stay with you forever.',
       },
     ],
 
@@ -2337,8 +2153,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
+        originalamt: '1800',
+        discountedamt: '999',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -2350,8 +2166,8 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1200',
+        originalamt: '1800',
+        discountedamt: '1199',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -2363,24 +2179,24 @@ export const hotels: any[] = [
     ],
   },
   {
-    cruiseId: 15,
-    title: 'Melvin Family Dinner Cruise in goa',
-    category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-melvin-dinner-cruise-in-goa',
+    cruiseId: 19,
+    title: 'Adventure Boat Party & water sports',
+    image: '/assets/home/CALMA.jpg',
+    category: 'Adventure Boat Party with water sports',
+    routingUrl: 'adventure-boat-party-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1199',
+    oldPrice: '1499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1000',
-    image: '/assets/home/03.avif',
+    reportPrice: 600,
+    currentPrice: '999',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/detailimages/CAL01.webp',
+      '/assets/detailimages/CAL02.webp',
+      '/assets/detailimages/CAL03.webp',
+      '/assets/detailimages/CAL04.webp',
+      '/assets/detailimages/CAL05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -2411,7 +2227,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -2422,19 +2238,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Adventure boat parties and watersports in Goa are predominantly concentrated around the scenic Mandovi River, offering a picturesque backdrop for activities and cruises.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Enjoy buffet meals (veg/non-veg), refreshing drinks (beer/soft drinks/juice), live DJ music, on-board amenities like changing rooms and toilets, safety gear (life jackets), and even dolphin sighting.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Enjoy thrilling water activities like jet skiing, banana boat rides, bumper rides, speed boat rides, kayaking, and more, appealing to a wide range of thrill-seekers and leisure enthusiasts.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Despite the monsoon season typically impacting sea-based watersports, the Mandovi River continues to host these adventure boat parties and watersports, ensuring year-round excitement and fun.',
       },
     ],
 
@@ -2506,8 +2322,8 @@ export const hotels: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1000',
+        originalamt: '1499',
+        discountedamt: '999',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -2520,346 +2336,8 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '1199',
         kidAmt: '900',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 16,
-    title: 'Sunset Cruise in Goa',
-    category: 'Sunset Cruise in Goa',
-    routingUrl: 'book-sunset-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '799',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 200,
-    currentPrice: '499',
-    image: '/assets/home/02.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 1 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '699',
-        discountedamt: '499',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '899',
-        discountedamt: '699',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 17,
-    title: 'Party Cruise in Goa',
-    category: 'Sunset Cruise in Goa',
-    routingUrl: 'book-party-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '799',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 200,
-    currentPrice: '499',
-    image: '/assets/home/02.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 1 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '699',
-        discountedamt: '499',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '899',
-        discountedamt: '699',
-        kidAmt: '700',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -2879,8 +2357,8 @@ export const hotels: any[] = [
     oldPrice: '15000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 9000,
-    currentPrice: '11000',
+    reportPrice: 7000,
+    currentPrice: '9999',
     image: '/assets/home/02.avif',
     bannerImgs: [
       '/assets/detailimages/Adventure-01.webp',
@@ -2918,7 +2396,7 @@ export const hotels: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -2929,19 +2407,19 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
+          'Enjoy a blend of luxury, relaxation, and opportunities for stunning coastal & iconic beaches views, historic forts like Fort Aguada, and charming coastal villages, all from the unique perspective of the open water.',
       },
       {
         about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
+          'Witness Goas spectacular sunsets from the comfort of a private yacht, complete with luxury amenities like sun decks, cozy cabins, and onboard dining featuring delicious cuisine.',
       },
       {
         about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
+          'Host unforgettable special occasions, such as birthdays, anniversaries, or corporate events, with the unique backdrop of the sea, enhanced by professional crew and tailored onboard services.',
       },
       {
         about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
+          'Enjoy a personalized and tranquil escape with customized itineraries for romantic dinners, stargazing, or exclusive celebrations, all away from the crowds in the serene intimacy of the sea.',
       },
     ],
 
@@ -3014,7 +2492,7 @@ export const hotels: any[] = [
         title: 'Without Transport',
         isSelected: true,
         originalamt: '15000',
-        discountedamt: '11000',
+        discountedamt: '9999',
         kidAmt: '0',
         desc: [
           'Access to lower deck',
@@ -3029,175 +2507,6 @@ export const hotels: any[] = [
         originalamt: '16000',
         discountedamt: '12000',
         kidAmt: '0',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 19,
-    title: 'Adventure Boat Party with water sports',
-    image: '/assets/dinnercruise/DC19.avif',
-    category: 'Adventure Boat Party with water sports',
-    routingUrl: 'adventure-boat-party-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '1499',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '1099',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a 3-hour Bollywood DJ party with friends, family, or loved ones, featuring energetic music and entertainment.',
-      },
-      {
-        about1:
-          'Experience fun games, engaging entertainment, and various dance performances that keep the excitement going.',
-      },
-      {
-        about1:
-          'Kids will love the mascots onboard, adding a special touch of fun and laughter for the little ones.',
-      },
-      {
-        about1:
-          'Indulge in refreshing drinks, including 2 pints of beer, 2 pegs of hard drinks, or soft drinks of your choice.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '1299',
-        discountedamt: '1099',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1499',
-        discountedamt: '1299',
-        kidAmt: '700',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',

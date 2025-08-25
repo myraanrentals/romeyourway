@@ -29,7 +29,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -205,7 +205,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -374,7 +374,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -543,7 +543,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -712,7 +712,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -881,7 +881,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1050,7 +1050,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1219,7 +1219,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1388,7 +1388,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1557,7 +1557,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1726,7 +1726,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -1895,7 +1895,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',
@@ -2064,7 +2064,7 @@ export const yacth: any[] = [
       {
         icon: 'free_cancellation',
         title: 'Free Cancellation',
-        description: 'Up to 15 days before the experience starts',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
         icon: 'local_activity',

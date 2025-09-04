@@ -2190,7 +2190,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 600,
-    currentPrice: '999',
+    currentPrice: '1',
     bannerImgs: [
       '/assets/detailimages/CAL01.webp',
       '/assets/detailimages/CAL02.webp',
@@ -2323,7 +2323,7 @@ export const hotels: any[] = [
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1499',
-        discountedamt: '999',
+        discountedamt: '1',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -2336,7 +2336,7 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1199',
+        discountedamt: '2',
         kidAmt: '900',
         desc: [
           'Access to all decks',

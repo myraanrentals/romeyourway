@@ -47,7 +47,17 @@
         </div>
 
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div
+            class="carousel-item"
+            *ngFor="let img of hotelDetails.bannerImgs; let i = index"
+            [class.active]="i === 0"
+          >
+            <img [src]="img" class="carousel-item-img" alt="Slide {{ i + 1 }}" />
+          </div>
+        </div>
+
+        <!-- <div class="carousel-inner">
+          <div class="carousel-item active" >
             <img src="/assets/detailimages/Adventure-01.webp" class="carousel-item-img" alt="" />
           </div>
           <div class="carousel-item">
@@ -59,7 +69,7 @@
           <div class="carousel-item">
             <img src="/assets/detailimages/Adventure-04.webp" class="carousel-item-img" alt="" />
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 

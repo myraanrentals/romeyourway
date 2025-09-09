@@ -12,3 +12,38 @@
     </div>
   </div>
 </section>
+
+<section>
+  <div class="readmore-content">
+    <h2>Explore Our Cruise Deals</h2>
+    <p>
+      <span *ngIf="!isExpanded" class="short-content">
+        Check out our exclusive offers for cruise holidays! Find the best deals and destinations for your dream vacation.
+      </span>
+      <span *ngIf="isExpanded" class="full-content">
+        Check out our exclusive offers for cruise holidays! Find the best deals and destinations for your dream vacation. We provide tailored packages for all kinds of travelers, from solo adventures to family trips. Explore exotic destinations, enjoy luxury amenities, and create unforgettable memories. 
+        You can also find special offers for last-minute bookings and seasonal discounts. Don't miss out on our limited-time promotions! Book your cruise today!
+        <h5>Check out our exclusive offers</h5>
+        <span>Check out our exclusive offers for cruise holidays! Find the best deals and destinations for your dream vacation. We provide tailored packages for all kinds of travelers, from solo adventures to family trips. Explore exotic destinations, enjoy luxury amenities, and create unforgettable memories. 
+          You can also find special offers for last-minute bookings and seasonal discounts. Don't miss out on our limited-time promotions! Book your cruise today!
+  </span>
+     
+      </span>
+    </p>
+    
+    <!-- Read More / Read Less Button -->
+    <button (click)="toggleContent()" class="readmore">
+     
+      <!-- Dynamically change text between 'Read More' and 'Read Less' -->
+      {{ isExpanded ? 'Read Less' : 'Read More' }}
+       <!-- Display the up arrow when the content is expanded (Read Less) -->
+       <img *ngIf="isExpanded" src="/assets/icons/angle-arrow-up.svg" width="18"/>
+    
+       <!-- Display the down arrow when the content is collapsed (Read More) -->
+       <img *ngIf="!isExpanded" src="/assets/icons/angle-arrow-down.svg" width="18"/>
+     
+    </button>
+    
+  </div>
+</section>
+

@@ -9,6 +9,9 @@ import { HelperService } from '@services/helper.service';
 import { MatCardModule } from '@angular/material/card';
 import { FaqComponent } from '../faq/faq.component';
 import { hotels } from '../../constants/hotels';
+import { yacth } from '@constants/yacth';
+declare var $: any; // Declare jQuery globally
+
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -27,6 +30,8 @@ import { hotels } from '../../constants/hotels';
 })
 export class HomepageComponent implements OnInit {
   hotelList = hotels;
+  yatchlList = yacth;
+  
   cardDataList = [
     {
       title: 'Famous Activities in Goa',
@@ -143,7 +148,7 @@ export class HomepageComponent implements OnInit {
       title: 'Bundle and Save',
     },
   ];
-
+  category: string = '';
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -151,6 +156,7 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.yatchlList = this._helperService.renderPackageData("private-yachts-in-goa");    
     sessionStorage.clear();
     (async () => {
       if (this._helperService.getSessionStorage('travelDetails') !== null) {
@@ -181,8 +187,74 @@ export class HomepageComponent implements OnInit {
     this._helperService.setSessionStorage('travelDetails', travelDetails);
     this.router.navigate([hotelDetails.pageUrl], { relativeTo: this.route });
   }
+  ngAfterViewInit() {
+    $('#slick-slider,#slick-slider-yachts,#slick-slider-dinner').slick({
+      slidesToShow: 3, // Show 3 slides at a time
+      slidesToScroll: 1, // Scroll 1 slide at a time
+      infinite: true, // Infinite scrolling
+      dots: false, // Disable dots navigation
+      arrows: true, // Show left/right arrows
+      autoplay: false, // Disable autoplay
+      autoplaySpeed: 2000, // Change slide every 2 seconds
+      centerMode: true,  // Enable center mode
+      centerPadding: '40px',
+      initialSlide: 0, 
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    $('#slick-slider').on('afterChange', (event: any, slick: any, currentSlide: number) => {
+      // Remove the highlighted class from all slides
+      $('.slick-slide').removeClass('highlighted');
+
+      // Add the highlighted class to the center (active) slide
+      const activeSlide = $(slick.$slides[currentSlide]);
+      activeSlide.addClass('highlighted');
+    });
+
+    $(window).on('resize', function () {
+      $('#slick-slider').slick('setPosition');
+    });
+  }
 
   goToService(link: string) {
-    this.router.navigate([link], { relativeTo: this.route });
+    const category = this.route.snapshot.paramMap.get('category');
+    this.router.navigate([`/book-dinner-cruise-in-goa/details/${link}`]);
   }
+  goToServiceYath(link: string) {
+    const category = this.route.snapshot.paramMap.get('category');
+    this.router.navigate([`/private-yachts-in-goa/details/${link}`]);
+  }
+  navigateTo(route: string) {
+    this.router.navigate([`/${route}`]);
+  }
+  
 }

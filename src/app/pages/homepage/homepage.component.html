@@ -167,7 +167,7 @@
     <h2>Travelers' favorite choices</h2>
     <div class="travelers-wrapper" id="slick-slider-dinner">
       <mat-card class="traveller-card" *ngFor="let offer of hotelList | slice: 0 : 6">
-        <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
+        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
           <div>
             <p class="category">{{ offer.category }}</p>

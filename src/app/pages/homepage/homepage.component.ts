@@ -189,16 +189,9 @@ export class HomepageComponent implements OnInit {
   }
   ngAfterViewInit() {
     $('#slick-slider,#slick-slider-yachts,#slick-slider-dinner').slick({
-      slidesToShow: 3, // Show 3 slides at a time
-      slidesToScroll: 1, // Scroll 1 slide at a time
-      infinite: true, // Infinite scrolling
-      dots: false, // Disable dots navigation
-      arrows: true, // Show left/right arrows
-      autoplay: false, // Disable autoplay
-      autoplaySpeed: 2000, // Change slide every 2 seconds
-      centerMode: true,  // Enable center mode
-      centerPadding: '40px',
-      initialSlide: 0, 
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: true,
       responsive: [
         {
           breakpoint: 1400,
@@ -226,7 +219,6 @@ export class HomepageComponent implements OnInit {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            centerPadding: '20px',
             centerMode: false,
           }
         }

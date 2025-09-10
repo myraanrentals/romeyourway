@@ -41,12 +41,7 @@ export class ExperienceComponent {
     private route: ActivatedRoute,
     private _helperService: HelperService,
   ) {
-    let winWidth = window.innerWidth;
-    if (winWidth < 768) {
-      this.mobFlag = true;
-    } else {
-      this.mobFlag = false;
-    }
+    this.setMobileFlag();
   }
   ngOnInit(): void {
     this.href = this._router.url;
@@ -55,9 +50,18 @@ export class ExperienceComponent {
         this.href = event.urlAfterRedirects;
       }
     });
+    window.addEventListener('resize', this.setMobileFlag.bind(this));
+
   }
   ngAfterViewInit() {
     this.href = this._router.url;
+  }
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.setMobileFlag.bind(this));
+  }
+  setMobileFlag() {
+    let winWidth = window.innerWidth;
+    this.mobFlag = winWidth < 800;
   }
 
   openFullScreen(content: TemplateRef<any>, offer: any) {

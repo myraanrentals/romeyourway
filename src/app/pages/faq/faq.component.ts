@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./faq.component.scss'],
 })
 export class FaqComponent {
+  isExpanded: boolean = false;
+
   faqs = [
     {
       question: 'What types of activities does Rome Your Way offer in Goa?',
@@ -79,5 +81,8 @@ export class FaqComponent {
 
   toggleFaq(index: number) {
     this.faqs.forEach((faq, i) => (faq.isOpen = i === index ? !faq.isOpen : false));
+  }
+  toggleContent() {
+    this.isExpanded = !this.isExpanded;
   }
 }

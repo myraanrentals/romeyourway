@@ -10,6 +10,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 600,
+    reportPriceWithTransport: 750,
     currentPrice: '899',
     image: '/assets/detailimages/NIR.webp',
     bannerImgs: [
@@ -162,6 +163,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 650,
+    reportPriceWithTransport: 750,
     currentPrice: '1099',
     image: '/assets/detailimages/VIH.webp',
     bannerImgs: [
@@ -331,6 +333,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 3000,
+    reportPriceWithTransport: 750,
     currentPrice: '3999',
    image: '/assets/detailimages/NAU.webp',
     bannerImgs: [
@@ -499,6 +502,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 200,
+    reportPriceWithTransport: 750,
     currentPrice: '399',
     image: '/assets/home/02.avif',
     bannerImgs: [
@@ -668,6 +672,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 3000,
+    reportPriceWithTransport: 750,
     currentPrice: '3999',
     image: '/assets/detailimages/NAU.webp',
     bannerImgs: [
@@ -837,6 +842,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
+    reportPriceWithTransport: 750,
     currentPrice: '1099',
     image: '/assets/detailimages/VIH01.webp',
     bannerImgs: [
@@ -1006,6 +1012,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 650,
+    reportPriceWithTransport: 750,
     currentPrice: '799',
     image: '/assets/detailimages/NIR.webp',
     bannerImgs: [
@@ -1175,6 +1182,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
+    reportPriceWithTransport: 750,
     currentPrice: '1099',
     image: '/assets/detailimages/PAR.webp',
     bannerImgs: [
@@ -1344,6 +1352,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
+    reportPriceWithTransport: 750,
     currentPrice: '1099',
     image: '/assets/detailimages/PRI01.webp',
     bannerImgs: [
@@ -1513,6 +1522,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 650,
+    reportPriceWithTransport: 750,
     currentPrice: '999',
     image: '/assets/home/A1.jpeg',
     bannerImgs: [
@@ -1682,6 +1692,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 650,
+    reportPriceWithTransport: 750,
     currentPrice: '999',
     image: '/assets/detailimages/CAL.webp',
     bannerImgs: [
@@ -1851,6 +1862,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
+    reportPriceWithTransport: 750,
     currentPrice: '999',
     image: '/assets/home/KAP.jpeg',
     bannerImgs: [
@@ -2020,6 +2032,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
+    reportPriceWithTransport: 750,
     currentPrice: '999',
     image: '/assets/detailimages/SWA.webp',
     bannerImgs: [
@@ -2190,6 +2203,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 600,
+    reportPriceWithTransport: 750,
     currentPrice: '1',
     bannerImgs: [
       '/assets/detailimages/CAL01.webp',
@@ -2358,6 +2372,7 @@ export const hotels: any[] = [
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 7000,
+    reportPriceWithTransport: 750,
     currentPrice: '9999',
     image: '/assets/home/02.avif',
     bannerImgs: [

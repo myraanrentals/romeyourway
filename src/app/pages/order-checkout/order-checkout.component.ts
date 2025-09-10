@@ -130,45 +130,63 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     return profit;
   }
   async applyCoupon(couponCode: string) {
+    if (this.sessionData?.couponCode === couponCode) {
+      this.couponMessage = `Coupon "${couponCode}" is already applied.`;
+      return;
+    }
+  
     this.iscouponLoading = true;
-    const result = await this.validateCoupon(couponCode);
-    if (result) {
-      this.couponCode = result.couponCode;
-      const profit = this.findProfit();
-      if (result.couponDiscount > profit) {
-        this.couponMessage = `This Coupon cannot be applied.`;
+  
+    try {
+      const result = await this.validateCoupon(couponCode);
+  
+      if (!result) {
+        this.couponMessage = 'Invalid or expired coupon code.';
         return;
       }
+  
+      // Check if discount exceeds profit
+      const profit = this.findProfit();
+      if (result.couponDiscount > profit) {
+        this.couponMessage = `This coupon cannot be applied.`;
+        return;
+      }
+  
+      // Apply coupon
+      const updatedSubtotal = this.sessionData.subtotal - result.couponDiscount;
+      const updatedAmountWithGST = this.calculateAfterTaxDiscount(
+        this.sessionData.amountWithGST,
+        18,
+        result.couponDiscount
+      ).finalTotal;
+  
+      this.couponCode = result.couponCode;
       this.couponMessage = `Coupon applied! You saved ₹${result.couponDiscount}`;
+  
       this.HelperService.updateSessionStorage({
         couponCode: result.couponCode,
         discountAmount: result.couponDiscount,
-        subtotal: this.sessionData.subtotal - result.couponDiscount,
-        amountWithGST: this.calculateAfterTaxDiscount(
-          this.sessionData.amountWithGST,
-          18,
-          result.couponDiscount,
-        ).finalTotal,
+        subtotal: updatedSubtotal,
+        amountWithGST: updatedAmountWithGST,
       });
+  
       this.sessionData = {
         ...this.sessionData,
         couponCode: result.couponCode,
         discountAmount: result.couponDiscount,
-        subtotal: this.sessionData.subtotal - result.couponDiscount,
-        amountWithGST: this.calculateAfterTaxDiscount(
-          this.sessionData.amountWithGST,
-          18,
-          result.couponDiscount,
-        ).finalTotal,
+        subtotal: updatedSubtotal,
+        amountWithGST: updatedAmountWithGST,
       };
-
+  
       this.showCouponModal = false;
+    } catch (error) {
+      this.couponMessage = 'Something went wrong. Please try again.';
+      console.error(error);
+    } finally {
       this.iscouponLoading = false;
-    } else {
-      this.iscouponLoading = false;
-      this.couponMessage = 'Invalid or expired coupon code.';
     }
   }
+  
   calculateAfterTaxDiscount(
     totalWithTax: number,
     taxRate: number,
@@ -227,6 +245,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.selectedPaymentOption = option;
     const subtotal = this.sessionData.subtotal;
     const reportPrice = this.hotelDetails.reportPrice;
+    const reportPriceWithTransport = this.hotelDetails.reportPriceWithTransport    
     const gstRate = 0.18;
 
     if (option === 'full') {
@@ -245,7 +264,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       const finalReportPrice = isYacht
         ? this.calculatePrice()
         : selectedTransport?.title === 'With Transport'
-          ? subtotal - vehicleQuantity * (reportPrice + 200)
+          ? subtotal - vehicleQuantity * reportPriceWithTransport 
           : subtotal - vehicleQuantity * reportPrice;
       const partialSubtotal = finalReportPrice;
 

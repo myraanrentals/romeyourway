@@ -33,13 +33,12 @@ p {
   .leftDiv {
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 30px;
   }
   .rightDiv {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 17px;
+    gap: 20px;
   }
 
   .booking-card {
@@ -685,7 +684,7 @@ p {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     border-radius: 5px;
     cursor: pointer;
   }
@@ -715,4 +714,41 @@ p {
   .container {
     padding: 0 !important;
   }
+}
+.text-section.pt-2{
+  .terms.inline{
+    display: inline;
+   
+  }
+  .actions{
+    float: right;
+    gap: 15px;
+    display: flex;
+    a{
+      text-decoration: none;
+      color: #555;
+    }
+  }
+}
+.contact-section{
+  display: grid;
+  gap: 10px
+}
+.contact-section.web{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  .terms{
+    font-size: 12px;
+    color: #666;
+}
+h4{
+  font-size: 14px;
+}
+.actions{
+  float: left;
+  gap: 15px;
+  display: flex;
+  font-size: 10px;
+}
 }

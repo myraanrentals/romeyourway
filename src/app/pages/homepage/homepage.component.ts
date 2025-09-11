@@ -188,6 +188,21 @@ export class HomepageComponent implements OnInit {
     this.router.navigate([hotelDetails.pageUrl], { relativeTo: this.route });
   }
   ngAfterViewInit() {
+    $('.banner-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      customPaging: function() {
+        return '<span class="slick-line"></span>';
+      },
+      centerMode: false,
+      infinite: false,
+      draggable: true, 
+      swipe: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
     $('#slick-slider,#slick-slider-yachts,#slick-slider-dinner').slick({
       slidesToShow: 1,
       centerMode: false,

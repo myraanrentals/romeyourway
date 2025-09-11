@@ -486,6 +486,38 @@ body {
   position: absolute;
   pointer-events: none;
 }
+
+.slick-prev:before, .slick-next:before {
+  color: #060606 !important;
+}
+.slick-dots li button {
+  padding: 53px !important;
+}
+.slick-dots li button:before {
+  font-size: 15px !important;
+  color: #fffefe !important;
+}
+.slick-dots {
+  bottom: 4px !important;
+}
+.slick-line {
+  display: block; 
+  width: 90px; 
+  height: 5px; 
+  background-color: #ccc;
+  transition: background-color 0.3s ease; 
+}
+
+.slick-active .slick-line {
+  background-color: #333; 
+}
+
+.slick-dots li {
+  margin: 0px 40px !important;
+}
+.slick-active .slick-line{
+  background-color: #ff5722 !important;
+}
 @media screen and (max-width: 767px) {
   .p-datepicker table td > span {
     width: 52px;
@@ -493,10 +525,14 @@ body {
   .p-datepicker table td > span small {
     font-size: 10px;
   }
+  .slick-line {
+    width: 20px !important;
+  }
+
+.slick-dots li {
+  margin: 0px 5px !important;
+}
 }
 
-.slick-prev:before, .slick-next:before {
-  color: #060606 !important;
-}
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

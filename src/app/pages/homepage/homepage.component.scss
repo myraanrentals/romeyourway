@@ -130,6 +130,15 @@ p {
 .m-ele {
   display: none;
 }
+@media screen and (max-width: 450px) {
+
+.carousel-control-prev {
+  margin-left: 40px !important;
+}
+.carousel-control-next {
+  margin-right: 40px !important;
+}
+}
 @media screen and (max-width: 767px) {
   .featureTitle {
     font-size: 16px !important;
@@ -139,12 +148,13 @@ p {
     flex-direction: column;
     gap: 6px;
   }
-  .carousel-img {
+  .carousel-img,.slick-slide img {
     margin-top: 100px;
     height: 300px; /* Adjust based on your design */
     object-fit: cover;
     /* Ensures images cover the area without stretching */
   }
+
   .custom-card-container {
     display: flex;
     overflow-x: auto;

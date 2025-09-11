@@ -192,7 +192,7 @@ export class HomepageComponent implements OnInit {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      dots: true,
+      dots: false,
       customPaging: function() {
         return '<span class="slick-line"></span>';
       },
@@ -203,7 +203,7 @@ export class HomepageComponent implements OnInit {
       autoplay: true,
       autoplaySpeed: 2000,
     });
-    $('#slick-slider,#slick-slider-yachts,#slick-slider-dinner').slick({
+    $('#slick-slider, #slick-slider-yachts, #slick-slider-dinner').slick({
       slidesToShow: 1,
       centerMode: false,
       variableWidth: true,
@@ -223,22 +223,12 @@ export class HomepageComponent implements OnInit {
           }
         },
         {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          }
+          breakpoint: 765,  
+          settings: "unslick",  
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-          }
-        }
       ]
     });
+    
 
     $('#slick-slider').on('afterChange', (event: any, slick: any, currentSlide: number) => {
       // Remove the highlighted class from all slides

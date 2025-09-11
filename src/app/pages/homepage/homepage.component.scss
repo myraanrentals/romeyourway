@@ -8,6 +8,8 @@
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 300px; 
+  margin: 0 10px;
 }
 .travelers-section {
   max-width: 1320px;
@@ -130,6 +132,13 @@ p {
 .m-ele {
   display: none;
 }
+@media screen and (max-width: 370px) {
+  .traveller-card{
+    width: 200px;
+  }
+
+
+  }
 @media screen and (max-width: 450px) {
 
 .carousel-control-prev {
@@ -140,6 +149,15 @@ p {
 }
 }
 @media screen and (max-width: 767px) {
+  .traveller-card {
+    min-width: 240px !important;
+}
+.traveller-card {
+  margin: 2px !important;
+}
+.offer-button{
+  font-size: 10px;
+}
   .featureTitle {
     font-size: 16px !important;
   }
@@ -526,7 +544,7 @@ p {
     flex-direction: column;
     gap: 20px;
   }
-  .carousel-img {
+  .carousel-img,video{
     height: 700px; /* Adjust based on your design */
     object-fit: cover;
   }
@@ -812,9 +830,4 @@ p {
 }
 .travelers-wrapper {
   width: 100%;
-}
-
-.traveller-card {
-  width: 300px; /* Customize the width of each card */
-  margin: 0 10px; /* Adjust gap between cards */
 }

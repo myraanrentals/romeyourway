@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { hotels, cancellationPolicy } from '../../constants/hotels';
 import { HelperService } from '../../services/helper.service';
 import { FeatureSectionComponent } from '../shared/components/feature-section/feature-section.component';
+declare var $: any; // Declare jQuery globally
 
 @Component({
   selector: 'app-details-page',
@@ -95,5 +96,22 @@ export class DetailsPageComponent {
   openWhatsApp(phoneNumber: string) {
     const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
     window.location.href = `https://wa.me/${internationalNumber}`;
+  }
+  ngAfterViewInit() {
+    $('.banner-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      customPaging: function() {
+        return '<span class="slick-line"></span>';
+      },
+      centerMode: false,
+      infinite: false,
+      draggable: true, 
+      swipe: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
   }
 }

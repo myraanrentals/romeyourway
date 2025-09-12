@@ -84,70 +84,29 @@
   </div> -->
   <div class="banner-slider">
     <div>
-      <video width="100%" autoplay muted loop>
-          <source src="/assets/banners/banner.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-      </video>
+      <video
+      #heroVideo
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      width="100%"
+      poster="assets/banners/banner-poster.jpg"
+    >
+      <source src="assets/banners/banner.webm" type="video/webm" />
+      <source src="assets/banners/banner.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    
   </div>
-  <!-- <div><img src="/assets/banners/Cruise-01.svg" width="100%"/></div>
-    <div><img src="/assets/banners/Scuba bnr-01.svg" width="100%"/></div>
-    <div><img src="/assets/banners/Yatch-01.svg" width="100%"/></div> -->
-  </div>
-</section>
-<section id="listing-wrapper">
-  <div class="container">
-    <div class="card mt-4 m-ele" id="special-offer">
-      <div class="card-body">
-        <div class="d-flex gap-2 align-items-center">
-          <div class="offer-img"></div>
-          <div class="offer-content">
-            <h3>Big Group, Big Savings! Up to 50% Off - Join Now! 🎉</h3>
-            <p>Because More is Always Better! 🌟 Join Us Now and Elevate Your Experience!</p>
-          </div>
-        </div>
-        <button class="btn btn-light" (click)="callPhoneNumber('+917715959917')">
-          Talk to Our Expert Now!
-        </button>
-      </div>
-    </div>
   </div>
 </section>
 <section class="secondDiv">
+
   <section>
-    <div class="offers-container">
-      <h2 class="offers-title">Offers for you</h2>
-      <div class="offers-wrapper">
-        <div *ngFor="let offer of offers" class="offer-card">
-          <img [src]="offer.image" [alt]="offer.title" class="offer-image" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="container webFeatures">
-      <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
-        <h2 class="offers-title">Things to Do...</h2>
-        <div class="featuresContainer">
-          @for (feature of features; track feature) {
-            <div class="card-main">
-              <div>
-                <img
-                  [ngStyle]="{ width: '68px', height: '68px' }"
-                  [src]="feature.icon"
-                  alt="Icon"
-                  class="card-main-img"
-                />
-              </div>
-              <div class="info">
-                <h3 class="featureTitle">{{ feature.title }}</h3>
-                <p>{{ feature.text }}</p>
-              </div>
-            </div>
-          }
-        </div>
-      </div>
-    </div>
-    <div class="container mobFeatures">
+    <div class="container" style="margin-top: 2rem">
       <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
         <h2 class="offers-title">Things to Do...</h2>
         <div class="featuresContainer">
@@ -163,12 +122,48 @@
               </div>
               <div class="info">
                 <h4 class="featureTitle">{{ feature.title }}</h4>
-                <p>{{ feature.text }}</p>
               </div>
             </div>
           }
         </div>
       </div>
+    </div>
+  </section>
+  <section>
+    <div class="offers-container">
+      <h2 class="offers-title">Offers for you</h2>
+      <div class="offers-wrapper">
+        <div class="offer-card">
+          <section id="listing-wrapper">
+              <div class="card m-ele" id="special-offer">
+                <div class="card-body">
+                  <div class="d-flex gap-2 align-items-center">
+                    <div class="offer-img"></div>
+                    <div class="offer-content mob">
+                      <h3>Big Group, Big Savings! <br>Up to 50% Off - Join Now! 🎉</h3>
+                      <p>Because More is Always Better! 🌟 <br>Join Us Now and <br>Elevate Your Experience!</p>
+                    </div>
+                    <div class="offer-content web">
+                      <h3>Big Group, Big Savings! Up to 50% Off - Join Now! 🎉</h3>
+                      <p>Because More is Always Better! 🌟 Join Us Now and Elevate Your Experience!</p>
+                    </div>
+                  </div>
+                  <button class="btn btn-light" (click)="callPhoneNumber('+917715959917')">
+                    Connect to Our Expert Now! <a [href]="'https://wa.me/917715959917'" target="_blank" class="whatsapp-link mobile">
+                      <img src="/assets/icons/whatsapp.png" width="20" alt="WhatsApp">
+                    </a>
+                  </button>
+                </div>
+              </div>
+          </section>
+        </div>
+      
+        <div class="offer-card"><img src="/assets/homepageImages/offerForYou2.png" class="offer-image" />
+        </div>
+        <div class="offer-card"><img src="/assets/homepageImages/offerForYou1.png" class="offer-image" />
+        </div>
+      </div>
+      
     </div>
   </section>
 </section>
@@ -212,10 +207,116 @@
 <section class="travelers-section">
   <div class="travelers-container">
     <h2>Travelers' favorite choices</h2>
+    <div class="travelers-wrapper" id="slick-slider-dinner">
+      <mat-card class="traveller-card" *ngFor="let offer of travelFavChoice | slice: 0 : 6">
+        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
+        <div class="offer-content">
+          <div>
+            <p class="category">{{ offer.name }}</p>
+            <h3 class="title">{{ offer.name }}</h3>
+            <p class="confirmation">Instant confirmation</p>
+            <p class="rating">
+              ⭐ dummy booked
+            </p>
+            <p class="price">
+              <span class="current-price">INR 1200</span>
+              <span class="old-price" >INR 300</span>
+            </p>
+          </div>
+          <!-- <button
+            mat-button
+            class="offer-button"
+            (click)="goToService(offer?.routingUrl)"
+          > -->
+          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+            {{ offer.name }}
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
+    Explore all Dinner Cruise >
+  </button>
+</section>
+<section class="travelers-section">
+  <div class="travelers-container">
+    <h2>Scuba Combos</h2>
+    <div class="travelers-wrapper" id="slick-slider-dinner">
+      <mat-card class="traveller-card" *ngFor="let offer of ScubaCombos | slice: 0 : 6">
+        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
+        <div class="offer-content">
+          <div>
+            <p class="category">{{ offer.name }}</p>
+            <h3 class="title">{{ offer.name }}</h3>
+            <p class="confirmation">Instant confirmation</p>
+            <p class="rating">
+              ⭐ dummy booked
+            </p>
+            <p class="price">
+              <span class="current-price">INR 1200</span>
+              <span class="old-price" >INR 300</span>
+            </p>
+          </div>
+          <!-- <button
+            mat-button
+            class="offer-button"
+            (click)="goToService(offer?.routingUrl)"
+          > -->
+          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+            {{ offer.name }}
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
+    Explore all Dinner Cruise >
+  </button>
+</section>
+<section class="travelers-section">
+  <div class="travelers-container">
+    <h2>Most Popular Watersports</h2>
+    <div class="travelers-wrapper" id="slick-slider-dinner">
+      <mat-card class="traveller-card" *ngFor="let offer of MostPopularWatersports | slice: 0 : 6">
+        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
+        <div class="offer-content">
+          <div>
+            <p class="category">{{ offer.name }}</p>
+            <h3 class="title">{{ offer.name }}</h3>
+            <p class="confirmation">Instant confirmation</p>
+            <p class="rating">
+              ⭐ dummy booked
+            </p>
+            <p class="price">
+              <span class="current-price">INR 1200</span>
+              <span class="old-price" >INR 300</span>
+            </p>
+          </div>
+          <!-- <button
+            mat-button
+            class="offer-button"
+            (click)="goToService(offer?.routingUrl)"
+          > -->
+          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+            {{ offer.name }}
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
+    Explore all Dinner Cruise >
+  </button>
+</section>
+
+<section class="travelers-section">
+  <div class="travelers-container">
+    <h2>Popular Cruises</h2>
 
     <!-- Slick Slider Container -->
     <div class="travelers-wrapper" id="slick-slider">
-      <div *ngFor="let offer of hotelList">
+      <div *ngFor="let offer of filteredHotelList">
         <mat-card class="traveller-card">
           <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
           <div class="offer-content">
@@ -238,11 +339,12 @@
         </mat-card>
       </div>
     </div>
+    
   </div>
   
   <!-- View All Button -->
   <button class="seeMoreBtn" (click)="navigateTo('private-yachts-in-goa')">
-    Explore all Dinner Cruise >
+    Explore all Popular Cruises >
   </button>
 </section>
 
@@ -251,35 +353,34 @@
 
 <section class="travelers-section">
   <div class="travelers-container">
-    <h2>Travelers' favorite choices</h2>
+    <h2>Private Luxury Yachts in Goa</h2>
 
-    <div class="travelers-wrapper" id="slick-slider-yachts">
-      <mat-card class="traveller-card" *ngFor="let offer of yatchlList | slice: 0 : 6">
-        <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
-        <div class="offer-content">
-          <div>
-            <p class="category">{{ offer.category }}</p>
-            <h3 class="title">{{ offer.title }}</h3>
-            <p class="confirmation">Instant confirmation</p>
-            <p class="rating">
-              ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
-            </p>
-            <p class="price">
-              <span class="current-price">INR {{ offer.currentPrice }}</span>
-              <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
-            </p>
+    <div class="travelers-wrapper" id="slick-slider">
+      <div *ngFor="let offer of filteredYatchList">
+        <mat-card class="traveller-card">
+          <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
+          <div class="offer-content">
+            <div>
+              <p class="category">{{ offer.category }}</p>
+              <h3 class="title">{{ offer.title }}</h3>
+              <p class="confirmation">Instant confirmation</p>
+              <p class="rating">
+                ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
+              </p>
+              <p class="price">
+                <span class="current-price">INR {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
+              </p>
+            </div>
+            <button mat-button class="offer-button" (click)="goToServiceYath(offer?.routingUrl)">
+              {{ offer.buttonText }}
+            </button>
           </div>
-          <!-- <button
-            mat-button
-            class="offer-button"
-            (click)="goToService(offer?.routingUrl)"
-          > -->
-          <button mat-button class="offer-button" (click)="goToServiceYath(offer?.routingUrl)">
-            {{ offer.buttonText }}
-          </button>
-        </div>
-      </mat-card>
+        </mat-card>
+      </div>
     </div>
+
+
   </div>
   <button class="seeMoreBtn" (click)="navigateTo('private-yachts-in-goa')">
     Explore all yachts >

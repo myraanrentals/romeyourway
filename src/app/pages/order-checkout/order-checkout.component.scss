@@ -419,7 +419,9 @@ p {
   font-size: 13px;
   color: #666;
 }
-
+.call-link,.whatsapp-link{
+  margin-left: 12px;
+}
 @media screen and (max-width: 768px) {
   .web {
     display: none !important;

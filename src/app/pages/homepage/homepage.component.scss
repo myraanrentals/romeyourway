@@ -19,7 +19,6 @@
 .traveller-card:hover {
   transform: translateY(-5px);
 }
-
 .badge {
   position: absolute;
   top: 10px;
@@ -42,7 +41,7 @@ mat-card-image {
   padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 10px;
 }
 
 .category {
@@ -132,14 +131,68 @@ p {
 .m-ele {
   display: none;
 }
+.offer-content.mob,.whatsapp-link.mobile{
+  display: none;
+}
+.offer-content.web{
+  display: block;
+}
 @media screen and (max-width: 370px) {
   .traveller-card{
     width: 200px;
   }
-
-
+  .offers-wrapper{
+    gap: 30px !important;
+  }
+  .offer-content.mob,.whatsapp-link.mobile{
+    display: block;
+    h3,p{
+      font-size: 12px !important;
+    }
+  }
+  #special-offer{
+    .card-body{
+      padding: 0px;
+    }
+    .btn.btn-light{
+      margin-top: 2.4rem;
+      position: absolute;
+      left: 8%;
+      width: 200px;
+    }
+  }
+  .offer-content.web{   
+     display: none;
+  }
+ 
   }
 @media screen and (max-width: 450px) {
+  .offers-wrapper{
+    gap: 30px !important;
+  }
+  .offer-content.mob,.whatsapp-link.mobile{
+    display: block;
+    h3,p{
+      font-size: 12px !important;
+    }
+  }
+  #special-offer{
+    .card-body{
+      padding: 0px;
+    }
+    .btn.btn-light{
+      margin-top: 2.4rem;
+      position: absolute;
+        left: 8%;
+        width: 200px;
+        font-size: 12px;
+        display: flex;
+        gap: 10px;
+    }
+  }
+  .offer-content.web{   
+     display: none;
+  }
 
 .carousel-control-prev {
   margin-left: 40px !important;
@@ -149,8 +202,13 @@ p {
 }
 }
 @media screen and (max-width: 767px) {
+  
   .traveller-card {
     min-width: 240px !important;
+}
+.seeMoreBtn{
+  margin: 0 auto;
+  font-size: 12px;
 }
 .traveller-card {
   margin: 2px !important;
@@ -159,7 +217,7 @@ p {
   font-size: 10px;
 }
   .featureTitle {
-    font-size: 16px !important;
+    font-size: 12px !important;
   }
 
   .innerContainer {
@@ -266,7 +324,7 @@ p {
   }
   .secondDiv {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   /* base positioning */
   .carousel-control-prev {
@@ -301,6 +359,7 @@ p {
       overflow: hidden;
       border: none;
       min-width: 240px;
+      height: 225px;
       box-shadow: 0 0 10px #00000026;
       .features li {
         font-size: 11px;
@@ -353,7 +412,20 @@ p {
   .itinerary-container {
     padding: 22px;
   }
-
+  .offers-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal width columns */
+    gap: 20px; /* spacing between cards */
+  }
+  
+  .offer-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
   .cards {
     display: flex;
     gap: 12px;
@@ -407,6 +479,10 @@ p {
   .info p {
     display: none;
   }
+  .webFeatures{
+    margin-top: 84px;
+
+  }
   h2 {
     font-size: 24px;
     font-weight: bold;
@@ -429,7 +505,6 @@ p {
     background: #ff7b52;
     border: 5px dashed #ffffff !important;
     color: #fff;
-    margin-top: 68px !important;
   }
 
   div#special-offer button {
@@ -509,7 +584,7 @@ p {
 
   .offer-image {
     width: 95%;
-    height: auto;
+    height: 225px;
     border-radius: 20px;
   }
 
@@ -567,8 +642,12 @@ p {
       transform 0.3s ease,
       box-shadow 0.3s ease;
     opacity: 0;
+    width: 200px;
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease-out forwards;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   .card-main:hover {
     transform: translateY(-5px);
@@ -581,7 +660,90 @@ p {
     margin-bottom: 30px;
   }
   #listing-wrapper {
-    display: none;
+    h4 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .d-flex {
+      margin: 0 -10px;
+      padding: 0 10px;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .card {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      border-radius: 26px;
+      overflow: hidden;
+      border: none;
+      width: 400px;
+      height: 225px;
+      box-shadow: 0 0 10px #00000026;
+      .features li {
+        font-size: 11px;
+        mat-icon {
+          color: #ff5722;
+        }
+      }
+      .ratings {
+        .checked {
+          color: #088943;
+        }
+      }
+      .ratings p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 22px;
+        margin-left: 5px;
+      }
+
+      hr {
+        margin: 7px 0 10px 0;
+      }
+
+      .card-body p {
+        margin-bottom: 0;
+      }
+
+      p.amount {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ff5722;
+      }
+
+      .actual-price {
+        color: #444;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+
+      .explore-route {
+        font-size: 15px;
+        mat-icon {
+          color: #ff5722;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+    div#special-offer {
+      background: #ff7b52;
+      border: 5px dashed #ffffff !important;
+      color: #fff;
+    }
+  
+    div#special-offer button {
+      border-radius: 4px;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: 500;
+    }
   }
   .featuresContainer {
     display: flex;
@@ -626,15 +788,12 @@ p {
   .offer-card {
     flex: 0 0 auto;
     width: 400px;
+    height: 225px;
     background: #fff;
     border-radius: 26px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-  }
-
-  .offer-card:hover {
-    transform: translateY(-5px);
   }
 
   .offer-image {

@@ -95,18 +95,18 @@
       width="100%"
       poster="assets/banners/banner-poster.jpg"
     >
-      <!-- <source src="assets/banners/banner.webm" type="video/webm" /> -->
       <source src="assets/banners/banner.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     
   </div>
   </div>
+  <!-- <img src="/assets/banners/Cruise-01.svg" width="100%"/> -->
 </section>
 <section class="secondDiv">
 
   <section>
-    <div class="container" style="margin-top: 2rem">
+    <div class="container things-todo">
       <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
         <h2 class="offers-title">Things to Do...</h2>
         <div class="featuresContainer">
@@ -133,37 +133,20 @@
     <div class="offers-container">
       <h2 class="offers-title">Offers for you</h2>
       <div class="offers-wrapper">
-        <div class="offer-card">
-          <section id="listing-wrapper">
-              <div class="card m-ele" id="special-offer">
-                <div class="card-body">
-                  <div class="d-flex gap-2 align-items-center">
-                    <div class="offer-img"></div>
-                    <div class="offer-content mob">
-                      <h3>Big Group, Big Savings! <br>Up to 50% Off - Join Now! 🎉</h3>
-                      <p>Because More is Always Better! 🌟 <br>Join Us Now and <br>Elevate Your Experience!</p>
-                    </div>
-                    <div class="offer-content web">
-                      <h3>Big Group, Big Savings! Up to 50% Off - Join Now! 🎉</h3>
-                      <p>Because More is Always Better! 🌟 Join Us Now and Elevate Your Experience!</p>
-                    </div>
-                  </div>
-                  <button class="btn btn-light" (click)="callPhoneNumber('+917715959917')">
-                    Connect to Our Expert Now! <a [href]="'https://wa.me/917715959917'" target="_blank" class="whatsapp-link mobile">
-                      <img src="/assets/icons/whatsapp.png" width="20" alt="WhatsApp">
-                    </a>
-                  </button>
-                </div>
-              </div>
-          </section>
+        <div class="offer-card"><img src="/assets/homepageImages/offerForYou2.png" class="offer-image" />
         </div>
-      
         <div class="offer-card"><img src="/assets/homepageImages/offerForYou2.png" class="offer-image" />
         </div>
         <div class="offer-card"><img src="/assets/homepageImages/offerForYou1.png" class="offer-image" />
         </div>
       </div>
-      
+
+        <div class="offers-wrappers">
+            <img src="/assets/homepageImages/offerForYou2.png" class="offer-image" width="100%"/>
+            <img src="/assets/homepageImages/offerForYou2.png" class="offer-image" width="100%"/>
+            <img src="/assets/homepageImages/offerForYou1.png" class="offer-image" width="100%"/>
+        </div>
+
     </div>
   </section>
 </section>
@@ -177,7 +160,7 @@
         <div class="offer-content">
           <div>
             <p class="category">{{ offer.category }}</p>
-            <h3 class="title">{{ offer.title }}</h3>
+            <h3 class="title">{{ offer.subTile }}</h3>
             <p class="confirmation">Instant confirmation</p>
             <p class="rating">
               ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
@@ -222,15 +205,16 @@
               <span class="current-price">INR 1200</span>
               <span class="old-price" >INR 300</span>
             </p>
+            <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+              {{ offer.name }}
+            </button>
           </div>
           <!-- <button
             mat-button
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
           > -->
-          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-            {{ offer.name }}
-          </button>
+         
         </div>
       </mat-card>
     </div>
@@ -257,15 +241,16 @@
               <span class="current-price">INR 1200</span>
               <span class="old-price" >INR 300</span>
             </p>
+            <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+              {{ offer.name }}
+            </button>
           </div>
           <!-- <button
             mat-button
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
           > -->
-          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-            {{ offer.name }}
-          </button>
+        
         </div>
       </mat-card>
     </div>
@@ -292,15 +277,16 @@
               <span class="current-price">INR 1200</span>
               <span class="old-price" >INR 300</span>
             </p>
+            <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+              {{ offer.name }}
+            </button>
           </div>
           <!-- <button
             mat-button
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
           > -->
-          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-            {{ offer.name }}
-          </button>
+         
         </div>
       </mat-card>
     </div>
@@ -322,7 +308,7 @@
           <div class="offer-content">
             <div>
               <p class="category">{{ offer.category }}</p>
-              <h3 class="title">{{ offer.title }}</h3>
+              <h3 class="title">{{ offer.subTile }}</h3>
               <p class="confirmation">Instant confirmation</p>
               <p class="rating">
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
@@ -362,7 +348,7 @@
           <div class="offer-content">
             <div>
               <p class="category">{{ offer.category }}</p>
-              <h3 class="title">{{ offer.title }}</h3>
+              <h3 class="title">{{ offer.subTile }}</h3>
               <p class="confirmation">Instant confirmation</p>
               <p class="rating">
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
@@ -439,4 +425,30 @@
     </div>
   </div>
 </section>
+<!-- <section>
+  <div class="offer-card">
+    <section id="listing-wrapper">
+        <div class="card m-ele" id="special-offer">
+          <div class="card-body">
+            <div class="d-flex gap-2 align-items-center">
+              <div class="offer-img"></div>
+              <div class="offer-content mob">
+                <h3>Big Group, Big Savings! <br>Up to 50% Off - Join Now! 🎉</h3>
+                <p>Because More is Always Better! 🌟 <br>Join Us Now and <br>Elevate Your Experience!</p>
+              </div>
+              <div class="offer-content web">
+                <h3>Big Group, Big Savings! Up to 50% Off - Join Now! 🎉</h3>
+                <p>Because More is Always Better! 🌟 Join Us Now and Elevate Your Experience!</p>
+              </div>
+            </div>
+               <button class="btn btn-light" (click)="callPhoneNumber('+917715959917')">
+              Connect to Our Expert Now!  <span><a [href]="'https://wa.me/917715959917'" target="_blank" class="whatsapp-link mobile">
+                <img src="/assets/whatsapp_icon.png"  alt="WhatsApp" width="20">
+              </a></span>
+            </button>
+          </div>
+        </div>
+    </section>
+  </div>
+</section> -->
 <app-faq></app-faq>

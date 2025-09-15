@@ -500,6 +500,10 @@ body {
 .slick-dots {
   bottom: 4px !important;
 }
+
+.offers-wrappers .slick-dots {
+  bottom: -40px !important;
+}
 .slick-line {
   display: block; 
   width: 90px; 

@@ -53,8 +53,6 @@ mat-card-image {
 .title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 8px;
-  min-height: 64px;
 }
 
 .confirmation {
@@ -128,7 +126,7 @@ p {
   font-weight: 400;
 }
 
-.m-ele {
+.m-ele,.offers-wrappers {
   display: none;
 }
 .offer-content.mob,.whatsapp-link.mobile{
@@ -137,13 +135,16 @@ p {
 .offer-content.web{
   display: block;
 }
+.secondDiv {
+  .flex.innerContainer{
+    margin-top: 4.5rem;
+  }
+}
 @media screen and (max-width: 370px) {
   .traveller-card{
     width: 200px;
   }
-  .offers-wrapper{
-    gap: 30px !important;
-  }
+  
   .offer-content.mob,.whatsapp-link.mobile{
     display: block;
     h3,p{
@@ -203,12 +204,18 @@ p {
 }
 @media screen and (max-width: 767px) {
   
-  .traveller-card {
-    min-width: 240px !important;
+.traveller-card {
+  width: 238px !important;
+  min-width: 258px;
 }
 .seeMoreBtn{
-  margin: 0 auto;
-  font-size: 12px;
+ display: none;
+}
+.offers-wrappers{
+  display: block;
+}
+.offers-wrapper{
+  display: none !important;
 }
 .traveller-card {
   margin: 2px !important;
@@ -222,7 +229,6 @@ p {
 
   .innerContainer {
     flex-direction: column;
-    gap: 6px;
   }
   .carousel-img,.slick-slide img {
     margin-top: 100px;
@@ -413,19 +419,32 @@ p {
     padding: 22px;
   }
   .offers-wrapper {
+    gap: 28px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal width columns */
-    gap: 20px; /* spacing between cards */
   }
   
   .offer-card {
     background: #fff;
     border-radius: 8px;
-    padding: 16px;
     display: flex;
     flex-direction: column;
   }
-  
+  video {
+    height: 500px;
+    object-fit: cover;
+}
+.things-todo{
+  padding: 22px;
+  padding: 0px;
+  max-width: none
+}
+  .offers-title{
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 12px;
+  }
   .cards {
     display: flex;
     gap: 12px;
@@ -562,29 +581,27 @@ p {
   .card-main:hover img {
     transform: scale(1.1);
   }
-
+  .travelers-section h2{
+    margin-top: 40px;
+    text-align: left;
+    padding-left: 22px;
+  }
   .offers-container {
-    margin-top: 24px;
+    margin-top: 50px;
     padding: 12px;
   }
   .offers-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 10px;
-    padding: 10px;
-    white-space: nowrap;
+    padding-top: 0px;
   }
 
   .offer-card {
     flex: 0 0 auto;
-    width: 80%; /* Adjust width as needed */
+    width: 100%; /* Adjust width as needed */
     scroll-snap-align: center;
   }
 
   .offer-image {
-    width: 95%;
-    height: 225px;
+    height: auto;
     border-radius: 20px;
   }
 
@@ -752,7 +769,6 @@ p {
   }
   .travelers-container {
     padding: 20px;
-    padding-top: 84px;
   }
   .travelers-wrapper {
     gap: 48px;
@@ -798,6 +814,7 @@ p {
 
   .offer-image {
     object-fit: fill;
+    width: 100%;
   }
 
   .custom-card-container {

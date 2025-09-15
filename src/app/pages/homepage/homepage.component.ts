@@ -96,7 +96,7 @@ export class HomepageComponent implements OnInit {
 
   ScubaCombos = [
     {
-      name: 'Scuba, Watersports & Grand Island Trip Combo',
+      name: 'Scuba, Watersports',
       description: 'Experience luxury dining on water',
       image: '/assets/icons/01.avif',
     },
@@ -153,12 +153,12 @@ export class HomepageComponent implements OnInit {
         {
           name: 'Baga Beach Nightlife',
           description: 'Lively beach parties',
-          image: '/assets/icons/01.avif',
+          image: '/assets/detailimages/NIR.webp',
         },
         {
           name: 'Dudhsagar Waterfalls',
           description: 'Majestic jungle falls',
-          image: '/assets/icons/02.avif',
+          image: '/assets/detailimages/NIR.webp',
         },
         {
           name: 'Spice Plantation Tour',
@@ -337,14 +337,11 @@ export class HomepageComponent implements OnInit {
     });
 
 
-    $('.banner-slider').slick({
+    $('.offers-wrappers').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      dots: false,
-      customPaging: function() {
-        return '<span class="slick-line"></span>';
-      },
+      dots: true,
       centerMode: false,
       infinite: false,
       draggable: true, 

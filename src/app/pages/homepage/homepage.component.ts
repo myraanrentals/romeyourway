@@ -342,6 +342,9 @@ export class HomepageComponent implements OnInit {
       slidesToScroll: 1,
       arrows: false,
       dots: true,
+      customPaging: function() {
+        return '<span class="slick-line"></span>';
+      },
       centerMode: false,
       infinite: false,
       draggable: true, 

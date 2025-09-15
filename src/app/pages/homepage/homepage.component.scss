@@ -142,7 +142,7 @@ p {
 }
 @media screen and (max-width: 370px) {
   .traveller-card{
-    width: 200px;
+    width: 200px ;
   }
   
   .offer-content.mob,.whatsapp-link.mobile{
@@ -205,7 +205,7 @@ p {
 @media screen and (max-width: 767px) {
   
 .traveller-card {
-  width: 238px !important;
+  width: 300px !important;
   min-width: 258px;
 }
 .seeMoreBtn{
@@ -513,7 +513,7 @@ p {
     padding: 0;
   }
   .travelers-wrapper {
-    gap: 28px;
+    gap: 10px;
     display: flex;
     overflow-x: auto;
     padding-left: 22px;

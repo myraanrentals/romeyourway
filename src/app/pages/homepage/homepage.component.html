@@ -154,8 +154,9 @@
 <section class="travelers-section">
   <div class="travelers-container">
     <h2>Travelers' favorite choices</h2>
-    <div class="travelers-wrapper" id="slick-slider-dinner">
-      <mat-card class="traveller-card" *ngFor="let offer of hotelList | slice: 0 : 6">
+    <div class="travelers-wrapper" id="slick-slider">
+      <div *ngFor="let offer of hotelList">
+      <mat-card class="traveller-card" >
         <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
           <div>
@@ -179,7 +180,10 @@
             {{ offer.buttonText }}
           </button>
         </div>
+
       </mat-card>
+    </div>
+
     </div>
   </div>
   <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
@@ -190,8 +194,9 @@
 <section class="travelers-section">
   <div class="travelers-container">
     <h2>Travelers' favorite choices</h2>
-    <div class="travelers-wrapper" id="slick-slider-dinner">
-      <mat-card class="traveller-card" *ngFor="let offer of travelFavChoice | slice: 0 : 6">
+    <div class="travelers-wrapper" id="slick-slider">
+      <div *ngFor="let offer of travelFavChoice">
+      <mat-card class="traveller-card" >
         <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
           <div>
@@ -218,6 +223,7 @@
         </div>
       </mat-card>
     </div>
+    </div>
   </div>
   <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
     Explore all Dinner Cruise >
@@ -226,8 +232,9 @@
 <section class="travelers-section">
   <div class="travelers-container">
     <h2>Scuba Combos</h2>
-    <div class="travelers-wrapper" id="slick-slider-dinner">
-      <mat-card class="traveller-card" *ngFor="let offer of ScubaCombos | slice: 0 : 6">
+    <div class="travelers-wrapper" id="slick-slider">
+      <div *ngFor="let offer of ScubaCombos">
+      <mat-card class="traveller-card">
         <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
           <div>
@@ -254,6 +261,7 @@
         </div>
       </mat-card>
     </div>
+    </div>
   </div>
   <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
     Explore all Dinner Cruise >
@@ -262,33 +270,34 @@
 <section class="travelers-section">
   <div class="travelers-container">
     <h2>Most Popular Watersports</h2>
-    <div class="travelers-wrapper" id="slick-slider-dinner">
-      <mat-card class="traveller-card" *ngFor="let offer of MostPopularWatersports | slice: 0 : 6">
-        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
-        <div class="offer-content">
-          <div>
-            <p class="category">{{ offer.name }}</p>
-            <h3 class="title">{{ offer.name }}</h3>
-            <p class="confirmation">Instant confirmation</p>
-            <p class="rating">
-              ⭐ dummy booked
-            </p>
-            <p class="price">
-              <span class="current-price">INR 1200</span>
-              <span class="old-price" >INR 300</span>
-            </p>
-            <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-              {{ offer.name }}
-            </button>
+    <div class="travelers-wrapper" id="slick-slider">
+      <div *ngFor="let offer of MostPopularWatersports">
+        <mat-card class="traveller-card">
+          <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
+          <div class="offer-content">
+            <div>
+              <p class="category">{{ offer.name }}</p>
+              <h3 class="title">{{ offer.name }}</h3>
+              <p class="confirmation">Instant confirmation</p>
+              <p class="rating">
+                ⭐ dummy booked
+              </p>
+              <p class="price">
+                <span class="current-price">INR 1200</span>
+                <span class="old-price" >INR 300</span>
+              </p>
+              <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+                {{ offer.name }}
+              </button>
+            </div>
+            <!-- <button
+              mat-button
+              class="offer-button"
+              (click)="goToService(offer?.routingUrl)"
+            > -->
           </div>
-          <!-- <button
-            mat-button
-            class="offer-button"
-            (click)="goToService(offer?.routingUrl)"
-          > -->
-         
-        </div>
-      </mat-card>
+        </mat-card>
+      </div>
     </div>
   </div>
   <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
@@ -343,7 +352,7 @@
 
     <div class="travelers-wrapper" id="slick-slider">
       <div *ngFor="let offer of filteredYatchList">
-        <mat-card class="traveller-card">
+        <mat-card class="traveller-card ">
           <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
           <div class="offer-content">
             <div>

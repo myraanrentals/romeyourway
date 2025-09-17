@@ -2,6 +2,7 @@ export const hotels: any[] = [
   {
     cruiseId: 1,
     title: 'Dinner Cruise in Goa',
+    subTile: 'Dinner Cruise in Goa',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-cruise-in-goa',
     rating: '4.6',
@@ -155,6 +156,7 @@ export const hotels: any[] = [
   {
     cruiseId: 2,
     title: 'Premium Dinner Cruise',
+    subTile: 'Premium Dinner Cruise',
     category: 'Premium Dinner Cruise',
     routingUrl: 'book-premium-dinner-cruise-in-goa',
     rating: '4.8',
@@ -325,6 +327,7 @@ export const hotels: any[] = [
   {
     cruiseId: 3,
     title: 'Luxury Dinner Cruise[UNLIMITED FOOD & DRINKS]',
+    subTile: 'Luxury Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-luxury-dinner-cruise-in-goa',
     rating: '4.8',
@@ -494,6 +497,7 @@ export const hotels: any[] = [
   {
     cruiseId: 16,
     title: 'Sunset & Party Cruise',
+    subTile: 'Sunset & Party Cruise',
     category: 'Sunset Cruise in Goa',
     routingUrl: 'book-sunset-cruise-in-goa',
     rating: '4.8',
@@ -664,6 +668,7 @@ export const hotels: any[] = [
   {
     cruiseId: 5,
     title: 'Nauti Amigo Luxury Dinner Cruise',
+    subTile: 'Nauti Amigo Luxury Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-nauti-amigo-luxury-dinner-cruise-in-goa',
     rating: '4.8',
@@ -834,6 +839,7 @@ export const hotels: any[] = [
   {
     cruiseId: 4,
     title: 'Vihaan Dinner Cruise[Family & Couple]',
+    subTile: 'Vihaan Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-vihaan-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1004,6 +1010,7 @@ export const hotels: any[] = [
   {
     cruiseId: 6,
     title: 'Nirwana Dinner Cruise',
+    subTile: 'Nirwana Cruise in Goa',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-nirwana-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1174,6 +1181,7 @@ export const hotels: any[] = [
   {
     cruiseId: 7,
     title: 'Paradise Dinner Cruise[FAMILY & COUPLE]',
+    subTile: 'Paradise Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-paradise-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1344,6 +1352,7 @@ export const hotels: any[] = [
   {
     cruiseId: 9,
     title: 'Princesa Dinner Cruise',
+    subTile: 'Princesa Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-princesa-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1514,6 +1523,7 @@ export const hotels: any[] = [
   {
     cruiseId: 12,
     title: 'Corel Queen Dinner Cruise',
+    subTile: 'Corel Queen Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-coral-queen-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1684,6 +1694,7 @@ export const hotels: any[] = [
   {
     cruiseId: 10,
     title: 'Calma Dinner Cruise',
+    subTile: 'Calma Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-calma-dinner-cruise-in-goa',
     rating: '4.8',
@@ -1854,6 +1865,7 @@ export const hotels: any[] = [
   {
     cruiseId: 11,
     title: 'Kapitol Dinner Cruise',
+    subTile: 'Kapitol Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-kapitol-dinner-cruise-in-goa',
     rating: '4.8',
@@ -2024,6 +2036,7 @@ export const hotels: any[] = [
   {
     cruiseId: 8,
     title: 'Swastik Family Dinner Cruise[CURRENTLY NOT AVAILABLE]',
+    subTile: 'Swastik Family Dinner Cruise',
     category: 'Dinner Cruise in Goa',
     routingUrl: 'book-swastik-dinner-cruise-in-goa',
     rating: '4.8',
@@ -2194,6 +2207,7 @@ export const hotels: any[] = [
   {
     cruiseId: 19,
     title: 'Adventure Boat Party & water sports',
+    subTile: 'Adventure Boat Party & water sports',
     image: '/assets/home/CALMA.jpg',
     category: 'Adventure Boat Party with water sports',
     routingUrl: 'adventure-boat-party-in-goa',
@@ -2364,6 +2378,7 @@ export const hotels: any[] = [
   {
     cruiseId: 18,
     title: 'Private Yacht',
+    subTile: 'Private Yacht',
     category: 'Private Yacht',
     routingUrl: 'book-sunset-cruise-in-goa',
     rating: '4.8',

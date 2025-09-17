@@ -14,7 +14,7 @@ export class HeaderComponent {
     private renderer: Renderer2,
     private router: Router,
   ) {}
-
+phone = '+91 771-595-9917'
   toggleMegaMenu() {
     this.isVisible = !this.isVisible;
     const navLinks = this.eRef.nativeElement.querySelector('#navLinks');

@@ -8,6 +8,8 @@
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 300px; 
+  margin: 0 10px;
 }
 .travelers-section {
   max-width: 1320px;
@@ -17,7 +19,6 @@
 .traveller-card:hover {
   transform: translateY(-5px);
 }
-
 .badge {
   position: absolute;
   top: 10px;
@@ -40,7 +41,7 @@ mat-card-image {
   padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 10px;
 }
 
 .category {
@@ -52,8 +53,6 @@ mat-card-image {
 .title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 8px;
-  min-height: 64px;
 }
 
 .confirmation {
@@ -127,10 +126,74 @@ p {
   font-weight: 400;
 }
 
-.m-ele {
+.m-ele,.offers-wrappers {
   display: none;
 }
+.offer-content.mob,.whatsapp-link.mobile{
+  display: none;
+}
+.offer-content.web{
+  display: block;
+}
+.secondDiv {
+  .flex.innerContainer{
+    margin-top: 4.5rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .traveller-card{
+    width: 200px ;
+  }
+  
+  .offer-content.mob,.whatsapp-link.mobile{
+    display: block;
+    h3,p{
+      font-size: 12px !important;
+    }
+  }
+  #special-offer{
+    .card-body{
+      padding: 0px;
+    }
+    .btn.btn-light{
+      margin-top: 2.4rem;
+      position: absolute;
+      left: 8%;
+      width: 200px;
+    }
+  }
+  .offer-content.web{   
+     display: none;
+  }
+ 
+  }
 @media screen and (max-width: 450px) {
+  .offers-wrapper{
+    gap: 30px !important;
+  }
+  .offer-content.mob,.whatsapp-link.mobile{
+    display: block;
+    h3,p{
+      font-size: 12px !important;
+    }
+  }
+  #special-offer{
+    .card-body{
+      padding: 0px;
+    }
+    .btn.btn-light{
+      margin-top: 2.4rem;
+      position: absolute;
+        left: 8%;
+        width: 200px;
+        font-size: 12px;
+        display: flex;
+        gap: 10px;
+    }
+  }
+  .offer-content.web{   
+     display: none;
+  }
 
 .carousel-control-prev {
   margin-left: 40px !important;
@@ -140,13 +203,32 @@ p {
 }
 }
 @media screen and (max-width: 767px) {
+  
+.traveller-card {
+  width: 300px !important;
+  min-width: 258px;
+}
+.seeMoreBtn{
+ display: none;
+}
+.offers-wrappers{
+  display: block;
+}
+.offers-wrapper{
+  display: none !important;
+}
+.traveller-card {
+  margin: 2px !important;
+}
+.offer-button{
+  font-size: 10px;
+}
   .featureTitle {
-    font-size: 16px !important;
+    font-size: 12px !important;
   }
 
   .innerContainer {
     flex-direction: column;
-    gap: 6px;
   }
   .carousel-img,.slick-slide img {
     margin-top: 100px;
@@ -220,7 +302,11 @@ p {
     border-bottom-right-radius: 12px;
     z-index: 2;
   }
-
+  .secondDiv {
+    .flex.innerContainer{
+      margin-top: 2.5rem;
+    }
+  }
   .custom-card-image {
     width: 68px;
     height: 68px;
@@ -248,7 +334,7 @@ p {
   }
   .secondDiv {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   /* base positioning */
   .carousel-control-prev {
@@ -283,6 +369,7 @@ p {
       overflow: hidden;
       border: none;
       min-width: 240px;
+      height: 225px;
       box-shadow: 0 0 10px #00000026;
       .features li {
         font-size: 11px;
@@ -335,7 +422,33 @@ p {
   .itinerary-container {
     padding: 22px;
   }
+  .offers-wrapper {
+    gap: 28px;
 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal width columns */
+  }
+  
+  .offer-card {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  video {
+    height: 500px;
+    object-fit: cover;
+}
+.things-todo{
+  padding: 22px;
+  padding: 0px;
+  max-width: none
+}
+  .offers-title{
+    margin-top: 23px;
+    text-align: left;
+    padding-left: 12px;
+  }
   .cards {
     display: flex;
     gap: 12px;
@@ -389,18 +502,25 @@ p {
   .info p {
     display: none;
   }
+  .webFeatures{
+    margin-top: 84px;
+
+  }
   h2 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
     margin-top: 64px;
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
+  }
+  .inspiration{
+    text-align: left;
   }
   .travelers-container {
     padding: 0;
   }
   .travelers-wrapper {
-    gap: 28px;
+    gap: 10px;
     display: flex;
     overflow-x: auto;
     padding-left: 22px;
@@ -411,7 +531,6 @@ p {
     background: #ff7b52;
     border: 5px dashed #ffffff !important;
     color: #fff;
-    margin-top: 68px !important;
   }
 
   div#special-offer button {
@@ -429,6 +548,7 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 34px;
+    cursor: pointer;
   }
 
   .card-main {
@@ -469,28 +589,26 @@ p {
   .card-main:hover img {
     transform: scale(1.1);
   }
-
+  .travelers-section h2{
+    margin-top: 40px;
+    text-align: left;
+    padding-left: 22px;
+  }
   .offers-container {
-    margin-top: 24px;
+    margin-top: 50px;
     padding: 12px;
   }
   .offers-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 10px;
-    padding: 10px;
-    white-space: nowrap;
+    padding-top: 0px;
   }
 
   .offer-card {
     flex: 0 0 auto;
-    width: 80%; /* Adjust width as needed */
+    width: 100%; /* Adjust width as needed */
     scroll-snap-align: center;
   }
 
   .offer-image {
-    width: 95%;
     height: auto;
     border-radius: 20px;
   }
@@ -526,7 +644,7 @@ p {
     flex-direction: column;
     gap: 20px;
   }
-  .carousel-img {
+  .carousel-img,video{
     height: 700px; /* Adjust based on your design */
     object-fit: cover;
   }
@@ -549,8 +667,12 @@ p {
       transform 0.3s ease,
       box-shadow 0.3s ease;
     opacity: 0;
+    width: 200px;
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease-out forwards;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   .card-main:hover {
     transform: translateY(-5px);
@@ -563,16 +685,99 @@ p {
     margin-bottom: 30px;
   }
   #listing-wrapper {
-    display: none;
+    h4 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .d-flex {
+      margin: 0 -10px;
+      padding: 0 10px;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .card {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      border-radius: 26px;
+      overflow: hidden;
+      border: none;
+      width: 400px;
+      height: 225px;
+      box-shadow: 0 0 10px #00000026;
+      .features li {
+        font-size: 11px;
+        mat-icon {
+          color: #ff5722;
+        }
+      }
+      .ratings {
+        .checked {
+          color: #088943;
+        }
+      }
+      .ratings p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 22px;
+        margin-left: 5px;
+      }
+
+      hr {
+        margin: 7px 0 10px 0;
+      }
+
+      .card-body p {
+        margin-bottom: 0;
+      }
+
+      p.amount {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ff5722;
+      }
+
+      .actual-price {
+        color: #444;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+
+      .explore-route {
+        font-size: 15px;
+        mat-icon {
+          color: #ff5722;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+    div#special-offer {
+      background: #ff7b52;
+      border: 5px dashed #ffffff !important;
+      color: #fff;
+    }
+  
+    div#special-offer button {
+      border-radius: 4px;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: 500;
+    }
   }
   .featuresContainer {
     display: flex;
     flex-direction: row;
     gap: 28px;
+    cursor: pointer;
   }
   .travelers-container {
     padding: 20px;
-    padding-top: 84px;
   }
   .travelers-wrapper {
     gap: 48px;
@@ -608,6 +813,7 @@ p {
   .offer-card {
     flex: 0 0 auto;
     width: 400px;
+    height: 225px;
     background: #fff;
     border-radius: 26px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -615,12 +821,9 @@ p {
     transition: transform 0.3s ease;
   }
 
-  .offer-card:hover {
-    transform: translateY(-5px);
-  }
-
   .offer-image {
     object-fit: fill;
+    width: 100%;
   }
 
   .custom-card-container {
@@ -812,9 +1015,4 @@ p {
 }
 .travelers-wrapper {
   width: 100%;
-}
-
-.traveller-card {
-  width: 300px; /* Customize the width of each card */
-  margin: 0 10px; /* Adjust gap between cards */
 }

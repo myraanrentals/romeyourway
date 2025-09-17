@@ -548,6 +548,7 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 34px;
+    cursor: pointer;
   }
 
   .card-main {
@@ -773,6 +774,7 @@ p {
     display: flex;
     flex-direction: row;
     gap: 28px;
+    cursor: pointer;
   }
   .travelers-container {
     padding: 20px;

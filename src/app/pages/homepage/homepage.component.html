@@ -107,11 +107,11 @@
 
   <section>
     <div class="container things-todo">
-      <div class="flex innerContainer" (click)="openWhatsApp('+917715959917')">
+      <div class="flex innerContainer" >
         <h2 class="offers-title">Things to Do...</h2>
         <div class="featuresContainer">
           @for (feature of mobFeatures; track feature) {
-            <div class="card-main">
+            <div class="card-main" (click)="navigateTo(feature.redirect)">
               <div>
                 <img
                   [ngStyle]="{ width: '68px', height: '68px' }"
@@ -176,7 +176,7 @@
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
           > -->
-          <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
+          <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
             {{ offer.buttonText }}
           </button>
         </div>
@@ -210,8 +210,8 @@
               <span class="current-price">INR 1200</span>
               <span class="old-price" >INR 300</span>
             </p>
-            <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-              {{ offer.name }}
+            <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
+              Book this activity & get 20% off 
             </button>
           </div>
           <!-- <button
@@ -248,8 +248,8 @@
               <span class="current-price">INR 1200</span>
               <span class="old-price" >INR 300</span>
             </p>
-            <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-              {{ offer.name }}
+            <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
+              Book this activity & get 20% off 
             </button>
           </div>
           <!-- <button
@@ -286,8 +286,8 @@
                 <span class="current-price">INR 1200</span>
                 <span class="old-price" >INR 300</span>
               </p>
-              <button mat-button class="offer-button" (click)="openWhatsApp('+917715959917')">
-                {{ offer.name }}
+              <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
+                Book this activity & get 20% off 
               </button>
             </div>
             <!-- <button

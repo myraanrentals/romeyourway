@@ -212,33 +212,39 @@ export class HomepageComponent implements OnInit {
   features: any[] = [
     {
       icon: '/assets/icons/Cruise icon png.png',
-      title: 'Cruise',
+      title: 'Cruises',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',
       title: 'Yacht',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'private-yachts-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Scuba',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/Cruise icon png.png',
       title: 'Watersports',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',
       title: 'Adventures',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Sightseeing',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     
   ];
@@ -247,31 +253,37 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/Cruise icon png.png',
       title: 'Cruises',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',
       title: 'Yacht',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'private-yachts-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Scuba',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/Cruise icon png.png',
       title: 'Watersports',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',
       title: 'Adventures',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Sightseeing',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
+      redirect: 'book-dinner-cruise-in-goa'
     },
   ];
   offers = [
@@ -402,6 +414,8 @@ export class HomepageComponent implements OnInit {
     this.router.navigate([`/private-yachts-in-goa/details/${link}`]);
   }
   navigateTo(route: string) {
+    console.log(route,"route");
+    
     this.router.navigate([`/${route}`]);
   }
   

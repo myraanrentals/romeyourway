@@ -4,6 +4,10 @@ import { dinnerCruise } from '../constants/dinnerCruise';
 import { yacth } from '../constants/yacth';
 import { formatDate } from '@angular/common';
 import { Router } from '@angular/router';
+import { scubaList } from '@constants/scuba';
+import { watersports } from '@constants/watersports';
+import { adventures } from '@constants/adventures';
+import { sightseeing } from '@constants/sightseeing';
 @Injectable({
   providedIn: 'root',
 })
@@ -28,8 +32,14 @@ export class HelperService {
       return hotels;
     } else if (category === 'private-yachts-in-goa') {
       return yacth;
-    } else if (category === 'best-dinner-cruise-in-goa') {
-      return dinnerCruise;
+    } else if (category === 'scuba-diving-in-goa') {
+      return scubaList;
+    } else if (category === 'best-water-sports-in-goa') {
+      return watersports;
+    } else if (category === 'best-adventures-in-goa') {
+      return adventures;
+    } else if (category === 'best-sightseeing-in-goa') {
+      return sightseeing;
     } else {
       return hotels;
     }

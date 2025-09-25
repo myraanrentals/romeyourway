@@ -1,4 +1,6 @@
-export const dinnerCruise: any[] = [];
+export const watersports: any[] = [
+  
+];
 
 export const cancellationPolicy: string[] = [
   'If cancellation is made 15 days before the date of travel, 0.0% will be charged.',

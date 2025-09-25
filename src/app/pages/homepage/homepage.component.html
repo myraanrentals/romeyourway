@@ -154,8 +154,9 @@
 <section class="travelers-section">
   <div class="travelers-container">
     <h2>Travelers' favorite choices</h2>
+
     <div class="travelers-wrapper" id="slick-slider">
-      <div *ngFor="let offer of hotelList">
+      <div *ngFor="let offer of favListOne">
       <mat-card class="traveller-card" >
         <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
@@ -193,32 +194,32 @@
 
 <section class="travelers-section">
   <div class="travelers-container">
-    <h2>Travelers' favorite choices</h2>
+    <h2>Other Additional Activities</h2>
     <div class="travelers-wrapper" id="slick-slider">
-      <div *ngFor="let offer of travelFavChoice">
+      <div *ngFor="let offer of favListOne">
       <mat-card class="traveller-card" >
         <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
           <div>
-            <p class="category">{{ offer.name }}</p>
-            <h3 class="title">{{ offer.name }}</h3>
-            <p class="confirmation">Instant confirmation</p>
-            <p class="rating">
+            <p class="category">{{ offer.category }}</p>
+            <h3 class="title">{{ offer.title }}</h3>
+            <!-- <p class="confirmation">Instant confirmation</p> -->
+            <!-- <p class="rating">
               ⭐ dummy booked
-            </p>
+            </p> -->
             <p class="price">
-              <span class="current-price">INR 1200</span>
-              <span class="old-price" >INR 300</span>
+              <span class="current-price">INR {{ offer.currentPrice }}</span>
+              <span class="old-price" >INR {{ offer.oldPrice }}</span>
             </p>
             <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
-              Book this activity & get 20% off 
+              Explore Now
             </button>
           </div>
           <!-- <button
             mat-button
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
-          > -->
+          >  -->
          
         </div>
       </mat-card>
@@ -229,26 +230,28 @@
     Explore all Dinner Cruise >
   </button>
 </section>
+
+
 <section class="travelers-section">
   <div class="travelers-container">
-    <h2>Scuba Combos</h2>
+    <h2>Scuba & Water Sports Combos</h2>
     <div class="travelers-wrapper" id="slick-slider">
-      <div *ngFor="let offer of ScubaCombos">
+      <div *ngFor="let offer of scubaList">
       <mat-card class="traveller-card">
         <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
         <div class="offer-content">
           <div>
-            <p class="category">{{ offer.name }}</p>
-            <h3 class="title">{{ offer.name }}</h3>
+            <p class="category">{{ offer.category }}</p>
+            <h3 class="title">{{ offer.title }}</h3>
             <p class="confirmation">Instant confirmation</p>
             <p class="rating">
               ⭐ dummy booked
             </p>
             <p class="price">
-              <span class="current-price">INR 1200</span>
-              <span class="old-price" >INR 300</span>
+              <span class="current-price">{{ offer.currentPrice }}</span>
+              <span class="old-price" >{{ offer.oldPrice }}</span>
             </p>
-            <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
+            <button mat-button class="offer-button" (click)="navigateTo('scuba-diving-in-goa')">
               Book this activity & get 20% off 
             </button>
           </div>
@@ -263,11 +266,11 @@
     </div>
     </div>
   </div>
-  <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
-    Explore all Dinner Cruise >
+  <button class="seeMoreBtn" (click)="navigateTo('scuba-diving-in-goa')">
+    Explore all Water Activities >
   </button>
 </section>
-<section class="travelers-section">
+<!-- <section class="travelers-section">
   <div class="travelers-container">
     <h2>Most Popular Watersports</h2>
     <div class="travelers-wrapper" id="slick-slider">
@@ -290,11 +293,11 @@
                 Book this activity & get 20% off 
               </button>
             </div>
-            <!-- <button
+             <button
               mat-button
               class="offer-button"
               (click)="goToService(offer?.routingUrl)"
-            > -->
+            > 
           </div>
         </mat-card>
       </div>
@@ -303,11 +306,11 @@
   <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
     Explore all Dinner Cruise >
   </button>
-</section>
+</section> -->
 
 <section class="travelers-section">
   <div class="travelers-container">
-    <h2>Popular Cruises</h2>
+    <h2>Popular Cruises in Goa</h2>
 
     <!-- Slick Slider Container -->
     <div class="travelers-wrapper" id="slick-slider">

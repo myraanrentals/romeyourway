@@ -1,4 +1,4 @@
-export const hotels: any[] = [
+export const favChoiceListTwo: any[] = [
   {
     cruiseId: 1,
     title: 'Dinner Cruise in Goa',
@@ -2204,11 +2204,11 @@ export const hotels: any[] = [
       },
     ],
   },
- {
+  {
     cruiseId: 19,
     title: 'Adventure Boat Party & water sports',
     subTile: 'Adventure Boat Party & water sports',
-    image: '/assets/detailimages/ADV.webp',
+    image: '/assets/home/CALMA.jpg',
     category: 'Adventure Boat Party with water sports',
     routingUrl: 'adventure-boat-party-in-goa',
     rating: '4.8',
@@ -2220,11 +2220,11 @@ export const hotels: any[] = [
     reportPriceWithTransport: 750,
     currentPrice: '1',
     bannerImgs: [
-      '/assets/detailimages/ADV1.webp',
-      '/assets/detailimages/ADV2.webp',
-      '/assets/detailimages/ADV3.webp',
-      '/assets/detailimages/ADV4.webp',
-      '/assets/detailimages/ADV.webp',
+      '/assets/detailimages/CAL01.webp',
+      '/assets/detailimages/CAL02.webp',
+      '/assets/detailimages/CAL03.webp',
+      '/assets/detailimages/CAL04.webp',
+      '/assets/detailimages/CAL05.webp',
     ],
     priceIncludes: {
       title: 'Price Includes',
@@ -2351,7 +2351,7 @@ export const hotels: any[] = [
         title: 'Without Transport',
         isSelected: true,
         originalamt: '1499',
-        discountedamt: '1000',
+        discountedamt: '1',
         kidAmt: '700',
         desc: [
           'Access to lower deck',
@@ -2364,7 +2364,7 @@ export const hotels: any[] = [
         title: 'With Transport',
         isSelected: false,
         originalamt: '1499',
-        discountedamt: '1200',
+        discountedamt: '2',
         kidAmt: '900',
         desc: [
           'Access to all decks',
@@ -2374,7 +2374,7 @@ export const hotels: any[] = [
         ],
       },
     ],
-},
+  },
   {
     cruiseId: 18,
     title: 'Private Yacht',
@@ -2554,30 +2554,12 @@ export const cancellationPolicy: string[] = [
   'If cancellation is made 0 to 7 days before, 100.0% will be charged.',
   'Unforeseen conditions may result in cancellation, and no cash refund will be provided.',
 ];
-export interface Traveller {
-  label: string;
-  price: number;
-  count: number;
-  displayLabel: string;
-}
-export function getTravellers(adultPrice: number, kidPrice: number): Traveller[] {
-  return [
-    { label: 'Adult', price: adultPrice, count: 1, displayLabel: 'Adult' },
-    { label: 'Child (4-10 year old)', price: kidPrice, count: 0, displayLabel: 'Child' },
-    { label: 'Infant (0-4 year old)', price: 0, count: 0, displayLabel: 'Infant' },
-  ];
-}
-export function getTravellersForYacth(
-  actualPaxCount: number,
-  Cruising: number,
-  Anchoring: number,
-): Traveller[] {
-  return [
-    { label: 'Actual Pax Count', price: 0, count: actualPaxCount, displayLabel: 'Full Capacity' },
-    { label: ' hr', price: Cruising, count: 1, displayLabel: 'Cruising' },
-    { label: ' hr', price: Anchoring, count: 1, displayLabel: 'Anchoring' },
-  ];
-}
 
-export const razorpay_key = 'rzp_live_udlCDMeLep9nk2';
-export const key_secret = 'S0z7n1X96xlkCKURtlxmqoGn';
+export const travellers = [
+  { label: 'Adult', price: 550, count: 1 },
+  { label: 'Child', price: 300, count: 0 },
+  { label: 'Infant', price: 150, count: 0 },
+];
+
+export const razorpay_key = 'rzp_live_1NvgMPNciEM6Mu';
+export const key_secret = '8jlIK1X0mkITb0GlKh2sqCKs';

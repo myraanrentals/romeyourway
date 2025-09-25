@@ -10,6 +10,9 @@ import { MatCardModule } from '@angular/material/card';
 import { FaqComponent } from '../faq/faq.component';
 import { hotels } from '../../constants/hotels';
 import { yacth } from '@constants/yacth';
+import { favChoiceListOne } from '@constants/favChoiceListOne';
+import { favChoiceListTwo } from '@constants/favChoiceListTwo';
+import { scubaList } from '@constants/scuba';
 declare var $: any; // Declare jQuery globally
 
 @Component({
@@ -32,6 +35,9 @@ export class HomepageComponent implements OnInit {
   @ViewChild('heroVideo') videoRef!: ElementRef<HTMLVideoElement>;
 
   hotelList = hotels;
+  favListOne = favChoiceListOne;
+  favListTwo = favChoiceListTwo;
+  scubaList = scubaList;
   yatchlList = yacth;
   
   allowedCruises = [
@@ -265,13 +271,13 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Scuba',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
-      redirect: 'book-dinner-cruise-in-goa'
+      redirect: 'scuba-diving-in-goa'
     },
     {
       icon: '/assets/icons/Cruise icon png.png',
       title: 'Watersports',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'book-dinner-cruise-in-goa'
+      redirect: 'best-water-sports-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',

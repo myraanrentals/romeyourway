@@ -2216,6 +2216,308 @@ export const yacth: any[] = [
       },
     ],
   },
+   {
+  "cruiseId": 4,
+  "title": "Private Events on Cruise in Goa",
+  "subTile": "Celebrate Special Moments on a Private Cruise",
+  "category": "Luxury & Private Experiences",
+  "routingUrl": "private-events-cruise-goa",
+  "rating": "4.8",
+  "reviews": "1500",
+  "oldPrice": "200000",
+  "booked": "250K+",
+  "buttonText": "Book your private cruise celebration now",
+  "reportPrice": 105000,
+  "reportPriceWithTransport": 105000,
+  "currentPrice": "150000",
+  "image": "/assets/detailimages/CAL.webp",
+  "bannerImgs": [
+    "/assets/detailimages/CAL01.webp",
+    "/assets/detailimages/CAL02.webp",
+    "/assets/detailimages/CAL03.webp",
+    "/assets/detailimages/CAL04.webp",
+    "/assets/detailimages/CAL.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Cruise Experience",
+        "items": [
+          "Private 2 to 3-hour cruise on Mandovi River or coastal route",
+          "Decorated deck with seating arrangements"
+        ]
+      },
+      {
+        "category": "Inclusions",
+        "items": [
+          "Welcome drinks (soft beverages/juices)",
+          "Snacks or buffet meals (customizable packages)"
+        ]
+      },
+      {
+        "category": "Entertainment",
+        "items": [
+          "DJ music setup or Bluetooth speaker system",
+          "Dance floor and mood lighting"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Get booking confirmation instantly via email"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 72 hours in advance for a full refund"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "Show your phone ticket to board your private cruise"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Private cruise ideal for birthdays, anniversaries, corporate events, and special celebrations."
+    },
+    {
+      "about1": "Cruise duration typically 2–3 hours with customizable start time."
+    },
+    {
+      "about1": "Choose from multiple yacht or cruise sizes based on group size (10 to 100+ guests)."
+    },
+    {
+      "about1": "Special add-ons like cakes, decorations, and live performances can be arranged on request."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 2–3 Hours",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "Mandovi River or Coastal Goa",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Fully Private Cruise",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Custom Packages Available",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Celebrate life’s biggest moments with elegance on a private cruise in Goa. Whether it's a birthday bash, romantic anniversary, pre-wedding party, or a corporate gathering, our luxury cruises offer the perfect blend of comfort, scenery, and entertainment. Fully customizable and privately booked for you and your guests.",
+
+  "overview": [
+    { "inclusion1": "Private yacht or cruise booking (2–3 hours)" },
+    { "inclusion1": "Welcome drinks and light snacks" },
+    { "inclusion1": "Decorated venue with seating" },
+    { "inclusion1": "Onboard music system or DJ setup" },
+    { "inclusion1": "Optional cake, flowers, and photography" },
+    { "inclusion1": "Professional crew and safety equipment" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Carry valid ID proof for all attendees." },
+    {
+      "exclusion1": "You may bring custom decorations with prior permission."
+    },
+    {
+      "exclusion1": "Outside food/alcohol may not be allowed unless agreed in advance."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Cruise options vary from open decks to luxury AC cabins with washrooms."
+    },
+    {
+      "needToKnow": "Custom timings, menus, and themes available on request."
+    },
+    {
+      "needToKnow": "Best to book at least 3–5 days in advance for guaranteed availability."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "Without Transport",
+      "isSelected": true,
+      "originalamt": "200000",
+      "discountedamt": "150000",
+      "kidAmt": "0",
+      "desc": [
+        "Self-report at jetty point in Panjim or Nerul",
+        "Private cruise with crew, music & snacks",
+        "Ideal for groups up to 25–50 depending on vessel",
+        "No hotel pickup or drop included"
+      ]
+    }
+  ]
+},
+{
+  "cruiseId": 5,
+  "title": "RA11 Private Cruise Goa",
+  "subTile": "Exclusive Celebrations on the Luxurious RA11 Cruise",
+  "category": "Luxury & Private Experiences",
+  "routingUrl": "ra11-private-cruise-goa",
+  "rating": "4.9",
+  "reviews": "1800",
+  "oldPrice": "28999",
+  "booked": "300K+",
+  "buttonText": "Book RA11 for Private Celebrations",
+  "reportPrice": 400000,
+  "reportPriceWithTransport": 400000,
+  "currentPrice": "500000",
+  "image": "/assets/detailimages/NAU.webp",
+  "bannerImgs": [
+    "/assets/detailimages/NAU01.webp",
+    "/assets/detailimages/NAU02.webp",
+    "/assets/detailimages/NAU03.webp",
+    "/assets/detailimages/NAU04.webp",
+    "/assets/detailimages/NAU05.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Cruise Experience",
+        "items": [
+          "Private 3-hour cruise on the RA11 vessel",
+          "Fully decorated space with customizable setup"
+        ]
+      },
+      {
+        "category": "Food & Beverages",
+        "items": [
+          "Welcome drinks (mocktails/soft drinks)",
+          "Buffet or snacks (custom menu options available)"
+        ]
+      },
+      {
+        "category": "Entertainment",
+        "items": [
+          "Live DJ or Bluetooth music system",
+          "Dance floor, lighting & host on request"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Booking confirmation via email & WhatsApp within minutes"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 72 hours before for a full refund"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "Show your e-ticket on phone to board the cruise"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Celebrate birthdays, anniversaries, and corporate events on your own private luxury cruise."
+    },
+    {
+      "about1": "RA11 offers flexible time slots and customizable decoration themes."
+    },
+    {
+      "about1": "Sound system, lights, and onboard crew included for a seamless experience."
+    },
+    {
+      "about1": "Optional add-ons: cakes, photographers, live performers, and more."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 3 Hours",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "RA11 Cruise – Mandovi River",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Private Celebrations",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Custom Packages & Add-ons",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Celebrate life’s biggest moments aboard the iconic RA11 private cruise in Goa. Whether it’s a milestone birthday, dreamy proposal, pre-wedding bash, or corporate celebration — RA11 delivers the perfect blend of luxury, comfort, and unforgettable views across the Mandovi River. Fully customizable with food, music, and decor.",
+
+  "overview": [
+    { "inclusion1": "Exclusive RA11 cruise booking for 3 hours" },
+    { "inclusion1": "Decorated venue with optional themes" },
+    { "inclusion1": "Welcome drinks and snacks or buffet" },
+    { "inclusion1": "DJ or music system with dance area" },
+    { "inclusion1": "Professional onboard crew & safety gear" },
+    { "inclusion1": "Optional add-ons: cake, photographer, anchor" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Valid photo ID is mandatory for entry." },
+    {
+      "exclusion1": "Inform in advance for any special setup or décor items."
+    },
+    {
+      "exclusion1": "Avoid high heels; boat surfaces can be slippery."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Boarding begins 20–30 mins before departure from Panjim jetty."
+    },
+    {
+      "needToKnow": "Event slots are limited — book at least 4–5 days in advance."
+    },
+    {
+      "needToKnow": "Alcoholic beverages allowed only with pre-approval and valid ID (18+)."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "Without Transport",
+      "isSelected": true,
+      "originalamt": "700000",
+      "discountedamt": "500000",
+      "kidAmt": "0",
+      "desc": [
+        "Self-report at Panjim/Nerul jetty",
+        "RA11 private cruise with all arrangements",
+        "Decor, food, and entertainment included",
+        "No hotel transport provided"
+      ]
+    }
+  ]
+}
 ];
 
 export const cancellationPolicy: string[] = [

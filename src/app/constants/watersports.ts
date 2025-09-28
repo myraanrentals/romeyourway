@@ -1,5 +1,476 @@
 export const watersports: any[] = [
-  
+   {
+    cruiseId: 19,
+    title: 'Adventure Boat Party & water sports',
+    subTile: 'Adventure Boat Party & water sports',
+    category: 'Adventure Boat Party with water sports',
+    routingUrl: 'adventure-boat-party-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    oldPrice: '2499',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 600,
+    reportPriceWithTransport: 800,
+    currentPrice: '1000',
+    image: '/assets/detailimages/ADV.webp',
+    bannerImgs: [
+      '/assets/detailimages/ADV1.webp',
+      '/assets/detailimages/ADV2.webp',
+      '/assets/detailimages/ADV3.webp',
+      '/assets/detailimages/ADV4.webp',
+      '/assets/detailimages/ADV.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Buffet Lunch (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+   mustKnow: [
+  {
+    about1:
+      'Adventure boat parties take place on the scenic Mandovi River, offering picturesque views and fun on the water.',
+  },
+  {
+    about1:
+      'Enjoy buffet meals, chilled drinks, DJ music, onboard facilities, and even the chance to spot dolphins.',
+  },
+  {
+    about1:
+      'Includes jet skiing, banana boat, bumper rides, kayaking, and more — perfect for thrill and leisure seekers.',
+  },
+  {
+    about1:
+      'Mandovi River cruises run year-round, even during monsoons, ensuring uninterrupted fun and adventure.',
+  }
+   ],
+
+
+    features: [
+      {
+        name: 'Duration 3 Hours',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
+      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '2499',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '2499',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+   },
+  {
+  "cruiseId": 2,
+  "title": "Malvan Scuba and Water Sports",
+  "subTile": "Malvan Scuba and Water Sports",
+  "category": "Water sports",
+  "routingUrl": "scuba-diving-in-goa",
+  "rating": "4.6",
+  "reviews": "3867",
+  "oldPrice": "2499",
+  "booked": "4M+",
+  "buttonText": "Book this activity & get 20% off",
+  "reportPrice": 1400,
+  "reportPriceWithTransport": 1400,
+  "currentPrice": "1999",
+  "image": "/assets/detailimages/WAT.webp",
+  "bannerImgs": [
+    "/assets/detailimages/WAT1.webp",
+    "/assets/detailimages/WAT2.webp",
+    "/assets/detailimages/WAT3.webp",
+    "/assets/detailimages/WAT4.webp",
+    "/assets/detailimages/WAT5.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Ticket",
+        "items": [
+          "Access to diving site with certified instructor",
+          "All permissions and dive equipment rental"
+        ]
+      },
+      {
+        "category": "Meals",
+        "items": [
+          "Light snacks after the dive",
+          "Mineral water & refreshments"
+        ]
+      },
+      {
+        "category": "Activities",
+        "items": [
+          "Underwater scuba diving session (15-20 mins)"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Dive booking confirmed immediately"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 48 hours before the activity"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "E-tickets delivered to your email"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Experience marine life up close with professional guides and safe diving equipment."
+    },
+    {
+      "about1": "Get briefed and trained before diving, perfect for beginners and non-swimmers too."
+    },
+    {
+      "about1": "Capture your underwater moments with optional photography and video add-ons."
+    },
+    {
+      "about1": "Perfect for adventure seekers and water lovers visiting Goa."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 6 Hours",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "Grand Island, Goa",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Diving Gear & Guide",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Transport Optional",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Experience the thrill of scuba diving in Goa with a 20-minute underwater dive at Grand Island. Explore vibrant coral reefs, encounter exotic fish, and enjoy a guided and safe adventure that requires no prior experience. Ideal for first-timers and certified divers alike…",
+
+  "overview": [
+    { "inclusion1": "20-minute guided underwater dive" },
+    { "inclusion1": "All diving gear included" },
+    { "inclusion1": "Certified dive instructor" },
+    { "inclusion1": "Snacks & refreshments post dive" },
+    { "inclusion1": "Training & safety briefing" },
+    { "inclusion1": "Hotel pickup & drop (included)" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Towels and swimwear not included." },
+    {
+      "exclusion1": "One Underwater scuba video is not chargeable extras."
+    },
+    {
+      "exclusion1": "Self-arrival packages do not include transportation."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Tip: Wear light swimwear and avoid eating a heavy meal before diving for a better experience."
+    },
+    {
+      "needToKnow": "Note: Diving is not allowed for pregnant women or people with heart conditions."
+    },
+    {
+      "needToKnow": "Pickup for diving with transport begins at 7 AM depending on your location in Goa. Final time shared by 6 PM prior evening."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "With Transport",
+      "isSelected": false,
+      "originalamt": "2499",
+      "discountedamt": "1999",
+      "kidAmt": "999",
+      "desc": [
+        "Pickup & drop from hotel",
+        "Basic diving gear and instructor",
+        "20-min underwater diving session",
+        "Light snacks & refreshments"
+      ]
+    }
+    ]
+   },
+   {
+  "cruiseId": 1,
+  "title": "Scuba Diving in Goa",
+  "subTile": "",
+  "category": "Water sports",
+  "routingUrl": "scuba-diving-in-goa",
+  "rating": "4.6",
+  "reviews": "3867",
+  "oldPrice": "2499",
+  "booked": "4M+",
+  "buttonText": "Book this activity & get 20% off",
+  "reportPrice": 1400,
+  "reportPriceWithTransport": 1400,
+  "currentPrice": "1699",
+  "image": "/assets/detailimages/SCU.webp",
+  "bannerImgs": [
+    "/assets/detailimages/SCU1.webp",
+    "/assets/detailimages/SCU2.webp",
+    "/assets/detailimages/SCU3.webp",
+    "/assets/detailimages/SCU4.webp",
+    "/assets/detailimages/SCU.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Ticket",
+        "items": [
+          "Access to diving site with certified instructor",
+          "All permissions and dive equipment rental"
+        ]
+      },
+      {
+        "category": "Meals",
+        "items": [
+          "Light snacks after the dive",
+          "Mineral water & refreshments"
+        ]
+      },
+      {
+        "category": "Activities",
+        "items": [
+          "Underwater scuba diving session (15-20 mins)"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Dive booking confirmed immediately"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 48 hours before the activity"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "E-tickets delivered to your email"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Experience marine life up close with professional guides and safe diving equipment."
+    },
+    {
+      "about1": "Get briefed and trained before diving, perfect for beginners and non-swimmers too."
+    },
+    {
+      "about1": "Capture your underwater moments with optional photography and video add-ons."
+    },
+    {
+      "about1": "Perfect for adventure seekers and water lovers visiting Goa."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 6 Hours",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "Grand Island, Goa",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Diving Gear & Guide",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Transport Optional",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Experience the thrill of scuba diving in Goa with a 20-minute underwater dive at Grand Island. Explore vibrant coral reefs, encounter exotic fish, and enjoy a guided and safe adventure that requires no prior experience. Ideal for first-timers and certified divers alike…",
+
+  "overview": [
+    { "inclusion1": "20-minute guided underwater dive" },
+    { "inclusion1": "All diving gear included" },
+    { "inclusion1": "Certified dive instructor" },
+    { "inclusion1": "Snacks & refreshments post dive" },
+    { "inclusion1": "Training & safety briefing" },
+    { "inclusion1": "Hotel pickup & drop (optional)" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Towels and swimwear not included." },
+    {
+      "exclusion1": "One Underwater scuba video is not chargeable extras."
+    },
+    {
+      "exclusion1": "Self-arrival packages do not include transportation."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Tip: Wear light swimwear and avoid eating a heavy meal before diving for a better experience."
+    },
+    {
+      "needToKnow": "Note: Diving is not allowed for pregnant women or people with heart conditions."
+    },
+    {
+      "needToKnow": "Pickup for diving with transport begins at 7 AM depending on your location in Goa. Final time shared by 6 PM prior evening."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "With Transport",
+      "isSelected": false,
+      "originalamt": "1999",
+      "discountedamt": "1699",
+      "kidAmt": "999",
+      "desc": [
+        "Pickup & drop from hotel",
+        "Basic diving gear and instructor",
+        "20-min underwater diving session",
+        "Light snacks & refreshments"
+      ]
+    }
+  ]
+  },
 ];
 
 export const cancellationPolicy: string[] = [

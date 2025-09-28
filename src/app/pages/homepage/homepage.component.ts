@@ -159,17 +159,17 @@ export class HomepageComponent implements OnInit {
         {
           name: 'Baga Beach Nightlife',
           description: 'Lively beach parties',
-          image: '/assets/detailimages/NIR.webp',
+          image: '/assets/detailimages/NOR2.webp',
         },
         {
           name: 'Dudhsagar Waterfalls',
           description: 'Majestic jungle falls',
-          image: '/assets/detailimages/NIR.webp',
+          image: '/assets/detailimages/DUD.webp',
         },
         {
           name: 'Spice Plantation Tour',
           description: 'Fragrant nature walk',
-          image: '/assets/icons/03.avif',
+          image: '/assets/detailimages/DUD1.webp',
         },
       ],
     },
@@ -179,17 +179,17 @@ export class HomepageComponent implements OnInit {
         {
           name: 'Calangute Beach',
           description: 'Sun, sand, and surf',
-          image: '/assets/icons/04.avif',
+          image: '/assets/detailimages/NOR4.webp',
         },
         {
           name: 'Fort Aguada',
           description: 'Historic sea-facing fort',
-          image: '/assets/icons/05.avif',
+          image: '/assets/detailimages/NOR.webp',
         },
         {
           name: 'Anjuna Flea Market',
           description: 'Boho shopping paradise',
-          image: '/assets/icons/06.avif',
+          image: '/assets/detailimages/NOR1.webp',
         },
       ],
     },
@@ -199,17 +199,17 @@ export class HomepageComponent implements OnInit {
         {
           name: 'Palolem Beach',
           description: 'Scenic crescent beach',
-          image: '/assets/icons/07.avif',
+          image: '/assets/detailimages/SOU4.webp',
         },
         {
           name: 'Colva Beach',
           description: 'Popular sunset spot',
-          image: '/assets/icons/08.avif',
+          image: '/assets/detailimages/NOR2.webp',
         },
         {
           name: 'Cabo de Rama Fort',
           description: 'Clifftop ocean views',
-          image: '/assets/icons/09.avif',
+          image: '/assets/detailimages/NOR3.webp',
         },
       ],
     },
@@ -283,13 +283,13 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/watersport.png',
       title: 'Adventures',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'book-dinner-cruise-in-goa'
+      redirect: 'best-adventures-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Sightseeing',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
-      redirect: 'book-dinner-cruise-in-goa'
+      redirect: 'best-sightseeing-in-goa'
     },
   ];
   offers = [

@@ -1,8 +1,8 @@
 export const scubaList: any[] = [  
-   {
+  {
   "cruiseId": 2,
-  "title": "Malvan Scuba and water sports combo",
-  "subTile": "",
+  "title": "Malvan Scuba and Water Sports",
+  "subTile": "Malvan Scuba and Water Sports ",
   "category": "Water sports",
   "routingUrl": "scuba-diving-in-goa",
   "rating": "4.6",
@@ -13,13 +13,13 @@ export const scubaList: any[] = [
   "reportPrice": 1400,
   "reportPriceWithTransport": 1400,
   "currentPrice": "1999",
-  "image": "/assets/detailimages/SCU.webp",
+  "image": "/assets/detailimages/WAT.webp",
   "bannerImgs": [
-    "/assets/detailimages/SCU1.webp",
-    "/assets/detailimages/SCU2.webp",
-    "/assets/detailimages/SCU3.webp",
-    "/assets/detailimages/SCU4.webp",
-    "/assets/detailimages/SCU.webp"
+    "/assets/detailimages/WAT1.webp",
+    "/assets/detailimages/WAT2.webp",
+    "/assets/detailimages/WAT3.webp",
+    "/assets/detailimages/WAT4.webp",
+    "/assets/detailimages/WAT5.webp"
   ],
 
   "priceIncludes": {
@@ -108,7 +108,7 @@ export const scubaList: any[] = [
     { "inclusion1": "Certified dive instructor" },
     { "inclusion1": "Snacks & refreshments post dive" },
     { "inclusion1": "Training & safety briefing" },
-    { "inclusion1": "Hotel pickup & drop (optional)" }
+    { "inclusion1": "Hotel pickup & drop (included)" }
   ],
 
   "thingsToCarry": [
@@ -135,24 +135,11 @@ export const scubaList: any[] = [
 
   "transport": [
     {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "1499",
-      "discountedamt": "899",
-      "kidAmt": "699",
-      "desc": [
-        "Self-arrival at diving point",
-        "Basic diving gear and instructor",
-        "20-min underwater diving session",
-        "Light snacks & refreshments"
-      ]
-    },
-    {
       "title": "With Transport",
       "isSelected": false,
-      "originalamt": "1699",
-      "discountedamt": "1099",
-      "kidAmt": "899",
+      "originalamt": "2499",
+      "discountedamt": "1999",
+      "kidAmt": "999",
       "desc": [
         "Pickup & drop from hotel",
         "Basic diving gear and instructor",
@@ -160,23 +147,23 @@ export const scubaList: any[] = [
         "Light snacks & refreshments"
       ]
     }
-  ]
+    ]
    },
    {
     cruiseId: 19,
     title: 'Adventure Boat Party & water sports',
     subTile: 'Adventure Boat Party & water sports',
-    image: '/assets/detailimages/ADV.webp',
     category: 'Adventure Boat Party with water sports',
     routingUrl: 'adventure-boat-party-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '1499',
+    oldPrice: '2499',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 600,
-    reportPriceWithTransport: 750,
+    reportPriceWithTransport: 800,
     currentPrice: '1000',
+    image: '/assets/detailimages/ADV.webp',
     bannerImgs: [
       '/assets/detailimages/ADV1.webp',
       '/assets/detailimages/ADV2.webp',
@@ -196,7 +183,7 @@ export const scubaList: any[] = [
         },
         {
           category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+          items: ['Buffet Lunch (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
         },
         {
           category: 'Activities',
@@ -221,24 +208,25 @@ export const scubaList: any[] = [
         description: 'Get tickets delivered to your Inbox',
       },
     ],
-    mustKnow: [
-      {
-        about1:
-          'Adventure boat parties and watersports in Goa are predominantly concentrated around the scenic Mandovi River, offering a picturesque backdrop for activities and cruises.',
-      },
-      {
-        about1:
-          'Enjoy buffet meals (veg/non-veg), refreshing drinks (beer/soft drinks/juice), live DJ music, on-board amenities like changing rooms and toilets, safety gear (life jackets), and even dolphin sighting.',
-      },
-      {
-        about1:
-          'Enjoy thrilling water activities like jet skiing, banana boat rides, bumper rides, speed boat rides, kayaking, and more, appealing to a wide range of thrill-seekers and leisure enthusiasts.',
-      },
-      {
-        about1:
-          'Despite the monsoon season typically impacting sea-based watersports, the Mandovi River continues to host these adventure boat parties and watersports, ensuring year-round excitement and fun.',
-      },
-    ],
+   mustKnow: [
+  {
+    about1:
+      'Adventure boat parties take place on the scenic Mandovi River, offering picturesque views and fun on the water.',
+  },
+  {
+    about1:
+      'Enjoy buffet meals, chilled drinks, DJ music, onboard facilities, and even the chance to spot dolphins.',
+  },
+  {
+    about1:
+      'Includes jet skiing, banana boat, bumper rides, kayaking, and more — perfect for thrill and leisure seekers.',
+  },
+  {
+    about1:
+      'Mandovi River cruises run year-round, even during monsoons, ensuring uninterrupted fun and adventure.',
+  }
+   ],
+
 
     features: [
       {
@@ -308,7 +296,7 @@ export const scubaList: any[] = [
       {
         title: 'Without Transport',
         isSelected: true,
-        originalamt: '1499',
+        originalamt: '2499',
         discountedamt: '1000',
         kidAmt: '700',
         desc: [
@@ -321,7 +309,7 @@ export const scubaList: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1499',
+        originalamt: '2499',
         discountedamt: '1200',
         kidAmt: '900',
         desc: [
@@ -346,7 +334,7 @@ export const scubaList: any[] = [
   "buttonText": "Book this activity & get 20% off",
   "reportPrice": 1400,
   "reportPriceWithTransport": 1400,
-  "currentPrice": "1999",
+  "currentPrice": "1699",
   "image": "/assets/detailimages/SCU.webp",
   "bannerImgs": [
     "/assets/detailimages/SCU1.webp",
@@ -469,24 +457,11 @@ export const scubaList: any[] = [
 
   "transport": [
     {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "1499",
-      "discountedamt": "899",
-      "kidAmt": "699",
-      "desc": [
-        "Self-arrival at diving point",
-        "Basic diving gear and instructor",
-        "20-min underwater diving session",
-        "Light snacks & refreshments"
-      ]
-    },
-    {
       "title": "With Transport",
       "isSelected": false,
-      "originalamt": "1699",
-      "discountedamt": "1099",
-      "kidAmt": "899",
+      "originalamt": "1999",
+      "discountedamt": "1699",
+      "kidAmt": "999",
       "desc": [
         "Pickup & drop from hotel",
         "Basic diving gear and instructor",

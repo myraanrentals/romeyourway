@@ -168,12 +168,12 @@ export const favChoiceListOne: any[] = [
         ],
       },
     ],
-   },
+  },
    {
-  "cruiseId": 1,
-  "title": "Scuba & Water Sports in Goa",
-  "subTile": "Scuba & Water Sports in Goa",
-  "category": "Water sports in Goa",
+  "cruiseId": 2,
+  "title": "Malvan Scuba and Water Sports",
+  "subTile": "Malvan Scuba and Water Sports",
+  "category": "Water sports",
   "routingUrl": "scuba-diving-in-goa",
   "rating": "4.6",
   "reviews": "3867",
@@ -183,13 +183,13 @@ export const favChoiceListOne: any[] = [
   "reportPrice": 1400,
   "reportPriceWithTransport": 1400,
   "currentPrice": "1999",
-  "image": "/assets/detailimages/SCU.webp",
+  "image": "/assets/detailimages/WAT.webp",
   "bannerImgs": [
-    "/assets/detailimages/SCU1.webp",
-    "/assets/detailimages/SCU2.webp",
-    "/assets/detailimages/SCU3.webp",
-    "/assets/detailimages/SCU4.webp",
-    "/assets/detailimages/SCU.webp"
+    "/assets/detailimages/WAT1.webp",
+    "/assets/detailimages/WAT2.webp",
+    "/assets/detailimages/WAT3.webp",
+    "/assets/detailimages/WAT4.webp",
+    "/assets/detailimages/WAT5.webp"
   ],
 
   "priceIncludes": {
@@ -278,7 +278,7 @@ export const favChoiceListOne: any[] = [
     { "inclusion1": "Certified dive instructor" },
     { "inclusion1": "Snacks & refreshments post dive" },
     { "inclusion1": "Training & safety briefing" },
-    { "inclusion1": "Hotel pickup & drop (optional)" }
+    { "inclusion1": "Hotel pickup & drop (included)" }
   ],
 
   "thingsToCarry": [
@@ -305,24 +305,11 @@ export const favChoiceListOne: any[] = [
 
   "transport": [
     {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "1499",
-      "discountedamt": "899",
-      "kidAmt": "699",
-      "desc": [
-        "Self-arrival at diving point",
-        "Basic diving gear and instructor",
-        "20-min underwater diving session",
-        "Light snacks & refreshments"
-      ]
-    },
-    {
       "title": "With Transport",
       "isSelected": false,
-      "originalamt": "1699",
-      "discountedamt": "1099",
-      "kidAmt": "899",
+      "originalamt": "2499",
+      "discountedamt": "1999",
+      "kidAmt": "999",
       "desc": [
         "Pickup & drop from hotel",
         "Basic diving gear and instructor",
@@ -330,10 +317,10 @@ export const favChoiceListOne: any[] = [
         "Light snacks & refreshments"
       ]
     }
-  ]
-  },
-  {
-  "cruiseId": 3,
+    ]
+   },
+    {
+  "cruiseId": 1,
   "title": "Dudhsagar Waterfall Trip",
   "subTile": "Dudhsagar Waterfall Trip",
   "category": "Nature & Adventure",
@@ -346,13 +333,13 @@ export const favChoiceListOne: any[] = [
   "reportPrice": 1500,
   "reportPriceWithTransport": 1500,
   "currentPrice": "1799",
-  "image": "/assets/detailimages/SOU.webp",
+  "image": "/assets/detailimages/DUD.webp",
   "bannerImgs": [
-    "/assets/detailimages/SOU1.webp",
-    "/assets/detailimages/SOU2.webp",
-    "/assets/detailimages/SOU3.webp",
-    "/assets/detailimages/SOU4.webp",
-    "/assets/detailimages/SOU.webp"
+    "/assets/detailimages/DUD1.webp",
+    "/assets/detailimages/DUD2.webp",
+    "/assets/detailimages/DUD3.webp",
+    "/assets/detailimages/DUD4.webp",
+    "/assets/detailimages/DUD5.webp"
   ],
 
   "priceIncludes": {
@@ -468,19 +455,6 @@ export const favChoiceListOne: any[] = [
 
   "transport": [
     {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "2199",
-      "discountedamt": "1799",
-      "kidAmt": "1799",
-      "desc": [
-        "Self-report at Mollem Forest Gate",
-        "Includes jeep safari & waterfall access",
-        "Spice plantation visit with lunch",
-        "Breakfast not included"
-      ]
-    },
-    {
       "title": "With Transport",
       "isSelected": false,
       "originalamt": "2199",
@@ -499,7 +473,7 @@ export const favChoiceListOne: any[] = [
     cruiseId: 16,
     title: 'Sunset & Party Cruise',
     subTile: 'Sunset & Party Cruise',
-    category: 'Best Cruises in Goa',
+    category: 'Sunset Cruise in Goa',
     routingUrl: 'book-sunset-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -666,50 +640,51 @@ export const favChoiceListOne: any[] = [
       },
     ],
   },
-  {
-  "cruiseId": 4,
+   {
+  "cruiseId": 2,
   "title": "Flyboarding in Goa",
   "subTile": "Flyboarding in Goa",
-  "category": "Water Sports in Goa",
-  "routingUrl": "flyboarding-in-goa",
-  "rating": "4.5",
-  "reviews": "2650",
+  "category": "Water Sports & Adventure",
+  "routingUrl": "flyboarding-goa",
+  "rating": "4.7",
+  "reviews": "3200",
   "oldPrice": "2999",
-  "booked": "2M+",
-  "buttonText": "Book this activity & get 20% off",
+  "booked": "1M+",
+  "buttonText": "Book this activity & get 15% off",
   "reportPrice": 2300,
   "reportPriceWithTransport": 2300,
   "currentPrice": "2800",
-  "image": "/assets/detailimages/SCU.webp",
+  "image": "/assets/detailimages/FLY.webp",
   "bannerImgs": [
-    "/assets/detailimages/SCU1.webp",
-    "/assets/detailimages/SCU2.webp",
-    "/assets/detailimages/SCU3.webp",
-    "/assets/detailimages/SCU4.webp",
-    "/assets/detailimages/SCU.webp"
+    "/assets/detailimages/FLY1.webp",
+    "/assets/detailimages/FLY2.webp",
+    "/assets/detailimages/FLY3.webp",
+    "/assets/detailimages/FLY4.webp",
+    "/assets/detailimages/FLY5.webp"
   ],
 
   "priceIncludes": {
     "title": "Price Includes",
     "sections": [
       {
-        "category": "Ticket",
+        "category": "Activity",
         "items": [
           "Flyboarding session (10–15 mins)",
-          "Certified instructor & safety gear"
+          "Professional certified instructor"
         ]
       },
       {
-        "category": "Meals",
+        "category": "Safety",
         "items": [
-          "Mineral water & light refreshment",
-          "Beachside cafe access (meals optional)"
+          "Life jacket and safety gear",
+          "Brief training before activity"
         ]
       },
       {
-        "category": "Activities",
+        "category": "Extras",
         "items": [
-          "Optional swimming post activity in safe zone"
+          "Changing room & shower access (if available)",
+          "Photos and videos (if opted)"
         ]
       }
     ]
@@ -719,32 +694,32 @@ export const favChoiceListOne: any[] = [
     {
       "icon": "event_available",
       "title": "Instant Confirmation",
-      "description": "Secure your flyboarding slot instantly"
+      "description": "Get your booking confirmed instantly"
     },
     {
       "icon": "free_cancellation",
       "title": "Free Cancellation",
-      "description": "Cancel for free up to 24 hours in advance"
+      "description": "Cancel up to 24 hours in advance for a full refund"
     },
     {
       "icon": "local_activity",
       "title": "Mobile Tickets",
-      "description": "No print needed — just show your phone"
+      "description": "No printouts needed — show your booking on phone"
     }
   ],
 
   "mustKnow": [
     {
-      "about1": "Reach the flyboarding spot 20 minutes early for registration and basic training."
+      "about1": "Flyboarding location is in North Goa (Calangute/Candolim/Sinquerim, based on conditions)."
     },
     {
-      "about1": "Certified instructors will assist you through balance, posture, and safe take-off."
+      "about1": "Briefing and training provided by certified instructors before your flight."
     },
     {
-      "about1": "Feel the thrill of flying 10–20 feet above the water powered by high-pressure jets."
+      "about1": "Flyboarding session lasts 10–15 minutes per person."
     },
     {
-      "about1": "Post-ride, relax by the beach or enjoy optional café refreshments nearby."
+      "about1": "Participants must be physically fit and aged 12 years or above."
     }
   ],
 
@@ -754,49 +729,49 @@ export const favChoiceListOne: any[] = [
       "image": "./assets/images/svg/cancellation-ico.svg"
     },
     {
-      "name": "Chapora / Morjim, Goa",
+      "name": "North Goa Beach",
       "image": "./assets/images/svg/bolt-ico.svg"
     },
     {
-      "name": "Safety Gear Provided",
+      "name": "Flyboarding Adventure",
       "image": "./assets/images/svg/mobile-ico.svg"
     },
     {
-      "name": "Transport Optional",
+      "name": "Optional Transport",
       "image": "./assets/images/svg/transfer-ico.svg"
     }
   ],
 
-  "overviewDesc": "Flyboarding in Goa offers an electrifying experience of soaring above the sea with high-powered water jets. With expert guidance, safety gear, and stunning beach backdrops, this 15-minute adventure is perfect for thrill seekers wanting to try something truly unforgettable…",
+  "overviewDesc": "Soar above the sea like a superhero with an adrenaline-pumping flyboarding session in Goa! A unique water sport that lifts you into the air using powerful water jets, flyboarding is perfect for thrill-seekers. With professional instructors, safety equipment, and scenic beach backdrops, this is an experience you won’t forget.",
 
   "overview": [
-    { "inclusion1": "10–15 min flyboarding session" },
-    { "inclusion1": "Certified instructor guidance" },
-    { "inclusion1": "Helmet & life jacket included" },
-    { "inclusion1": "Hydration & refreshments provided" },
-    { "inclusion1": "Access to beach shower/changing area" },
-    { "inclusion1": "Pickup/drop available (optional)" }
+    { "inclusion1": "Brief training session with expert" },
+    { "inclusion1": "Flyboarding for 10–15 minutes" },
+    { "inclusion1": "All safety gear included" },
+    { "inclusion1": "Assistance by a certified instructor" },
+    { "inclusion1": "Changing room and basic facilities" },
+    { "inclusion1": "Transport option available at extra cost" }
   ],
 
   "thingsToCarry": [
-    { "exclusion1": "Bring your own towel and swimwear." },
+    { "exclusion1": "Carry swimwear and towel." },
     {
-      "exclusion1": "GoPro video/photo service not included but can be purchased onsite."
+      "exclusion1": "Sunscreen and sunglasses recommended while waiting."
     },
     {
-      "exclusion1": "Transport only available in selected North Goa zones."
+      "exclusion1": "Avoid wearing loose jewelry or valuables."
     }
   ],
 
   "needToKnows": [
     {
-      "needToKnow": "Tip: Beginners can opt for a short dry practice before the session to improve balance."
+      "needToKnow": "Participants must know basic swimming or be comfortable in water."
     },
     {
-      "needToKnow": "Note: Weight limit is 40–100 kg. Not suitable for people with back or heart issues."
+      "needToKnow": "Maximum weight allowed: 100 kg."
     },
     {
-      "needToKnow": "Arrive 20 minutes early to complete waiver form and get geared up before your time slot."
+      "needToKnow": "Flyboarding may be canceled in case of rough sea/weather conditions with full refund or reschedule."
     }
   ],
 
@@ -804,229 +779,63 @@ export const favChoiceListOne: any[] = [
     {
       "title": "Without Transport",
       "isSelected": true,
-      "originalamt": "3500",
+      "originalamt": "3499",
       "discountedamt": "2800",
-      "kidAmt": "Not Applicable",
+      "kidAmt": "2800",
       "desc": [
-        "Self-report at activity location",
-        "Flyboarding session (10–15 mins)",
-        "Life jacket, helmet & instructor",
-        "Beach refreshment included"
-      ]
-    },
-    {
-      "title": "With Transport",
-      "isSelected": false,
-      "originalamt": "3500",
-      "discountedamt": "2800",
-      "kidAmt": "Not Applicable",
-      "desc": [
-        "Hotel pickup & drop from North Goa (limited areas)",
-        "Flyboarding session (10–15 mins)",
-        "Safety equipment & instructor",
-        "Complimentary refreshment included"
+        "Self-report at designated beach location",
+        "Flyboarding gear and instructor provided",
+        "Includes all safety equipment",
+        "No transport or meals included"
       ]
     }
   ]
   },
-  {
-    cruiseId: 1,
-    title: 'Dinner Cruise in Goa',
-    subTile: 'Dinner Cruise in Goa',
-    category: 'Best Cruises in Goa',
-    routingUrl: 'book-cruise-in-goa',
-    rating: '4.6',
-    reviews: '3867',
-    oldPrice: '1499',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 600,
-    reportPriceWithTransport: 750,
-    currentPrice: '899',
-    image: '/assets/detailimages/NIR.webp',
-    bannerImgs: [
-      '/assets/detailimages/NIR01.webp',
-      '/assets/detailimages/NIR02.webp',
-      '/assets/detailimages/NIR03.webp',
-      '/assets/detailimages/NIR04.webp',
-      '/assets/detailimages/NIR05.webp',
-    ],
-
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-       {
-        about1:
-          'Enjoy 3-Hours with friends, family, or loved ones, all while enjoying the vibrant sights and sounds of Goa.',
-      },
-      {
-        about1:
-          'Savor a selection of gourmet dishes as you glide over glistening waters for a delightful experience.',
-      },
-      {
-        about1:
-          'Enjoy fun-filled games, dance & groove to retro classics and Bollywood hits spun by a dynamic DJ.',
-      },
-      {
-        about1:
-          'This cruise promises to be the perfect setting for an unforgettable night dinner cruise party.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '1499',
-        discountedamt: '899',
-        kidAmt: '699',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '1699',
-        discountedamt: '1099',
-        kidAmt: '899',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-  "cruiseId": 2,
-  "title": "North Goa Sightseeing Tour",
-  "subTile": "North Goa Tour",
-  "category": "Best City Tours in Goa",
-  "routingUrl": "north-goa-sightseeing-tour",
-  "rating": "4.7",
-  "reviews": "4250",
-  "oldPrice": "1999",
-  "booked": "5M+",
-  "buttonText": "Book this activity & get 20% off",
-  "reportPrice": 1200,
-  "reportPriceWithTransport": 1300,
-  "currentPrice": "1599",
-  "image": "/assets/detailimages/NOR.webp",
+   {
+  "cruiseId": 3,
+  "title": "Bungee Jumping in Goa",
+  "subTile": "Bungee Jumping in Goa",
+  "category": "Adventure & Extreme Sports",
+  "routingUrl": "bungee-jumping-goa",
+  "rating": "4.9",
+  "reviews": "2800",
+  "oldPrice": "4500",
+  "booked": "800K+",
+  "buttonText": "Book this activity & get 10% off",
+  "reportPrice": 3000,
+  "reportPriceWithTransport": 3000,
+  "currentPrice": "3999",
+  "image": "/assets/detailimages/BUN.webp",
   "bannerImgs": [
-    "/assets/detailimages/NOR1.webp",
-    "/assets/detailimages/NOR2.webp",
-    "/assets/detailimages/NOR3.webp",
-    "/assets/detailimages/NOR4.webp",
-    "/assets/detailimages/NOR.webp"
+    "/assets/detailimages/BUN1.webp",
+    "/assets/detailimages/BUN2.webp",
+    "/assets/detailimages/BUN3.webp",
+    "/assets/detailimages/BUN4.webp",
+    "/assets/detailimages/BUN5.webp"
   ],
 
   "priceIncludes": {
     "title": "Price Includes",
     "sections": [
       {
-        "category": "Ticket",
+        "category": "Activity",
         "items": [
-          "Entry to key North Goa landmarks",
-          "Guided tour with local expert"
+          "Single bungee jump from 55m high platform",
+          "Jump supervised by trained jump masters"
         ]
       },
       {
-        "category": "Meals",
+        "category": "Safety",
         "items": [
-          "Bottled drinking water",
-          "Optional stop at beach shack for lunch (self-paid)"
+          "Harness, ankle straps, helmet & all safety gear",
+          "Certified safety standards (ISO & Australian norms)"
         ]
       },
       {
-        "category": "Activities",
+        "category": "Extras",
         "items": [
-          "Beach hopping, sightseeing & market visit"
+          "Completion certificate",
+          "Video recording of your jump (if opted)"
         ]
       }
     ]
@@ -1036,46 +845,46 @@ export const favChoiceListOne: any[] = [
     {
       "icon": "event_available",
       "title": "Instant Confirmation",
-      "description": "Tour is confirmed immediately upon booking"
+      "description": "Booking confirmed instantly via email & SMS"
     },
     {
       "icon": "free_cancellation",
       "title": "Free Cancellation",
-      "description": "Full refund if cancelled up to 24 hours in advance"
+      "description": "Full refund if cancelled 48 hours in advance"
     },
     {
       "icon": "local_activity",
       "title": "Mobile Tickets",
-      "description": "E-tickets accepted at pickup point"
+      "description": "Mobile ticket accepted at activity site"
     }
   ],
 
   "mustKnow": [
     {
-      "about1": "Start your trip with a morning transfer from South Goa to North Goa (1-2 hours depending on traffic)."
+      "about1": "Jump from a height of 55 meters (180+ feet) above ground level."
     },
     {
-      "about1": "Explore Fort Aguada (9:30-10:30 AM), a 17th-century fort offering panoramic Arabian Sea views."
+      "about1": "Safety briefing and gear fitting before the jump."
     },
     {
-      "about1": "Visit Candolim Beach, Calangute for lunch, and Baga Beach for water sports and vibrant beach scenes."
+      "about1": "Only one jump per person; repeat jumps at extra cost."
     },
     {
-      "about1": "End the day at Anjuna and Vagator beaches, famous for sunset views and relaxed vibes."
+      "about1": "Spectator area available for friends/family to watch."
     }
   ],
 
   "features": [
     {
-      "name": "Duration 8–10 Hours",
+      "name": "Duration 1.5 Hours",
       "image": "./assets/images/svg/cancellation-ico.svg"
     },
     {
-      "name": "North Goa, India",
+      "name": "Located in North Goa",
       "image": "./assets/images/svg/bolt-ico.svg"
     },
     {
-      "name": "Guided Group Tour",
+      "name": "Certified Jump Masters",
       "image": "./assets/images/svg/mobile-ico.svg"
     },
     {
@@ -1084,36 +893,36 @@ export const favChoiceListOne: any[] = [
     }
   ],
 
-  "overviewDesc": "This North Goa sightseeing tour offers a full day of beaches, history, and culture. Explore Fort Aguada, lounge at Candolim and Calangute, and dive into the party scenes of Baga and Anjuna. Ideal for travelers who want to experience Goa's north side highlights in one easy package…",
+  "overviewDesc": "Take the leap of a lifetime with Goa’s most exhilarating bungee jumping experience. Set amidst natural surroundings, this jump is operated by experts adhering to international safety standards. Whether you're a thrill-seeker or first-timer, this activity guarantees an adrenaline rush like no other!",
 
   "overview": [
-    { "inclusion1": "Morning pickup from South Goa (optional)" },
-    { "inclusion1": "Fort Aguada visit (9:30-10:30 AM)" },
-    { "inclusion1": "Candolim & Calangute Beach (with lunch break)" },
-    { "inclusion1": "Baga Beach – water sports & bars" },
-    { "inclusion1": "Anjuna Beach flea market visit" },
-    { "inclusion1": "Vagator Beach sunset stop" }
+    { "inclusion1": "Welcome briefing & safety instructions" },
+    { "inclusion1": "Single bungee jump from 55 meters" },
+    { "inclusion1": "All safety gear (harness, helmet, etc.)" },
+    { "inclusion1": "Certified jump masters" },
+    { "inclusion1": "Completion certificate" },
+    { "inclusion1": "Optional transport from North Goa hotels" }
   ],
 
   "thingsToCarry": [
-    { "exclusion1": "Bring your own sunscreen and towel." },
+    { "exclusion1": "Wear comfortable, non-loose clothing." },
     {
-      "exclusion1": "Meals and drinks at beach shacks are self-paid."
+      "exclusion1": "Closed-toe shoes are mandatory."
     },
     {
-      "exclusion1": "Additional water sports or activities are not included."
+      "exclusion1": "Avoid eating heavy meals 1 hour before the jump."
     }
   ],
 
   "needToKnows": [
     {
-      "needToKnow": "Tip: Wear comfortable footwear and beachwear; carry a hat for sun protection."
+      "needToKnow": "Minimum age: 14 years. Weight range: 40–110 kg."
     },
     {
-      "needToKnow": "Note: Beach time is limited and follows a fixed group itinerary."
+      "needToKnow": "People with medical conditions (heart, back, pregnancy, etc.) should avoid this activity."
     },
     {
-      "needToKnow": "Pickup time from South Goa is between 8:00–9:00 AM depending on location."
+      "needToKnow": "Jump videos are available at additional cost."
     }
   ],
 
@@ -1121,27 +930,14 @@ export const favChoiceListOne: any[] = [
     {
       "title": "Without Transport",
       "isSelected": true,
-      "originalamt": "1299",
-      "discountedamt": "899",
-      "kidAmt": "699",
+      "originalamt": "4500",
+      "discountedamt": "3999",
+      "kidAmt": "3999",
       "desc": [
-        "Join from Panjim or North Goa directly",
-        "AC coach for full-day sightseeing",
-        "Guided beach and fort tour",
-        "Stops at major North Goa highlights"
-      ]
-    },
-    {
-      "title": "With Transport",
-      "isSelected": false,
-      "originalamt": "1499",
-      "discountedamt": "1099",
-      "kidAmt": "799",
-      "desc": [
-        "Pickup from South Goa hotels",
-        "AC transport included both ways",
-        "Guided full-day tour of North Goa",
-        "Stops at forts, beaches & flea markets"
+        "Self-report at the Bungee Jumping site",
+        "Includes one jump with all safety gear",
+        "Certified instructors and certificate",
+        "No meals or transport included"
       ]
     }
   ]

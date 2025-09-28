@@ -91,7 +91,7 @@ export const sightseeing: any[] = [
       "image": "./assets/images/svg/mobile-ico.svg"
     },
     {
-      "name": "Transport Optional",
+      "name": "Transport Included",
       "image": "./assets/images/svg/transfer-ico.svg"
     }
   ],
@@ -227,7 +227,7 @@ export const sightseeing: any[] = [
       "image": "./assets/images/svg/mobile-ico.svg"
     },
     {
-      "name": "Transport Optional",
+      "name": "Transport Included",
       "image": "./assets/images/svg/transfer-ico.svg"
     }
   ],

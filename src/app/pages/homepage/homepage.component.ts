@@ -32,7 +32,7 @@ declare var $: any; // Declare jQuery globally
   styleUrl: './homepage.component.scss',
 })
 export class HomepageComponent implements OnInit {
-  @ViewChild('heroVideo') videoRef!: ElementRef<HTMLVideoElement>;
+  // @ViewChild('heroVideo') videoRef!: ElementRef<HTMLVideoElement>;
 
   hotelList = hotels;
   favListOne = favChoiceListOne;
@@ -342,17 +342,17 @@ export class HomepageComponent implements OnInit {
     this.router.navigate([hotelDetails.pageUrl], { relativeTo: this.route });
   }
   ngAfterViewInit() {
-    const v = this.videoRef.nativeElement;
+    // const v = this.videoRef.nativeElement;
 
     // ensure attributes are set before play
-    v.muted = true;                     // critical for autoplay
-    (v as any).playsInline = true;      // iOS Safari property
-    v.setAttribute('playsinline', '');  // attribute for good measure
+    // v.muted = true;                     // critical for autoplay
+    // (v as any).playsInline = true;      // iOS Safari property
+    // v.setAttribute('playsinline', '');  // attribute for good measure
 
-    // force play on mount
-    v.play().catch(err => {
-      console.warn('Autoplay prevented:', err);
-    });
+    // // force play on mount
+    // v.play().catch(err => {
+    //   console.warn('Autoplay prevented:', err);
+    // });
 
 
     $('.offers-wrappers').slick({

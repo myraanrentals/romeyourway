@@ -443,7 +443,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       payToVendor: reportPrice,
       companyRate: travellers[0]?.price || 0,
       payToCompany: 0,
-      bookingAmount: 1 || 0,
+      bookingAmount: amountWithGST || 0,
       balanceAmount: (subtotal || 0) - (payableAmount || 0),
       totalAmount: (subtotal || 0) * 1.18,
       securityAmount: 0,

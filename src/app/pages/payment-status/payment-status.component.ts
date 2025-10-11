@@ -33,8 +33,13 @@ export class PaymentStatusComponent implements OnInit {
       next: (res) => {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           this.isLoading = false;
-          switch (res.payload.state.toLowerCase()) {
-            case 'completed':
+          switch (res.payload.respMesg) {
+            case 'Your Payment is PAID':
+              sessionStorage.setItem('paymentStatusResponse', JSON.stringify(res?.payload));
+
+              this.router.navigate(['/payment-success']);
+              break;
+            case 'PAID':
               sessionStorage.setItem('paymentStatusResponse', JSON.stringify(res?.payload));
 
               this.router.navigate(['/payment-success']);

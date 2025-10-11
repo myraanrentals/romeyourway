@@ -111,7 +111,7 @@ export class HelperService {
     paymentType: 'full',
     pickupLocation: '',
     amountWithGST: 0,
-    location: 'Calangute',
+    location: '',
     discountAmount: 0,
     couponCode: '',
   };

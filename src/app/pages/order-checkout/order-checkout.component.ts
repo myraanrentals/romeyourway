@@ -397,7 +397,70 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       selectedPackage: selectedTransport,
       location,
     };
-    this.handlePaymentResponse('response', payloadData);
+    const isTransportIncluded = !!location;
+    const reportPrice = isTransportIncluded
+      ? this.hotelDetails?.reportPriceWithTransport
+      : this.hotelDetails?.reportPrice || 0;
+
+    const adultCount = travellers[0]?.count || 0;
+    const childCount = travellers[1]?.count || 0;
+    const infantCount = travellers[2]?.count || 0;
+
+    const secondPayloadData = {
+      companyName: title,
+      enquirySource: 'WEBSITE',
+
+      // Transport & Location
+      pickDropHub: location,
+      pickupHub: location,
+      pickupPoint: location,
+      dropHub: location,
+      dropPoint: null,
+      activityLocation: null,
+
+      // Package Info
+      categoryId: 1,
+      category: title,
+
+      // Timing
+      pickupDateTime: selectedDate?.dateFormat || null,
+      dropDateTime: selectedDate?.dateFormat || null,
+
+      // Customer Info
+      customeName: `${firstName || ''} ${lastName || ''}`.trim(),
+      countryDialCode: countryCode,
+      customerMobile: phone,
+      customerEmailId: email,
+
+      // People Info
+      totalDays: 1,
+      quantity: adultCount + childCount + infantCount,
+      childrenQuantity: travellers[1]?.count || 0,
+      infantQuantity: travellers[2]?.count || 0,
+
+      // Pricing Info
+      vendorRate: reportPrice,
+      payToVendor: reportPrice,
+      companyRate: travellers[0]?.price || 0,
+      payToCompany: 0,
+      bookingAmount: 1 || 0,
+      balanceAmount: (subtotal || 0) - (payableAmount || 0),
+      totalAmount: (subtotal || 0) * 1.18,
+      securityAmount: 0,
+
+      // Discounts & Status
+      discountType: 'FLAT',
+      discount: this.sessionData?.discountAmount || 0,
+      status: 'ENQUIRY',
+
+      // Source
+      leadOrigine: 'WEBSITE',
+      leadType: 'New',
+      createdBy: 'ONLINE',
+      loginId: phone,
+      notes: '',
+    };
+    this.handlePaymentResponse('response', secondPayloadData);
     const options = {
       key: razorpay_key,
       amount: 1,
@@ -407,7 +470,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       name: 'Myraan Adventures',
       description: 'Booking Payment',
       handler: (response: any) => {
-        this.handlePaymentResponse(response, payloadData);
+        this.handlePaymentResponse(response, secondPayloadData);
       },
       prefill: { name: `${firstName} ${lastName}`, email, contact: phone },
       theme: { color: '#3399cc' },
@@ -418,7 +481,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
-          const payLink = res?.payload?.paymentLink;
+          const payLink = res?.payload?.paymentUrl;
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
           console.log({ res });
           this.bookingPay(payLink);

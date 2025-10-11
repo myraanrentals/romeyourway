@@ -104,11 +104,11 @@ export class ExperienceComponent {
   }
   goToService(link: string) {
     const category = this.route.snapshot.paramMap.get('category');
-    // if (category === 'private-yachts-in-goa' || category === 'best-dinner-cruise-in-goa') {
-    //   window.location.href = 'tel:+917715959917';
-    // } else {
-    // }
-    this._router.navigate([`/${category}/details/${link}`]);
+    if (category === 'private-yachts-in-goa' || category === 'best-dinner-cruise-in-goa') {
+      window.location.href = 'tel:+917715959917';
+    } else {
+      this._router.navigate([`/${category}/details/${link}`]);
+    }
   }
   @ViewChild('scrollableDiv') scrollableDiv!: ElementRef;
   @ViewChild('scrollableNav') scrollableNav!: ElementRef;

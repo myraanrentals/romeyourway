@@ -31,7 +31,7 @@ export class ProtectRouteGuard implements CanActivate {
     if (!paymentStatusResponse) return false;
     try {
       const parsedData = JSON.parse(paymentStatusResponse);
-      return parsedData.orderId && parsedData.state === 'COMPLETED';
+      return parsedData.bookingId && parsedData.respMesg === 'Your Payment is PAID';
     } catch (e) {
       return false;
     }

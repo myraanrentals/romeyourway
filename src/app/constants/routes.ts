@@ -1,7 +1,7 @@
-export const API_BASE_URL = 'https://myraan.work/vehicle/';
+export const API_BASE_URL = 'http://116.203.172.163/rentalcrm/';
 
 export const APIROUTES = {
-  WATERSPORTSBOOKING: `${API_BASE_URL}waterSportsBooking`,
-  PAYMENTSTATUS: `${API_BASE_URL}checkPhonePeStatus`,
+  WATERSPORTSBOOKING: `${API_BASE_URL}registerLead`,
+  PAYMENTSTATUS: `${API_BASE_URL}updatePaymentDetails`,
   VALIDATECOUPON: `${API_BASE_URL}validateCouponDetails`,
 };

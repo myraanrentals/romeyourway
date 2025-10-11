@@ -30,7 +30,7 @@ export class PaymentSuccessComponent implements OnInit {
 
     try {
       const data = JSON.parse(paymentStatusResponse);
-      const orderId = data?.orderId;
+      const orderId = data?.bookingId;
       const paymentDetail = data?.paymentDetails?.[0];
       const metaInfo = data?.metaInfo;
 

@@ -1873,8 +1873,8 @@ export const hotels: any[] = [
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    reportPriceWithTransport: 750,
+    reportPrice: 650,
+    reportPriceWithTransport: 850,
     currentPrice: '999',
     image: '/assets/home/KAP.jpeg',
     bannerImgs: [
@@ -2010,7 +2010,7 @@ export const hotels: any[] = [
         isSelected: true,
         originalamt: '1299',
         discountedamt: '999',
-        kidAmt: '700',
+        kidAmt: '699',
         desc: [
           'Access to lower deck',
           '2-hour cruise in Goa Marina',
@@ -2021,9 +2021,9 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1499',
+        originalamt: '1199',
         discountedamt: '1199',
-        kidAmt: '900',
+        kidAmt: '899',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -2548,7 +2548,7 @@ export const hotels: any[] = [
   },
   {
   "cruiseId": 4,
-  "title": "Private Events on Cruise in Goa",
+  "title": "Private Cruises in Goa",
   "subTile": "Celebrate Special Moments on a Private Cruise",
   "category": "Luxury & Private Experiences",
   "routingUrl": "private-events-cruise-goa",

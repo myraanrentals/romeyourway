@@ -471,6 +471,304 @@ export const watersports: any[] = [
     }
   ]
   },
+  {
+  "cruiseId": 3,
+  "title": "Jet Ski Ride in Goa",
+  "subTile": "Jet Ski Water Sports Adventure",
+  "category": "Water sports",
+  "routingUrl": "jet-ski-in-goa",
+  "rating": "4.4",
+  "reviews": "2843",
+  "oldPrice": "999",
+  "booked": "2M+",
+  "buttonText": "Book this activity & get 15% off",
+  "reportPrice": 400,
+  "reportPriceWithTransport": 400,
+  "currentPrice": "600",
+  "image": "/assets/detailimages/JET.webp",
+  "bannerImgs": [
+    "/assets/detailimages/JET1.webp",
+    "/assets/detailimages/JET2.webp",
+    "/assets/detailimages/JET3.webp",
+    "/assets/detailimages/JET4.webp",
+    "/assets/detailimages/JET5.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Ticket",
+        "items": [
+          "Jet Ski ride with life jacket",
+          "Certified guide for safety"
+        ]
+      },
+      {
+        "category": "Meals",
+        "items": [
+          "Mineral water & light refreshments"
+        ]
+      },
+      {
+        "category": "Activities",
+        "items": [
+          "Jet Ski ride for 10–15 minutes"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Booking confirmed right after payment"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 24 hours in advance"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "Access with your phone – no printout needed"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Zoom through the waves on a high-speed Jet Ski – no prior experience needed."
+    },
+    {
+      "about1": "All rides are supervised with proper safety gear and expert assistance."
+    },
+    {
+      "about1": "Ideal for thrill seekers and perfect for couples or solo riders."
+    },
+    {
+      "about1": "Ride duration depends on sea condition and local regulations."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 1 Hour (with wait)",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "Goa Beach Location",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Jet Ski & Life Jacket",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Transport Optional",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Ride the waves on a high-powered Jet Ski at one of Goa’s iconic beaches. Experience speed, splash, and scenic views in a thrilling water adventure perfect for beginners and pros alike. Safety briefings and gear are provided, ensuring a fun and secure ride for everyone.",
+
+  "overview": [
+    { "inclusion1": "10–15 minute Jet Ski ride" },
+    { "inclusion1": "Safety gear (life jacket included)" },
+    { "inclusion1": "Supervision by trained instructor" },
+    { "inclusion1": "Refreshments post ride" },
+    { "inclusion1": "Optional transport available" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Towels and swimwear not included." },
+    {
+      "exclusion1": "Photo/video not included – available at additional cost."
+    },
+    {
+      "exclusion1": "Self-arrival package excludes hotel pickup/drop."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Tip: Best enjoyed early morning for calmer waters and shorter wait times."
+    },
+    {
+      "needToKnow": "Note: Not recommended for individuals with back problems or pregnant women."
+    },
+    {
+      "needToKnow": "Participants must be at least 12 years old; minors must ride with an adult."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "Without Transport",
+      "isSelected": true,
+      "originalamt": "999",
+      "discountedamt": "600",
+      "kidAmt": "600",
+      "desc": [
+        "Jet Ski gear and safety briefing",
+        "10–15 minute ride with guide",
+        "Drinking water & refreshments"
+      ]
+    }
+  ]
+},
+
+{
+  "cruiseId": 4,
+  "title": "Parasailing Adventure in Goa",
+  "subTile": "Soar High Over the Arabian Sea",
+  "category": "Water sports",
+  "routingUrl": "parasailing-in-goa",
+  "rating": "4.7",
+  "reviews": "4120",
+  "oldPrice": "1200",
+  "booked": "3M+",
+  "buttonText": "Book now & get 10% off",
+  "reportPrice": 700,
+  "reportPriceWithTransport": 700,
+  "currentPrice": "900",
+  "image": "/assets/detailimages/PARA.webp",
+  "bannerImgs": [
+    "/assets/detailimages/PARA1.webp",
+    "/assets/detailimages/PARA2.webp",
+    "/assets/detailimages/PARA3.webp",
+    "/assets/detailimages/PARA4.webp",
+    "/assets/detailimages/PARA5.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Ticket",
+        "items": [
+          "Parasailing ride with safety harness",
+          "Certified instructor supervision"
+        ]
+      },
+      {
+        "category": "Meals",
+        "items": [
+          "Mineral water & basic refreshments"
+        ]
+      },
+      {
+        "category": "Activities",
+        "items": [
+          "Parasailing flight (6–8 minutes in air)"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Get your slot confirmed immediately"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 24 hours in advance"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "E-tickets sent directly to your email"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Fly up to 300 feet above sea level with a panoramic view of Goa's coastline."
+    },
+    {
+      "about1": "All gear provided, including life jackets and harness – no experience needed."
+    },
+    {
+      "about1": "Choose from beach take-off or boat parasailing, depending on location."
+    },
+    {
+      "about1": "Ideal for couples, solo adventurers, and first-timers looking for a scenic thrill."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 1–1.5 Hours (including wait)",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "Multiple Beach Locations",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Safety Gear & Harness",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Optional Hotel Transfer",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Enjoy a breathtaking parasailing adventure in Goa, flying high above the sparkling waters of the Arabian Sea. Safe, scenic, and perfect for all levels of experience – this thrilling flight offers unmatched coastal views and a once-in-a-lifetime feeling of freedom.",
+
+  "overview": [
+    { "inclusion1": "6–8 minutes flight time" },
+    { "inclusion1": "Certified parasailing instructors" },
+    { "inclusion1": "Harness, life jacket & safety gear" },
+    { "inclusion1": "Water & refreshments included" },
+    { "inclusion1": "Hotel pickup & drop (if selected)" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Wear comfortable beachwear – no swimwear provided." },
+    {
+      "exclusion1": "Photography/video not included (available on request)."
+    },
+    {
+      "exclusion1": "Transport not included for self-arrival option."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Tip: Morning or sunset slots offer the best weather and views."
+    },
+    {
+      "needToKnow": "Note: Not suitable for pregnant women or those with serious heart/back conditions."
+    },
+    {
+      "needToKnow": "Participants must be at least 14 years old. Weight limit applies (generally 50–100kg)."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "Without Transport",
+      "isSelected": true,
+      "originalamt": "1200",
+      "discountedamt": "900",
+      "kidAmt": "900",
+      "desc": [
+        "Parasailing with instructor & gear",
+        "6–8 minute ride in air",
+        "Basic refreshments & water"
+      ]
+    }
+  ]
+},
+
+
+
 ];
 
 export const cancellationPolicy: string[] = [

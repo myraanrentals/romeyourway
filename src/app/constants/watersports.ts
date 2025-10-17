@@ -3,7 +3,7 @@ export const watersports: any[] = [
     cruiseId: 19,
     title: 'Adventure Boat Party & water sports',
     subTile: 'Adventure Boat Party & water sports',
-    category: 'Adventure Boat Party with water sports',
+    category: 'Watersports',
     routingUrl: 'adventure-boat-party-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -171,11 +171,308 @@ export const watersports: any[] = [
       },
     ],
    },
+    {
+  "cruiseId": 2,
+  "title": "Water Sports Combo",
+  "subTile": "5 Water Sports",
+  "category": "Watersports",
+  "routingUrl": "water-sports-in-goa",
+  "rating": "4.6",
+  "reviews": "3867",
+  "oldPrice": "2499",
+  "booked": "4M+",
+  "buttonText": "Book this activity & get 20% off",
+  "reportPrice": 1000,
+  "reportPriceWithTransport": 1000,
+  "currentPrice": "1499",
+  "image": "/assets/detailimages/WAT.webp",
+  "bannerImgs": [
+    "/assets/detailimages/WAT1.webp",
+    "/assets/detailimages/WAT2.webp",
+    "/assets/detailimages/WAT3.webp",
+    "/assets/detailimages/WAT4.webp",
+    "/assets/detailimages/WAT5.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Ticket",
+        "items": [
+          "Entry to the water sports area",
+          "Safety equipment for all activities"
+        ]
+      },
+      {
+        "category": "Meals",
+        "items": []
+      },
+      {
+        "category": "Activities",
+        "items": [
+          "Jet Ski ride",
+          "Banana Boat ride",
+          "Bumper ride",
+          "Parasailing",
+          "Speed Boat ride"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Booking confirmed immediately"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 48 hours before the activity"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "E-tickets delivered to your email"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Enjoy 5 thrilling water sports activities with professional supervision."
+    },
+    {
+      "about1": "Life jackets and safety gear provided for all participants."
+    },
+    {
+      "about1": "Ideal for both beginners and adventure lovers."
+    },
+    {
+      "about1": "Perfect activity for friends, couples, and family groups in Goa."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 2–3 Hours",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "North Goa Beaches",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Life Jackets & Instructor",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Transport Optional",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Indulge in Goa’s most thrilling Water Sports Combo featuring Jet Ski, Banana Ride, Bumper Ride, Parasailing, and a Speed Boat ride. With professional instructors and safety gear, it's perfect for all age groups looking for adventure on the waves. No swimming skills required!",
+
+  "overview": [
+    { "inclusion1": "Jet Ski ride" },
+    { "inclusion1": "Banana Boat ride" },
+    { "inclusion1": "Bumper ride" },
+    { "inclusion1": "Parasailing experience" },
+    { "inclusion1": "Speed Boat ride" },
+    { "inclusion1": "Safety equipment & instructions" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Towels and swimwear not included" },
+    { "exclusion1": "No meals or refreshments included in this package" },
+    { "exclusion1": "Transportation is not included in 'Without Transport' option" }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Tip: Wear light clothes/swimwear and carry an extra pair of clothes."
+    },
+    {
+      "needToKnow": "Note: Not recommended for pregnant women or people with serious medical conditions."
+    },
+    {
+      "needToKnow": "Reporting location and timing will be shared after booking confirmation."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "Without Transport",
+      "isSelected": true,
+      "originalamt": "2499",
+      "discountedamt": "1499",
+      "kidAmt": "1499",
+      "desc": [
+        "No Pickup & drop from hotel",
+        "5 water sports activities included",
+        "Safety equipment & guide",
+        "No snacks or meals included"
+      ]
+    }
+  ]
+},
+    {
+  "cruiseId": 2,
+  "title": "Scuba and Water Sports",
+  "subTile": "Malvan Scuba and Water Sports",
+  "category": "Watersports",
+  "routingUrl": "scuba-diving-in-goa",
+  "rating": "4.6",
+  "reviews": "3867",
+  "oldPrice": "2499",
+  "booked": "4M+",
+  "buttonText": "Book this activity & get 20% off",
+  "reportPrice": 1400,
+  "reportPriceWithTransport": 1400,
+  "currentPrice": "1999",
+  "image": "/assets/detailimages/WAT.webp",
+  "bannerImgs": [
+    "/assets/detailimages/WAT1.webp",
+    "/assets/detailimages/WAT2.webp",
+    "/assets/detailimages/WAT3.webp",
+    "/assets/detailimages/WAT4.webp",
+    "/assets/detailimages/WAT5.webp"
+  ],
+
+  "priceIncludes": {
+    "title": "Price Includes",
+    "sections": [
+      {
+        "category": "Ticket",
+        "items": [
+          "Access to diving site with certified instructor",
+          "All permissions and dive equipment rental"
+        ]
+      },
+      {
+        "category": "Meals",
+        "items": [
+          "Light snacks after the dive",
+          "Mineral water & refreshments"
+        ]
+      },
+      {
+        "category": "Activities",
+        "items": [
+          "Underwater scuba diving session (15-20 mins)"
+        ]
+      }
+    ]
+  },
+
+  "topFeatures": [
+    {
+      "icon": "event_available",
+      "title": "Instant Confirmation",
+      "description": "Dive booking confirmed immediately"
+    },
+    {
+      "icon": "free_cancellation",
+      "title": "Free Cancellation",
+      "description": "Cancel up to 48 hours before the activity"
+    },
+    {
+      "icon": "local_activity",
+      "title": "Mobile Tickets",
+      "description": "E-tickets delivered to your email"
+    }
+  ],
+
+  "mustKnow": [
+    {
+      "about1": "Experience marine life up close with professional guides and safe diving equipment."
+    },
+    {
+      "about1": "Get briefed and trained before diving, perfect for beginners and non-swimmers too."
+    },
+    {
+      "about1": "Capture your underwater moments with optional photography and video add-ons."
+    },
+    {
+      "about1": "Perfect for adventure seekers and water lovers visiting Goa."
+    }
+  ],
+
+  "features": [
+    {
+      "name": "Duration 6 Hours",
+      "image": "./assets/images/svg/cancellation-ico.svg"
+    },
+    {
+      "name": "Grand Island, Goa",
+      "image": "./assets/images/svg/bolt-ico.svg"
+    },
+    {
+      "name": "Diving Gear & Guide",
+      "image": "./assets/images/svg/mobile-ico.svg"
+    },
+    {
+      "name": "Transport Optional",
+      "image": "./assets/images/svg/transfer-ico.svg"
+    }
+  ],
+
+  "overviewDesc": "Experience the thrill of scuba diving in Goa with a 20-minute underwater dive at Grand Island. Explore vibrant coral reefs, encounter exotic fish, and enjoy a guided and safe adventure that requires no prior experience. Ideal for first-timers and certified divers alike…",
+
+  "overview": [
+    { "inclusion1": "20-minute guided underwater dive" },
+    { "inclusion1": "All diving gear included" },
+    { "inclusion1": "Certified dive instructor" },
+    { "inclusion1": "Snacks & refreshments post dive" },
+    { "inclusion1": "Training & safety briefing" },
+    { "inclusion1": "Hotel pickup & drop (included)" }
+  ],
+
+  "thingsToCarry": [
+    { "exclusion1": "Towels and swimwear not included." },
+    {
+      "exclusion1": "One Underwater scuba video is not chargeable extras."
+    },
+    {
+      "exclusion1": "Self-arrival packages do not include transportation."
+    }
+  ],
+
+  "needToKnows": [
+    {
+      "needToKnow": "Tip: Wear light swimwear and avoid eating a heavy meal before diving for a better experience."
+    },
+    {
+      "needToKnow": "Note: Diving is not allowed for pregnant women or people with heart conditions."
+    },
+    {
+      "needToKnow": "Pickup for diving with transport begins at 7 AM depending on your location in Goa. Final time shared by 6 PM prior evening."
+    }
+  ],
+
+  "transport": [
+    {
+      "title": "With Transport",
+      "isSelected": false,
+      "originalamt": "2499",
+      "discountedamt": "1999",
+      "kidAmt": "999",
+      "desc": [
+        "Pickup & drop from hotel",
+        "Basic diving gear and instructor",
+        "20-min underwater diving session",
+        "Light snacks & refreshments"
+      ]
+    }
+    ]
+   },
   {
   "cruiseId": 2,
   "title": "Malvan Scuba and Water Sports",
   "subTile": "Malvan Scuba and Water Sports",
-  "category": "Water sports",
+  "category": "Watersports",
   "routingUrl": "scuba-diving-in-goa",
   "rating": "4.6",
   "reviews": "3867",
@@ -325,7 +622,7 @@ export const watersports: any[] = [
   "cruiseId": 1,
   "title": "Scuba Diving in Goa",
   "subTile": "",
-  "category": "Water sports",
+  "category": "Watersports",
   "routingUrl": "scuba-diving-in-goa",
   "rating": "4.6",
   "reviews": "3867",
@@ -475,7 +772,7 @@ export const watersports: any[] = [
   "cruiseId": 3,
   "title": "Jet Ski Ride in Goa",
   "subTile": "Jet Ski Water Sports Adventure",
-  "category": "Water sports",
+  "category": "Watersports",
   "routingUrl": "jet-ski-in-goa",
   "rating": "4.4",
   "reviews": "2843",
@@ -618,12 +915,11 @@ export const watersports: any[] = [
     }
   ]
 },
-
 {
   "cruiseId": 4,
   "title": "Parasailing Adventure in Goa",
   "subTile": "Soar High Over the Arabian Sea",
-  "category": "Water sports",
+  "category": "Watersports",
   "routingUrl": "parasailing-in-goa",
   "rating": "4.7",
   "reviews": "4120",
@@ -766,9 +1062,6 @@ export const watersports: any[] = [
     }
   ]
 },
-
-
-
 ];
 
 export const cancellationPolicy: string[] = [

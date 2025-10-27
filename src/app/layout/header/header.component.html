@@ -29,22 +29,28 @@
             <a routerLink="/contact-us">Contact Us</a>
           </li>
           <li class="web" style="height: 24px; width: 24px; white-space: nowrap">
-           <img src="./assets/icons/telephone.png"/>
-            <span class="phone-no">+917715959917</span>
+            <img src="./assets/icons/telephone.png" alt="Phone" style="vertical-align: middle" />
+            <a
+              href="tel:+917715959917"
+              class="phone-no"
+              style="color: inherit; text-decoration: none; margin-left: 6px"
+            >
+              +91 77159 59917
+            </a>
           </li>
         </ul>
         <div class="mobile-hamburger">
           <div class="hamburger" [class.open]="isVisible" id="hamburger">
             <a
-            class="hamburger mobile-only"
-            [class.open]="isVisible"
-            id="hamburger"
-            [href]="'tel:' + phone"
-            aria-label="Call"
-          >
-            <img src="./assets/icons/call-header.png" width="28" />
-          </a>
-                    </div>
+              class="hamburger mobile-only"
+              [class.open]="isVisible"
+              id="hamburger"
+              [href]="'tel:' + phone"
+              aria-label="Call"
+            >
+              <img src="./assets/icons/call-header.png" width="28" />
+            </a>
+          </div>
           <div class="hamburger" [class.open]="isVisible" id="hamburger" (click)="toggleMegaMenu()">
             <span></span>
             <span></span>

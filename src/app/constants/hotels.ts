@@ -1,9 +1,9 @@
 export const hotels: any[] = [
   {
     cruiseId: 1,
-    title: 'Dinner Cruise in Goa',
-    subTile: 'Dinner Cruise in Goa',
-    category: 'Dinner Cruise in Goa',
+    title: 'Dinner Cruise',
+    subTile: 'Dinner Cruise',
+    category: 'Cruise',
     routingUrl: 'book-cruise-in-goa',
     rating: '4.6',
     reviews: '3867',
@@ -157,7 +157,7 @@ export const hotels: any[] = [
     cruiseId: 2,
     title: 'Premium Dinner Cruise',
     subTile: 'Premium Dinner Cruise',
-    category: 'Premium Dinner Cruise',
+    category: 'Cruise',
     routingUrl: 'book-premium-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -328,7 +328,7 @@ export const hotels: any[] = [
     cruiseId: 3,
     title: 'Luxury Dinner Cruise',
     subTile: 'Luxury Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-luxury-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -498,7 +498,7 @@ export const hotels: any[] = [
     cruiseId: 16,
     title: 'Sunset & Party Cruise',
     subTile: 'Sunset & Party Cruise',
-    category: 'Sunset Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-sunset-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -669,7 +669,7 @@ export const hotels: any[] = [
     cruiseId: 5,
     title: 'Nauti Amigo Luxury Dinner Cruise',
     subTile: 'Nauti Amigo Luxury Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-nauti-amigo-luxury-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -838,9 +838,9 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 4,
-    title: 'Vihaan Dinner Cruise[Family & Couple]',
+    title: 'Vihaan Dinner Cruise',
     subTile: 'Vihaan Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-vihaan-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -1010,8 +1010,8 @@ export const hotels: any[] = [
   {
     cruiseId: 6,
     title: 'Nirwana Dinner Cruise',
-    subTile: 'Nirwana Cruise in Goa',
-    category: 'Dinner Cruise in Goa',
+    subTile: 'Nirwana Dinner Cruise',
+    category: 'Cruise',
     routingUrl: 'book-nirwana-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -1180,9 +1180,9 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 7,
-    title: 'Paradise Dinner Cruise[FAMILY & COUPLE]',
+    title: 'Paradise Dinner Cruise',
     subTile: 'Paradise Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-paradise-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -1353,7 +1353,7 @@ export const hotels: any[] = [
     cruiseId: 9,
     title: 'Princesa Dinner Cruise',
     subTile: 'Princesa Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-princesa-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -1524,7 +1524,7 @@ export const hotels: any[] = [
     cruiseId: 12,
     title: 'Corel Queen Dinner Cruise',
     subTile: 'Corel Queen Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-coral-queen-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -1695,7 +1695,7 @@ export const hotels: any[] = [
     cruiseId: 10,
     title: 'Calma Dinner Cruise',
     subTile: 'Calma Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-calma-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -1866,15 +1866,15 @@ export const hotels: any[] = [
     cruiseId: 11,
     title: 'Kapitol Dinner Cruise',
     subTile: 'Kapitol Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    category: 'Cruise',
     routingUrl: 'book-kapitol-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
     oldPrice: '1199',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    reportPriceWithTransport: 750,
+    reportPrice: 650,
+    reportPriceWithTransport: 850,
     currentPrice: '999',
     image: '/assets/home/KAP.jpeg',
     bannerImgs: [
@@ -2010,7 +2010,7 @@ export const hotels: any[] = [
         isSelected: true,
         originalamt: '1299',
         discountedamt: '999',
-        kidAmt: '700',
+        kidAmt: '699',
         desc: [
           'Access to lower deck',
           '2-hour cruise in Goa Marina',
@@ -2021,9 +2021,9 @@ export const hotels: any[] = [
       {
         title: 'With Transport',
         isSelected: false,
-        originalamt: '1499',
+        originalamt: '1199',
         discountedamt: '1199',
-        kidAmt: '900',
+        kidAmt: '899',
         desc: [
           'Access to all decks',
           '2-hour cruise in Goa Marina',
@@ -2035,9 +2035,9 @@ export const hotels: any[] = [
   },
   {
     cruiseId: 8,
-    title: 'Swastik Family Dinner Cruise[CURRENTLY NOT AVAILABLE]',
-    subTile: 'Swastik Family Dinner Cruise',
-    category: 'Dinner Cruise in Goa',
+    title: 'Swastik Dinner Cruise',
+    subTile: 'Swastik Dinner Cruise',
+    category: 'Cruise',
     routingUrl: 'book-swastik-dinner-cruise-in-goa',
     rating: '4.8',
     reviews: '3867',
@@ -2374,482 +2374,7 @@ export const hotels: any[] = [
         ],
       },
     ],
-},
-  {
-    cruiseId: 18,
-    title: 'Private Yacht',
-    subTile: 'Private Yacht',
-    category: 'Private Yacht',
-    routingUrl: 'book-sunset-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3867',
-    oldPrice: '15000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 7000,
-    reportPriceWithTransport: 750,
-    currentPrice: '9999',
-    image: '/assets/home/02.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Enjoy a blend of luxury, relaxation, and opportunities for stunning coastal & iconic beaches views, historic forts like Fort Aguada, and charming coastal villages, all from the unique perspective of the open water.',
-      },
-      {
-        about1:
-          'Witness Goas spectacular sunsets from the comfort of a private yacht, complete with luxury amenities like sun decks, cozy cabins, and onboard dining featuring delicious cuisine.',
-      },
-      {
-        about1:
-          'Host unforgettable special occasions, such as birthdays, anniversaries, or corporate events, with the unique backdrop of the sea, enhanced by professional crew and tailored onboard services.',
-      },
-      {
-        about1:
-          'Enjoy a personalized and tranquil escape with customized itineraries for romantic dinners, stargazing, or exclusive celebrations, all away from the crowds in the serene intimacy of the sea.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 1 Hours',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '15000',
-        discountedamt: '9999',
-        kidAmt: '0',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '16000',
-        discountedamt: '12000',
-        kidAmt: '0',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-  "cruiseId": 4,
-  "title": "Private Events on Cruise in Goa",
-  "subTile": "Celebrate Special Moments on a Private Cruise",
-  "category": "Luxury & Private Experiences",
-  "routingUrl": "private-events-cruise-goa",
-  "rating": "4.8",
-  "reviews": "1500",
-  "oldPrice": "200000",
-  "booked": "250K+",
-  "buttonText": "Book your private cruise celebration now",
-  "reportPrice": 105000,
-  "reportPriceWithTransport": 105000,
-  "currentPrice": "150000",
-  "image": "/assets/detailimages/CAL.webp",
-  "bannerImgs": [
-    "/assets/detailimages/CAL01.webp",
-    "/assets/detailimages/CAL02.webp",
-    "/assets/detailimages/CAL03.webp",
-    "/assets/detailimages/CAL04.webp",
-    "/assets/detailimages/CAL.webp"
-  ],
-
-  "priceIncludes": {
-    "title": "Price Includes",
-    "sections": [
-      {
-        "category": "Cruise Experience",
-        "items": [
-          "Private 2 to 3-hour cruise on Mandovi River or coastal route",
-          "Decorated deck with seating arrangements"
-        ]
-      },
-      {
-        "category": "Inclusions",
-        "items": [
-          "Welcome drinks (soft beverages/juices)",
-          "Snacks or buffet meals (customizable packages)"
-        ]
-      },
-      {
-        "category": "Entertainment",
-        "items": [
-          "DJ music setup or Bluetooth speaker system",
-          "Dance floor and mood lighting"
-        ]
-      }
-    ]
-  },
-
-  "topFeatures": [
-    {
-      "icon": "event_available",
-      "title": "Instant Confirmation",
-      "description": "Get booking confirmation instantly via email"
-    },
-    {
-      "icon": "free_cancellation",
-      "title": "Free Cancellation",
-      "description": "Cancel up to 72 hours in advance for a full refund"
-    },
-    {
-      "icon": "local_activity",
-      "title": "Mobile Tickets",
-      "description": "Show your phone ticket to board your private cruise"
-    }
-  ],
-
-  "mustKnow": [
-    {
-      "about1": "Private cruise ideal for birthdays, anniversaries, corporate events, and special celebrations."
-    },
-    {
-      "about1": "Cruise duration typically 2–3 hours with customizable start time."
-    },
-    {
-      "about1": "Choose from multiple yacht or cruise sizes based on group size (10 to 100+ guests)."
-    },
-    {
-      "about1": "Special add-ons like cakes, decorations, and live performances can be arranged on request."
-    }
-  ],
-
-  "features": [
-    {
-      "name": "Duration 2–3 Hours",
-      "image": "./assets/images/svg/cancellation-ico.svg"
-    },
-    {
-      "name": "Mandovi River or Coastal Goa",
-      "image": "./assets/images/svg/bolt-ico.svg"
-    },
-    {
-      "name": "Fully Private Cruise",
-      "image": "./assets/images/svg/mobile-ico.svg"
-    },
-    {
-      "name": "Custom Packages Available",
-      "image": "./assets/images/svg/transfer-ico.svg"
-    }
-  ],
-
-  "overviewDesc": "Celebrate life’s biggest moments with elegance on a private cruise in Goa. Whether it's a birthday bash, romantic anniversary, pre-wedding party, or a corporate gathering, our luxury cruises offer the perfect blend of comfort, scenery, and entertainment. Fully customizable and privately booked for you and your guests.",
-
-  "overview": [
-    { "inclusion1": "Private yacht or cruise booking (2–3 hours)" },
-    { "inclusion1": "Welcome drinks and light snacks" },
-    { "inclusion1": "Decorated venue with seating" },
-    { "inclusion1": "Onboard music system or DJ setup" },
-    { "inclusion1": "Optional cake, flowers, and photography" },
-    { "inclusion1": "Professional crew and safety equipment" }
-  ],
-
-  "thingsToCarry": [
-    { "exclusion1": "Carry valid ID proof for all attendees." },
-    {
-      "exclusion1": "You may bring custom decorations with prior permission."
-    },
-    {
-      "exclusion1": "Outside food/alcohol may not be allowed unless agreed in advance."
-    }
-  ],
-
-  "needToKnows": [
-    {
-      "needToKnow": "Cruise options vary from open decks to luxury AC cabins with washrooms."
-    },
-    {
-      "needToKnow": "Custom timings, menus, and themes available on request."
-    },
-    {
-      "needToKnow": "Best to book at least 3–5 days in advance for guaranteed availability."
-    }
-  ],
-
-  "transport": [
-    {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "200000",
-      "discountedamt": "150000",
-      "kidAmt": "0",
-      "desc": [
-        "Self-report at jetty point in Panjim or Nerul",
-        "Private cruise with crew, music & snacks",
-        "Ideal for groups up to 25–50 depending on vessel",
-        "No hotel pickup or drop included"
-      ]
-    }
-  ]
-},
-{
-  "cruiseId": 5,
-  "title": "RA11 Private Cruise Goa",
-  "subTile": "Exclusive Celebrations on the Luxurious RA11 Cruise",
-  "category": "Luxury & Private Experiences",
-  "routingUrl": "ra11-private-cruise-goa",
-  "rating": "4.9",
-  "reviews": "1800",
-  "oldPrice": "28999",
-  "booked": "300K+",
-  "buttonText": "Book RA11 for Private Celebrations",
-  "reportPrice": 400000,
-  "reportPriceWithTransport": 400000,
-  "currentPrice": "500000",
-  "image": "/assets/detailimages/NAU.webp",
-  "bannerImgs": [
-    "/assets/detailimages/NAU01.webp",
-    "/assets/detailimages/NAU02.webp",
-    "/assets/detailimages/NAU03.webp",
-    "/assets/detailimages/NAU04.webp",
-    "/assets/detailimages/NAU05.webp"
-  ],
-
-  "priceIncludes": {
-    "title": "Price Includes",
-    "sections": [
-      {
-        "category": "Cruise Experience",
-        "items": [
-          "Private 3-hour cruise on the RA11 vessel",
-          "Fully decorated space with customizable setup"
-        ]
-      },
-      {
-        "category": "Food & Beverages",
-        "items": [
-          "Welcome drinks (mocktails/soft drinks)",
-          "Buffet or snacks (custom menu options available)"
-        ]
-      },
-      {
-        "category": "Entertainment",
-        "items": [
-          "Live DJ or Bluetooth music system",
-          "Dance floor, lighting & host on request"
-        ]
-      }
-    ]
-  },
-
-  "topFeatures": [
-    {
-      "icon": "event_available",
-      "title": "Instant Confirmation",
-      "description": "Booking confirmation via email & WhatsApp within minutes"
-    },
-    {
-      "icon": "free_cancellation",
-      "title": "Free Cancellation",
-      "description": "Cancel up to 72 hours before for a full refund"
-    },
-    {
-      "icon": "local_activity",
-      "title": "Mobile Tickets",
-      "description": "Show your e-ticket on phone to board the cruise"
-    }
-  ],
-
-  "mustKnow": [
-    {
-      "about1": "Celebrate birthdays, anniversaries, and corporate events on your own private luxury cruise."
-    },
-    {
-      "about1": "RA11 offers flexible time slots and customizable decoration themes."
-    },
-    {
-      "about1": "Sound system, lights, and onboard crew included for a seamless experience."
-    },
-    {
-      "about1": "Optional add-ons: cakes, photographers, live performers, and more."
-    }
-  ],
-
-  "features": [
-    {
-      "name": "Duration 3 Hours",
-      "image": "./assets/images/svg/cancellation-ico.svg"
-    },
-    {
-      "name": "RA11 Cruise – Mandovi River",
-      "image": "./assets/images/svg/bolt-ico.svg"
-    },
-    {
-      "name": "Private Celebrations",
-      "image": "./assets/images/svg/mobile-ico.svg"
-    },
-    {
-      "name": "Custom Packages & Add-ons",
-      "image": "./assets/images/svg/transfer-ico.svg"
-    }
-  ],
-
-  "overviewDesc": "Celebrate life’s biggest moments aboard the iconic RA11 private cruise in Goa. Whether it’s a milestone birthday, dreamy proposal, pre-wedding bash, or corporate celebration — RA11 delivers the perfect blend of luxury, comfort, and unforgettable views across the Mandovi River. Fully customizable with food, music, and decor.",
-
-  "overview": [
-    { "inclusion1": "Exclusive RA11 cruise booking for 3 hours" },
-    { "inclusion1": "Decorated venue with optional themes" },
-    { "inclusion1": "Welcome drinks and snacks or buffet" },
-    { "inclusion1": "DJ or music system with dance area" },
-    { "inclusion1": "Professional onboard crew & safety gear" },
-    { "inclusion1": "Optional add-ons: cake, photographer, anchor" }
-  ],
-
-  "thingsToCarry": [
-    { "exclusion1": "Valid photo ID is mandatory for entry." },
-    {
-      "exclusion1": "Inform in advance for any special setup or décor items."
-    },
-    {
-      "exclusion1": "Avoid high heels; boat surfaces can be slippery."
-    }
-  ],
-
-  "needToKnows": [
-    {
-      "needToKnow": "Boarding begins 20–30 mins before departure from Panjim jetty."
-    },
-    {
-      "needToKnow": "Event slots are limited — book at least 4–5 days in advance."
-    },
-    {
-      "needToKnow": "Alcoholic beverages allowed only with pre-approval and valid ID (18+)."
-    }
-  ],
-
-  "transport": [
-    {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "700000",
-      "discountedamt": "500000",
-      "kidAmt": "0",
-      "desc": [
-        "Self-report at Panjim/Nerul jetty",
-        "RA11 private cruise with all arrangements",
-        "Decor, food, and entertainment included",
-        "No hotel transport provided"
-      ]
-    }
-  ]
 }
-
-
 ];
 
 export const cancellationPolicy: string[] = [

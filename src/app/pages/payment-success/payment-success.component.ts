@@ -22,9 +22,12 @@ export class PaymentSuccessComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
   ) {}
-
+  public amount?: string;
   ngOnInit(): void {
     const paymentStatusResponse = sessionStorage.getItem('paymentStatusResponse');
+    const checkoutSession = sessionStorage.getItem('checkoutSession');
+    const amount = checkoutSession && JSON?.parse(checkoutSession)?.amountWithGST;
+    this.amount = amount;
     const paymentResponse = sessionStorage.getItem('paymentResponse');
     if (!(paymentStatusResponse && paymentResponse)) return;
 

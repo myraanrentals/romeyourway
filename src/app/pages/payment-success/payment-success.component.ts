@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 @Component({
   selector: 'app-payment-success',
   standalone: true,
@@ -8,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './payment-success.component.html',
   styleUrl: './payment-success.component.scss',
 })
-export class PaymentSuccessComponent implements OnInit {
+export class PaymentSuccessComponent implements OnInit, AfterViewInit {
   public paymentDetails: {
     transactionId?: string;
     paymentMode?: string;
@@ -28,6 +32,7 @@ export class PaymentSuccessComponent implements OnInit {
     const checkoutSession = sessionStorage.getItem('checkoutSession');
     const amount = checkoutSession && JSON?.parse(checkoutSession)?.amountWithGST;
     this.amount = amount;
+
     const paymentResponse = sessionStorage.getItem('paymentResponse');
     if (!(paymentStatusResponse && paymentResponse)) return;
 
@@ -48,5 +53,16 @@ export class PaymentSuccessComponent implements OnInit {
     } catch (error) {
       console.error('Error parsing payment status response:', error);
     }
+  }
+  ngAfterViewInit(): void {
+    // Push to GA/GTM ONLY after details are set.
+    // If data can arrive later (async), call this again after you set paymentDetails.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'purchase',
+      value: typeof this.amount === 'number' ? this.amount : 0, // GA4 expects number
+      transaction_id: this.paymentDetails.orderId ?? this.paymentDetails.transactionId ?? '',
+      currency: 'INR',
+    });
   }
 }

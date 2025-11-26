@@ -1,43 +1,52 @@
 section {
   padding: 20px 0;
   color: #444;
+
   h2 {
     font-size: 24px;
     font-weight: 500;
     margin: 20px 0;
   }
+
   h3 {
     margin: 5px 0 0;
     font-size: 20px;
   }
 }
-.list-h3{
+
+.list-h3 {
   margin-top: 20px !important;
 }
+
 h4 {
   font-size: 20px;
   color: #444;
   margin: 10px 0;
 }
+
 ul {
   padding-left: 18px;
   margin-top: 10px;
 }
+
 li {
   list-style: circle;
   line-height: 24px;
   font-size: 13px;
 }
+
 .link-cursor {
   cursor: pointer;
 }
+
 .accordion-button {
   background-color: #ff7b52 !important;
   color: white !important;
   border-radius: 12px;
 }
-.accordion-flush > .accordion-item > .accordion-header .accordion-button,
-.accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
+
+.accordion-flush>.accordion-item>.accordion-header .accordion-button,
+.accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed {
   border-radius: 12px;
 }
 
@@ -50,10 +59,12 @@ li {
   border-radius: 12px;
   background-color: #fff3e0;
 }
+
 .card {
   border-radius: 10px !important;
   overflow: hidden;
 }
+
 .cardImg {
   padding: 10px;
   height: 600px;
@@ -62,22 +73,26 @@ li {
 #modal-nav a.active {
   color: rgb(255, 0, 122);
 }
+
 .modal-slider {
   img {
     width: 100%;
     height: 200px;
   }
 }
+
 .card {
   padding: 10px;
   border: 1px solid #cecece;
   border-radius: 7px;
   margin: 20px 0;
+
   .slider {
     overflow: hidden;
     max-width: 520px;
     min-width: 520px;
     height: 100%;
+
     img {
       border-radius: 12px;
       overflow: hidden;
@@ -86,6 +101,7 @@ li {
       height: 350px;
     }
   }
+
   .info {
     font-size: 14px;
     margin-left: 12px;
@@ -103,7 +119,7 @@ li {
       font-feature-settings: normal;
       line-height: 20px;
       letter-spacing: 0.6px;
-      height: 44px;
+      height: 50px;
       background-color: rgb(255, 87, 34);
       border: none;
       color: rgb(255, 255, 255);
@@ -111,6 +127,7 @@ li {
       border-radius: 7px;
       margin: 10px 0;
     }
+
     .secondary-button {
       font-size: 16px;
       font-weight: 500;
@@ -130,10 +147,12 @@ li {
 
     .features {
       margin: 10px 0;
-      > div {
+
+      >div {
         display: flex;
         font-size: 13px;
         margin: 12px 0;
+
         img {
           margin-right: 10px;
         }
@@ -141,6 +160,7 @@ li {
     }
   }
 }
+
 h4#modal-basic-title {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -149,6 +169,7 @@ h4#modal-basic-title {
   font-size: 16px;
   padding-bottom: 10px;
 }
+
 #modal-nav {
   white-space: nowrap;
   gap: 10px;
@@ -161,6 +182,7 @@ h4#modal-basic-title {
 #modal-nav a {
   text-decoration: none;
   padding: 4px 10px;
+
   &.active {
     color: rgb(255, 87, 34);
     background: rgb(254, 247, 251);
@@ -170,25 +192,30 @@ h4#modal-basic-title {
 #modal-nav::-webkit-scrollbar {
   display: none;
 }
+
 #scrollBody {
   padding-left: 0;
   padding-right: 0;
   max-height: 70vh;
 }
+
 span.rating {
   color: orange;
   font-weight: 500;
   position: relative;
   top: 10px;
+
   svg {
     width: 14px;
     position: relative;
     top: -2px;
   }
 }
+
 svg#star-full-big {
   width: 28px;
 }
+
 .detail-content.d-ele {
   max-height: 280px;
   overflow: hidden;
@@ -205,15 +232,18 @@ svg#star-full-big {
   left: 0;
   background: linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 45%, 10%, 0) 100%);
 }
-.reviews-wrapper > div:first-child {
+
+.reviews-wrapper>div:first-child {
   font-size: 28px;
   font-weight: 700;
   color: #ff007a;
 }
+
 .review-count {
   font-weight: 600;
   color: #444;
 }
+
 #detailed-reviews {
   .review {
     padding: 10px;
@@ -257,33 +287,40 @@ svg#star-full-big {
 
 .tag {
   background: #088943;
-  border-radius: 0 3px 3px 0;
+  border-radius: 4px 4px 0 0;
   color: #fff;
   display: inline-block;
-  height: 20px;
+  height: auto;
+  min-height: 20px;
   line-height: 20px;
-  padding: 0 5px 0 15px;
+  padding: 5px 8px 10px 8px;
   position: relative;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0px 0;
   text-decoration: none;
   font-size: 13px;
+  font-size: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 30%), 50% 100%, 0% calc(100% - 30%));
 }
+
 .tag::after {
-  background: #fff;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #088943;
-  border-top: 10px solid transparent;
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  transform: rotate(180deg);
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #088943;
 }
+
 .modal-footer {
   div {
     min-width: 120px;
     text-align: right;
   }
+
   button {
     font-size: 16px;
     font-weight: 500;
@@ -300,6 +337,7 @@ svg#star-full-big {
     padding: 0 10px;
   }
 }
+
 .modal-footer {
   position: absolute;
   width: 100%;
@@ -311,27 +349,34 @@ svg#star-full-big {
   display: flex;
   justify-content: space-around;
 }
+
 .price-div {
   display: flex;
   flex-direction: column;
 }
+
 @media screen and (min-width: 768px) {
+
   .modal-body {
     padding-bottom: 100px;
+
     .features {
       display: flex;
       flex-direction: row;
       gap: 15px;
       margin-bottom: 20px;
+
       div {
         font-size: 14px;
       }
     }
+
     .reviews-wrapper {
       color: #444;
       font-size: 16px;
     }
   }
+
   .modal-experience {
     width: 50vw;
     position: fixed;
@@ -345,15 +390,48 @@ svg#star-full-big {
   ::ng-deep .modal-content {
     background-color: transparent;
   }
+
   .whatsapp {
     display: flex;
     flex-direction: row;
-    height: 25px;
-    width: 25px;
+    height: 32px;
+    width: 32px;
     white-space: nowrap;
     align-items: center;
     gap: 10px;
     font-weight: 500;
+  }
+
+  .amount {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    padding-bottom: 20px;
+    background: white;
+  }
+
+  .amount-price {
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 600;
+  }
+
+  .dotted-border {
+    margin-left: 16px;
+    display: flex;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    padding-right: 5px !important;
+    width: 200px;
+    div {
+      display: flex;
+      font-size: 16px;
+
+    }
+
   }
 }
 
@@ -364,11 +442,14 @@ svg#star-full-big {
   width: 100%;
   border-radius: 10px;
 }
+
 .features-container {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
-  gap: 5px; /* Adds spacing between items */
+  grid-template-columns: repeat(2, 1fr);
+  /* Creates 2 equal columns */
+  gap: 5px;
+  /* Adds spacing between items */
 }
 
 .feature {
@@ -380,62 +461,103 @@ svg#star-full-big {
 .feature img {
   object-fit: contain;
 }
+
 .feature div {
   font-size: small;
 }
 
 @media screen and (max-width: 767px) {
+  .amount-price {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .old-price {
+    font-size: 18px;
+  }
+
+  .discount-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
   section {
     padding: 0px;
   }
+
   .card {
     padding: 0;
+
     .info,
     .payments {
       padding: 0 15px !important;
     }
   }
+
   .amount {
+    display: flex;
     margin-left: 12px;
+    justify-content: flex-start;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 6px;
+    background: white;
+    align-items: center;
+
   }
+
   #scrollBody {
     padding: 110px 0 0 !important;
     max-height: calc(100vh - 100px);
   }
-  .card img{
-    width: fit-content !important;
-    height: auto !important;
+
+  .card img {
+    // width: fit-content !important;
+    // height: auto !important;
   }
-  
+  .whatsapp-icon{
+    width: 28px!important;
+    height: 28px!important;
+  }
+
   section {
     h2 {
       font-size: 18px;
     }
+
     h3 {
       font-size: 26px;
     }
+
     .card .g-3 {
       gap: 10px;
     }
   }
+
   .card .payments button {
     font-size: 14px !important;
   }
+
   .show-full-info .link {
     display: none;
   }
+
   .container {
     padding: 0 20px;
   }
+
   .card {
-    > .flex {
+    >.flex {
       flex-direction: column;
+
       div {
         width: 100%;
         max-width: 100%;
       }
+
       .payments {
         border: none;
+
         .mobile-reverse {
           flex-direction: column-reverse !important;
           margin-bottom: 15px;
@@ -443,10 +565,12 @@ svg#star-full-big {
       }
     }
   }
+
   .slider {
     max-height: 238px;
     width: 720px;
   }
+
   #experience .features div,
   #experience-modal .features div {
     font-size: 11px;
@@ -458,20 +582,24 @@ svg#star-full-big {
   .modal-experience {
     background-color: white;
     width: 100%;
-    position: static; /* Resets fixed positioning */
+    position: static;
+    /* Resets fixed positioning */
     top: auto;
     left: auto;
     transform: none;
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
+    /* Full width for smaller screens */
     margin: 0 auto;
   }
 
   ::ng-deep .modal-content {
     background-color: white;
   }
+
   .whatsapp {
     display: none;
   }
+
   .reviews-wrapper {
     flex-direction: column;
   }
@@ -485,9 +613,11 @@ svg#star-full-big {
   .rating-bar {
     width: 50%;
   }
+
   .progress {
     width: 60%;
     height: 7px;
+
     .progress-bar {
       border-radius: 10px;
       background: #ff007a;
@@ -495,10 +625,22 @@ svg#star-full-big {
   }
 }
 
-.old-price{
+.old-price {
   text-decoration: line-through;
   color: #777;
-  margin-bottom: 10px;
-  font-size: 13px;
-  margin-right: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.discount-badge {
+  background-color: #d32f2f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-left: auto;
+  text-align: center;
 }

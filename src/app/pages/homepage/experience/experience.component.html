@@ -47,13 +47,14 @@
           </div>
           <div class="payments">
             <div *ngIf="href !== '/private-yachts-in-goa'" class="amount">
-              <span class="old-price">INR {{ offer.oldPrice }}</span>
-
-              <div class="tag">15% OFF</div>
-              <h3>
-                INR {{ offer.currentPrice }}
-               
-              </h3>
+              <div class="">
+                <span>₹</span>
+                <span class="old-price"> {{ offer.oldPrice }}</span>
+              <span class="amount-price"> {{ offer.currentPrice }}</span>
+              </div>
+              <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0" class="discount-badge">
+                YOU SAVE {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%!
+              </div>
             </div>
             <div class="flex flex-column mobile-reverse">
               <div class="button-group">
@@ -64,7 +65,8 @@
                   class="secondary-button m-ele"
                   (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
                 >
-                  Get Details
+                <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" class="whatsapp-icon" />
+                  ENQUIRE NOW
                 </button>
               </div>
               <div class="features">
@@ -73,14 +75,14 @@
                   <span>{{ feature.name }}</span>
                 </div>
               </div>
-              <div class="show-full-info">
+              <div class="show-full-info dotted-border">
                 <div
                   (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
                   class="whatsapp link link-cursor"
                 >
                   <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
 
-                  Get more details
+                  ENQUIRE NOW
                   <img src="./assets/images/svg/arrow-ico.svg" alt="" />
                 </div>
               </div>

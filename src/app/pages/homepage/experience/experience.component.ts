@@ -168,4 +168,12 @@ export class ExperienceComponent {
   getItemById(identity: number) {
     return this.experienceData.find((item: any) => item.cruiseId === identity);
   }
+
+  calculateDiscount(oldPrice: number, currentPrice: number): number {
+    if (!oldPrice || !currentPrice || oldPrice <= currentPrice) {
+      return 0;
+    }
+    const discount = ((oldPrice - currentPrice) / oldPrice) * 100;
+    return Math.round(discount);
+  }
 }

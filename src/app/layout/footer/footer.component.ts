@@ -1,11 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit, OnDestroy {
+  isHomepage: boolean = false;
+  private routerSubscription?: Subscription;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Check initial route
+    this.checkIfHomepage();
+    
+    // Subscribe to route changes
+    this.routerSubscription = this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.checkIfHomepage();
+      });
+  }
+
+  ngOnDestroy() {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
+  }
+
+  private checkIfHomepage() {
+    this.isHomepage = this.router.url === '/' || this.router.url === '';
+  }
+
   dropdowns: { [key: string]: boolean } = {
     company: true,
     forTravelers: true,

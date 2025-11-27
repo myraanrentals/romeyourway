@@ -183,7 +183,7 @@ export const favChoiceListOne: any[] = [
   "reportPrice": 1400,
   "reportPriceWithTransport": 1400,
   "currentPrice": "1999",
-  "image": "/assets/detailimages/WAT.webp",
+  "image": "/assets/detailimages/WAT1.webp",
   "bannerImgs": [
     "/assets/detailimages/WAT1.webp",
     "/assets/detailimages/WAT2.webp",

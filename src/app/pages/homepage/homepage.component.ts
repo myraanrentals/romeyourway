@@ -302,6 +302,35 @@ export class HomepageComponent implements OnInit {
       title: 'Bundle and Save',
     },
   ];
+  privateParties = [
+    {
+      image: '/assets/detailimages/DUD.webp',
+      title: 'Best staycation deals',
+      description: 'Enjoy these cool staycation promotions in Goa',
+    },
+    {
+      image: '/assets/detailimages/KAP05.webp',
+      title: 'All Time Favourite Activities in Goa',
+      description: "Don't forget to check out these activities while you're here",
+    },
+    {
+      image: '/assets/detailimages/DUD.webp',
+      title: 'Best staycation deals',
+      description: 'Enjoy these cool staycation promotions in Goa',
+    },{
+      image: '/assets/detailimages/DUD.webp',
+      title: 'Best staycation deals',
+      description: 'Enjoy these cool staycation promotions in Goa',
+    },{
+      image: '/assets/detailimages/DUD.webp',
+      title: 'Best staycation deals',
+      description: 'Enjoy these cool staycation promotions in Goa',
+    },{
+      image: '/assets/detailimages/DUD.webp',
+      title: 'Best staycation deals',
+      description: 'Enjoy these cool staycation promotions in Goa',
+    },
+  ];
   category: string = '';
   constructor(
     private router: Router,
@@ -370,6 +399,22 @@ export class HomepageComponent implements OnInit {
       autoplay: true,
       autoplaySpeed: 2000,
     });
+    $('#private-parties-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      customPaging: function() {
+        return '<span class="slick-line"></span>';
+      },
+      centerMode: false,
+      infinite: false,
+      draggable: true, 
+      swipe: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
+
     $('#slick-slider, #slick-slider-yachts, #slick-slider-dinner').slick({
       slidesToShow: 1,
       centerMode: false,
@@ -396,6 +441,9 @@ export class HomepageComponent implements OnInit {
       ]
     });
     
+    // Add padding-bottom to slick-list elements
+    $('#slick-slider .slick-list, #slick-slider-yachts .slick-list, #slick-slider-dinner .slick-list').css('padding-bottom', '12px');
+    
 
     $('#slick-slider').on('afterChange', (event: any, slick: any, currentSlide: number) => {
       // Remove the highlighted class from all slides
@@ -408,6 +456,8 @@ export class HomepageComponent implements OnInit {
 
     $(window).on('resize', function () {
       $('#slick-slider').slick('setPosition');
+      // Reapply padding-bottom after resize
+      $('#slick-slider .slick-list, #slick-slider-yachts .slick-list, #slick-slider-dinner .slick-list').css('padding-bottom', '12px');
     });
   }
 

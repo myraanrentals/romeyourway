@@ -226,7 +226,7 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/watersport.png',
       title: 'Yacht',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'private-yachts-in-goa'
+      redirect: 'book-private-yachts-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
@@ -265,31 +265,31 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/watersport.png',
       title: 'Yacht',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'private-yachts-in-goa'
+      redirect: 'book-private-yachts-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Scuba',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
-      redirect: 'scuba-diving-in-goa'
+      redirect: 'book-watersports-and-scuba-diving-in-goa'
     },
     {
       icon: '/assets/icons/Cruise icon png.png',
       title: 'Watersports',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'best-water-sports-in-goa'
+      redirect: 'book-water-sports-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',
       title: 'Adventures',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'best-adventures-in-goa'
+      redirect: 'book-adventures-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Sightseeing',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
-      redirect: 'best-sightseeing-in-goa'
+      redirect: 'book-sightseeing-in-goa'
     },
   ];
   offers = [
@@ -310,7 +310,7 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.yatchlList = this._helperService.renderPackageData("private-yachts-in-goa");    
+    this.yatchlList = this._helperService.renderPackageData("book-private-yachts-in-goa");    
     sessionStorage.clear();
     (async () => {
       if (this._helperService.getSessionStorage('travelDetails') !== null) {
@@ -417,7 +417,7 @@ export class HomepageComponent implements OnInit {
   }
   goToServiceYath(link: string) {
     const category = this.route.snapshot.paramMap.get('category');
-    this.router.navigate([`/private-yachts-in-goa/details/${link}`]);
+    this.router.navigate([`/book-private-yachts-in-goa/details/${link}`]);
   }
   navigateTo(route: string) {
     console.log(route,"route");

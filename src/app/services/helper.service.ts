@@ -28,17 +28,25 @@ export class HelperService {
     }
   }
   renderPackageData(category: string) {
-    if (category === 'book-dinner-cruise-in-goa') {
+    // Extract category name after 'book-' or 'best-' prefix
+    let categoryName = category;
+    if (category.startsWith('book-')) {
+      categoryName = category.replace('book-', '');
+    } else if (category.startsWith('best-')) {
+      categoryName = category.replace('best-', '');
+    }
+
+    if (categoryName === 'dinner-cruise-in-goa') {
       return hotels;
-    } else if (category === 'private-yachts-in-goa') {
+    } else if (categoryName === 'private-yachts-in-goa') {
       return yacth;
-    } else if (category === 'scuba-diving-in-goa') {
+    } else if (categoryName === 'watersports-and-scuba-diving-in-goa') {
       return scubaList;
-    } else if (category === 'best-water-sports-in-goa') {
+    } else if (categoryName === 'water-sports-in-goa') {
       return watersports;
-    } else if (category === 'best-adventures-in-goa') {
+    } else if (categoryName === 'adventures-in-goa') {
       return adventures;
-    } else if (category === 'best-sightseeing-in-goa') {
+    } else if (categoryName === 'sightseeing-in-goa') {
       return sightseeing;
     } else {
       return hotels;

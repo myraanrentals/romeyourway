@@ -258,7 +258,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         amountWithGST,
       });
     } else {
-      const isYacht = this.category === 'private-yachts-in-goa';
+      const isYacht = this.category === 'book-private-yachts-in-goa';
       const { travellers, selectedTransport } = this.sessionData;
       const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
       const finalReportPrice = isYacht

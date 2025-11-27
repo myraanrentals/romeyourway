@@ -86,14 +86,14 @@ export class CheckoutPageComponent implements OnInit {
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
         selectedTime:
-          category !== 'private-yachts-in-goa'
+          category !== 'book-private-yachts-in-goa'
             ? this.selectedTime
             : this.hotelDetails.transport[0].timeSlots[0],
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[0],
         subtotal: this.hotelDetails.transport[0].discountedamt,
         travellers:
-          this.category !== 'private-yachts-in-goa'
+          this.category !== 'book-private-yachts-in-goa'
             ? getTravellers(
                 Number(this.hotelDetails.transport[0].discountedamt),
                 Number(this.hotelDetails.transport[0].kidAmt),
@@ -111,7 +111,7 @@ export class CheckoutPageComponent implements OnInit {
       this.sessionData.selectedTransport?.kidAmt,
     );
     this.selectedTime =
-      category !== 'private-yachts-in-goa'
+      category !== 'book-private-yachts-in-goa'
         ? this.selectedTime
         : this.sessionData.selectedTransport.timeSlots[0];
   }
@@ -123,7 +123,7 @@ export class CheckoutPageComponent implements OnInit {
 
   increaseCount(traveller: any): void {
     const isActualPaxCount = traveller.label === 'Actual Pax Count';
-    const isYacht = this.category === 'private-yachts-in-goa';
+    const isYacht = this.category === 'book-private-yachts-in-goa';
 
     const maxCount = isYacht ? (isActualPaxCount ? traveller.price : Infinity) : Infinity;
 
@@ -137,7 +137,7 @@ export class CheckoutPageComponent implements OnInit {
 
   decreaseCount(traveller: any) {
     const isAdult = traveller.label === 'Adult';
-    const isYacth = this.category === 'private-yachts-in-goa';
+    const isYacth = this.category === 'book-private-yachts-in-goa';
     const minCount = isAdult || isYacth ? 1 : 0;
 
     if (traveller.count > minCount) {
@@ -163,7 +163,7 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   getSubtotal(): number {
-    const isYacth = this.category === 'private-yachts-in-goa';
+    const isYacth = this.category === 'book-private-yachts-in-goa';
     if (isYacth) return 0;
     const subtotal = this.sessionData.travellers.reduce(
       (total: number, traveller: any) =>
@@ -236,7 +236,7 @@ export class CheckoutPageComponent implements OnInit {
       cruiseId: this.hotelDetails.cruiseId,
     });
     this.selectedTime =
-      this.category !== 'private-yachts-in-goa'
+      this.category !== 'book-private-yachts-in-goa'
         ? this.selectedTime
         : this.sessionData.selectedTransport.timeSlots[0];
     this.updateTime(this.selectedTime);

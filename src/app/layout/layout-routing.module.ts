@@ -51,6 +51,7 @@ const routes: Routes = [
       },
       { path: ':category/details/:id', component: DetailsPageComponent },
       { path: ':category', component: ListingComponent },
+      { path: ':category/enquire', component: ListingComponent },
     ],
   },
 ];

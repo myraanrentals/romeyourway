@@ -35,6 +35,7 @@ export class ExperienceComponent {
   images: any = '';
   selectedIdentity = 1;
   href: string = '';
+  isEnquire: boolean = false;
 
   constructor(
     private _router: Router,
@@ -45,9 +46,25 @@ export class ExperienceComponent {
   }
   ngOnInit(): void {
     this.href = this._router.url;
+    const category = this.route.snapshot.paramMap.get('category');
+    if (this.href.includes('/enquire')) {
+      console.log('URL contains /enquire:', this.href);
+      this.isEnquire = true;
+    } else if (category && category.startsWith('best-')) {
+      this.isEnquire = true;
+    }
     this.routerSub = this._router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.href = event.urlAfterRedirects;
+        const currentCategory = this.route.snapshot.paramMap.get('category');
+        if (this.href.includes('/enquire')) {
+          console.log('URL contains /enquire:', this.href);
+          this.isEnquire = true;
+        } else if (currentCategory && currentCategory.startsWith('best-')) {
+          this.isEnquire = true;
+        } else {
+          this.isEnquire = false;
+        }
       }
     });
     window.addEventListener('resize', this.setMobileFlag.bind(this));
@@ -58,6 +75,9 @@ export class ExperienceComponent {
   }
   ngOnDestroy() {
     window.removeEventListener('resize', this.setMobileFlag.bind(this));
+    if (this.routerSub) {
+      this.routerSub.unsubscribe();
+    }
   }
   setMobileFlag() {
     let winWidth = window.innerWidth;
@@ -104,7 +124,7 @@ export class ExperienceComponent {
   }
   goToService(link: string) {
     const category = this.route.snapshot.paramMap.get('category');
-    if (category === 'private-yachts-in-goa' || category === 'best-dinner-cruise-in-goa') {
+    if (category === 'book-private-yachts-in-goa' || category === 'best-dinner-cruise-in-goa') {
       window.location.href = 'tel:+917715959917';
     } else {
       this._router.navigate([`/${category}/details/${link}`]);
@@ -169,11 +189,16 @@ export class ExperienceComponent {
     return this.experienceData.find((item: any) => item.cruiseId === identity);
   }
 
-  calculateDiscount(oldPrice: number, currentPrice: number): number {
-    if (!oldPrice || !currentPrice || oldPrice <= currentPrice) {
+  calculateDiscount(oldPrice: number | string, currentPrice: number | string): number {
+    const oldP = Number(oldPrice);
+    const currP = Number(currentPrice);
+  
+    if (!oldP || !currP || oldP <= currP) {
       return 0;
     }
-    const discount = ((oldPrice - currentPrice) / oldPrice) * 100;
+  
+    const discount = ((oldP - currP) / oldP) * 100;
     return Math.round(discount);
   }
+  
 }

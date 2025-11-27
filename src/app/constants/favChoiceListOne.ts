@@ -174,7 +174,7 @@ export const favChoiceListOne: any[] = [
   "title": "Malvan Scuba and Water Sports",
   "subTile": "Malvan Scuba and Water Sports",
   "category": "Watersports",
-  "routingUrl": "scuba-diving-in-goa",
+  "routingUrl": "book-watersports-and-scuba-diving-in-goa",
   "rating": "4.6",
   "reviews": "3867",
   "oldPrice": "2499",

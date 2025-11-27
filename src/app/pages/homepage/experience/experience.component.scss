@@ -410,12 +410,16 @@ svg#star-full-big {
     padding: 12px;
     padding-bottom: 20px;
     background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   }
 
   .amount-price {
     font-size: 20px;
     margin-bottom: 0px;
     font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   }
 
   .dotted-border {
@@ -433,6 +437,7 @@ svg#star-full-big {
     }
 
   }
+
 }
 
 .modal-footer-container {
@@ -467,18 +472,26 @@ svg#star-full-big {
 }
 
 @media screen and (max-width: 767px) {
+  .list-h3{
+    font-size: 22px !important;
+    color: #2A2A2A !important;
+  }
   .amount-price {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .old-price {
-    font-size: 18px;
+    font-size: 20px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   }
 
   .discount-badge {
     font-size: 10px;
-    padding: 4px 8px;
+    padding: 2px 8px;
+    width: 156px !important;
   }
 
   section {
@@ -535,7 +548,7 @@ svg#star-full-big {
   }
 
   .card .payments button {
-    font-size: 14px !important;
+    font-size: 14px ;
   }
 
   .show-full-info .link {
@@ -607,6 +620,7 @@ svg#star-full-big {
   .tag {
     max-width: 70px !important;
   }
+
 }
 
 .reviews-wrapper {
@@ -630,13 +644,15 @@ svg#star-full-big {
   color: #777;
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .discount-badge {
-  background-color: #d32f2f;
+  background-color: #1fad5f;
   color: white;
   padding: 6px 12px;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;

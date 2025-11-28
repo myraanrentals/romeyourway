@@ -62,7 +62,7 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
       event: 'purchase',
       value: typeof this.amount === 'number' ? this.amount : 0, // GA4 expects number
       transaction_id: this.paymentDetails.orderId ?? this.paymentDetails.transactionId ?? '',
-      currency: 'INR',
+      currency: '₹',
     });
   }
 }

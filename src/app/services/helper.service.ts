@@ -8,6 +8,7 @@ import { scubaList } from '@constants/scuba';
 import { watersports } from '@constants/watersports';
 import { adventures } from '@constants/adventures';
 import { sightseeing } from '@constants/sightseeing';
+import { privateParties } from '@constants/privateParties';
 @Injectable({
   providedIn: 'root',
 })
@@ -48,7 +49,9 @@ export class HelperService {
       return adventures;
     } else if (categoryName === 'sightseeing-in-goa') {
       return sightseeing;
-    } else {
+    }else if (categoryName === 'private-parties') {
+      return privateParties; 
+    }else {
       return hotels;
     }
   }

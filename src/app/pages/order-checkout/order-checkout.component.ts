@@ -464,7 +464,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const options = {
       key: razorpay_key,
       amount: 1,
-      currency: 'INR',
+      currency: '₹',
       expire_by: 1750346930,
       reference_id: phone,
       name: 'Myraan Adventures',

@@ -13,6 +13,7 @@ import { yacth } from '@constants/yacth';
 import { favChoiceListOne } from '@constants/favChoiceListOne';
 import { favChoiceListTwo } from '@constants/favChoiceListTwo';
 import { scubaList } from '@constants/scuba';
+import { privateParties } from '@constants/privateParties';
 declare var $: any; // Declare jQuery globally
 
 @Component({
@@ -302,35 +303,46 @@ export class HomepageComponent implements OnInit {
       title: 'Bundle and Save',
     },
   ];
-  privateParties = [
-    {
-      image: '/assets/detailimages/DUD.webp',
-      title: 'Best staycation deals',
-      description: 'Enjoy these cool staycation promotions in Goa',
-    },
-    {
-      image: '/assets/detailimages/KAP05.webp',
-      title: 'All Time Favourite Activities in Goa',
-      description: "Don't forget to check out these activities while you're here",
-    },
-    {
-      image: '/assets/detailimages/DUD.webp',
-      title: 'Best staycation deals',
-      description: 'Enjoy these cool staycation promotions in Goa',
-    },{
-      image: '/assets/detailimages/DUD.webp',
-      title: 'Best staycation deals',
-      description: 'Enjoy these cool staycation promotions in Goa',
-    },{
-      image: '/assets/detailimages/DUD.webp',
-      title: 'Best staycation deals',
-      description: 'Enjoy these cool staycation promotions in Goa',
-    },{
-      image: '/assets/detailimages/DUD.webp',
-      title: 'Best staycation deals',
-      description: 'Enjoy these cool staycation promotions in Goa',
-    },
-  ];
+  // privateParties = [
+  //   {
+  //     image: '/assets/privateBoookings/NautiAmigo.png',
+  //     title: 'Nauti Amigo Luxury Cruise',
+  //     description: 'Enjoy these cool staycation promotions in Goa',
+  //   },
+  //   {
+  //     image: '/assets/privateBoookings/Raii.png',
+  //     title: 'Raii Dinner Cruise',
+  //     description: "Don't forget to check out these activities while you're here",
+  //   },
+  //   {
+  //     image: '/assets/privateBoookings/Leomar.png',
+  //     title: 'Leomar Dinner Cruise',
+  //     description: 'Enjoy these cool staycation promotions in Goa',
+  //   },
+  //   {
+  //     image: '/assets/privateBoookings/Calma.png',
+  //     title: 'Calma Dinner Cruise',
+  //     description: "Don't forget to check out these activities while you're here",
+  //   },{
+  //     image: '/assets/privateBoookings/fisherman.png',
+  //     title: 'Fisherman Dinner Cruise',
+  //     description: 'Enjoy these cool staycation promotions in Goa',
+  //   },
+  //   {
+  //     image: '/assets/privateBoookings/Lovely.png',
+  //     title: 'Lovely Dinner Cruise',
+  //     description: "Don't forget to check out these activities while you're here",
+  //   },{
+  //     image: '/assets/privateBoookings/OmSai.png',
+  //     title: 'Om Sai Dinner Cruise',
+  //     description: 'Enjoy these cool staycation promotions in Goa',
+  //   },{
+  //     image: '/assets/privateBoookings/Vihan.png',
+  //     title: 'Vihaan Dinner Cruise',
+  //     description: 'Enjoy these cool staycation promotions in Goa',
+  //   },
+  // ];
+  privateParties = privateParties;
   category: string = '';
   constructor(
     private router: Router,
@@ -473,6 +485,10 @@ export class HomepageComponent implements OnInit {
     console.log(route,"route");
     
     this.router.navigate([`/${route}`]);
+  }
+  
+  navigateToPrivateParty(routingUrl: string) {
+    this.router.navigate([`/private-parties/details/${routingUrl}`]);
   }
   
 }

@@ -50,9 +50,9 @@
               {{ package.title }} [Capacity: {{ package.capacity }}]
             </span>
             <div class="price">
-              <span class="original-price">INR {{ package.originalamt }}</span>
+              <span class="original-price">₹ {{ package.originalamt }}</span>
               <span class="discounted-price"
-                ><strong>INR {{ package.discountedamt }}</strong></span
+                ><strong>₹ {{ package.discountedamt }}</strong></span
               >
             </div>
           </div>
@@ -130,7 +130,7 @@
           <div>
             <p class="traveller-label">{{ traveller.displayLabel }}</p>
             <p class="price" *ngIf="this.category === 'book-private-yachts-in-goa'">
-              <span *ngIf="traveller.label !== 'Actual Pax Count'">INR</span>
+              <span *ngIf="traveller.label !== 'Actual Pax Count'">₹</span>
               <span *ngIf="traveller.label !== 'Actual Pax Count'">
                 {{
                   traveller.label === 'Actual Pax Count'
@@ -146,7 +146,7 @@
               {{ traveller.label }}
             </p>
             <p class="price" *ngIf="this.category !== 'book-private-yachts-in-goa'">
-              INR
+              ₹
               {{
                 traveller.label === 'Adult'
                   ? sessionData.selectedTransport?.discountedamt
@@ -167,7 +167,7 @@
         <div class="subtotal-section">
           <p>Sub Total</p>
           <p class="subtotal-amount">
-            INR {{ category === 'book-private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
+            ₹ {{ category === 'book-private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
           </p>
         </div>
       </div>
@@ -183,7 +183,7 @@
         <div class="price-div">
           <span>Total Amount </span>
           <p class="pay-btn-amount">
-            INR {{ category === 'book-private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
+            ₹ {{ category === 'book-private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
           </p>
         </div>
         <button class="offer-button" *ngIf="!showProceedButton" (click)="scrollToTimeSlot()">

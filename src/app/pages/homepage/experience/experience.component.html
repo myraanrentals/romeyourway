@@ -48,12 +48,13 @@
           <div class="payments">
             <div *ngIf="href !== '/book-private-yachts-in-goa'" class="amount">
               <div class="">
-                <span class="old-price"> ₹{{ offer.oldPrice }}</span>
+                <span *ngIf="!isPrivateParty" class="old-price"> ₹{{ offer.oldPrice }}</span>
               <span class="amount-price"> ₹{{ offer.currentPrice }}</span>
               </div>
-              <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0" class="discount-badge">
+              <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && !isPrivateParty" class="discount-badge">
                  SAVED {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%!
               </div>
+              <div *ngIf="isPrivateParty" class="discount-badge" style="text-transform: none!important;">Negotiable</div>
             </div>
             <div class="flex flex-column mobile-reverse">
               <div class="button-group">

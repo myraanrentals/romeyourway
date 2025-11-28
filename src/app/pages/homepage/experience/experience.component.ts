@@ -36,6 +36,7 @@ export class ExperienceComponent {
   selectedIdentity = 1;
   href: string = '';
   isEnquire: boolean = false;
+  isPrivateParty: boolean = false;
 
   constructor(
     private _router: Router,
@@ -52,6 +53,8 @@ export class ExperienceComponent {
       this.isEnquire = true;
     } else if (category && category.startsWith('best-')) {
       this.isEnquire = true;
+    } else if (category && category.startsWith('private-parties')) {
+      this.isPrivateParty = true;
     }
     this.routerSub = this._router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -190,8 +193,8 @@ export class ExperienceComponent {
   }
 
   calculateDiscount(oldPrice: number | string, currentPrice: number | string): number {
-    const oldP = Number(oldPrice);
-    const currP = Number(currentPrice);
+    const oldP = Number(String(oldPrice).replace(/,/g, ''));
+    const currP = Number(String(currentPrice).replace(/,/g, ''));
   
     if (!oldP || !currP || oldP <= currP) {
       return 0;

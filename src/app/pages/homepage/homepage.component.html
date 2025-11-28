@@ -69,8 +69,8 @@
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
               </p>
               <p class="price">
-                <span class="current-price">INR {{ offer.currentPrice }}</span>
-                <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
+                <span class="current-price">₹ {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
               </p>
             </div>
             <!-- <button
@@ -115,8 +115,8 @@
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
               </p>
               <p class="price">
-                <span class="current-price">INR {{ offer.currentPrice }}</span>
-                <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
+                <span class="current-price">₹ {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
               </p>
             </div>
             <button mat-button class="offer-button" (click)="goToService(offer?.routingUrl)">
@@ -189,8 +189,8 @@
                 ⭐ dummy booked
               </p>
               <p class="price">
-                <span class="current-price">INR 1200</span>
-                <span class="old-price" >INR 300</span>
+                <span class="current-price">₹ 1200</span>
+                <span class="old-price" >₹ 300</span>
               </p>
               <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
                 Book this activity & get 20% off 
@@ -228,8 +228,8 @@
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
               </p>
               <p class="price">
-                <span class="current-price">INR {{ offer.currentPrice }}</span>
-                <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
+                <span class="current-price">₹ {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
               </p>
             </div>
             <button mat-button class="offer-button" (click)="goToServiceYath(offer?.routingUrl)">
@@ -247,7 +247,7 @@
   </button>
 </section>
 
-<section>
+<!-- <section class="private-parties-section">
   <div class="itinerary-container">
     <h2 class="inspiration">Private Parties</h2>
     <div class="cards" id="private-parties-slider">
@@ -265,7 +265,20 @@
 
     
   </div>
+</section> -->
+<section class="simple-hex-section">
+  <h2 class="inspiration">Private Parties</h2>
+
+  <div class="simple-hex-grid">
+    <div *ngFor="let item of privateParties" class="simple-hex" [style.background-image]="'url(' + item.image + ')'" (click)="navigateToPrivateParty(item.routingUrl)">
+      <div class="simple-hex-overlay"></div>
+      <div class="simple-hex-inner">
+        <p>{{ item.title }}</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section>
   <div class="itinerary-container">
     <h2 class="inspiration text-center">Inspiration for your itinerary</h2>

@@ -377,10 +377,10 @@
         <div class="payment-section-end">
           <div>
             <p class="original-price">
-              <s>INR {{ sessionData.subtotal + 500 }}</s>
+              <s>₹ {{ sessionData.subtotal + 500 }}</s>
             </p>
             <p class="final-price">
-              INR {{ sessionData.amountWithGST }}
+              ₹ {{ sessionData.amountWithGST }}
               <span (click)="openBookingSummary()" class="mobile viewDetails">View Details ></span>
             </p>
           </div>
@@ -453,15 +453,15 @@
 
         <hr />
         <p>
-          Total Amount: <span>INR {{ sessionData.subtotal }}</span>
+          Total Amount: <span>₹ {{ sessionData.subtotal }}</span>
         </p>
         <hr />
         <p>
           Total Payable Amount (With TAX):
-          <strong>INR {{ sessionData.amountWithGST }}</strong>
+          <strong>₹ {{ sessionData.amountWithGST }}</strong>
         </p>
         <div *ngIf="this.sessionData.couponCode" class="discount-message">
-          🎉 Woohoo! You saved INR {{ this.sessionData.discountAmount }} on this booking!!
+          🎉 Woohoo! You saved ₹ {{ this.sessionData.discountAmount }} on this booking!!
         </div>
       </div>
       <div class="applied-coupon-card" (click)="showCouponModal = true">
@@ -591,10 +591,10 @@
         <div class="payment-section-end">
           <div>
             <p class="original-price">
-              <s>INR {{ sessionData.subtotal + 500 }}</s>
+              <s>₹ {{ sessionData.subtotal + 500 }}</s>
             </p>
             <p class="final-price">
-              INR {{ sessionData.amountWithGST }}
+              ₹ {{ sessionData.amountWithGST }}
               <span (click)="openBookingSummary()" class="viewDetails">View Details ></span>
             </p>
           </div>

@@ -43,11 +43,11 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   yatchlList = yacth;
   
   allowedCruises = [
-    'Nauti Amigo Luxury Dinner Cruise',
-    'Vihaan Dinner Cruise[Family & Couple]',
-    'Nirwana Dinner Cruise',
-    'Paradise Dinner Cruise[FAMILY & COUPLE]',
-    'Swastik Family Dinner Cruise[CURRENTLY NOT AVAILABLE]'
+
+    "Swastik Dinner Cruise",
+    "Nirwana Dinner Cruise",
+    'Vihaan Dinner Cruise',
+    'Nauti Amigo Luxury Cruise'
   ];
 
   allowedYatch = [

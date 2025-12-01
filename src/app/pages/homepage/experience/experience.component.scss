@@ -128,6 +128,46 @@ li {
       margin: 10px 0;
     }
 
+    .flip-container {
+      perspective: 1000px;
+      width: 100%;
+      height: 50px;
+      margin: 20px 0;
+    }
+
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-container.flipped .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+
+    .phone-number-button {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: default;
+    }
+
     .secondary-button {
       font-size: 16px;
       font-weight: 500;
@@ -423,13 +463,12 @@ svg#star-full-big {
   }
 
   .dotted-border {
-    margin-left: 16px;
     display: flex;
     border: 2px dashed #ccc;
     border-radius: 20px;
     padding: 10px;
     padding-right: 5px !important;
-    width: 200px;
+    width: 240px;
     div {
       display: flex;
       font-size: 16px;
@@ -472,18 +511,44 @@ svg#star-full-big {
 }
 
 @media screen and (max-width: 767px) {
+  .phone-icon-button {
+    min-width: 48px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: 1.5px solid #ff5722;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff5722;
+
+    mat-icon {
+      color: #ff5722;
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background: #fff5f2;
+    }
+  }
   .list-h3{
-    font-size: 22px !important;
+    font-size: 20px !important;
+    font-weight: 500;
     color: #2A2A2A !important;
   }
   .amount-price {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
+    color: #5C5C5C !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .old-price {
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   }
@@ -549,6 +614,36 @@ svg#star-full-big {
 
   .card .payments button {
     font-size: 14px ;
+  }
+
+  .flip-container {
+    .flip-inner {
+      transition: none;
+    }
+
+    &.flipped .flip-inner {
+      transform: none;
+    }
+
+    .flip-front,
+    .flip-back {
+      position: static;
+      backface-visibility: visible;
+      -webkit-backface-visibility: visible;
+    }
+
+    .flip-back {
+      transform: none;
+      display: none;
+    }
+
+    &.flipped .flip-back {
+      display: block;
+    }
+
+    &.flipped .flip-front {
+      display: none;
+    }
   }
 
   .show-full-info .link {

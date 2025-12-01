@@ -2,106 +2,116 @@
   <div class="container">
     <h2>Select Your Package</h2>
     @for (offer of experienceData; track offer) {
-      <div class="card">
-        <div class="flex g-1">
-          @if (mobFlag) {
-              <div navigation="true" pagination="true" autoplay="true" loop="true">
-                <div><img src="{{ offer.image }}" alt="" /></div>
-              </div>
-          } @else {
-            <div class="slider">
-              <div navigation="true" pagination="true" autoplay="true" loop="true">
-                <div><img src="{{ offer.image }}" alt="" /></div>
-              </div>
-            </div>
-          }
+    <div class="card">
+      <div class="flex g-1">
+        @if (mobFlag) {
+        <div navigation="true" pagination="true" autoplay="true" loop="true">
+          <div><img src="{{ offer.image }}" alt="" /></div>
+        </div>
+        } @else {
+        <div class="slider">
+          <div navigation="true" pagination="true" autoplay="true" loop="true">
+            <div><img src="{{ offer.image }}" alt="" /></div>
+          </div>
+        </div>
+        }
 
-          <div class="info">
-            <span class="rating">
-              <strong>
-                <svg id="star-full" viewBox="0 0 475.075 475.075">
-                  <path
-                    data-card-section="Reviews"
-                    fill="#FFA500"
-                    d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z"
-                  ></path>
-                </svg>
-                {{ offer.rating }}
-              </strong>
-              ({{ offer.reviews }})
-            </span>
-            <h3 class="list-h3">{{ offer.title }}</h3>
-            <div class="detail-content d-ele">
-              <ul>
-                <li *ngFor="let item of offer.mustKnow">
-                  {{ item.about1 }}
-                </li>
-              </ul>
-            </div>
-            <div class="show-full-info">
-              <div (click)="goToService(offer?.routingUrl)" class="link link-cursor">
-                Show inclusions & important info
-                <img src="./assets/images/svg/arrow-ico.svg" alt="" />
-              </div>
+        <div class="info">
+          <span class="rating">
+            <strong>
+              <svg id="star-full" viewBox="0 0 475.075 475.075">
+                <path data-card-section="Reviews" fill="#FFA500"
+                  d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z">
+                </path>
+              </svg>
+              {{ offer.rating }}
+            </strong>
+            ({{ offer.reviews }})
+          </span>
+          <h3 class="list-h3">{{ offer.title }}</h3>
+          <div class="detail-content d-ele">
+            <ul>
+              <li *ngFor="let item of offer.mustKnow">
+                {{ item.about1 }}
+              </li>
+            </ul>
+          </div>
+          <div class="show-full-info">
+            <div (click)="goToService(offer?.routingUrl)" class="link link-cursor">
+              Show inclusions & important info
+              <img src="./assets/images/svg/arrow-ico.svg" alt="" />
             </div>
           </div>
-          <div class="payments">
-            <div *ngIf="href !== '/book-private-yachts-in-goa'" class="amount">
-              <div class="">
-                <span *ngIf="!isPrivateParty" class="old-price"> ₹{{ offer.oldPrice }}</span>
+        </div>
+        <div class="payments">
+          <div *ngIf="href !== '/book-private-yachts-in-goa'" class="amount">
+            <div class="">
+              <span *ngIf="!isPrivateParty" class="old-price"> ₹{{ offer.oldPrice }}</span>
               <span class="amount-price"> ₹{{ offer.currentPrice }}</span>
-              </div>
-              <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && !isPrivateParty" class="discount-badge">
-                 SAVED {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%!
-              </div>
-              <div *ngIf="isPrivateParty" class="discount-badge" style="text-transform: none!important;">Negotiable</div>
             </div>
-            <div class="flex flex-column mobile-reverse">
-              <div class="button-group">
-                <button class="primary-button" (click)="isEnquire ? openWhatsApp('+917715959917', offer.whatsappMsg) : goToService(offer?.routingUrl)" class="{{ isEnquire ? 'Enquire-button' : '' }}">
-                  {{ isEnquire ? 'CALL NOW' : 'Book Now' }}
-                </button>
-                <button
-                  class="secondary-button m-ele"
-                  (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
-                >
-                <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" class="whatsapp-icon" />
-                  ENQUIRE NOW
-                </button>
-              </div>
-              <div class="features">
-                <div *ngFor="let feature of offer.features" class="feature-item">
-                  <img [src]="feature.image" alt="{{ feature.name }}" />
-                  <span>{{ feature.name }}</span>
+            <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && !isPrivateParty"
+              class="discount-badge">
+              SAVED {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%!
+            </div>
+            <div *ngIf="isPrivateParty" class="discount-badge" style="text-transform: none!important;">Negotiable</div>
+          </div>
+          <div class="flex flex-column mobile-reverse">
+            <div class="button-group">
+              @if (isEnquire) {
+              <div class="flip-container" [class.flipped]="isButtonFlipped(offer)">
+                <div class="flip-inner">
+                  <div class="flip-front">
+                    <button class="primary-button Enquire-button" (click)="handleEnquireClick(offer)">
+                      CALL NOW
+                    </button>
+                  </div>
+                  <div class="flip-back">
+                    <button class="primary-button Enquire-button phone-number-button">
+                      {{ formatPhoneNumber('+917715959917') }}
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="show-full-info dotted-border">
-                <div
-                  (click)="openWhatsApp('+917715959917', offer.whatsappMsg)"
-                  class="whatsapp link link-cursor"
-                >
-                  <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
+              } @else {
+              <button class="primary-button" (click)="goToService(offer?.routingUrl)">
+                {{ href === '/private-parties' ? 'GET MORE INFO' : 'BOOK ONLINE' }}
+              </button>
+              }
+              <div class="d-flex gap-2 ">
+                <button mat-button *ngIf="!isEnquire" class="phone-icon-button m-ele" (click)="callPhoneNumber('+917715959917')">
+                  <mat-icon>phone</mat-icon>
+                </button>
+                <button class="secondary-button m-ele" (click)="openWhatsApp('+917715959917', offer.whatsappMsg)">
+                  <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" class="whatsapp-icon" />
+                  BOOK ON WHATSAPP
+                </button>
+              </div>
+            </div>
+            <div class="features">
+              <div *ngFor="let feature of offer.features" class="feature-item">
+                <img [src]="feature.image" alt="{{ feature.name }}" />
+                <span>{{ feature.name }}</span>
+              </div>
+            </div>
+            <div class="show-full-info dotted-border">
+              <div (click)="openWhatsApp('+917715959917', offer.whatsappMsg)" class="whatsapp link link-cursor">
+                <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" />
 
-                  ENQUIRE NOW
-                  <img src="./assets/images/svg/arrow-ico.svg" alt="" />
-                </div>
+                Book on WhatsApp
+                <img src="./assets/images/svg/arrow-ico.svg" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     }
   </div>
   <ng-template #content let-offer="offer" let-modal>
     <div id="experience-modal" class="modal-experience">
       <div class="modal-header" style="display: block">
         <div class="flex">
-          <button
-            type="button"
-            class="btn-close"
-            aria-label="Close"
-            (click)="modal.dismiss('Cross click')"
-          ></button>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
         </div>
         <div class="flex" id="modal-nav" #scrollableNav>
           <a (click)="scrollToElement('highlight')" id="highlight-anchor">Highlights</a>
@@ -133,11 +143,9 @@
           <span class="rating">
             <strong>
               <svg id="star-full" viewBox="0 0 475.075 475.075">
-                <path
-                  data-card-section="Reviews"
-                  fill="#FFA500"
-                  d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z"
-                ></path>
+                <path data-card-section="Reviews" fill="#FFA500"
+                  d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z">
+                </path>
               </svg>
               {{ getItemById(selectedIdentity)?.ratings }}
             </strong>
@@ -200,11 +208,9 @@
             <div class="flex flex-justify-between reviews-wrapper">
               <div class="mb-2">
                 <svg id="star-full-big" viewBox="0 0 475.075 475.075">
-                  <path
-                    data-card-section="Reviews"
-                    fill="#FFA500"
-                    d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z"
-                  ></path>
+                  <path data-card-section="Reviews" fill="#FFA500"
+                    d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704 c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706 l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136 c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386 c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136 c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z">
+                  </path>
                 </svg>
                 {{ getItemById(selectedIdentity)?.ratings }}
                 <small class="d-ele">{{ getItemById(selectedIdentity)?.rated }} Ratings</small>
@@ -220,14 +226,8 @@
                       <img src="./assets/images/svg/star-pink-fill.svg" alt="" />
                     </div>
                     <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 70%"
-                        aria-valuenow="50"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
+                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="review-count">1732</div>
                   </div>
@@ -242,14 +242,8 @@
                       <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="review-count">865</div>
                   </div>
@@ -264,14 +258,8 @@
                       <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 60%"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
+                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"
+                        aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="review-count">532</div>
                   </div>
@@ -286,14 +274,8 @@
                       <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 25%"
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="review-count">202</div>
                   </div>
@@ -308,14 +290,8 @@
                       <img src="./assets/images/svg/star-pink-outlined.svg" alt="" />
                     </div>
                     <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 10%"
-                        aria-valuenow="10"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
+                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="review-count">02</div>
                   </div>
@@ -325,11 +301,7 @@
             <div id="detailed-reviews" class="mt-3">
               <div class="review">
                 <div class="flex flex-align-center">
-                  <img
-                    class="review-profile"
-                    src="./assets/images/svg/Avatar_5.svg"
-                    alt="Marianna"
-                  />
+                  <img class="review-profile" src="./assets/images/svg/Avatar_5.svg" alt="Marianna" />
                   <div class="review-details">
                     <div class="review-name">Marianna</div>
                     <div class="review-stars">
@@ -363,28 +335,22 @@
                 ₹ {{ getItemById(selectedIdentity)?.amount }}
               </strong>
             </div>
-            <strong
-              style="
+            <strong style="
                 color: rgb(255, 123, 0);
                 font-weight: 800;
                 letter-spacing: 1px;
                 margin-left: 5px;
                 text-wrap: nowrap;
-              "
-            >
+              ">
               ₹ {{ getItemById(selectedIdentity)?.amount }}
             </strong>
             <span style="text-wrap: nowrap; font-size: small">per person</span>
           </div>
           <div>
-            <button
-              style="margin-left: 64px"
-              (click)="
+            <button style="margin-left: 64px" (click)="
                 redirectToBooking(experienceData, getItemById(selectedIdentity));
                 modal.dismiss('Cross click')
-              "
-              class="availability-button"
-            >
+              " class="availability-button">
               Check availability
             </button>
           </div>

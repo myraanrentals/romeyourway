@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { VideoWrapperComponent } from './video-wrapper/video-wrapper.component';
@@ -32,8 +32,9 @@ declare var $: any; // Declare jQuery globally
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit, AfterViewInit {
   // @ViewChild('heroVideo') videoRef!: ElementRef<HTMLVideoElement>;
+  @ViewChild('carousel', { static: false }) carouselElement!: ElementRef;
 
   hotelList = hotels;
   favListOne = favChoiceListOne;
@@ -344,6 +345,19 @@ export class HomepageComponent implements OnInit {
   // ];
   privateParties = privateParties;
   category: string = '';
+  
+  // Typing effect properties
+  activeSlideIndex: number = 0;
+  carouselTexts: string[] = [
+    'Thrill. Dive. Sail. Repeat.',//scuba
+    '3… 2… 1… JUMP INTO LEGEND',//bungee jumping
+    'Private Decks & The Only Thing We Share is the View',//private yachts
+    
+  ];
+  displayedTexts: string[] = ['', ''];
+  typingSpeed: number = 100; // milliseconds per character
+  typingTimeouts: any[] = [];
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -361,6 +375,11 @@ export class HomepageComponent implements OnInit {
         this._helperService.deleteSessionStorage('travellersDetails');
       }
     })();
+    
+    // Start typing effect for first slide
+    setTimeout(() => {
+      this.startTypingEffect(0);
+    }, 500);
   }
 
   callPhoneNumber(phoneNumber: string) {
@@ -383,6 +402,35 @@ export class HomepageComponent implements OnInit {
     this.router.navigate([hotelDetails.pageUrl], { relativeTo: this.route });
   }
   ngAfterViewInit() {
+    // Setup carousel event listener for typing effect
+    const carouselEl = document.getElementById('carouselExampleSlidesOnly');
+    if (carouselEl) {
+      carouselEl.addEventListener('slide.bs.carousel', (event: any) => {
+        const toIndex = event.to;
+        this.activeSlideIndex = toIndex;
+        this.displayedTexts[toIndex] = '';
+        
+        // Clear existing timeouts
+        this.typingTimeouts.forEach(timeout => clearTimeout(timeout));
+        this.typingTimeouts = [];
+        
+        // Start typing effect for new slide
+        setTimeout(() => {
+          this.startTypingEffect(toIndex);
+        }, 300);
+      });
+      
+      carouselEl.addEventListener('slid.bs.carousel', (event: any) => {
+        // Ensure typing effect starts after slide transition completes
+        const activeIndex = event.to;
+        if (!this.displayedTexts[activeIndex]) {
+          setTimeout(() => {
+            this.startTypingEffect(activeIndex);
+          }, 100);
+        }
+      });
+    }
+    
     // const v = this.videoRef.nativeElement;
 
     // ensure attributes are set before play
@@ -489,6 +537,22 @@ export class HomepageComponent implements OnInit {
   
   navigateToPrivateParty(routingUrl: string) {
     this.router.navigate([`/private-parties/details/${routingUrl}`]);
+  }
+  
+  startTypingEffect(slideIndex: number) {
+    const fullText = this.carouselTexts[slideIndex];
+    this.displayedTexts[slideIndex] = '';
+    
+    for (let i = 0; i <= fullText.length; i++) {
+      const timeout = setTimeout(() => {
+        this.displayedTexts[slideIndex] = fullText.substring(0, i);
+      }, i * this.typingSpeed);
+      this.typingTimeouts.push(timeout);
+    }
+  }
+  
+  getTypingText(slideIndex: number): string {
+    return this.displayedTexts[slideIndex] || '';
   }
   
 }

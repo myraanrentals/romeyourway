@@ -16,11 +16,12 @@ import $ from 'jquery';
 import { hotels } from '../../../constants/hotels';
 import { Subscription } from 'rxjs';
 import { FaqComponent } from '../../faq/faq.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, FaqComponent],
+  imports: [CommonModule, FaqComponent, MatIconModule],
   providers: [HelperService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './experience.component.html',
@@ -37,6 +38,7 @@ export class ExperienceComponent {
   href: string = '';
   isEnquire: boolean = false;
   isPrivateParty: boolean = false;
+  flippedButtons: Map<number, boolean> = new Map();
 
   constructor(
     private _router: Router,
@@ -163,6 +165,31 @@ export class ExperienceComponent {
 
   callPhoneNumber(phoneNumber: string) {
     window.location.href = `tel:${phoneNumber}`;
+  }
+
+  handleEnquireClick(offer: any, phoneNumber: string = '+917715959917') {
+    if (this.mobFlag) {
+      // Mobile: directly call
+      this.callPhoneNumber(phoneNumber);
+    } else {
+      // Web: flip to show phone number
+      const offerId = offer?.cruiseId || 0;
+      const isFlipped = this.flippedButtons.get(offerId) || false;
+      this.flippedButtons.set(offerId, !isFlipped);
+    }
+  }
+
+  isButtonFlipped(offer: any): boolean {
+    const offerId = offer?.cruiseId || 0;
+    return this.flippedButtons.get(offerId) || false;
+  }
+
+  formatPhoneNumber(phoneNumber: string): string {
+    // Format: +91 77159 59917
+    if (phoneNumber.startsWith('+91')) {
+      return `+91 ${phoneNumber.slice(3, 8)} ${phoneNumber.slice(8)}`;
+    }
+    return phoneNumber;
   }
 
   showInclusionClick(offerDetails: any) {

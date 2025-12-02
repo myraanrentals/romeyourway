@@ -5,9 +5,11 @@ import {
   ElementRef,
   inject,
   Input,
+  QueryList,
   SimpleChanges,
   TemplateRef,
   ViewChild,
+  ViewChildren,
 } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -30,7 +32,7 @@ declare var bootstrap: any;
 })
 export class ExperienceComponent {
   @Input() experienceData: any;
-  @ViewChild('carousel') carousel!: ElementRef;
+  @ViewChildren('carouselRefs') carouselRefs!: QueryList<ElementRef>;
 
   private modalService = inject(NgbModal);
   private routerSub!: Subscription;
@@ -42,8 +44,8 @@ export class ExperienceComponent {
   isEnquire: boolean = false;
   isPrivateParty: boolean = false;
   flippedButtons: Map<number, boolean> = new Map();
-  activeSlideIndex = 0;
-
+  bsCarouselList: any[] = [];
+  activeSlideIndex: number[] = [];
   constructor(
     private _router: Router,
     private route: ActivatedRoute,
@@ -51,7 +53,6 @@ export class ExperienceComponent {
   ) {
     this.setMobileFlag();
   }
-  bsCarousel: any;
   ngOnInit(): void {
     this.href = this._router.url;
     const category = this.route.snapshot.paramMap.get('category');
@@ -83,34 +84,31 @@ export class ExperienceComponent {
   ngAfterViewInit() {
     this.href = this._router.url;
 
-    // initialize bootstrap carousel with autoplay
-    this.bsCarousel = new bootstrap.Carousel(this.carousel.nativeElement, {
-      interval: false,   
-      ride: false,       
-      pause: true,
-      touch: true,       
-      wrap: true
+    this.carouselRefs.forEach((carouselRef, idx) => {
+
+      this.activeSlideIndex[idx] = 0;
+
+      const instance = new bootstrap.Carousel(carouselRef.nativeElement, {
+        interval: false,
+        ride: false,
+        pause: true,
+        touch: true,
+        wrap: true,
+      });
+
+      this.bsCarouselList[idx] = instance;
+
+      carouselRef.nativeElement.addEventListener("slide.bs.carousel", (event: any) => {
+        this.activeSlideIndex[idx] = event.to;
+      });
     });
-
-    // Listen slide change
-    this.carousel.nativeElement.addEventListener('slide.bs.carousel', (event: any) => {
-      this.activeSlideIndex = event.to;
-    });
   }
 
-  nextSlide() {
-    this.bsCarousel.next();
+  goToSlide(cardIndex: number, slideIndex: number) {
+    this.bsCarouselList[cardIndex].to(slideIndex);
   }
 
-  prevSlide() {
-    this.bsCarousel.prev();
-  }
 
-  goToSlide(i: number) {
-    this.bsCarousel.to(i);
-  }
-
-  
   ngOnDestroy() {
     window.removeEventListener('resize', this.setMobileFlag.bind(this));
     if (this.routerSub) {
@@ -255,13 +253,13 @@ export class ExperienceComponent {
   calculateDiscount(oldPrice: number | string, currentPrice: number | string): number {
     const oldP = Number(String(oldPrice).replace(/,/g, ''));
     const currP = Number(String(currentPrice).replace(/,/g, ''));
-  
+
     if (!oldP || !currP || oldP <= currP) {
       return 0;
     }
-  
+
     const discount = ((oldP - currP) / oldP) * 100;
     return Math.round(discount);
   }
-  
+
 }

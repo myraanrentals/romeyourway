@@ -1,33 +1,31 @@
 <section id="experience">
   <div class="container">
     <h2>Select Your Package</h2>
-    @for (offer of experienceData; track offer) {
+    @for (offer of experienceData; track offer; let idx = $index) {
     <div class="card">
       <div class="flex g-1">
         @if (mobFlag) {
-          <div id="customCarousel" class="carousel slide" data-bs-ride="carousel" #carousel>
-  
-            <!-- Slides -->
-            <div class="carousel-inner">
-              <div 
-                class="carousel-item" 
-                *ngFor="let bannerImg of offer.bannerImgs; let i = index" 
-                [class.active]="i === 0"
-              >
-                <img [src]="bannerImg" class="d-block w-100 rounded" />
-              </div>
+        <div id="carousel-{{ idx }}" class="carousel slide" data-bs-ride="carousel" #carouselRefs>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let bannerImg of offer.bannerImgs; let i = index"
+              [class.active]="i === 0">
+              <img [src]="bannerImg" class="d-block w-100 rounded" />
             </div>
-          
-            <!-- Dots -->
-            <div class="carousel-indicators custom-dots">
-              <button *ngFor="let img of offer.bannerImgs; let i = index"
-                type="button"
-                [class.active]="i === activeSlideIndex"
-                (click)="goToSlide(i)">
-              </button>
-            </div>            
           </div>
-          
+
+          <!-- Dots Only -->
+          <div class="carousel-indicators custom-dots">
+            <button *ngFor="let img of offer.bannerImgs; let i = index" type="button"
+              [class.active]="activeSlideIndex[idx] === i" (click)="goToSlide(idx, i)">
+            </button>
+          </div>
+
+        </div>
+
+
+
         } @else {
         <div class="slider">
           <div navigation="true" pagination="true" autoplay="true" loop="true">

@@ -17,6 +17,7 @@ import { hotels } from '../../../constants/hotels';
 import { Subscription } from 'rxjs';
 import { FaqComponent } from '../../faq/faq.component';
 import { MatIconModule } from '@angular/material/icon';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-experience',
@@ -29,6 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ExperienceComponent {
   @Input() experienceData: any;
+  @ViewChild('carousel') carousel!: ElementRef;
+
   private modalService = inject(NgbModal);
   private routerSub!: Subscription;
   closeResult = '';
@@ -39,6 +42,7 @@ export class ExperienceComponent {
   isEnquire: boolean = false;
   isPrivateParty: boolean = false;
   flippedButtons: Map<number, boolean> = new Map();
+  activeSlideIndex = 0;
 
   constructor(
     private _router: Router,
@@ -47,6 +51,7 @@ export class ExperienceComponent {
   ) {
     this.setMobileFlag();
   }
+  bsCarousel: any;
   ngOnInit(): void {
     this.href = this._router.url;
     const category = this.route.snapshot.paramMap.get('category');
@@ -77,7 +82,35 @@ export class ExperienceComponent {
   }
   ngAfterViewInit() {
     this.href = this._router.url;
+
+    // initialize bootstrap carousel with autoplay
+    this.bsCarousel = new bootstrap.Carousel(this.carousel.nativeElement, {
+      interval: false,   
+      ride: false,       
+      pause: true,
+      touch: true,       
+      wrap: true
+    });
+
+    // Listen slide change
+    this.carousel.nativeElement.addEventListener('slide.bs.carousel', (event: any) => {
+      this.activeSlideIndex = event.to;
+    });
   }
+
+  nextSlide() {
+    this.bsCarousel.next();
+  }
+
+  prevSlide() {
+    this.bsCarousel.prev();
+  }
+
+  goToSlide(i: number) {
+    this.bsCarousel.to(i);
+  }
+
+  
   ngOnDestroy() {
     window.removeEventListener('resize', this.setMobileFlag.bind(this));
     if (this.routerSub) {

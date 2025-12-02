@@ -638,6 +638,7 @@ svg#star-full-big {
   .card img {
     border-radius: 12px;
     height: 45vh;
+    object-fit: cover;
     
     // width: fit-content !important;
     // height: auto !important;

@@ -89,7 +89,7 @@ export class ExperienceComponent {
       this.activeSlideIndex[idx] = 0;
 
       const instance = new bootstrap.Carousel(carouselRef.nativeElement, {
-        interval: false,
+        interval: true,
         ride: false,
         pause: true,
         touch: true,
@@ -160,11 +160,8 @@ export class ExperienceComponent {
   }
   goToService(link: string) {
     const category = this.route.snapshot.paramMap.get('category');
-    if (category === 'book-private-yachts-in-goa' || category === 'best-dinner-cruise-in-goa') {
-      window.location.href = 'tel:+917715959917';
-    } else {
-      this._router.navigate([`/${category}/details/${link}`]);
-    }
+    this._router.navigate([`/${category}/details/${link}`]);
+
   }
   @ViewChild('scrollableDiv') scrollableDiv!: ElementRef;
   @ViewChild('scrollableNav') scrollableNav!: ElementRef;
@@ -187,10 +184,10 @@ export class ExperienceComponent {
   onScroll(event: any) {}
 
   openWhatsApp(phoneNumber: string, msg: string) {
-    // Ensure the phone number is in international format (with country code)
+    const infoType = this.isEnquire ? 'enquire' : 'know more';
+    const message = `Hello, I would like to ${infoType} about ${msg} in Goa!`;
     const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
-    const encodedMessage = encodeURIComponent(msg);
-    // Open WhatsApp with the provided number
+    const encodedMessage = encodeURIComponent(message);
     window.location.href = `https://wa.me/${internationalNumber}?text=${encodedMessage}`;
   }
 

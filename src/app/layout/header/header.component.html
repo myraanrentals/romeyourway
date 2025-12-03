@@ -30,13 +30,14 @@
             <a routerLink="/contact-us">Contact Us</a>
           </li>
           <li class="web" style="height: 24px; width: 24px; white-space: nowrap">
-            <img src="./assets/icons/telephone.png" alt="Phone" style="vertical-align: middle" />
+            <mat-icon>phone</mat-icon>
+
             <a
               href="tel:+917715959917"
               class="phone-no"
               style="color: inherit; text-decoration: none; margin-left: 6px"
             >
-              +91 77159 59917
+              77159 59917
             </a>
           </li>
         </ul>
@@ -49,7 +50,8 @@
               [href]="'tel:' + phone"
               aria-label="Call"
             >
-              <img src="./assets/icons/call-header.png" width="28" />
+            <mat-icon style="color: #444;">phone</mat-icon>
+
             </a>
           </div>
           <div class="hamburger" [class.open]="isVisible" id="hamburger" (click)="toggleMegaMenu()">

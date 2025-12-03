@@ -66,6 +66,10 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
       },
     ],
     highlights: [
@@ -241,6 +245,10 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
       },
     ],
     highlights: [
@@ -410,6 +418,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -581,6 +593,10 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
       },
     ],
     highlights: [
@@ -750,6 +766,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -921,6 +941,10 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
       },
     ],
     highlights: [
@@ -1090,6 +1114,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -1261,175 +1289,9 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
-      },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'OFF-PEAK SLOTS',
-        capacity: 8,
-        timeSlots: ['7:00 AM to 3:30 PM'],
-        isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'PEAK SLOTS',
-        timeSlots: ['4:00 PM to 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'CUSTOM SLOTS',
-        timeSlots: ['7:00 AM - 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 13,
-    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
-    title: 'Shantam Catamaran : Indulge in Oceanic Luxury',
-    subTile: 'Shantam Catamaran ',
-    category: 'Vihaan Dinner Cruise in Goa',
-    routingUrl: 'book-shantam-catamaran-indulge-in-oceanic-luxury-in-goa',
-    rating: '4.3',
-    reviews: '1290',
-    oldPrice: '36000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '34500',
-    image: '/assets/dinnercruise/Shantam Cat.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
-      },
-      {
-        about1:
-          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
-      },
-      {
-        about1:
-          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
-      },
-    ],
-    features: [
-      {
-        name: 'Capacity: Upto 16 Pax',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Duration: 1+1 Hour ',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
+      },  
+   {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -1600,6 +1462,184 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+  },
+  {
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Shantam Catamaran : Indulge in Oceanic Luxury',
+    subTile: 'Shantam Catamaran ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-shantam-catamaran-indulge-in-oceanic-luxury-in-goa',
+    rating: '4.3',
+    reviews: '1290',
+    oldPrice: '36000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '34500',
+    image: '/assets/dinnercruise/Shantam Cat.avif',
+    bannerImgs: [
+      '/assets/detailimages/Adventure-01.webp',
+      '/assets/detailimages/Adventure-02.webp',
+      '/assets/detailimages/Adventure-03.webp',
+      '/assets/detailimages/Adventure-04.webp',
+      '/assets/detailimages/Adventure-05.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -1771,6 +1811,10 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
       },
     ],
     highlights: [
@@ -1941,6 +1985,10 @@ export const yacth: any[] = [
       {
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
       },
     ],
     highlights: [
@@ -2110,6 +2158,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },  
+   {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],

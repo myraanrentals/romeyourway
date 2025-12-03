@@ -56,11 +56,11 @@ header {
   z-index: 10;
 }
 .phone-no {
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
   margin-left: 8px;
-  padding: 4px;
   border-radius: 12px;
   letter-spacing: 1px;
+  bottom: 6px;
 }
 
 .hamburger span {
@@ -253,6 +253,6 @@ header {
   }
   .mobile-hamburger {
     display: flex;
-    gap: 25px;
+    gap: 20px;
   }
 }

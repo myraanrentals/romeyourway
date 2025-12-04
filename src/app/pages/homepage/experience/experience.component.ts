@@ -5,6 +5,7 @@ import {
   ElementRef,
   inject,
   Input,
+  OnChanges,
   QueryList,
   SimpleChanges,
   TemplateRef,
@@ -19,18 +20,19 @@ import { hotels } from '../../../constants/hotels';
 import { Subscription } from 'rxjs';
 import { FaqComponent } from '../../faq/faq.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, FaqComponent, MatIconModule],
+  imports: [CommonModule, FaqComponent, MatIconModule, FormsModule],
   providers: [HelperService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnChanges {
   @Input() experienceData: any;
   @ViewChildren('carouselRefs') carouselRefs!: QueryList<ElementRef>;
 
@@ -46,6 +48,9 @@ export class ExperienceComponent {
   flippedButtons: Map<number, boolean> = new Map();
   bsCarouselList: any[] = [];
   activeSlideIndex: number[] = [];
+  selectedFilter = 'all';
+  filteredData: any[] = [];
+  items: { label: string; value: string }[] | null = null;
   constructor(
     private _router: Router,
     private route: ActivatedRoute,
@@ -55,9 +60,18 @@ export class ExperienceComponent {
   }
   ngOnInit(): void {
     this.href = this._router.url;
+    this.filteredData = this.experienceData; 
     const category = this.route.snapshot.paramMap.get('category');
+    
+    // Get filter items based on category
+    if (category) {
+      this.items = this._helperService.getFilterItems(category);
+    } else {
+      // No category, no items
+      this.items = null;
+    }
+    
     if (this.href.includes('/enquire')) {
-      console.log('URL contains /enquire:', this.href);
       this.isEnquire = true;
     } else if (category && category.startsWith('best-')) {
       this.isEnquire = true;
@@ -68,18 +82,36 @@ export class ExperienceComponent {
       if (event instanceof NavigationEnd) {
         this.href = event.urlAfterRedirects;
         const currentCategory = this.route.snapshot.paramMap.get('category');
+        
+        // Update filter items when route changes
+        if (currentCategory) {
+          this.items = this._helperService.getFilterItems(currentCategory);
+        } else {
+          this.items = null;
+        }
+        
         if (this.href.includes('/enquire')) {
-          console.log('URL contains /enquire:', this.href);
           this.isEnquire = true;
         } else if (currentCategory && currentCategory.startsWith('best-')) {
           this.isEnquire = true;
         } else {
           this.isEnquire = false;
         }
+        // Reset filter to 'all' when route changes
+        this.selectedFilter = 'all';
+        // filteredData will be updated in ngOnChanges when experienceData changes
       }
     });
     window.addEventListener('resize', this.setMobileFlag.bind(this));
 
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // When experienceData changes (e.g., route change updates the input), reset filter
+    if (changes['experienceData'] && this.experienceData) {
+      this.selectedFilter = 'all';
+      this.filteredData = this.experienceData;
+    }
   }
   ngAfterViewInit() {
     this.href = this._router.url;
@@ -119,7 +151,23 @@ export class ExperienceComponent {
     let winWidth = window.innerWidth;
     this.mobFlag = winWidth < 800;
   }
-
+  filterPackages() {
+    if (this.selectedFilter === 'all') {
+      this.filteredData = this.experienceData;
+      return;
+    }
+  
+    this.filteredData = this.experienceData
+      .filter(
+        (x: any) => x.type.includes(this.selectedFilter) || x.type.includes('others')
+      )
+      .sort((a: any, b: any) => {
+        if (a.type.includes(this.selectedFilter) && b.type.includes('others')) return -1;
+        if (a.type.includes('others') && b.type.includes(this.selectedFilter)) return 1;
+        return 0;
+      });
+  }
+  
   openFullScreen(content: TemplateRef<any>, offer: any) {
     this.selectedIdentity = offer.cruiseId;
 

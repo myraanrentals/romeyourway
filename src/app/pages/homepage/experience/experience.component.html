@@ -1,7 +1,18 @@
 <section id="experience">
   <div class="container">
-    <h2>Select Your Package</h2>
-    @for (offer of experienceData; track offer; let idx = $index) {
+    @if (items && items.length > 0) {
+    <div class="select-package-container"><h2>Select Your Package</h2>
+      <select [(ngModel)]="selectedFilter" (change)="filterPackages()" class="form-select">
+        <option *ngFor="let item of items" [value]="item.value">
+          {{ item.label }}
+        </option>
+      </select>
+      
+      <!-- <p>Selected: {{ selectedItem }}</p> -->
+    </div>
+    }
+    
+    @for (offer of filteredData; track offer; let idx = $index) {
     <div class="card">
       <div class="flex g-1">
         @if (mobFlag) {
@@ -148,7 +159,7 @@
                   @if (isEnquire) {
                   <mat-icon>phone</mat-icon>
                   } @else {
-                  <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" class="whatsapp-icon" />
+                  <img [src]="'assets/whatsapp_icon-orange.png'" alt="WhatsApp icon" class="whatsapp-icon orange-icon" />
                   }
                 </button>
                 <button class="primary-button m-ele" (click)="isEnquire ? openWhatsApp('+917715959917', offer.title)

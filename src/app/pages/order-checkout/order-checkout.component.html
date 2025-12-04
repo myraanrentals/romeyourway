@@ -270,39 +270,21 @@
         <!-- Contact Form -->
         <!-- Contact Form -->
         <div class="contact-form">
-          <div class="nameForm">
             <div class="form-group">
-              <label for="firstName">First Name</label>
+              <label for="fullName">Full Name*</label>
               <input
-                id="firstName"
+                id="fullName"
                 type="text"
-                placeholder="Enter First Name"
-                [(ngModel)]="travellerDetails.firstName"
-                name="firstName"
+                placeholder="Enter Full Name"
+                [(ngModel)]="travellerDetails.fullName"
+                name="fullName"
                 required
                 (input)="updateTravellerDetails()"
               />
-              <span class="error" *ngIf="showErrors && errors?.['firstName']?.hasError">
-                {{ errors['firstName'].message }}
+              <span class="error" *ngIf="showErrors && errors?.['fullName']?.hasError">
+                {{ errors['fullName'].message }}
               </span>
             </div>
-
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input
-                id="lastName"
-                type="text"
-                placeholder="Enter Last Name"
-                [(ngModel)]="travellerDetails.lastName"
-                name="lastName"
-                required
-                (input)="updateTravellerDetails()"
-              />
-              <span class="error" *ngIf="showErrors && errors?.['lastName']?.hasError">
-                {{ errors['lastName'].message }}
-              </span>
-            </div>
-          </div>
 
           <div class="form-group">
             <label for="email">Email*</label>
@@ -343,7 +325,7 @@
             </div>
 
             <div class="form-group phone-group">
-              <label for="phone">Phone Number</label>
+              <label for="phone">Phone Number*</label>
               <input
                 id="phone"
                 type="number"

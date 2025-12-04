@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { hotels, getTravellers } from '../constants/hotels';
+import { hotels, getTravellers, items as hotelsItems } from '../constants/hotels';
 import { dinnerCruise } from '../constants/dinnerCruise';
-import { yacth } from '../constants/yacth';
+import { yacth, items as yacthItems } from '../constants/yacth';
 import { formatDate } from '@angular/common';
 import { Router } from '@angular/router';
-import { scubaList } from '@constants/scuba';
-import { watersports } from '@constants/watersports';
+import { scubaList, items as scubaItems } from '@constants/scuba';
+import { watersports, items as watersportsItems } from '@constants/watersports';
 import { adventures } from '@constants/adventures';
 import { sightseeing } from '@constants/sightseeing';
 import { privateParties } from '@constants/privateParties';
@@ -53,6 +53,38 @@ export class HelperService {
       return privateParties; 
     }else {
       return hotels;
+    }
+  }
+
+  getFilterItems(category: string): { label: string; value: string }[] | null {
+    // Extract category name after 'book-' or 'best-' prefix
+    let categoryName = category;
+    if (category.startsWith('book-')) {
+      categoryName = category.replace('book-', '');
+    } else if (category.startsWith('best-')) {
+      categoryName = category.replace('best-', '');
+    }
+
+    if (categoryName === 'dinner-cruise-in-goa') {
+      return hotelsItems || null;
+    } else if (categoryName === 'private-yachts-in-goa') {
+      return yacthItems || null;
+    } else if (categoryName === 'watersports-and-scuba-diving-in-goa') {
+      return scubaItems || null;
+    } else if (categoryName === 'water-sports-in-goa') {
+      return watersportsItems || null;
+    } else if (categoryName === 'adventures-in-goa') {
+      // No items exported, return null to hide dropdown
+      return null;
+    } else if (categoryName === 'sightseeing-in-goa') {
+      // No items exported, return null to hide dropdown
+      return null;
+    } else if (categoryName === 'private-parties') {
+      // No items exported, return null to hide dropdown
+      return null;
+    } else {
+      // Default to dinner cruise items if available
+      return hotelsItems || null;
     }
   }
   deleteSessionStorage(key: string) {

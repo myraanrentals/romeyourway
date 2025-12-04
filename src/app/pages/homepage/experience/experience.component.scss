@@ -71,7 +71,20 @@ li {
   padding: 10px;
   height: 600px;
 }
-
+.select-package-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-select{
+  width: 200px;
+  border-radius: 28px;
+  border: 1px solid #ccc;
+  padding-top: 5px;
+  line-height: 1.2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 #modal-nav a.active {
   color: rgb(255, 0, 122);
 }
@@ -91,7 +104,10 @@ li {
   gap: 6px;
   z-index: 15;
 }
-
+orange-icon{
+  filter: brightness(0) invert(0);
+  color: #fd6b3e;
+}
 .custom-dots button {
   width: 8px;
   height: 8px;
@@ -201,6 +217,7 @@ li {
   .payments {
     width: 350px;
     border-left: 1px dashed #cecece;
+    padding-left: 10px;
 
     .primary-button {
       font-size: 16px;
@@ -484,10 +501,13 @@ svg#star-full-big {
 @media screen and (min-width: 768px) {
   .rating-section{
     margin-bottom: 12px;
-
   }
-
-
+  .select-package-container{
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+   
+  }
   .modal-body {
     padding-bottom: 100px;
 
@@ -607,9 +627,17 @@ svg#star-full-big {
   .primary-button{
     margin: 0px !important;
   }
-.info{
-
-}
+  .form-select{
+    width: 110px;
+    height: 28px;
+   
+  }
+  .select-package-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
   .save-text { font-size: 16px; }
   .sub-text { font-size: 12px; }
@@ -620,7 +648,7 @@ svg#star-full-big {
     width: 45px;
     height: 50px;
     padding: 0;
-    border: 0.5px solid #ffa88e;
+    border: 2.5px solid #fd6b3e;
     background: white;
     border-radius: 8px;
     display: flex;

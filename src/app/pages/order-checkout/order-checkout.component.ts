@@ -44,8 +44,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   hotelList = hotels;
   hotelDetails: any;
   travellerDetails = {
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
     countryCode: '+91',
     phone: '',
@@ -318,13 +317,9 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const phoneRegex = /^\d{6,15}$/;
 
     this.errors = {
-      firstName: {
-        hasError: !this.travellerDetails.firstName,
-        message: 'First Name is required',
-      },
-      lastName: {
-        hasError: !this.travellerDetails.lastName,
-        message: 'Last Name is required',
+      fullName: {
+        hasError: !this.travellerDetails.fullName,
+        message: 'Full Name is required',
       },
       emailRequired: {
         hasError: !this.travellerDetails.email,
@@ -356,7 +351,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   }
 
   initiatePayment() {
-    const { firstName, lastName, countryCode, phone, email } = this.travellerDetails;
+    const { fullName, countryCode, phone, email } = this.travellerDetails;
     const {
       payableAmount,
       selectedDate,
@@ -387,7 +382,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       totalAmountForChild: travellers[1]?.price * travellers[1]?.count,
       totalAmountForInfant: travellers[2]?.price * travellers[2]?.count,
       toDate: selectedDate?.dateFormat,
-      customerName: `${firstName} ${lastName}`,
+      customerName: fullName,
       email,
       totalAmount: amountWithGST,
       discountedTotalAmount: subtotal,
@@ -427,7 +422,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       dropDateTime: selectedDate?.dateFormat || null,
 
       // Customer Info
-      customeName: `${firstName || ''} ${lastName || ''}`.trim(),
+      customeName: fullName,
       countryDialCode: countryCode,
       customerMobile: phone,
       customerEmailId: email,
@@ -472,7 +467,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       handler: (response: any) => {
         this.handlePaymentResponse(response, secondPayloadData);
       },
-      prefill: { name: `${firstName} ${lastName}`, email, contact: phone },
+      prefill: { name: fullName, email, contact: phone },
       theme: { color: '#3399cc' },
     };
   }

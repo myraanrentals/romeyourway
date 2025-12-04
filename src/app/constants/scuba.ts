@@ -1,9 +1,11 @@
 export const scubaList: any[] = [
+  //Scuba Diving in Goa
   {
     "cruiseId": 1,
     "title": "Scuba Diving in Goa",
     "subTile": "",
     "category": "Watersports",
+    type: ['scuba'],
     "routingUrl": "scuba-diving-in-goa",
     "rating": "4.6",
     "reviews": "3867",
@@ -149,11 +151,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Scuba & Grand Island Combo
   {
     "cruiseId": 22,
     "title": "Scuba & Grand Island Combo",
     "subTile": "Malvan Scuba and Water Sports",
     "category": "Watersports",
+    type: ['scuba', 'trips'],
     "routingUrl": "scuba-and-grand-island-combo",
     "rating": "4.6",
     "reviews": "3867",
@@ -299,11 +303,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Scuba, Grand Island & Watersports Combo
   {
     "cruiseId": 4,
     "title": "Scuba, Grand Island & Watersports Combo",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['scuba', 'trips', 'water sports'],
     "routingUrl": "scuba-grand-island-and-watersports-combo",
     "rating": "4.7",
     "reviews": "4120",
@@ -446,11 +452,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Flyboarding In Goa
   {
     "cruiseId": 4,
     "title": "Flyboarding In Goa",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports',"adventure"],
     "routingUrl": "flyboarding-in-goa",
     "rating": "4.7",
     "reviews": "4120",
@@ -593,11 +601,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //5+ Watersports Combo
   {
     "cruiseId": 2,
     "title": "5+ Watersports Combo",
     "subTile": "5 Water Sports",
     "category": "Watersports",
+    type: ['water sports'],
     "routingUrl": "5-watersports-combo",
     "rating": "4.6",
     "reviews": "3867",
@@ -740,11 +750,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Advance Watersports Combo
   {
     "cruiseId": 4,
     "title": "Advance Watersports Combo",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports' ,'adventure'],
     "routingUrl": "advance-watersports-combo",
     "rating": "4.7",
     "reviews": "4120",
@@ -887,11 +899,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Adventure Boat Party
   {
     "cruiseId": 4,
     "title": "Adventure Boat Party",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports' ,'trips'],
     "routingUrl": "adventure-boat-party-in-goa",
     "rating": "4.7",
     "reviews": "4120",
@@ -1034,11 +1048,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Adventure Boat Party & 4+ Watersports
   {
     cruiseId: 19,
     title: 'Adventure Boat Party & 4+ Watersports',
     subTile: 'Adventure Boat Party & water sports',
     category: 'Watersports',
+    type: ['water sports' ,'trips'],
     routingUrl: 'adventure-boat-party-and-4-watersports-combo',
     rating: '4.8',
     reviews: '3867',
@@ -1206,11 +1222,13 @@ export const scubaList: any[] = [
       },
     ],
   },
+  //Speed Boat & Parasailing
   {
     "cruiseId": 4,
     "title": "Speed Boat & Parasailing",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports' ,'adventure'],
     "routingUrl": "speed-boat-and-parasailing",
     "rating": "4.7",
     "reviews": "4120",
@@ -1353,11 +1371,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Jetski Ride
   {
     "cruiseId": 3,
     "title": "Jetski Ride",
     "subTile": "Jet Ski Water Sports Adventure",
     "category": "Watersports",
+    type: ['water sports', 'adventure'],
     "routingUrl": "jetski-ride-in-goa",
     "rating": "4.4",
     "reviews": "2843",
@@ -1500,11 +1520,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Banana Ride
   {
     "cruiseId": 4,
     "title": "Banana Ride",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports' ,'adventure'],
     "routingUrl": "banana-ride-in-goa",
     "rating": "4.7",
     "reviews": "4120",
@@ -1647,11 +1669,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Bumper Ride
   {
     "cruiseId": 4,
     "title": "Bumper Ride",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports' ,'adventure'],
     "routingUrl": "bumper-ride-in-goa",
     "rating": "4.7",
     "reviews": "4120",
@@ -1794,11 +1818,13 @@ export const scubaList: any[] = [
       }
     ]
   },
+  //Speed Boat
   {
     "cruiseId": 4,
     "title": "Speed Boat",
     "subTile": "Soar High Over the Arabian Sea",
     "category": "Watersports",
+    type: ['water sports'],
     "routingUrl": "speed-boat-in-goa",
     "rating": "4.7",
     "reviews": "4120",
@@ -1958,3 +1984,11 @@ export const travellers = [
 
 export const razorpay_key = 'rzp_live_1NvgMPNciEM6Mu';
 export const key_secret = '8jlIK1X0mkITb0GlKh2sqCKs';
+
+export const items = [
+  { label: 'All', value: 'all' },
+  { label: 'Scuba', value: 'scuba' },
+  { label: 'Watersports', value: 'water sports' },
+  { label: 'Adventure', value: 'adventure' },
+  { label: 'Trips', value: 'trips' },
+];

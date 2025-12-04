@@ -39,7 +39,7 @@ header {
 }
 
 .nav-links li {
-  margin-left: 2rem;
+  margin-left: 4rem;
   align-self: center;
 }
 
@@ -255,4 +255,8 @@ header {
     display: flex;
     gap: 20px;
   }
+
+}
+.header-section {
+gap: 7.5rem;
 }

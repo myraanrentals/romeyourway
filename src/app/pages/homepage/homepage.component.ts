@@ -15,6 +15,7 @@ import { favChoiceListTwo } from '@constants/favChoiceListTwo';
 import { scubaList } from '@constants/scuba';
 import { privateParties } from '@constants/privateParties';
 declare var $: any; // Declare jQuery globally
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-homepage',
@@ -304,47 +305,17 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       title: 'Bundle and Save',
     },
   ];
-  // privateParties = [
-  //   {
-  //     image: '/assets/privateBoookings/NautiAmigo.png',
-  //     title: 'Nauti Amigo Luxury Cruise',
-  //     description: 'Enjoy these cool staycation promotions in Goa',
-  //   },
-  //   {
-  //     image: '/assets/privateBoookings/Raii.png',
-  //     title: 'Raii Dinner Cruise',
-  //     description: "Don't forget to check out these activities while you're here",
-  //   },
-  //   {
-  //     image: '/assets/privateBoookings/Leomar.png',
-  //     title: 'Leomar Dinner Cruise',
-  //     description: 'Enjoy these cool staycation promotions in Goa',
-  //   },
-  //   {
-  //     image: '/assets/privateBoookings/Calma.png',
-  //     title: 'Calma Dinner Cruise',
-  //     description: "Don't forget to check out these activities while you're here",
-  //   },{
-  //     image: '/assets/privateBoookings/fisherman.png',
-  //     title: 'Fisherman Dinner Cruise',
-  //     description: 'Enjoy these cool staycation promotions in Goa',
-  //   },
-  //   {
-  //     image: '/assets/privateBoookings/Lovely.png',
-  //     title: 'Lovely Dinner Cruise',
-  //     description: "Don't forget to check out these activities while you're here",
-  //   },{
-  //     image: '/assets/privateBoookings/OmSai.png',
-  //     title: 'Om Sai Dinner Cruise',
-  //     description: 'Enjoy these cool staycation promotions in Goa',
-  //   },{
-  //     image: '/assets/privateBoookings/Vihan.png',
-  //     title: 'Vihaan Dinner Cruise',
-  //     description: 'Enjoy these cool staycation promotions in Goa',
-  //   },
-  // ];
   privateParties = privateParties;
   category: string = '';
+
+  getChunkedPrivateParties(): any[][] {
+    const chunkSize = 2;
+    const chunks: any[][] = [];
+    for (let i = 0; i < this.privateParties.length; i += chunkSize) {
+      chunks.push(this.privateParties.slice(i, i + chunkSize));
+    }
+    return chunks;
+  }
   
   // Typing effect properties
   activeSlideIndex: number = 0;
@@ -386,9 +357,11 @@ export class HomepageComponent implements OnInit, AfterViewInit {
     window.location.href = `tel:${phoneNumber}`;
   }
 
-  openWhatsApp(phoneNumber: string) {
+  openWhatsApp(phoneNumber: string,msg?: string) {
     const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
-    window.location.href = `https://wa.me/${internationalNumber}`;
+    const message = msg && `Hello, I would like to enquire about ${msg} in Goa!`
+    const encodedMessage = message && encodeURIComponent(message);
+    window.location.href = encodedMessage ? `https://wa.me/${internationalNumber}?text=${encodedMessage}` : `https://wa.me/${internationalNumber}`;
   }
 
   goToDetailedPage(hotelDetails: any, offer: any) {
@@ -428,6 +401,16 @@ export class HomepageComponent implements OnInit, AfterViewInit {
             this.startTypingEffect(activeIndex);
           }, 100);
         }
+      });
+    }
+    
+    // Initialize itinerary carousel with auto-slide
+    const itineraryCarouselEl = document.getElementById('itinerary-carousel');
+    if (itineraryCarouselEl && typeof bootstrap !== 'undefined') {
+      const carousel = new bootstrap.Carousel(itineraryCarouselEl, {
+        interval: 3000,
+        ride: 'carousel',
+        wrap: true
       });
     }
     

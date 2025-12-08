@@ -174,10 +174,10 @@ oldPrice: '4999',
   },//nauti amigo luxury cruise price:-1,49,999
   {
     cruiseId: 102,
-    title: 'Raii Dinner Cruise',
-    subTile: 'Raii Dinner Cruise',
+    title: 'Ra11 SuperYacht',
+    subTile: 'Ra11 SuperYacht Cruise',
     category: 'Cruise',
-    routingUrl: 'private-book-raii-dinner-cruise-in-goa',
+    routingUrl: 'private-book-ra11-super-yacht-in-goa',
     rating: '4.8',
     reviews: '3867',
     mobilePackageDesc:['Min. 2hrs','Panjim'],
@@ -346,7 +346,7 @@ oldPrice: '1499',
   },//ra11 SuperYacht price:-1,62,499
   {
     cruiseId: 103,
-    title: 'Leomar Dinner Cruise',
+    title: 'Leomar Cruise',
     subTile: 'Leomar Dinner Cruise',
     category: 'Cruise',
     routingUrl: 'private-book-leomar-dinner-cruise-in-goa',
@@ -518,7 +518,7 @@ oldPrice: '1199',
   },//leomar cruise price:-39,999
   {
     cruiseId: 108,
-    title: 'Vihaan Dinner Cruise',
+    title: 'Vihaan Cruise',
     subTile: 'Vihaan Dinner Cruise',
     category: 'Cruise',
     routingUrl: 'private-book-vihaan-dinner-cruise-in-goa',
@@ -690,7 +690,7 @@ oldPrice: '1499',
   },//vihaan cruise price:-39,999
   {
     cruiseId: 104,
-    title: 'Calma Dinner Cruise',
+    title: 'Calma Cruise',
     subTile: 'Calma Dinner Cruise',
     category: 'Cruise',
     routingUrl: 'private-book-calma-dinner-cruise-in-goa',
@@ -862,7 +862,7 @@ oldPrice: '1199',
   },//calma cruise price:-39,999
   {
     cruiseId: 105,
-    title: 'Fisherman Dinner Cruise',
+    title: 'Fisherman Cruise',
     subTile: 'Fisherman Dinner Cruise',
     category: 'Cruise',
     routingUrl: 'private-book-fisherman-dinner-cruise-in-goa',
@@ -1034,7 +1034,7 @@ oldPrice: '1299',
   },//Fisherman cruise price:-29,999
   {
     cruiseId: 106,
-    title: 'Lovely Dinner Cruise',
+    title: 'Lovely Cruise',
     subTile: 'Lovely Dinner Cruise',
     category: 'Cruise',
     routingUrl: 'private-book-lovely-dinner-cruise-in-goa',
@@ -1206,7 +1206,7 @@ oldPrice: '1199',
   },//lovely cruise price:-19,999
   {
     cruiseId: 107,
-    title: 'Om Sai Dinner Cruise',
+    title: 'Om Sai Cruise',
     subTile: 'Om Sai Dinner Cruise',
     category: 'Cruise',
     routingUrl: 'private-book-om-sai-dinner-cruise-in-goa',

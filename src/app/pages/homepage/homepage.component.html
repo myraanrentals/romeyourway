@@ -2,7 +2,7 @@
   <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
     data-bs-interval="4000">
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <!-- <div class="carousel-item active">
         <img class="d-block w-100 carousel-img" src="/assets/banners/portrait-scuba-diver-sea-water-with-marine-life.jpg" alt="First slide" />
         <div class="carousel-caption typing-container">
           <h2 class="typing-text" [class.typing]="activeSlideIndex === 0">
@@ -17,8 +17,8 @@
             {{ getTypingText(1) }}
           </h2>
         </div>
-      </div>
-      <div class="carousel-item">
+      </div> -->
+      <div class="carousel-item active">
         <img class="d-block w-100 carousel-img" src="/assets/banners/privateYacht.png" alt="Second slide" />
         <div class="carousel-caption typing-container">
           <h2 class="typing-text" [class.typing]="activeSlideIndex === 2">
@@ -268,33 +268,37 @@
   </button>
 </section>
 
-<!-- <section class="private-parties-section">
+<section>
   <div class="itinerary-container">
-    <h2 class="inspiration">Private Parties</h2>
-    <div class="cards" id="private-parties-slider">
-      <div *ngFor="let party of privateParties" class="card" [style.background-image]="'url(' + party.image + ')'">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <div>
-            <h3>{{ party.title }}</h3>
-            <p>{{ party.description }}</p>
+    <h2 class="inspiration">Inspiration for your itinerary</h2>
+    <div id="itinerary-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        @for (chunk of getChunkedPrivateParties(); track $index; let isFirst = $first) {
+        <div class="carousel-item" [class.active]="isFirst">
+          <div class="cards">
+            @for (party of chunk; track party.cruiseId) {
+            <div class="card" [style.background-image]="'url(' + party.image + ')'" (click)="navigateToPrivateParty(party.routingUrl)" style="cursor: pointer;">
+              <div class="overlay"></div>
+              <div class="card-content">
+                <div>
+                  <h3>{{ party.title }}</h3>
+                  <p>{{ party.subTile }}</p>
+                </div>
+                <button class="custom-btn" (click)="openWhatsApp('+917715959917',party.title); $event.stopPropagation()">Enquire Now</button>
+              </div>
+            </div>
+            }
+            @if (chunk.length === 1 && $index === 0) {
+            <div class="card empty-card"></div>
+            }
           </div>
-          <button class="custom-btn">See activities</button>
         </div>
+        }
       </div>
-    </div>
-
-    
-  </div>
-</section> -->
-<section class="simple-hex-section">
-  <h2 class="inspiration">Private Parties</h2>
-
-  <div class="simple-hex-grid">
-    <div *ngFor="let item of privateParties" class="simple-hex" [style.background-image]="'url(' + item.image + ')'" (click)="navigateToPrivateParty(item.routingUrl)">
-      <div class="simple-hex-overlay"></div>
-      <div class="simple-hex-inner">
-        <p>{{ item.title }}</p>
+      <div class="carousel-indicators itinerary-dots">
+        @for (chunk of getChunkedPrivateParties(); track $index) {
+        <button type="button" [attr.data-bs-target]="'#itinerary-carousel'" [attr.data-bs-slide-to]="$index" [class.active]="$first" [attr.aria-current]="$first ? 'true' : null" [attr.aria-label]="'Slide ' + ($index + 1)"></button>
+        }
       </div>
     </div>
   </div>
@@ -302,7 +306,7 @@
 
 <section>
   <div class="itinerary-container">
-    <h2 class="inspiration text-center">Inspiration for your itinerary</h2>
+    <h2 class="inspiration text-center">Private Parties</h2>
     <div class="custom-card-container">
 
       <div *ngFor="let card of cardDataList" class="custom-card">

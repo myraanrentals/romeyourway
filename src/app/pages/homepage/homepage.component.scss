@@ -607,6 +607,30 @@ p {
   }
   .itinerary-container {
     padding: 22px;
+    
+    #itinerary-carousel {
+      .carousel-inner {
+        padding-bottom: 40px;
+      }
+      
+      .cards {
+        display: flex;
+        gap: 12px;
+      }
+
+      .card {
+        flex: 0 0 calc(50% - 6px);
+        height: 250px;
+        border-radius: 10px;
+      }
+    }
+    
+    .itinerary-dots {
+      button {
+        width: 8px;
+        height: 8px;
+      }
+    }
   }
   .offers-wrapper {
     gap: 28px;
@@ -1144,6 +1168,67 @@ p {
     padding: 20px 10px;
     margin: 0 auto;
     max-width: 1320px;
+    
+    #itinerary-carousel {
+      position: relative;
+      
+      .carousel-inner {
+        padding-bottom: 50px;
+      }
+      
+      .cards {
+        display: flex;
+        gap: 48px;
+      }
+
+      .card {
+        flex: 0 0 calc(50% - 24px);
+        position: relative;
+        height: 450px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+      }
+    }
+    
+    .itinerary-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      z-index: 10;
+      
+      button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        opacity: 1;
+        
+        &.active {
+          background-color: #ff5722;
+        }
+        
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
   }
 
   #private-parties-slider {
@@ -1229,12 +1314,7 @@ p {
     font-size: 14px;
     margin-bottom: 10px;
   }
-  #private-parties-slider {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border-radius: 16px;
-    padding: 20px;
-    background: #cdb4ff; /* optional but looks cleaner */
-  }
+
   .btn {
     background: white;
     color: black;
@@ -1359,5 +1439,66 @@ p {
 
   .simple-hex-inner p {
     font-size: 14px;
+  }
+  
+  .itinerary-container {
+    #itinerary-carousel {
+      .carousel-inner {
+        padding-bottom: 40px;
+      }
+      
+      .cards {
+        gap: 12px;
+      }
+
+      .card {
+        flex: 0 0 100%;
+        height: 250px;
+        border-radius: 10px;
+        
+        &.empty-card {
+          display: none;
+        }
+        
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+      
+      .card-content {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 1;
+        color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 40px);
+      }
+      
+      .card-content div {
+        margin-bottom: auto;
+      }
+      
+      .custom-btn {
+        align-self: flex-start;
+        background: white;
+        color: black;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+    
+    .itinerary-dots {
+      button {
+        width: 8px;
+        height: 8px;
+      }
+    }
   }
 }

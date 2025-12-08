@@ -52,10 +52,10 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   ];
 
   allowedYatch = [
-    'Manta Ray : Sail Into Unforgettable Adventures',
-    'Orca : Luxury on Water',
-    'Shantam Catamaran : Indulge in Oceanic Luxury',
-    'Ralston-1 : Explore the Seas',
+    'Manta Ray',
+    'Orca',
+    'Shantam Catamaran',
+    'Ralston Red',
   ];
 
 

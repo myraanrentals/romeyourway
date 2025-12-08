@@ -1,4 +1,5 @@
 export const sightseeing: any[] = [
+  //North Goa Sightseeing Tour
   {
   "cruiseId": 1,
   "title": "North Goa Sightseeing Tour",
@@ -6,6 +7,7 @@ export const sightseeing: any[] = [
   "category": "Sightseeing Tour",
   "routingUrl": "north-goa-sightseeing-tour",
   "rating": "4.7",
+  mobilePackageDesc:['10 hours','North Goa'],
   "reviews": "2145",
   "oldPrice": "700",
   "booked": "2M+",
@@ -135,12 +137,14 @@ export const sightseeing: any[] = [
     }
   ]
   },
+  // South Goa Sightseeing Tour
   {
   "cruiseId": 2,
   "title": "South Goa Sightseeing Tour",
   "subTile": "Explore Heritage Sites, Churches & Beaches",
   "category": "Sightseeing Tour",
   "routingUrl": "south-goa-sightseeing-tour",
+  mobilePackageDesc:['10 hours','South Goa'],
   "rating": "4.6",
   "reviews": "1789",
   "oldPrice": "700",
@@ -271,6 +275,7 @@ export const sightseeing: any[] = [
     }
   ]
   },
+  //Dudhsagar Waterfall Trip
    {
   "cruiseId": 1,
   "title": "Dudhsagar Waterfall Trip",
@@ -279,6 +284,7 @@ export const sightseeing: any[] = [
   "routingUrl": "dudhsagar-waterfall-trip",
   "rating": "4.8",
   "reviews": "5100",
+  mobilePackageDesc:['10 hours','kullem'],
   "oldPrice": "2199",
   "booked": "3M+",
   "buttonText": "Book this activity & get 20% off",
@@ -421,6 +427,7 @@ export const sightseeing: any[] = [
     }
   ]
   },
+  //Flyboarding in Goa
   {
   "cruiseId": 2,
   "title": "Flyboarding in Goa",
@@ -430,6 +437,7 @@ export const sightseeing: any[] = [
   "rating": "4.7",
   "reviews": "3200",
   "oldPrice": "2999",
+  mobilePackageDesc:['2 hours','baga'],
   "booked": "1M+",
   "buttonText": "Book this activity & get 15% off",
   "reportPrice": 2300,
@@ -572,6 +580,7 @@ export const sightseeing: any[] = [
     }
   ]
   },
+  //Bungee Jumping in Goa
   {
   "cruiseId": 3,
   "title": "Bungee Jumping in Goa",
@@ -581,6 +590,7 @@ export const sightseeing: any[] = [
   "rating": "4.9",
   "reviews": "2800",
   "oldPrice": "4500",
+  mobilePackageDesc:['4 hours','Mayem'],
   "booked": "800K+",
   "buttonText": "Book this activity & get 10% off",
   "reportPrice": 3000,

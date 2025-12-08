@@ -1,17 +1,18 @@
 <section id="experience">
   <div class="container">
     @if (items && items.length > 0) {
-    <div class="select-package-container"><h2>Select Your Package</h2>
+    <div class="select-package-container">
+      <h2>Select Your Package</h2>
       <select [(ngModel)]="selectedFilter" (change)="filterPackages()" class="form-select">
         <option *ngFor="let item of items" [value]="item.value">
           {{ item.label }}
         </option>
       </select>
-      
+
       <!-- <p>Selected: {{ selectedItem }}</p> -->
     </div>
     }
-    
+
     @for (offer of filteredData; track offer; let idx = $index) {
     <div class="card">
       <div class="flex g-1">
@@ -63,7 +64,8 @@
 
         <div class="info">
           <div class="rating-section m-ele ">
-            <span *ngIf="mobFlag">2 hours</span>
+            <span *ngIf="mobFlag">{{ offer?.mobilePackageDesc?.[0] }}</span>
+            <span *ngIf="mobFlag">{{ offer?.mobilePackageDesc?.[1] }}</span>
             <span class="rating">
               <strong>
                 <svg id="star-full" viewBox="0 0 475.075 475.075">
@@ -90,33 +92,44 @@
             </div>
           </div>
         </div>
-        <div class="payments" >
+        <div class="payments">
           @if (mobFlag) {
-          <div *ngIf="href !== '/book-private-yachts-in-goa'" class="amount">
+          <div class="amount">
             <div class="">
               <div class="amount-price-section">
-                <span *ngIf="!isPrivateParty" class="old-price"> ₹{{ offer.oldPrice }}</span>
-                <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && !isPrivateParty"
+                <span *ngIf="href !== '/private-parties'" class="old-price"> ₹{{ offer.oldPrice }}</span>
+                <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && href !== '/private-parties'"
                   class="discount-badge">
-                  SAVED {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%
+                  {{ href.includes('private-yachts-in-goa') ? 'SAVE' : 'SAVED' }} {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%
                 </div>
               </div>
-              <span class="amount-price"> ₹{{ offer.currentPrice }} <span style="color: #515151; font-size: 12px;">/
-                  Adult</span></span>
+              <span class="amount-price" [class]="href.includes('private-yachts-in-goa')? 'hidden' : ''"> ₹{{ offer.currentPrice }} <span style="color: #515151; font-size: 12px;">
+                  /
+                  {{
+                  href.includes('private-yachts-in-goa')
+                  ? offer?.mobilePackageDesc?.[0]
+                  : href === '/private-parties'
+                  ? 'Hour'
+                  : 'Adult'
+                  }}
+                </span>
+              </span>
             </div>
-            <div *ngIf="isPrivateParty" class="discount-badge" style="text-transform: none!important;">Negotiable</div>
+            <div *ngIf="href === '/private-parties'" class="discount-badge" style="text-transform: none!important;">
+              Negotiable</div>
           </div>
           } @else {
-          <div  class="amount">
+          <div class="amount">
             <div class="">
-              <span *ngIf="!isPrivateParty" class="old-price"> ₹{{ offer.oldPrice }}</span>
+              <span *ngIf="href !== '/private-parties'" class="old-price"> ₹{{ offer.oldPrice }}</span>
               <span class="amount-price"> ₹{{ offer.currentPrice }}</span>
             </div>
-            <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && !isPrivateParty"
+            <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && href !== '/private-parties'"
               class="discount-badge-web">
               SAVED {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%!
             </div>
-            <div *ngIf="isPrivateParty" class="discount-badge" style="text-transform: none!important;">Negotiable</div>
+            <div *ngIf="href === '/private-parties'" class="discount-badge" style="text-transform: none!important;">
+              Negotiable</div>
           </div>
           }
           <div class="flex flex-column mobile-reverse">
@@ -159,7 +172,8 @@
                   @if (isEnquire) {
                   <mat-icon>phone</mat-icon>
                   } @else {
-                  <img [src]="'assets/whatsapp_icon-orange.png'" alt="WhatsApp icon" class="whatsapp-icon orange-icon" />
+                  <img [src]="'assets/whatsapp_icon-orange.png'" alt="WhatsApp icon"
+                    class="whatsapp-icon orange-icon" />
                   }
                 </button>
                 <button class="primary-button m-ele" (click)="isEnquire ? openWhatsApp('+917715959917', offer.title)

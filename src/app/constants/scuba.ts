@@ -9,7 +9,8 @@ export const scubaList: any[] = [
     "routingUrl": "scuba-diving-in-goa",
     "rating": "4.6",
     "reviews": "3867",
-    "oldPrice": "1800",
+    mobilePackageDesc:['10 hours','Island']
+,"oldPrice": "1800",
     "booked": "4M+",
     "buttonText": "Book this activity & get 20% off",
     "reportPrice": 1400,
@@ -161,7 +162,8 @@ export const scubaList: any[] = [
     "routingUrl": "scuba-and-grand-island-combo",
     "rating": "4.6",
     "reviews": "3867",
-    "oldPrice": "1999",
+    mobilePackageDesc:['10 hours','Island']
+,"oldPrice": "1999",
     "booked": "4M+",
     "buttonText": "Book this activity & get 20% off",
     "reportPrice": 1400,
@@ -313,7 +315,8 @@ export const scubaList: any[] = [
     "routingUrl": "scuba-grand-island-and-watersports-combo",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "2999",
+    mobilePackageDesc:['10 hours','Island']
+,"oldPrice": "2999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -462,7 +465,8 @@ export const scubaList: any[] = [
     "routingUrl": "flyboarding-in-goa",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "2999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "2999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -611,7 +615,8 @@ export const scubaList: any[] = [
     "routingUrl": "5-watersports-combo",
     "rating": "4.6",
     "reviews": "3867",
-    "oldPrice": "2499",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "2499",
     "booked": "4M+",
     "buttonText": "Book this activity & get 20% off",
     "reportPrice": 1000,
@@ -760,7 +765,8 @@ export const scubaList: any[] = [
     "routingUrl": "advance-watersports-combo",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "2999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "2999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -909,7 +915,8 @@ export const scubaList: any[] = [
     "routingUrl": "adventure-boat-party-in-goa",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "1999",
+    mobilePackageDesc:['4 hours','Panjim']
+,"oldPrice": "1999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -1057,6 +1064,7 @@ export const scubaList: any[] = [
     type: ['water sports' ,'trips'],
     routingUrl: 'adventure-boat-party-and-4-watersports-combo',
     rating: '4.8',
+    mobilePackageDesc:['4 hours','Panjim'],
     reviews: '3867',
     oldPrice: '1999',
     booked: '4M+',
@@ -1232,7 +1240,8 @@ export const scubaList: any[] = [
     "routingUrl": "speed-boat-and-parasailing",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "1999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "1999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -1381,7 +1390,8 @@ export const scubaList: any[] = [
     "routingUrl": "jetski-ride-in-goa",
     "rating": "4.4",
     "reviews": "2843",
-    "oldPrice": "999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "999",
     "booked": "2M+",
     "buttonText": "Book this activity & get 15% off",
     "reportPrice": 400,
@@ -1530,7 +1540,8 @@ export const scubaList: any[] = [
     "routingUrl": "banana-ride-in-goa",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -1679,7 +1690,8 @@ export const scubaList: any[] = [
     "routingUrl": "bumper-ride-in-goa",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,
@@ -1828,7 +1840,8 @@ export const scubaList: any[] = [
     "routingUrl": "speed-boat-in-goa",
     "rating": "4.7",
     "reviews": "4120",
-    "oldPrice": "999",
+    mobilePackageDesc:['2 hours','baga']
+,"oldPrice": "999",
     "booked": "3M+",
     "buttonText": "Book now & get 10% off",
     "reportPrice": 700,

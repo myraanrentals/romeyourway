@@ -1,4 +1,5 @@
 export const adventures: any[] = [  
+  //Dudhsagar Waterfall Trip
   {
   "cruiseId": 1,
   "title": "Dudhsagar Waterfall Trip",
@@ -6,6 +7,7 @@ export const adventures: any[] = [
   "category": "Nature & Adventure",
   "routingUrl": "dudhsagar-waterfall-trip",
   "rating": "4.8",
+  mobilePackageDesc:['10 hours','kullem'],
   "reviews": "5100",
   "oldPrice": "2199",
   "booked": "3M+",
@@ -149,12 +151,14 @@ export const adventures: any[] = [
     }
   ]
   },
+  //Flyboarding in Goa
   {
   "cruiseId": 2,
   "title": "Flyboarding in Goa",
   "subTile": "Flyboarding in Goa",
   "category": "Water Sports & Adventure",
   "routingUrl": "flyboarding-goa",
+  mobilePackageDesc:['2 hours','baga'],
   "rating": "4.7",
   "reviews": "3200",
   "oldPrice": "2999",
@@ -300,6 +304,7 @@ export const adventures: any[] = [
     }
   ]
   },
+  //Bungee Jumping in Goa
   {
   "cruiseId": 3,
   "title": "Bungee Jumping in Goa",
@@ -307,6 +312,7 @@ export const adventures: any[] = [
   "category": "Adventure & Extreme Sports",
   "routingUrl": "bungee-jumping-goa",
   "rating": "4.9",
+  mobilePackageDesc:['4 hours','Mayem'],
   "reviews": "2800",
   "oldPrice": "4500",
   "booked": "800K+",
@@ -451,6 +457,7 @@ export const adventures: any[] = [
     }
   ]
   },
+  //North Goa Sightseeing Tour
    {
   "cruiseId": 1,
   "title": "North Goa Sightseeing Tour",
@@ -458,6 +465,7 @@ export const adventures: any[] = [
   "category": "Sightseeing Tour",
   "routingUrl": "north-goa-sightseeing-tour",
   "rating": "4.7",
+  mobilePackageDesc:['10 hours','North Goa'],
   "reviews": "2145",
   "oldPrice": "700",
   "booked": "2M+",
@@ -587,6 +595,7 @@ export const adventures: any[] = [
     }
   ]
   },
+  //South Goa Sightseeing Tour
   {
   "cruiseId": 2,
   "title": "South Goa Sightseeing Tour",
@@ -594,6 +603,7 @@ export const adventures: any[] = [
   "category": "Sightseeing Tour",
   "routingUrl": "south-goa-sightseeing-tour",
   "rating": "4.6",
+  mobilePackageDesc:['10 hours','South Goa'],
   "reviews": "1789",
   "oldPrice": "700",
   "booked": "1.5M+",

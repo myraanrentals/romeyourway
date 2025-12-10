@@ -61,6 +61,7 @@ export class ExperienceComponent implements OnChanges {
   ngOnInit(): void {
     this.href = this._router.url;
     this.filteredData = this.experienceData; 
+    console.log(this.filteredData,"this.filteredData");
     const category = this.route.snapshot.paramMap.get('category');
     
     // Get filter items based on category

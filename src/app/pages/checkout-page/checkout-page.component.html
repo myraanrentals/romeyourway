@@ -25,6 +25,7 @@
 
         <mat-form-field class="hidden-datepicker custom-datepicker">
           <input
+            #datePickerInput
             matInput
             [matDatepicker]="picker"
             [min]="minDate"
@@ -233,6 +234,35 @@
     <div class="modal-actions">
       <button (click)="closeLocationModal()">Cancel</button>
       <button [disabled]="!selectedLocation" (click)="confirmLocation()">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Special Date Modal -->
+<div class="modal-backdrop" *ngIf="showSpecialDateModal" (click)="closeSpecialDateModal()">
+  <div class="special-event-modal" (click)="$event.stopPropagation()">
+    <div class="modal-content">
+      <p class="modal-title">
+        For {{ selectedSpecialEvent?.title || 'Special Event' }} Bookings, Please get<br />
+        in touch with our Offline team
+      </p>
+      
+      <div class="action-buttons">
+        <button class="phone-button" (click)="callSupport()">
+          <mat-icon class="material-symbols-outlined">phone</mat-icon>
+        </button>
+        <button class="enquire-button" (click)="enquireNow()">
+          <span class="enquire-icon"></span>
+          <span>ENQUIRE NOW</span>
+        </button>
+      </div>
+      
+      <p class="visit-text">To know more, please visit us at</p>
+      
+      <button class="detail-button" (click)="navigateToDetails()" *ngIf="selectedSpecialEvent?.navigateTo">
+        <mat-icon class="material-symbols-outlined">language</mat-icon>
+        <span>{{ selectedSpecialEvent?.title || 'Special Event' }} Detail</span>
+      </button>
     </div>
   </div>
 </div>

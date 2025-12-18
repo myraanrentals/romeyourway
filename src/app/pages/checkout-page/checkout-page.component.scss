@@ -483,6 +483,131 @@
     color: #007bff;
     font-size: 16px;
   }
+
+  /* Special Event Modal Styles */
+  .special-event-modal {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    border-radius: 16px 16px 0 0;
+    background: #fff;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease-out;
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+
+      .modal-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #333;
+        margin: 0;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 10px 0;
+
+        .phone-button {
+          width: 50px;
+          height: 50px;
+          border-radius: 8px;
+          border: 2px solid #007bff;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          mat-icon {
+            color: #007bff;
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+          }
+
+          &:hover {
+            background: #007bff;
+            mat-icon {
+              color: #fff;
+            }
+          }
+        }
+
+        .enquire-button {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 20px;
+          border-radius: 8px;
+          border: 2px solid #007bff;
+          background: #007bff;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          .enquire-icon {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          &:hover {
+            background: #0056b3;
+            border-color: #0056b3;
+          }
+        }
+      }
+
+      .visit-text {
+        font-size: 14px;
+        color: #666;
+        margin: 10px 0 0 0;
+      }
+
+      .detail-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: 2px solid #007bff;
+        background: #fff;
+        color: #007bff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0 auto;
+        max-width: 200px;
+
+        mat-icon {
+          color: #007bff;
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          background: #007bff;
+          color: #fff;
+          mat-icon {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .pickup-location {
@@ -900,5 +1025,129 @@
     white-space: nowrap;
     min-height: 4px;
     margin-top: 12px;
+  }
+
+  /* Special Event Modal Styles - Desktop */
+  .special-event-modal {
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+
+      .modal-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #333;
+        margin: 0;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin: 10px 0;
+
+        .phone-button {
+          width: 60px;
+          height: 60px;
+          border-radius: 10px;
+          border: 2px solid #007bff;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          mat-icon {
+            color: #007bff;
+            font-size: 28px;
+            width: 28px;
+            height: 28px;
+          }
+
+          &:hover {
+            background: #007bff;
+            mat-icon {
+              color: #fff;
+            }
+          }
+        }
+
+        .enquire-button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 14px 24px;
+          border-radius: 10px;
+          border: 2px solid #007bff;
+          background: #007bff;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          .enquire-icon {
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          &:hover {
+            background: #0056b3;
+            border-color: #0056b3;
+          }
+        }
+      }
+
+      .visit-text {
+        font-size: 15px;
+        color: #666;
+        margin: 10px 0 0 0;
+      }
+
+      .detail-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 24px;
+        border-radius: 10px;
+        border: 2px solid #007bff;
+        background: #fff;
+        color: #007bff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0 auto;
+        max-width: 250px;
+
+        mat-icon {
+          color: #007bff;
+          font-size: 22px;
+          width: 22px;
+          height: 22px;
+        }
+
+        &:hover {
+          background: #007bff;
+          color: #fff;
+          mat-icon {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }

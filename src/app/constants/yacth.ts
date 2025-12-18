@@ -4272,7 +4272,7 @@ oldPrice: '30000',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
     currentPrice: '27999',
-    image: '/assets/Private Yatchs/Sunset 42/i1.webp',
+    image: '/assets/Private Yatchs/Sunset 42/Sunset 42 (1).webp',
     bannerImgs: [
       '/assets/Private Yatchs/Sunset 42/i2.webp',
       '/assets/Private Yatchs/Sunset 42/i3.webp',

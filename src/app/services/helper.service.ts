@@ -9,6 +9,7 @@ import { watersports, items as watersportsItems } from '@constants/watersports';
 import { adventures } from '@constants/adventures';
 import { sightseeing } from '@constants/sightseeing';
 import { privateParties } from '@constants/privateParties';
+import { DevList } from '@constants/devList';
 @Injectable({
   providedIn: 'root',
 })
@@ -51,7 +52,10 @@ export class HelperService {
       return sightseeing;
     }else if (categoryName === 'private-parties') {
       return privateParties; 
-    }else {
+    }
+    else if (categoryName === 'private-dev-kratagya') {
+      return DevList; }
+      else {
       return hotels;
     }
   }

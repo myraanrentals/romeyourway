@@ -46,6 +46,7 @@ interface SessionData {
 })
 export class CheckoutPageComponent implements OnInit {
   @ViewChild('timeSlotContainer') timeSlotContainer!: ElementRef;
+  @ViewChild('datePickerInput') datePickerInput!: ElementRef<HTMLInputElement>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -70,6 +71,8 @@ export class CheckoutPageComponent implements OnInit {
   selectedLocation: string | null = null;
   category: string = '';
   public showProceedButton = false;
+  showSpecialDateModal = false;
+  selectedSpecialEvent: { date: string; title: string; navigateTo: string } | null = null;
 
   ngOnInit() {
     this.generateDates(new Date());
@@ -83,6 +86,7 @@ export class CheckoutPageComponent implements OnInit {
       this.hotelList = this.HelperService.renderPackageData(category);
       this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
+      this.generateDates(new Date());
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
         selectedTime:
@@ -256,11 +260,21 @@ export class CheckoutPageComponent implements OnInit {
     for (let i = 0; i < 6; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
+      const dateFormat = formatDate(date, 'yyyy-MM-dd', 'en');
+      const specialEvent = this.hotelDetails?.specialEvents && 
+                          Array.isArray(this.hotelDetails.specialEvents) && 
+                          this.hotelDetails.specialEvents.length > 0
+                          ? this.hotelDetails.specialEvents.find((event: any) => event.date === dateFormat)
+                          : null;
+      const isDisabled = !!specialEvent;
+      
       this.dates.push({
         day: date.getDate().toString(),
         label: formatDate(date, 'MMM dd', 'en'),
-        dateFormat: formatDate(date, 'yyyy-MM-dd', 'en'),
-        selected: i === 0,
+        dateFormat: dateFormat,
+        selected: i === 0 && !isDisabled,
+        disabled: isDisabled,
+        specialEvent: specialEvent,
       });
     }
   }
@@ -272,6 +286,11 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   selectDate(date: any) {
+    if (date.disabled && date.specialEvent) {
+      this.selectedSpecialEvent = date.specialEvent;
+      this.showSpecialDateModal = true;
+      return;
+    }
     this.dates.forEach((d) => (d.selected = false));
     date.selected = true;
     this.HelperService.updateSessionStorage({ selectedDate: date });
@@ -279,6 +298,28 @@ export class CheckoutPageComponent implements OnInit {
 
   onDateSelected(event: any) {
     const selectedDate = event.value;
+    if (!selectedDate) {
+      return;
+    }
+    
+    const dateFormat = formatDate(selectedDate, 'yyyy-MM-dd', 'en');
+    const specialEvent = this.hotelDetails?.specialEvents && 
+                        Array.isArray(this.hotelDetails.specialEvents) && 
+                        this.hotelDetails.specialEvents.length > 0
+                        ? this.hotelDetails.specialEvents.find((event: any) => event.date === dateFormat)
+                        : null;
+    
+    if (specialEvent) {
+      this.selectedSpecialEvent = specialEvent;
+      this.showSpecialDateModal = true;
+      setTimeout(() => {
+        if (this.datePickerInput?.nativeElement) {
+          this.datePickerInput.nativeElement.value = '';
+        }
+      }, 0);
+      return;
+    }
+    
     if (selectedDate >= this.minDate) {
       this.generateDates(selectedDate);
     }
@@ -291,6 +332,20 @@ export class CheckoutPageComponent implements OnInit {
       },
     });
   }
+
+  dateFilter = (date: Date | null): boolean => {
+    if (!date) {
+      return false;
+    }
+    
+    if (this.hotelDetails?.specialEvents && Array.isArray(this.hotelDetails.specialEvents) && this.hotelDetails.specialEvents.length > 0) {
+      const dateString = formatDate(date, 'yyyy-MM-dd', 'en');
+      const specialEvent = this.hotelDetails.specialEvents.find((event: any) => event.date === dateString);
+      return !specialEvent;
+    }
+    
+    return true;
+  };
 
   goBack() {
     this.router.navigate(['/']);
@@ -318,6 +373,33 @@ export class CheckoutPageComponent implements OnInit {
         pickupLocation: this.selectedLocation,
       });
       this.showLocationModal = false;
+    }
+  }
+
+  closeSpecialDateModal() {
+    this.showSpecialDateModal = false;
+    this.selectedSpecialEvent = null;
+  }
+
+  callSupport() {
+    window.location.href = 'tel:+917715959917';
+  }
+
+  enquireNow() {
+    // Open WhatsApp with pre-filled message
+    const message = encodeURIComponent(`Hi, I would like to enquire about ${this.selectedSpecialEvent?.title || 'special event'} bookings.`);
+    window.open(`https://wa.me/917715959917?text=${message}`, '_blank');
+  }
+
+  navigateToDetails() {
+    if (this.selectedSpecialEvent?.navigateTo) {
+      // Check if it's a full URL or a route path
+      const url = this.selectedSpecialEvent.navigateTo.startsWith('http://') || 
+                  this.selectedSpecialEvent.navigateTo.startsWith('https://')
+        ? this.selectedSpecialEvent.navigateTo
+        : `${window.location.origin}${this.selectedSpecialEvent.navigateTo.startsWith('/') ? '' : '/'}${this.selectedSpecialEvent.navigateTo}`;
+      window.open(url, '_blank');
+      this.closeSpecialDateModal();
     }
   }
 }

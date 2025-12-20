@@ -40,6 +40,7 @@ export class BookingService {
     let payload = {
       payload: {
         createdBy: 'ONLINE',
+        pgRespUrl: "https://www.romeyourway.com/payment-status/",
         ...payloadData,
       },
     };

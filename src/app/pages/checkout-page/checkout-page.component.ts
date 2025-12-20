@@ -95,12 +95,12 @@ export class CheckoutPageComponent implements OnInit {
             : this.hotelDetails.transport[0].timeSlots[0],
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[0],
-        subtotal: this.hotelDetails.transport[0].discountedamt,
+        subtotal: this.hotelDetails.transport[0].adultPrice,
         travellers:
           this.category !== 'book-private-yachts-in-goa'
             ? getTravellers(
-                Number(this.hotelDetails.transport[0].discountedamt),
-                Number(this.hotelDetails.transport[0].kidAmt),
+                Number(this.hotelDetails.transport[0].adultPrice),
+                Number(this.hotelDetails.transport[0].kidPrice),
               )
             : getTravellersForYacth(
                 Number(this.hotelDetails.transport[0].actualPaxCount),
@@ -111,8 +111,8 @@ export class CheckoutPageComponent implements OnInit {
       this.HelperService.updateSessionStorage(this.sessionData);
     });
     this.travellers = getTravellers(
-      this.sessionData.selectedTransport?.discountedamt,
-      this.sessionData.selectedTransport?.kidAmt,
+      this.sessionData.selectedTransport?.adultPrice,
+      this.sessionData.selectedTransport?.kidPrice,
     );
     this.selectedTime =
       category !== 'book-private-yachts-in-goa'
@@ -126,6 +126,7 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   increaseCount(traveller: any): void {
+    
     const isActualPaxCount = traveller.label === 'Actual Pax Count';
     const isYacht = this.category === 'book-private-yachts-in-goa';
 
@@ -158,9 +159,9 @@ export class CheckoutPageComponent implements OnInit {
   getTravellerPrice(traveller: any): number {
     // same logic as template
     if (traveller.label === 'Adult') {
-      return this.sessionData.selectedTransport?.discountedamt || 0;
+      return this.sessionData.selectedTransport?.adultPrice || 0;
     } else if (traveller.label === 'Child (4-10 year old)') {
-      return this.sessionData.selectedTransport?.kidAmt || 0;
+      return this.sessionData.selectedTransport?.kidPrice || 0;
     } else {
       return 0;
     }
@@ -235,10 +236,18 @@ export class CheckoutPageComponent implements OnInit {
 
     this.sessionData.travellers;
     this.sessionData.selectedTransport = selectedTransport;
-    this.HelperService.updateSessionStorage({
+    const slectedTravellers  = getTravellers(
+      Number(selectedTransport.adultPrice),
+      Number(selectedTransport.kidPrice),
+    )
+    const updateData = {
       selectedTransport: selectedTransport || null,
       cruiseId: this.hotelDetails.cruiseId,
-    });
+      travellers: slectedTravellers,
+    };
+    this.sessionData = { ...this.sessionData, ...updateData };
+    this.HelperService.updateSessionStorage(updateData);
+    
     this.selectedTime =
       this.category !== 'book-private-yachts-in-goa'
         ? this.selectedTime

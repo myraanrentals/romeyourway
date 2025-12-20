@@ -123,7 +123,6 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   }
   findProfit() {
     const { travellers } = this.sessionData;
-
     const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
     const profit = vehicleQuantity * this.hotelDetails.reportPrice;
     return profit;
@@ -158,7 +157,6 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         18,
         result.couponDiscount
       ).finalTotal;
-  
       this.couponCode = result.couponCode;
       this.couponMessage = `Coupon applied! You saved ₹${result.couponDiscount}`;
   
@@ -259,19 +257,19 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     } else {
       const isYacht = this.category === 'book-private-yachts-in-goa';
       const { travellers, selectedTransport } = this.sessionData;
-      const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
+      const nonYachtSubtotal = travellers[0]?.count * selectedTransport?.adultReportPrice + travellers[1]?.count * selectedTransport?.kidReportPrice;
+
       const finalReportPrice = isYacht
         ? this.calculatePrice()
-        : selectedTransport?.title === 'With Transport'
-          ? subtotal - vehicleQuantity * reportPriceWithTransport 
-          : subtotal - vehicleQuantity * reportPrice;
-      const partialSubtotal = finalReportPrice;
+        : nonYachtSubtotal
 
-      const partialGST = +(partialSubtotal * gstRate).toFixed(2);
-      const amountWithGST = +(partialSubtotal + partialGST).toFixed(2);
+      const partial= travellers[0]?.count * (Number(selectedTransport?.adultPrice)-Number(selectedTransport?.adultReportPrice)) + travellers[1]?.count *(Number(selectedTransport?.kidPrice) - Number(selectedTransport?.kidReportPrice))
+
+      const partialGST = +(partial * gstRate).toFixed(2);
+      const amountWithGST = +(partial + partialGST).toFixed(2);
 
       this.HelperService.updateSessionStorage({
-        payableAmount: +partialSubtotal.toFixed(2),
+        payableAmount: +partial.toFixed(2),
         paymentType: option,
         amountWithGST,
       });
@@ -478,7 +476,6 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentUrl;
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
-          console.log({ res });
           this.bookingPay(payLink);
         } else {
         }
@@ -489,7 +486,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     });
   }
   bookingPay(paymentLink: string) {
-    window.location.href = paymentLink;
+    window.open(paymentLink, '_blank');
   }
   async validateCoupon(
     coupon: string,

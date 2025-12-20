@@ -16,6 +16,24 @@ export const scubaList: any[] = [
     "reportPrice": 1400,
     "reportPriceWithTransport": 1400,
     "currentPrice": "1199",
+    priceDetails: {
+      regularPrice: '1800',
+      discountPrice: '1199',
+      withTransport: {
+        regularPrice: '1999',
+        adultPrice: '1699',
+        kidPrice: '999',
+        adultReportPrice: '1400',
+        kidReportPrice: '999',
+      },
+      withoutTransport: {
+        regularPrice: '1800',
+        adultPrice: '1199',
+        kidPrice: '999',
+        adultReportPrice: '1400',
+        kidReportPrice: '999',
+      },
+    },
     "image": "/assets/Scuba/Scuba Diving in Goa/SCU.webp",
     "bannerImgs": [
       "/assets/Scuba/Scuba Diving in Goa/SCU1.webp",
@@ -169,6 +187,24 @@ export const scubaList: any[] = [
     "reportPrice": 1400,
     "reportPriceWithTransport": 1400,
     "currentPrice": "1299",
+    priceDetails: {
+      regularPrice: '1999',
+      discountPrice: '1299',
+      withTransport: {
+        regularPrice: '2499',
+        adultPrice: '1999',
+        kidPrice: '999',
+        adultReportPrice: '1400',
+        kidReportPrice: '999',
+      },
+      withoutTransport: {
+        regularPrice: '1999',
+        adultPrice: '1299',
+        kidPrice: '999',
+        adultReportPrice: '1400',
+        kidReportPrice: '999',
+      },
+    },
     "image": "/assets/Scuba/Scuba & Grand Island Combo/WAT1.webp",
     "bannerImgs": [
       "/assets/Scuba/Scuba & Grand Island Combo/WAT2.webp",
@@ -322,6 +358,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "2299",
+    priceDetails: {
+      regularPrice: '2999',
+      discountPrice: '2299',
+      withTransport: {
+        regularPrice: '3499',
+        adultPrice: '2299',
+        kidPrice: '1500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '2999',
+        adultPrice: '2299',
+        kidPrice: '1500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Scuba, Grand Island & Watersports Combo/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Scuba, Grand Island & Watersports Combo/i2.webp",
@@ -472,6 +526,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "2299",
+    priceDetails: {
+      regularPrice: '2999',
+      discountPrice: '2299',
+      withTransport: {
+        regularPrice: '3499',
+        adultPrice: '2299',
+        kidPrice: '1500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '1200',
+        adultPrice: '900',
+        kidPrice: '900',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Flyboarding In Goa/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Flyboarding In Goa/i2.webp",
@@ -622,6 +694,24 @@ export const scubaList: any[] = [
     "reportPrice": 1000,
     "reportPriceWithTransport": 1000,
     "currentPrice": "2099",
+    priceDetails: {
+      regularPrice: '2499',
+      discountPrice: '2099',
+      withTransport: {
+        regularPrice: '2999',
+        adultPrice: '2099',
+        kidPrice: '1200',
+        adultReportPrice: '1000',
+        kidReportPrice: '1000',
+      },
+      withoutTransport: {
+        regularPrice: '2499',
+        adultPrice: '1499',
+        kidPrice: '1499',
+        adultReportPrice: '1000',
+        kidReportPrice: '1000',
+      },
+    },
     "image": "/assets/Scuba/5+ Watersports Combo/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/5+ Watersports Combo/i2.webp",
@@ -772,6 +862,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "2200",
+    priceDetails: {
+      regularPrice: '2999',
+      discountPrice: '2200',
+      withTransport: {
+        regularPrice: '3499',
+        adultPrice: '2200',
+        kidPrice: '1500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '2499',
+        adultPrice: '1499',
+        kidPrice: '1499',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Advance Watersports Combo/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Advance Watersports Combo/i2.webp",
@@ -922,6 +1030,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "800",
+    priceDetails: {
+      regularPrice: '1999',
+      discountPrice: '800',
+      withTransport: {
+        regularPrice: '2499',
+        adultPrice: '800',
+        kidPrice: '600',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '1200',
+        adultPrice: '900',
+        kidPrice: '900',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Adventure Boat Party/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Adventure Boat Party/i2.webp",
@@ -1057,6 +1183,24 @@ export const scubaList: any[] = [
   },
   //Adventure Boat Party & 4+ Watersports
   {
+    priceDetails: {
+      regularPrice: '1999',
+      discountPrice: '800',
+      withTransport: {
+        regularPrice: '2499',
+        adultPrice: '800',
+        kidPrice: '600',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '1200',
+        adultPrice: '900',
+        kidPrice: '900',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     cruiseId: 19,
     title: 'Adventure Boat Party & 4+ Watersports',
     subTile: 'Adventure Boat Party & water sports',
@@ -1247,6 +1391,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "1499",
+    priceDetails: {
+      regularPrice: '1999',
+      discountPrice: '1499',
+      withTransport: {
+        regularPrice: '2499',
+        adultPrice: '1499',
+        kidPrice: '1000',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '1200',
+        adultPrice: '900',
+        kidPrice: '900',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Speed Boat & Parasailing/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Speed Boat & Parasailing/i2.webp",
@@ -1397,6 +1559,24 @@ export const scubaList: any[] = [
     "reportPrice": 400,
     "reportPriceWithTransport": 400,
     "currentPrice": "700",
+    priceDetails: {
+      regularPrice: '999',
+      discountPrice: '700',
+      withTransport: {
+        regularPrice: '1499',
+        adultPrice: '700',
+        kidPrice: '500',
+        adultReportPrice: '400',
+        kidReportPrice: '400',
+      },
+      withoutTransport: {
+        regularPrice: '999',
+        adultPrice: '600',
+        kidPrice: '600',
+        adultReportPrice: '400',
+        kidReportPrice: '400',
+      },
+    },
     "image": "/assets/Scuba/Jetski Ride/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Jetski Ride/i2.webp",
@@ -1547,6 +1727,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "700",
+    priceDetails: {
+      regularPrice: '999',
+      discountPrice: '700',
+      withTransport: {
+        regularPrice: '1499',
+        adultPrice: '700',
+        kidPrice: '500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '999',
+        adultPrice: '600',
+        kidPrice: '600',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Banana Ride/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Banana Ride/i2.webp",
@@ -1697,6 +1895,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "700",
+    priceDetails: {
+      regularPrice: '999',
+      discountPrice: '700',
+      withTransport: {
+        regularPrice: '1499',
+        adultPrice: '700',
+        kidPrice: '500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '1200',
+        adultPrice: '900',
+        kidPrice: '900',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Bumper Ride/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Bumper Ride/i2.webp",
@@ -1847,6 +2063,24 @@ export const scubaList: any[] = [
     "reportPrice": 700,
     "reportPriceWithTransport": 700,
     "currentPrice": "700",
+    priceDetails: {
+      regularPrice: '999',
+      discountPrice: '700',
+      withTransport: {
+        regularPrice: '1499',
+        adultPrice: '700',
+        kidPrice: '500',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+      withoutTransport: {
+        regularPrice: '1200',
+        adultPrice: '900',
+        kidPrice: '900',
+        adultReportPrice: '700',
+        kidReportPrice: '700',
+      },
+    },
     "image": "/assets/Scuba/Speed Boat/i1.webp",
     "bannerImgs": [
       "/assets/Scuba/Speed Boat/i2.webp",

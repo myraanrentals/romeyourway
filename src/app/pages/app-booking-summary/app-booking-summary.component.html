@@ -9,7 +9,7 @@
         ₹
         {{
           item.count *
-            (selectedTransport?.title === 'With Transport' ? item.price + 200 : item.price)
+          item.price
         }}
       </div>
     </div>
@@ -26,11 +26,11 @@
     </div>
     <div class="taxDiv">
       <p>TAX CGST 9%</p>
-      <strong> + ₹ {{ discountedAmount * 0.09 }}</strong>
+      <strong> + ₹ {{ discountedAmount * 0.09 | number: '1.2-2' }}</strong>
     </div>
     <div class="taxDiv">
       <p>TAX SGST 9%</p>
-      <strong> + ₹ {{ discountedAmount * 0.09 }}</strong>
+      <strong> + ₹ {{ discountedAmount * 0.09 | number: '1.2-2' }}</strong>
     </div>
     <div>
       <p>{{ paymentType === 'partial' ? 'Partial' : 'Total' }} Payable Amount:</p>

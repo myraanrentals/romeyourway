@@ -347,11 +347,11 @@
       </div>
       <div class="price-box">
         <div class="price-div">
-          <h3 class="desktop-price">₹ {{ hotelDetails.currentPrice }} <span>{{ isPrivateParty ? 'Per Hour' : 'Per
+          <h3 class="desktop-price">₹ {{ hotelDetails.priceDetails.discountPrice }} <span>{{ isPrivateParty ? 'Per Hour' : 'Per
               Person' }}</span></h3>
-          <h3 class="mobile-price">₹ {{ hotelDetails.currentPrice }} /<span style="text-decoration: line-through;"> {{
-              hotelDetails.oldPrice }}</span></h3>
-          <p class="old-price desktop-old-price">₹ {{ hotelDetails.oldPrice }}</p>
+          <h3 class="mobile-price">₹ {{ hotelDetails.priceDetails.discountPrice }} /<span style="text-decoration: line-through;"> {{
+              hotelDetails.priceDetails?.regularPrice }}</span></h3>
+          <p class="old-price desktop-old-price">₹ {{ hotelDetails.priceDetails?.regularPrice }}</p>
           <span class="negotiable-badge" *ngIf="isPrivateParty">Negotiable</span>
           <div class="rating">
             <span>⭐ {{ hotelDetails.rating }} <span class="rating-count">({{ hotelDetails.reviews }})</span> </span>
@@ -398,8 +398,8 @@
           <div class="offer-content">
             <h3 class="title">{{ offer.title }}</h3>
             <p class="price">
-              <span class="current-price">₹ {{ offer.currentPrice }}</span>
-              <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
+              <span class="current-price">₹ {{ offer.priceDetails.discountPrice }}</span>
+              <span class="old-price" *ngIf="offer.priceDetails?.regularPrice">₹ {{ offer.priceDetails?.regularPrice }}</span>
             </p>
             <button mat-button class="offer-button">
               {{ offer.buttonText }}

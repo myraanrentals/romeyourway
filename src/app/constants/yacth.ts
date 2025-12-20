@@ -182,6 +182,10 @@ oldPrice: '12000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '7000',
+    },
   },
   //Wave Rider
   {
@@ -359,6 +363,10 @@ oldPrice: '14000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Blue Fin
   {
@@ -536,6 +544,10 @@ oldPrice: '15000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Rinker 
   {
@@ -713,6 +725,10 @@ oldPrice: '15000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //M. V. Tara 
   {
@@ -890,6 +906,10 @@ oldPrice: '15000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Prestige 36
   {
@@ -1067,6 +1087,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Manta Ray
   {
@@ -1244,6 +1268,10 @@ oldPrice: '18000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Nicolyn
   {
@@ -1421,6 +1449,10 @@ oldPrice: '18000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Solaris
   {
@@ -1598,6 +1630,10 @@ oldPrice: '18000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Aquamarine
   {
@@ -1775,6 +1811,10 @@ oldPrice: '18000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Sea Ray 330
   {
@@ -1952,6 +1992,10 @@ oldPrice: '18000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Sea Ray 400
   {
@@ -2129,6 +2173,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Majestic II
   {
@@ -2306,6 +2354,10 @@ oldPrice: '18000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Dhruv
   {
@@ -2483,6 +2535,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Funliner
   {
@@ -2660,6 +2716,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Phoenix
   {
@@ -2837,6 +2897,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Arc 52
   {
@@ -3014,6 +3078,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Dreamz
   {
@@ -3191,6 +3259,10 @@ oldPrice: '20000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Amzonite
   {
@@ -3368,6 +3440,10 @@ oldPrice: '25000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Orca
   {
@@ -3545,6 +3621,10 @@ oldPrice: '25000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
     //Ralston 1
     {
@@ -3719,10 +3799,14 @@ oldPrice: '25000',
             '2-hour cruise in Goa Marina',
             'Goan buffet dinner.',
             'Goan dance show',
-          ],
-        },
-      ],
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
     },
+  },
   //Ralston 2
   {
     cruiseId: 15,
@@ -3899,6 +3983,10 @@ oldPrice: '25000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
 
   //Taj Exotica
@@ -4077,6 +4165,10 @@ oldPrice: '36000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Blue Diamond
   {
@@ -4254,6 +4346,10 @@ oldPrice: '36000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Sunset 42
   {
@@ -4431,6 +4527,10 @@ oldPrice: '30000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Leopard
   {
@@ -4608,6 +4708,10 @@ oldPrice: '40000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Polaris
   {
@@ -4785,6 +4889,10 @@ oldPrice: '40000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Ferretti 460
   {
@@ -4962,7 +5070,11 @@ oldPrice: '50000',
         ],
       },
     ],
-  },  
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
+  },
   //Ferretti 550
   {
     cruiseId: 13,
@@ -5139,7 +5251,11 @@ oldPrice: '70000',
         ],
       },
     ],
-  },  
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
+  },
   //Foxy lady
   {
     cruiseId: 13,
@@ -5316,7 +5432,11 @@ oldPrice: '80000',
         ],
       },
     ],
-  },  
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
+  },
   //Riviera
   {
     cruiseId: 13,
@@ -5493,6 +5613,10 @@ oldPrice: '50000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Shantam
   {
@@ -5670,6 +5794,10 @@ oldPrice: '35000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
   //Shantam Catamaran
   {
@@ -5847,6 +5975,10 @@ oldPrice: '37000',
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '1700',
+      discountPrice: '1200',
+    },
   },
 ];
 

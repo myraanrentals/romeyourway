@@ -120,20 +120,48 @@ export const DevList: any[] = [   {
         "needToKnow": "Hotel pickup for the sightseeing tour with transport starts at 7:30 AM depending on your location. Exact time shared a day before."
       }
     ],
-    "transport": [
+    priceDetails: {
+      regularPrice: '1',
+      discountPrice: '1',
+    },
+    transport: [
       {
-        "title": "With Transport",
-        "isSelected": true,
-        "originalamt": "1",
-        "discountedamt": "1",
-        "kidAmt": "1",
-        "desc": [
-          "Pickup & drop from hotel",
-          "Visit 6+ heritage and beach sites",
-          "Comfortable AC vehicle for entire journey"
-        ]
-      }
-    ]
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '1',
+        discountedamt: '1',
+        kidAmt: '1',
+        regularPrice: '1',
+        adultPrice: '1',
+        kidPrice: '1',
+        adultReportPrice: '650',
+        kidReportPrice: '650',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '1699',
+        discountedamt: '1099',
+        kidAmt: '899',
+        regularPrice: '1800',
+        adultPrice: '1199',
+        kidPrice: '899',
+        adultReportPrice: '800',
+        kidReportPrice: '800',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
     }]
 
 

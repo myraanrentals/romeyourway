@@ -51,9 +51,9 @@
               {{ package.title }} [Capacity: {{ package.capacity }}]
             </span>
             <div class="price">
-              <span class="original-price">₹ {{ package.originalamt }}</span>
+              <span class="original-price">₹ {{ package?.regularPrice }}</span>
               <span class="discounted-price"
-                ><strong>₹ {{ package.discountedamt }}</strong></span
+                ><strong>₹ {{ package.adultPrice }}</strong></span
               >
             </div>
           </div>
@@ -150,9 +150,9 @@
               ₹
               {{
                 traveller.label === 'Adult'
-                  ? sessionData.selectedTransport?.discountedamt
+                  ? sessionData.selectedTransport?.adultPrice
                   : traveller.label === 'Child (4-10 year old)'
-                    ? sessionData.selectedTransport?.kidAmt || 0
+                    ? sessionData.selectedTransport?.kidPrice || 0
                     : 0
               }}
               /{{ traveller.label.toLowerCase() }}

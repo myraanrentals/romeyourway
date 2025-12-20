@@ -55,8 +55,8 @@ export class DetailsPageComponent {
     this.hotelDetails = this.HelperService.getHotelByID(routeId, this.hotelList);
 
     const hotelPackage = {
-      adultPrice: this.hotelDetails.transport[0].discountedamt,
-      kidPrice: this.hotelDetails.transport[0].kidAmt,
+      adultPrice: this.hotelDetails.transport[0].adultPrice,
+      kidPrice: this.hotelDetails.transport[0].kidPrice,
     };
 
     sessionStorage.setItem('packagePrice', JSON.stringify(hotelPackage));

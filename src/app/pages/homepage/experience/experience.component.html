@@ -29,7 +29,7 @@
               <div *ngIf="i === offer.bannerImgs.length - 1" class="last-slide-overlay">
 
                 <p class="save-text">
-                  SAVED <span>INR {{ (+offer.oldPrice) - (+offer.currentPrice) }}</span>
+                  SAVED <span>INR {{ (+offer.priceDetails?.regularPrice) - (+offer.priceDetails?.discountPrice) }}</span>
                 </p>
 
                 <p class="sub-text">on this package</p>
@@ -97,13 +97,13 @@
           <div class="amount">
             <div class="">
               <div class="amount-price-section">
-                <span *ngIf="href !== '/private-parties'" class="old-price"> ₹{{ offer.oldPrice }}</span>
-                <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && href !== '/private-parties'"
+                <span *ngIf="href !== '/private-parties'" class="old-price"> ₹{{ offer?.priceDetails?.regularPrice }}</span>
+                <div *ngIf="calculateDiscount(offer.priceDetails?.regularPrice, offer.priceDetails?.discountPrice) > 0 && href !== '/private-parties'"
                   class="discount-badge">
-                  {{ href.includes('private-yachts-in-goa') ? 'SAVE' : 'SAVED' }} {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%
+                  {{ href.includes('private-yachts-in-goa') ? 'SAVE' : 'SAVED' }} {{ calculateDiscount(offer?.priceDetails?.regularPrice, offer?.priceDetails?.discountPrice) }}%
                 </div>
               </div>
-              <span class="amount-price" [class]="href.includes('private-yachts-in-goa')? 'hidden' : ''"> ₹{{ offer.currentPrice }} <span style="color: #515151; font-size: 12px;">
+              <span class="amount-price" [class]="href.includes('private-yachts-in-goa')? 'hidden' : ''"> ₹{{ offer?.priceDetails?.discountPrice }} <span style="color: #515151; font-size: 12px;">
                   /
                   {{
                   href.includes('private-yachts-in-goa')
@@ -121,12 +121,12 @@
           } @else {
           <div class="amount">
             <div class="">
-              <span *ngIf="href !== '/private-parties'" class="old-price"> ₹{{ offer.oldPrice }}</span>
-              <span class="amount-price"> ₹{{ offer.currentPrice }}</span>
+              <span *ngIf="href !== '/private-parties'" class="old-price"> ₹{{ offer?.priceDetails?.regularPrice }}</span>
+              <span class="amount-price"> ₹{{ offer?.priceDetails?.discountPrice }}</span>
             </div>
-            <div *ngIf="calculateDiscount(offer.oldPrice, offer.currentPrice) > 0 && href !== '/private-parties'"
+            <div *ngIf="calculateDiscount(offer?.priceDetails?.regularPrice, offer?.priceDetails?.discountPrice) > 0 && href !== '/private-parties'"
               class="discount-badge-web">
-              SAVED {{ calculateDiscount(offer.oldPrice, offer.currentPrice) }}%!
+              SAVED {{ calculateDiscount(offer?.priceDetails?.regularPrice, offer?.priceDetails?.discountPrice) }}%!
             </div>
             <div *ngIf="href === '/private-parties'" class="discount-badge" style="text-transform: none!important;">
               Negotiable</div>

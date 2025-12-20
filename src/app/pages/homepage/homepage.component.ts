@@ -513,7 +513,6 @@ export class HomepageComponent implements OnInit, AfterViewInit {
     this.router.navigate([`/book-private-yachts-in-goa/details/${link}`]);
   }
   navigateTo(route: string) {
-    console.log(route,"route");
     
     this.router.navigate([`/${route}`]);
   }

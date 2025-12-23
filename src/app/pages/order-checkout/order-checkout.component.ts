@@ -359,6 +359,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       selectedTransport,
       amountWithGST,
       location,
+      selectedTime
     } = this.sessionData;
     const { title } = this.hotelDetails;
     const payloadData = {
@@ -390,6 +391,11 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       selectedPackage: selectedTransport,
       location,
     };
+    const adultPrice = Number(selectedTransport?.adultPrice)
+    const kidPrice = Number(selectedTransport?.kidPrice)
+    const adultReportPrice = Number(selectedTransport?.adultReportPrice)
+    const kidReportPrice = Number(selectedTransport?.kidReportPrice)
+    const kidCount = travellers[1]?.count || 0;
     const isTransportIncluded = !!location;
     const reportPrice = isTransportIncluded
       ? this.hotelDetails?.reportPriceWithTransport
@@ -398,7 +404,23 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const adultCount = travellers[0]?.count || 0;
     const childCount = travellers[1]?.count || 0;
     const infantCount = travellers[2]?.count || 0;
-
+    const totalAmount = adultCount*adultPrice + kidCount * kidPrice
+    const totalAmountWithGst = totalAmount + totalAmount * 0.18
+    const totalBalanceAmount =  adultCount*adultReportPrice + kidCount * kidReportPrice
+    //Patrial Logics
+    const partialAmount = adultCount*(adultPrice-adultReportPrice) + kidCount * (kidPrice-kidReportPrice)
+    const partialAmountWithGst = partialAmount + partialAmount * 0.18
+    const partialBalanceAmount =  totalAmount - partialAmount
+    
+    
+    // full payment
+    
+    const finalBalanceAmount = paymentType==='full'?totalAmountWithGst-totalAmountWithGst:partialBalanceAmount
+    
+    //partial payment
+    const payToVendor = paymentType==='full'? totalBalanceAmount:0
+    const finalTotalAmount =  paymentType==='full'?totalAmountWithGst:partialAmountWithGst+partialBalanceAmount
+    
     const secondPayloadData = {
       companyName: title,
       enquirySource: 'WEBSITE',
@@ -424,21 +446,24 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       countryDialCode: countryCode,
       customerMobile: phone,
       customerEmailId: email,
+      subCategory:'Activity',
 
       // People Info
-      totalDays: 1,
-      quantity: adultCount + childCount + infantCount,
-      childrenQuantity: travellers[1]?.count || 0,
-      infantQuantity: travellers[2]?.count || 0,
+      quantity: adultCount,
+      childrenQuantity: childCount || 0,
+      infantQuantity: infantCount || 0,
+      startTime: selectedTime,
 
       // Pricing Info
-      vendorRate: reportPrice,
-      payToVendor: reportPrice,
+      vendorRate: selectedTransport?.adultReportPrice || 0,
+      vendorRateForKids: selectedTransport?.kidReportPrice || 0,
+      payToVendor: payToVendor,
       companyRate: travellers[0]?.price || 0,
+      companyRateForKids: travellers[1]?.price || 0,
       payToCompany: 0,
-      bookingAmount: amountWithGST || 0,
-      balanceAmount: (subtotal || 0) - (payableAmount || 0),
-      totalAmount: (subtotal || 0) * 1.18,
+      bookingAmount: amountWithGST,
+      balanceAmount: finalBalanceAmount,
+      totalAmount: finalTotalAmount,
       securityAmount: 0,
 
       // Discounts & Status

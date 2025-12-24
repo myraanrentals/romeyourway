@@ -86,6 +86,11 @@ export class CheckoutPageComponent implements OnInit {
       this.hotelList = this.HelperService.renderPackageData(category);
       this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
+      if (this.hotelDetails?.transport && this.hotelDetails.transport.length > 0) {
+        this.hotelDetails.transport.forEach((t: any, index: number) => {
+          t.isSelected = index === 0;
+        });
+      }
       this.generateDates(new Date());
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,

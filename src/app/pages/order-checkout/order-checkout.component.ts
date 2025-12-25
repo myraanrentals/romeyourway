@@ -358,7 +358,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       paymentType,
       selectedTransport,
       amountWithGST,
-      location,
+      pickupLocation,
       selectedTime
     } = this.sessionData;
     const { title } = this.hotelDetails;
@@ -416,20 +416,20 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     // full payment
     
     const finalBalanceAmount = paymentType==='full'?totalAmountWithGst-totalAmountWithGst:partialBalanceAmount
-    
+    const finalBookingAmount = partialAmount
     //partial payment
     const payToVendor = paymentType==='full'? totalBalanceAmount:0
-    const finalTotalAmount =  paymentType==='full'?totalAmountWithGst:partialAmountWithGst+partialBalanceAmount
+    const finalTotalAmount =  paymentType==='full'?amountWithGST:partialAmountWithGst+partialBalanceAmount
     
     const secondPayloadData = {
       companyName: title,
       enquirySource: 'WEBSITE',
 
       // Transport & Location
-      pickDropHub: location,
-      pickupHub: location,
-      pickupPoint: location,
-      dropHub: location,
+      pickDropHub: pickupLocation,
+      pickupHub: pickupLocation,
+      pickupPoint: pickupLocation,
+      dropHub: pickupLocation,
       dropPoint: null,
       activityLocation: null,
 
@@ -450,7 +450,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
 
       // People Info
       quantity: adultCount,
-      childrenQuantity: childCount || 0,
+      kidQuantity: childCount || 0,
       infantQuantity: infantCount || 0,
       startTime: selectedTime,
 
@@ -461,10 +461,11 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       companyRate: travellers[0]?.price || 0,
       companyRateForKids: travellers[1]?.price || 0,
       payToCompany: 0,
-      bookingAmount: amountWithGST,
+      bookingAmount: finalBookingAmount,
       balanceAmount: finalBalanceAmount,
       totalAmount: finalTotalAmount,
       securityAmount: 0,
+      actualAmount:amountWithGST,
 
       // Discounts & Status
       discountType: 'FLAT',
@@ -478,21 +479,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       loginId: phone,
       notes: '',
     };
+    console.log('secondPayloadData', {secondPayloadData});
     this.handlePaymentResponse('response', secondPayloadData);
-    const options = {
-      key: razorpay_key,
-      amount: 1,
-      currency: '₹',
-      expire_by: 1750346930,
-      reference_id: phone,
-      name: 'Myraan Adventures',
-      description: 'Booking Payment',
-      handler: (response: any) => {
-        this.handlePaymentResponse(response, secondPayloadData);
-      },
-      prefill: { name: fullName, email, contact: phone },
-      theme: { color: '#3399cc' },
-    };
   }
 
   handlePaymentResponse(response: any, payloadData: any) {

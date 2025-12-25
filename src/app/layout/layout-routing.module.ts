@@ -31,12 +31,12 @@ const routes: Routes = [
       {
         path: 'payment-success',
         component: PaymentSuccessComponent,
-        canActivate: [ProtectRouteGuard],
+        // canActivate: [ProtectRouteGuard],
       },
       {
         path: 'payment-failure',
         component: PaymentFailureComponent,
-        canActivate: [ProtectRouteGuard],
+        // canActivate: [ProtectRouteGuard],
       },
 
       {

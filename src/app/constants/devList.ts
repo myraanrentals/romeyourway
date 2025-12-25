@@ -134,8 +134,8 @@ export const DevList: any[] = [   {
         regularPrice: '1',
         adultPrice: '1',
         kidPrice: '1',
-        adultReportPrice: '650',
-        kidReportPrice: '650',
+        adultReportPrice: '1',
+        kidReportPrice: '1',
         desc: [
           'Access to lower deck',
           '2-hour cruise in Goa Marina',

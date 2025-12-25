@@ -739,6 +739,7 @@ export const hotels: any[] = [
     },
     cruiseId: 5,
     title: 'Nauti Amigo Cruise(Luxury)',
+    description: 'Nauti Amigo Cruise offers an exclusive 2-hour evening experience on Goa’s iconic Mandovi River. Savour a lavish unlimited buffet with vegetarian and non-vegetarian delicacies, enjoy live entertainment and vibrant dance performances, and sip on refreshing drinks as Panjim’s skyline lights up around you. Designed for all age groups, couples, families, and celebrations, this cruise delivers the perfect blend of fine dining, entertainment, and luxury on the water.',
     subTile: 'Nauti Amigo Cruise(Luxury)',
     category: 'Cruise',
     type: ['luxury'],
@@ -801,19 +802,51 @@ export const hotels: any[] = [
     mustKnow: [
       {
         about1:
-          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+          'Signature Luxury Sailing Experience on the serene Mandovi River',
       },
       {
         about1:
-          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+          'Magnificent Triple-Deck Cruise Vessel, each deck curated for refined indulgence',
       },
       {
         about1:
-          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+          'Exclusive AC VIP Lounge with plush seating and elegant interiors',
       },
       {
         about1:
-          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+          'Open-Air Upper Deck offering panoramic night views and romantic ambience',
+      },
+      {
+        about1:
+          'Live DJ & Premium Dance Floor with immersive lighting and sound',
+      },
+      {
+        about1:
+          'Curated Onboard Bar & Hookah Lounge for a sophisticated nightlife experience',
+      },
+      {
+        about1:
+          'Designer Seating & Picture-Perfect Spaces for memorable photo moments',
+      },
+      {
+        about1:
+          'Romance-Centric Ambience ideal for couples and intimate celebrations',
+      },
+      {
+        about1:
+          'Graciously Family-Friendly while maintaining a premium atmosphere',
+      },
+      {
+        about1:
+          'Celebration-Ready Luxury Setup for birthdays, anniversaries, and private occasions',
+      },
+      {
+        about1:
+          'Spacious, Immaculate Washrooms designed for comfort and convenience',
+      },
+      {
+        about1:
+          'High-Standard Safety & Professional Crew ensuring a seamless experience',
       },
     ],
 
@@ -849,14 +882,27 @@ export const hotels: any[] = [
     ],
     overviewDesc:
       'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
+      overview: [
+        { inclusion1: 'Nauti Amigo Entertainment Line-Up & Culinary Delights' },
+        { inclusion1: '3-Hour Luxury Sailing Experience' },
+        { inclusion1: 'Celebration onboard' },
+        { inclusion1: 'Multiple Dance Performances' },
+        { inclusion1: 'Bollywood Dance Show' },
+        { inclusion1: 'Tollywood Dance Performance' },
+        { inclusion1: 'Live DJ Entertainment with professional sound and lighting' },
+        { inclusion1: 'Interactive Games & Guest Engagement Activities' },
+        { inclusion1: 'Exclusive Spot Prizes & Surprise Giveaways' },
+        { inclusion1: 'Three-Deck Luxury Cruise Vessel with distinct experiences' },
+        { inclusion1: 'Premium Sofa Seating across VIP and lounge areas' },
+        { inclusion1: 'Unlimited Gourmet Soup Selection' },
+        { inclusion1: 'Unlimited Vegetarian Starters' },
+        { inclusion1: 'Unlimited Non-Vegetarian Starters' },
+        { inclusion1: 'Unlimited Lavish Buffet Dinner' },
+        { inclusion1: 'Unlimited IMFL Beverages' },
+        { inclusion1: 'Unlimited Soft Drinks & Mixers' },
+        { inclusion1: 'Chef-Selected Accompaniments' },
+        { inclusion1: 'Assorted Desserts to conclude the dining experience' },
+      ],
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },
       {
@@ -927,6 +973,7 @@ export const hotels: any[] = [
         discountPrice: '3499',
       },
       cruiseId: 5,
+      description: 'Nauti Amigo Cruise offers an exclusive 2-hour evening experience on Goa’s iconic Mandovi River. Savour a lavish unlimited buffet with vegetarian and non-vegetarian delicacies, enjoy live entertainment and vibrant dance performances, and sip on refreshing drinks as Panjim’s skyline lights up around you. Designed for all age groups, couples, families, and celebrations, this cruise delivers the perfect blend of fine dining, entertainment, and luxury on the water.',
       title: 'Nauti Amigo Cruise(Premium)',
       subTile: 'Nauti Amigo Cruise(Premium)',
       category: 'Cruise',
@@ -990,19 +1037,51 @@ export const hotels: any[] = [
       mustKnow: [
         {
           about1:
-            'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+            'Signature Luxury Sailing Experience on the serene Mandovi River',
         },
         {
           about1:
-            'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+            'Magnificent Triple-Deck Cruise Vessel, each deck curated for refined indulgence',
         },
         {
           about1:
-            'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+            'Exclusive AC VIP Lounge with plush seating and elegant interiors',
         },
         {
           about1:
-            'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+            'Open-Air Upper Deck offering panoramic night views and romantic ambience',
+        },
+        {
+          about1:
+            'Live DJ & Premium Dance Floor with immersive lighting and sound',
+        },
+        {
+          about1:
+            'Curated Onboard Bar & Hookah Lounge for a sophisticated nightlife experience',
+        },
+        {
+          about1:
+            'Designer Seating & Picture-Perfect Spaces for memorable photo moments',
+        },
+        {
+          about1:
+            'Romance-Centric Ambience ideal for couples and intimate celebrations',
+        },
+        {
+          about1:
+            'Graciously Family-Friendly while maintaining a premium atmosphere',
+        },
+        {
+          about1:
+            'Celebration-Ready Luxury Setup for birthdays, anniversaries, and private occasions',
+        },
+        {
+          about1:
+            'Spacious, Immaculate Washrooms designed for comfort and convenience',
+        },
+        {
+          about1:
+            'High-Standard Safety & Professional Crew ensuring a seamless experience',
         },
       ],
   
@@ -1038,14 +1117,27 @@ export const hotels: any[] = [
       ],
       overviewDesc:
         'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-      overview: [
-        { inclusion1: '2-hour mandovi cruise' },
-        { inclusion1: 'Buffet dinner' },
-        { inclusion1: 'Welcome drinks' },
-        { inclusion1: 'Soft drinks & water' },
-        { inclusion1: 'Goan dance show' },
-        { inclusion1: 'Hotel transfers (optional upgrade)' },
-      ],
+        overview: [
+          { inclusion1: 'Nauti Amigo Entertainment Line-Up & Culinary Delights' },
+          { inclusion1: '3-Hour Luxury Sailing Experience' },
+          { inclusion1: 'Celebration onboard' },
+          { inclusion1: 'Multiple Dance Performances' },
+          { inclusion1: 'Bollywood Dance Show' },
+          { inclusion1: 'Tollywood Dance Performance' },
+          { inclusion1: 'Live DJ Entertainment with professional sound and lighting' },
+          { inclusion1: 'Interactive Games & Guest Engagement Activities' },
+          { inclusion1: 'Exclusive Spot Prizes & Surprise Giveaways' },
+          { inclusion1: 'Three-Deck Luxury Cruise Vessel with distinct experiences' },
+          { inclusion1: 'Premium Sofa Seating across VIP and lounge areas' },
+          { inclusion1: 'Unlimited Gourmet Soup Selection' },
+          { inclusion1: 'Unlimited Vegetarian Starters' },
+          { inclusion1: 'Unlimited Non-Vegetarian Starters' },
+          { inclusion1: 'Unlimited Lavish Buffet Dinner' },
+          { inclusion1: 'Complimentary Drinks' },
+          { inclusion1: 'Chef-Selected Accompaniments' },
+          { inclusion1: 'Assorted Desserts to conclude the dining experience' },
+        ]
+        ,        
       thingsToCarry: [
         { exclusion1: 'Parking charges are not included in the package.' },
         {

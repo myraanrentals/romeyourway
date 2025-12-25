@@ -53,12 +53,13 @@
         <div>
           <h2 style="font-size: 22px">Unwind with a {{ hotelDetails.title }}</h2>
           <span class="abovehighlights">
-            Treat yourself to an evening of indulgence with a dinner cruise along the serene Mandovi
+            {{ hotelDetails.description|| 'Treat yourself to an evening of indulgence with a dinner cruise along the
+            serene Mandovi
             River. Step aboard and dive into a lavish spread of unlimited culinary delights,
             featuring a vibrant mix of vegetarian and meaty dishes that promise to tantalize your
             taste buds. As the boat glides through the water, prepare to be captivated by the
             glowing skyline of Panjim City. This 2-hour journey offers a front-row seat to Goa’s
-            charm, revealing its beauty
+            charm, revealing its beauty' }}
           </span>
         </div>
         <hr />
@@ -92,8 +93,8 @@
 
           <div *ngIf="activeTab === 'mustKnow'" class="tab-content">
             <ul>
-              <li *ngFor="let detail of hotelDetails.mustKnow">
-                {{ detail.about1 }}
+              <li *ngFor="let detail of hotelDetails.overview">
+                {{ detail.inclusion1 }}
               </li>
             </ul>
           </div>
@@ -347,15 +348,17 @@
       </div>
       <div class="price-box">
         <div class="price-div">
-          <h3 class="desktop-price">₹ {{ hotelDetails.priceDetails.discountPrice }} <span>{{ isPrivateParty ? 'Per Hour' : 'Per
+          <h3 class="desktop-price">₹ {{ hotelDetails.priceDetails.discountPrice }} <span>{{ isPrivateParty ? 'Per Hour'
+              : 'Per
               Person' }}</span></h3>
-          <h3 class="mobile-price">₹ {{ hotelDetails.priceDetails.discountPrice }} /<span style="text-decoration: line-through;"> {{
+          <h3 class="mobile-price">₹ {{ hotelDetails.priceDetails.discountPrice }} /<span
+              style="text-decoration: line-through;"> {{
               hotelDetails.priceDetails?.regularPrice }}</span></h3>
           <p class="old-price desktop-old-price">₹ {{ hotelDetails.priceDetails?.regularPrice }}</p>
           <span class="negotiable-badge" *ngIf="isPrivateParty">Negotiable</span>
           <div class="rating">
             <span>⭐ {{ hotelDetails.rating }} <span class="rating-count">({{ hotelDetails.reviews }})</span> </span>
-            
+
           </div>
         </div>
         <div class="desktop-button">
@@ -399,7 +402,8 @@
             <h3 class="title">{{ offer.title }}</h3>
             <p class="price">
               <span class="current-price">₹ {{ offer.priceDetails.discountPrice }}</span>
-              <span class="old-price" *ngIf="offer.priceDetails?.regularPrice">₹ {{ offer.priceDetails?.regularPrice }}</span>
+              <span class="old-price" *ngIf="offer.priceDetails?.regularPrice">₹ {{ offer.priceDetails?.regularPrice
+                }}</span>
             </p>
             <button mat-button class="offer-button">
               {{ offer.buttonText }}

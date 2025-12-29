@@ -92,7 +92,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     overviewDesc:
       'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
@@ -261,7 +261,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -468,7 +468,7 @@ export const hotels: any[] = [
   //       image: './assets/images/svg/bolt-ico.svg',
   //     },
   //     { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-  //     { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+  //     { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
   //   ],
   //   highlights: [
   //     {
@@ -656,7 +656,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -739,7 +739,7 @@ export const hotels: any[] = [
     },
     cruiseId: 5,
     title: 'Nauti Amigo Cruise(Luxury)',
-    description: 'Nauti Amigo Cruise offers an exclusive 2-hour evening experience on Goa’s iconic Mandovi River. Savour a lavish unlimited buffet with vegetarian and non-vegetarian delicacies, enjoy live entertainment and vibrant dance performances, and sip on refreshing drinks as Panjim’s skyline lights up around you. Designed for all age groups, couples, families, and celebrations, this cruise delivers the perfect blend of fine dining, entertainment, and luxury on the water.',
+    description: 'Nauti Amigo Cruise offers an exclusive 3-hour evening experience on Goa’s iconic Mandovi River. Savour a lavish unlimited buffet with vegetarian and non-vegetarian delicacies, enjoy live entertainment and vibrant dance performances, and sip on refreshing drinks as Panjim’s skyline lights up around you. Designed for all age groups, couples, families, and celebrations, this cruise delivers the perfect blend of fine dining, entertainment, and luxury on the water.',
     subTile: 'Nauti Amigo Cruise(Luxury)',
     category: 'Cruise',
     type: ['luxury'],
@@ -768,13 +768,13 @@ export const hotels: any[] = [
         {
           category: 'Ticket',
           items: [
-            '2 Hours Cruising on Mandovi River',
+            '3 Hours Sailing on Mandovi River',
             'Dance Performances & Entertainment on Board',
           ],
         },
         {
           category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Unlimited Dinks & Snacks'],
         },
         {
           category: 'Activities',
@@ -860,7 +860,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -881,7 +881,12 @@ export const hotels: any[] = [
       },
     ],
     overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+      'A luxury night cruise featuring live DJ, dance performances, unlimited buffet dinner, IMFL drinks, and elegant seating for couples, families, and celebrations.',
+      overviewPara:[
+        'Experience one of the best luxury dinner cruises in Goa aboard the Nauti Amigo Luxury Cruise, a premium triple-deck cruise on the Mandovi River. Designed for couples, families, and celebration seekers, this evening cruise combines live entertainment, gourmet dining, and scenic night views for an unforgettable experience.',
+        "The cruise features an AC VIP lounge, premium sofa seating, an open-air upper deck, advanced sound and lighting systems, and a lively dance floor with a live DJ. Guests are entertained with Bollywood and Tollywood dance performances, interactive games, and curated onboard activities, making it one of the most entertaining river cruises in Goa.",
+        "Enjoy a lavish unlimited buffet dinner including vegetarian and non-vegetarian starters, gourmet soups, curated accompaniments, desserts, and unlimited IMFL and soft drinks. With a professional crew, high safety standards, and seamless onboard service, Nauti Amigo stands out as a top-rated luxury cruise experience."
+      ],
       overview: [
         { inclusion1: 'Nauti Amigo Entertainment Line-Up & Culinary Delights' },
         { inclusion1: '3-Hour Luxury Sailing Experience' },
@@ -894,7 +899,7 @@ export const hotels: any[] = [
         { inclusion1: 'Exclusive Spot Prizes & Surprise Giveaways' },
         { inclusion1: 'Three-Deck Luxury Cruise Vessel with distinct experiences' },
         { inclusion1: 'Premium Sofa Seating across VIP and lounge areas' },
-        { inclusion1: 'Unlimited Gourmet Soup Selection' },
+        { inclusion1: 'Unlimited Gourmet Soup ' },
         { inclusion1: 'Unlimited Vegetarian Starters' },
         { inclusion1: 'Unlimited Non-Vegetarian Starters' },
         { inclusion1: 'Unlimited Lavish Buffet Dinner' },
@@ -904,14 +909,7 @@ export const hotels: any[] = [
         { inclusion1: 'Assorted Desserts to conclude the dining experience' },
       ],
     thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
+      { exclusion1: 'Anything Not Mentioned in the package details.' },
     ],
     needToKnows: [
       {
@@ -940,10 +938,12 @@ export const hotels: any[] = [
         adultReportPrice: '3000',
         kidReportPrice: '1500',
         desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
         ],
       },
       {
@@ -958,10 +958,13 @@ export const hotels: any[] = [
         adultReportPrice: '3000',
         kidReportPrice: '2000',
         desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
+         'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+          'Transfers',
         ],
       },
     ],
@@ -973,7 +976,7 @@ export const hotels: any[] = [
         discountPrice: '3499',
       },
       cruiseId: 5,
-      description: 'Nauti Amigo Cruise offers an exclusive 2-hour evening experience on Goa’s iconic Mandovi River. Savour a lavish unlimited buffet with vegetarian and non-vegetarian delicacies, enjoy live entertainment and vibrant dance performances, and sip on refreshing drinks as Panjim’s skyline lights up around you. Designed for all age groups, couples, families, and celebrations, this cruise delivers the perfect blend of fine dining, entertainment, and luxury on the water.',
+      description: 'Nauti Amigo Cruise offers an exclusive 3-hour evening experience on Goa’s iconic Mandovi River. Savour a lavish unlimited buffet with vegetarian and non-vegetarian delicacies, enjoy live entertainment and vibrant dance performances, and sip on refreshing drinks as Panjim’s skyline lights up around you. Designed for all age groups, couples, families, and celebrations, this cruise delivers the perfect blend of fine dining, entertainment, and luxury on the water.',
       title: 'Nauti Amigo Cruise(Premium)',
       subTile: 'Nauti Amigo Cruise(Premium)',
       category: 'Cruise',
@@ -1003,7 +1006,7 @@ export const hotels: any[] = [
           {
             category: 'Ticket',
             items: [
-              '2 Hours Cruising on Mandovi River',
+              '3 Hours Sailing on Mandovi River',
               'Dance Performances & Entertainment on Board',
             ],
           },
@@ -1095,7 +1098,7 @@ export const hotels: any[] = [
           image: './assets/images/svg/bolt-ico.svg',
         },
         { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-        { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+        { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
       ],
       highlights: [
         {
@@ -1116,7 +1119,12 @@ export const hotels: any[] = [
         },
       ],
       overviewDesc:
-        'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+      'A premium night cruise featuring live DJ, dance performances, unlimited buffet dinner, IMFL drinks, and elegant seating for couples, families, and celebrations.',
+      overviewPara:[
+        'Experience one of the best premium dinner cruises in Goa aboard the Nauti Amigo Luxury Cruise, a premium triple-deck cruise on the Mandovi River. Designed for couples, families, and celebration seekers, this evening cruise combines live entertainment, gourmet dining, and scenic night views for an unforgettable experience.',
+        "The cruise features an AC VIP lounge, premium sofa seating, an open-air upper deck, advanced sound and lighting systems, and a lively dance floor with a live DJ. Guests are entertained with Bollywood and Tollywood dance performances, interactive games, and curated onboard activities, making it one of the most entertaining river cruises in Goa.",
+        "Enjoy a lavish unlimited buffet dinner including vegetarian and non-vegetarian starters, gourmet soups, curated accompaniments, desserts, and unlimited IMFL and soft drinks. With a professional crew, high safety standards, and seamless onboard service, Nauti Amigo stands out as a top-rated luxury cruise experience."
+      ],
         overview: [
           { inclusion1: 'Nauti Amigo Entertainment Line-Up & Culinary Delights' },
           { inclusion1: '3-Hour Luxury Sailing Experience' },
@@ -1129,7 +1137,7 @@ export const hotels: any[] = [
           { inclusion1: 'Exclusive Spot Prizes & Surprise Giveaways' },
           { inclusion1: 'Three-Deck Luxury Cruise Vessel with distinct experiences' },
           { inclusion1: 'Premium Sofa Seating across VIP and lounge areas' },
-          { inclusion1: 'Unlimited Gourmet Soup Selection' },
+          { inclusion1: 'Unlimited Gourmet Soup ' },
           { inclusion1: 'Unlimited Vegetarian Starters' },
           { inclusion1: 'Unlimited Non-Vegetarian Starters' },
           { inclusion1: 'Unlimited Lavish Buffet Dinner' },
@@ -1139,14 +1147,7 @@ export const hotels: any[] = [
         ]
         ,        
       thingsToCarry: [
-        { exclusion1: 'Parking charges are not included in the package.' },
-        {
-          exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-        },
-        {
-          exclusion1:
-            'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-        },
+        { exclusion1: 'Anything Not Mentioned in the package details.' },
       ],
       needToKnows: [
         {
@@ -1175,10 +1176,13 @@ export const hotels: any[] = [
           adultReportPrice: '2500',
           kidReportPrice: '1500',
           desc: [
-            'Access to lower deck',
-            '2-hour cruise in Goa Marina',
-            'Goan buffet dinner.',
-            'Goan dance show',
+            'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Complementary drinks.',
+          'Unlimited entertainment.',
+          'Dessert'
           ],
         },
         {
@@ -1193,10 +1197,14 @@ export const hotels: any[] = [
           adultReportPrice: '3000',
           kidReportPrice: '2000',
           desc: [
-            'Access to all decks',
-            '2-hour cruise in Goa Marina',
-            'Goan buffet dinner.',
-            'Goan dance show',
+           'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Complementary drinks.',
+          'Unlimited entertainment.',
+          'Dessert',
+          'Transfers'
           ],
         },
       ],
@@ -1296,7 +1304,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -1479,7 +1487,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -1667,7 +1675,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -1855,7 +1863,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -2043,7 +2051,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -2231,7 +2239,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -2419,7 +2427,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -2607,7 +2615,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -2795,7 +2803,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -2983,7 +2991,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -3171,7 +3179,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -3359,7 +3367,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -3547,7 +3555,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -3735,7 +3743,7 @@ export const hotels: any[] = [
         image: './assets/images/svg/bolt-ico.svg',
       },
       { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: './assets/images/svg/transfer-ico.svg' },
+      { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
       {
@@ -3831,10 +3839,11 @@ export const hotels: any[] = [
 ];
 
 export const cancellationPolicy: string[] = [
-  'If cancellation is made 15 days before the date of travel, 0.0% will be charged.',
-  'If cancellation is made 7 to 15 days before, 50.0% of the total cost will be charged.',
-  'If cancellation is made 0 to 7 days before, 100.0% will be charged.',
-  'Unforeseen conditions may result in cancellation, and no cash refund will be provided.',
+ "If cancellation is made 15 days before the scheduled activity date, 0% will be charged.",
+  "If cancellation is made 7 to 15 days before the scheduled activity date, 50% of the total cost will be charged.",
+  "If cancellation is made 0 to 7 days before the scheduled activity date, 100% will be charged.",
+  "If the service is not provided by us, the full amount paid will be refunded.",
+  "No refunds are applicable for no-shows, late arrivals, or changes of plans."
 ];
 export interface Traveller {
   label: string;

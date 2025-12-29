@@ -89,7 +89,8 @@ export class DetailsPageComponent {
       width: '600px',
       data: {
         overviewDesc: this.hotelDetails.overviewDesc,
-        overview: this.hotelDetails.overview,
+        overviewPara: this.hotelDetails?.overviewPara,
+        title: this.hotelDetails.title,
       },
     });
   }

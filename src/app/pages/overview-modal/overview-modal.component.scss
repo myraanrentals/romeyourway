@@ -1,7 +1,263 @@
-button {
-  background-color: #ff5722;
-  padding: 8px;
-  border: none;
-  border-radius: 12px;
-  font-weight: 400;
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px 24px;
+  border-bottom: 2px solid #f0f0f0;
+  background: linear-gradient(135deg, #ff5722 0%, #ff6600 100%);
+  position: relative;
+  min-height: 60px;
+  gap: 12px;
+  overflow: hidden;
+
+  .modal-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+  }
+
+  .close-button {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    margin-left: 16px;
+    flex-shrink: 0;
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(90deg);
+    }
+
+    mat-icon {
+      color: #ffffff;
+    }
+  }
+}
+
+.modal-content {
+  padding: 24px;
+  max-height: calc(90vh - 180px);
+  overflow-y: auto;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ff5722;
+    border-radius: 4px;
+
+    &:hover {
+      background: #ff6600;
+    }
+  }
+
+  .overview-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 0 24px 0;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #ff5722;
+  }
+
+  .overview-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e8e8e8;
+      transition: all 0.2s ease;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: #f8f9fa;
+        padding-left: 8px;
+        border-radius: 4px;
+      }
+
+      .list-icon {
+        color: #19ad6f;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      span {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #515151;
+        flex: 1;
+      }
+    }
+  }
+}
+
+.modal-actions {
+  padding: 16px 24px;
+  border-top: 1px solid #e8e8e8;
+  margin: 0 -24px -24px -24px;
+  display: flex;
+  justify-content: flex-end;
+  background: #fafafa;
+
+  .close-btn {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(255, 87, 34, 0.3);
+
+    mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background-color: #e64a19;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Mobile responsive styles
+@media screen and (max-width: 768px) {
+  .modal-header {
+    padding: 16px 12px 12px 16px;
+    min-height: 56px;
+    gap: 8px;
+    
+
+    .modal-title {
+      font-size: 18px;
+      line-height: 1.2;
+      -webkit-line-clamp: 2;
+    }
+
+    .close-button {
+      margin-left: 8px;
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+
+      mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .modal-content {
+    padding: 20px 16px;
+    max-height: calc(90vh - 160px);
+
+    .overview-description {
+      font-size: 15px;
+      padding: 12px;
+      margin-bottom: 20px;
+    }
+
+    .overview-list {
+      .list-item {
+        padding: 10px 0;
+
+        .list-icon {
+          font-size: 18px;
+          width: 18px;
+          height: 18px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .modal-actions {
+    padding: 12px 16px;
+    margin: 0 -24px -24px -24px;
+
+    .close-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// Global dialog styles override
+::ng-deep {
+  .mat-mdc-dialog-container {
+    padding: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+    max-width: 100vw !important;
+  }
+
+  .mat-mdc-dialog-surface {
+    border-radius: 16px !important;
+  }
+
+  // Make dialog responsive on mobile
+  @media screen and (max-width: 768px) {
+    .mat-mdc-dialog-container {
+      width: 95vw !important;
+      max-width: 95vw !important;
+      margin: 0 auto !important;
+    }
+  }
 }

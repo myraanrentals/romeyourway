@@ -475,7 +475,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       // Source
       leadOrigine: 'WEBSITE',
       leadType: 'New',
-      createdBy: 'ONLINE',
+      createdBy: '1234567890',
+      superadminId: '1234567890',
       loginId: phone,
       notes: '',
     };
@@ -486,6 +487,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   handlePaymentResponse(response: any, payloadData: any) {
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
+        console.log('res', res);
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentUrl;
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
@@ -499,6 +501,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     });
   }
   bookingPay(paymentLink: string) {
+    console.log('paymentLink', paymentLink);
     window.open(paymentLink, '_blank');
   }
   async validateCoupon(

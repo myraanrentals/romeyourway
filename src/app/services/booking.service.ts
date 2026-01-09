@@ -39,9 +39,10 @@ export class BookingService {
   vehicleBooking(payloadData: any): Observable<any> {
     let payload = {
       payload: {
-        createdBy: 'ONLINE',
         pgRespUrl: "https://www.romeyourway.com/payment-status/",
         ...payloadData,
+        createdBy: '1234567890',
+        superadminId: '1234567890',
       },
     };
     return this._apiService.httpPOST(APIROUTES.WATERSPORTSBOOKING, payload);

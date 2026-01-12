@@ -516,8 +516,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     });
   }
   bookingPay(paymentLink: string) {
-    console.log('paymentLink', paymentLink);
-    window.open(paymentLink, '_blank');
+    window.location.href = paymentLink;
   }
   async validateCoupon(
     coupon: string,

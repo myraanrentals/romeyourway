@@ -23,8 +23,8 @@ export class PaymentStatusComponent implements OnInit {
     const paymentId = this.route.snapshot.paramMap.get('paymentId');
     const previousBookingID = sessionStorage.getItem('paymentResponse');
     console.log({paymentId, previousBookingID});
-    if ( previousBookingID !== paymentId) {
-      this.error = `${previousBookingID} is not the same as ${paymentId}`;
+    if (!paymentId) {
+      this.error = 'Missing payment ID';
       this.isLoading = false;
       return;
     }

@@ -347,7 +347,23 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       this.initiatePayment();
     }
   }
+  convertToUTC(dateStr: string, timeStr: string): string {
+    const [year, month, day] = dateStr.split('-').map(Number);
 
+  const match = timeStr.toLowerCase().match(/(\d+)(am|pm)/);
+  if (!match) throw new Error('Invalid time format');
+
+  let hour = Number(match[1]);
+  const period = match[2];
+
+  if (period === 'pm' && hour !== 12) hour += 12;
+  if (period === 'am' && hour === 12) hour = 0;
+
+  const utcDate = new Date(Date.UTC(year, month - 1, day, hour, 0, 0));
+
+  return utcDate.toISOString().slice(0, 19);
+  }
+  
   initiatePayment() {
     const { fullName, countryCode, phone, email } = this.travellerDetails;
     const {
@@ -438,8 +454,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       category: title,
 
       // Timing
-      pickupDateTime: selectedDate?.dateFormat || null,
-      dropDateTime: selectedDate?.dateFormat || null,
+      pickupDateTime: this.convertToUTC(selectedDate?.dateFormat, selectedTime) || null,
+      dropDateTime: this.convertToUTC(selectedDate?.dateFormat, selectedTime) || null,
 
       // Customer Info
       customeName: fullName,
@@ -461,7 +477,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       companyRate: travellers[0]?.price || 0,
       companyRateForKids: travellers[1]?.price || 0,
       payToCompany: 0,
-      bookingAmount: finalBookingAmount,
+      bookingAmount: amountWithGST,
       balanceAmount: finalBalanceAmount,
       totalAmount: finalTotalAmount,
       securityAmount: 0,
@@ -477,10 +493,9 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       leadType: 'New',
       createdBy: '1234567890',
       superadminId: '1234567890',
-      loginId: phone,
+      loginId: '1234567890',
       notes: '',
     };
-    console.log('secondPayloadData', {secondPayloadData});
     this.handlePaymentResponse('response', secondPayloadData);
   }
 

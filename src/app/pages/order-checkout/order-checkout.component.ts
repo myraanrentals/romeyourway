@@ -477,7 +477,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       companyRate: travellers[0]?.price || 0,
       companyRateForKids: travellers[1]?.price || 0,
       payToCompany: 0,
-      bookingAmount: amountWithGST,
+      bookingAmount: finalBookingAmount,
       balanceAmount: finalBalanceAmount,
       totalAmount: finalTotalAmount,
       securityAmount: 0,

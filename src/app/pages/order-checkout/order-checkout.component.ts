@@ -207,8 +207,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     return {
       basePrice: parseFloat(basePrice.toFixed(2)),
       discountedBase: parseFloat(discountedBase.toFixed(2)),
-      taxAmount: parseFloat(taxAmount.toFixed(2)),
-      finalTotal: parseFloat(finalTotal.toFixed(2)),
+      taxAmount: Math.floor(parseFloat(taxAmount.toFixed(2))),
+      finalTotal: Math.floor(parseFloat(finalTotal.toFixed(2))),
     };
   }
 

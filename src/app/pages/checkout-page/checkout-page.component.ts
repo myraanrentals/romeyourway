@@ -182,15 +182,15 @@ export class CheckoutPageComponent implements OnInit {
     );
     const gstRate = 0.18;
     const gstAmount = +(subtotal * gstRate).toFixed(2);
-    const amountWithGST = +(subtotal + gstAmount).toFixed(2);
+    const amountWithGST = Math.floor(+(subtotal + gstAmount).toFixed(2));
 
     this.HelperService.updateSessionStorage({
-      subtotal: +subtotal.toFixed(2),
-      payableAmount: +subtotal.toFixed(2),
+      subtotal: Math.floor(+subtotal.toFixed(2)),
+      payableAmount: Math.floor(+subtotal.toFixed(2)),
       amountWithGST,
     });
 
-    return +subtotal.toFixed(2);
+    return Math.floor(+subtotal.toFixed(2));
   }
 
   getSubtotalForYacth(): number {

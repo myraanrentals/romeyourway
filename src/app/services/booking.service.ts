@@ -39,7 +39,7 @@ export class BookingService {
   vehicleBooking(payloadData: any): Observable<any> {
     let payload = {
       payload: {
-        pgRespUrl: "https://www.romeyourway.com/payment-status/",
+        pgRespUrl: "https://romeyourway.com/payment-status/",
         ...payloadData,
         createdBy: '1234567890',
         superadminId: '1234567890',

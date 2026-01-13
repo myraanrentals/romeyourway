@@ -580,7 +580,21 @@
               <span (click)="openBookingSummary()" class="viewDetails">View Details ></span>
             </p>
           </div>
-          <button class="confirm-pay-btn" (click)="validateAndSubmit()">Confirm & Pay</button>
+          <button
+  class="confirm-pay-btn"
+  (click)="validateAndSubmit()"
+  [disabled]="confirmPaymentLoading"
+>
+  <ng-container *ngIf="!confirmPaymentLoading; else loading">
+    Confirm & Pay
+  </ng-container>
+
+  <ng-template #loading>
+    <span class="spinner"></span>
+    Processing...
+  </ng-template>
+</button>
+
         </div>
       </div>
     </div>

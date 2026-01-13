@@ -28,7 +28,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   ) {}
 
   selectedPaymentOption: 'partial' | 'full' = 'full';
-
+  confirmPaymentLoading = false;
   contact = {
     firstName: 'Arshad',
     lastName: 'M',
@@ -500,23 +500,29 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   }
 
   handlePaymentResponse(response: any, payloadData: any) {
+    this.confirmPaymentLoading = true;
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
-        console.log('res', res);
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentUrl;
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
           this.bookingPay(payLink);
         } else {
+          this.confirmPaymentLoading = false;
         }
       },
       error: (err: any) => {
         console.error('Booking failed', err);
+        this.confirmPaymentLoading = false;
       },
+      complete: () => {
+        this.confirmPaymentLoading = false;
+      }
     });
   }
   bookingPay(paymentLink: string) {
     window.location.href = paymentLink;
+    this.confirmPaymentLoading = false;
   }
   async validateCoupon(
     coupon: string,

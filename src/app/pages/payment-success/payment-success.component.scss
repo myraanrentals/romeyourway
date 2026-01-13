@@ -47,9 +47,36 @@
     }
   }
 
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .download-receipt-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
   .back-home-btn {
     display: inline-block;
-    margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     background-color: #28a745;
     color: #fff;

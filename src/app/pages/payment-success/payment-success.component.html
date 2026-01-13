@@ -15,7 +15,13 @@
 
     <div class="payment-details">
       <p><strong>Order ID:</strong> {{ paymentDetails.orderId }}</p>
-      <p><strong>Transaction ID:</strong> {{ paymentDetails.bookingId }}</p>
+      <p><strong>Transaction ID:</strong> {{ paymentDetails.cashfreePaymentId }}</p>
+      <p><strong>Payment Currency:</strong> {{ paymentDetails.paymentCurrency }}</p>
+      <p><strong>Payment Amount:</strong> {{ paymentDetails.paymentAmount }}</p>
+      <p><strong>Cashfree Payment ID:</strong> {{ paymentDetails.cashfreePaymentId }}</p>
+      <p><strong>Payment Completion Time:</strong> {{ paymentDetails.paymentCompletionTime }}</p>
+      <p><strong>Bank Reference:</strong> {{ paymentDetails.bankReference }}</p>
+      <p><strong>Payment Group:</strong> {{ paymentDetails.paymentGroup }}</p>
       <!-- <p><strong>Transaction ID:</strong> {{ paymentDetails.transactionId }}</p>
       <p><strong>Payment Mode:</strong> {{ paymentDetails.paymentMode }}</p>
       <p><strong>Name:</strong> {{ paymentDetails.name }}</p>
@@ -25,7 +31,10 @@
       ⚠️ Please save your <strong>Order ID</strong> and <strong>Mobile Number</strong> for future
       reference in case of any issues.
     </p>
-    <a href="/" class="back-home-btn">Go to Home</a>
+    <div class="action-buttons">
+      <button (click)="downloadReceipt()" class="download-receipt-btn">Download Receipt</button>
+      <a href="/" class="back-home-btn">Go to Home</a>
+    </div>
   </div>
 </div>
 

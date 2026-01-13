@@ -421,11 +421,11 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const childCount = travellers[1]?.count || 0;
     const infantCount = travellers[2]?.count || 0;
     const totalAmount = adultCount*adultPrice + kidCount * kidPrice
-    const totalAmountWithGst = totalAmount + totalAmount * 0.18
+    const totalAmountWithGst = Math.floor(totalAmount + totalAmount * 0.18)
     const totalBalanceAmount =  adultCount*adultReportPrice + kidCount * kidReportPrice
     //Patrial Logics
     const partialAmount = adultCount*(adultPrice-adultReportPrice) + kidCount * (kidPrice-kidReportPrice)
-    const partialAmountWithGst = partialAmount + partialAmount * 0.18
+    const partialAmountWithGst = Math.floor(partialAmount + partialAmount * 0.18)
     const partialBalanceAmount =  totalAmount - partialAmount
     
     

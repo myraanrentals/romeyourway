@@ -22,7 +22,6 @@ export class PaymentStatusComponent implements OnInit {
   ngOnInit(): void {
     const paymentId = this.route.snapshot.paramMap.get('paymentId');
     const previousBookingID = sessionStorage.getItem('paymentResponse');
-    console.log({paymentId, previousBookingID});
     if (!paymentId) {
       this.error = 'Missing payment ID';
       this.isLoading = false;
@@ -35,7 +34,19 @@ export class PaymentStatusComponent implements OnInit {
           this.isLoading = false;
           switch (res.payload.respMesg) {
             case 'Your Payment is SUCCESS':
-              sessionStorage.setItem('paymentStatusResponse', JSON.stringify(res?.payload));
+              const pgResponseBody = JSON.parse(res?.payload?.pgResponseBody)[0];
+              const requiredRes = {
+                orderId: pgResponseBody?.order_id,
+                paymentCurrency: pgResponseBody?.payment_currency,
+                paymentAmount: pgResponseBody?.payment_amount,
+                cashfreePaymentId: pgResponseBody?.cf_payment_id,
+                paymentCompletionTime: pgResponseBody?.payment_completion_time,
+                bankReference: pgResponseBody?.bank_reference,
+                paymentGroup: pgResponseBody?.payment_group,
+              }
+
+              console.log({pgResponseBody});
+              sessionStorage.setItem('paymentStatusResponse', JSON.stringify(requiredRes));
 
               this.router.navigate(['/payment-success']);
               break;

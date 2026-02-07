@@ -107,8 +107,20 @@
           class="time-dropdown"
         >
           <mat-select [(ngModel)]="selectedTime" (selectionChange)="updateTime($event.value)">
-            <mat-option value="6pm">Starts at 06:00 PM</mat-option>
-            <mat-option value="7pm">Starts at 07:00 PM</mat-option>
+            <ng-container *ngIf="hotelDetails?.timeSlots && hotelDetails?.timeSlots?.length > 0">
+              <mat-option
+                *ngFor="let timeSlot of hotelDetails.timeSlots"
+                [value]="timeSlot"
+              >
+                Report Time: {{ timeSlot }}
+              </mat-option>
+            </ng-container>
+            <mat-option
+              *ngIf="!hotelDetails?.timeSlots || hotelDetails?.timeSlots?.length === 0"
+              value="8:00pm"
+            >
+              Report Time: 8:00pm
+            </mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field

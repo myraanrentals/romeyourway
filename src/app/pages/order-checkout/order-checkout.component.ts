@@ -61,20 +61,20 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   showCouponModal: boolean = false;
   availableCoupons = [
     {
-      title: 'Get 10% off',
-      code: 'DIGISMART',
-      description: 'Applicable with Standard Chartered cards. Max ₹200 off.',
+      title: 'Get ₹500 off',
+      code: 'RYWVDS500',
+      description: 'Applicable on full payment. Max ₹500 off.',
     },
-    {
-      title: 'Up to ₹100 Cashback',
-      code: 'PHONEPERUPAYCC',
-      description: 'Valid on PhonePe with Rupay Credit Cards.',
-    },
-    {
-      title: 'Flat ₹200 Cashback',
-      code: 'PAYTMUPI',
-      description: 'Valid on Paytm UPI above ₹150.',
-    },
+    // {
+    //   title: 'Up to ₹100 Cashback',
+    //   code: 'PHONEPERUPAYCC',
+    //   description: 'Valid on PhonePe with Rupay Credit Cards.',
+    // },
+    // {
+    //   title: 'Flat ₹200 Cashback',
+    //   code: 'PAYTMUPI',
+    //   description: 'Valid on Paytm UPI above ₹150.',
+    // },
   ];
 
   ngOnInit() {

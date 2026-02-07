@@ -92,11 +92,12 @@ export class CheckoutPageComponent implements OnInit {
         });
       }
       this.generateDates(new Date());
+      this.selectedTime = this.hotelDetails.timeSlots[0] ?? '8pm';
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
         selectedTime:
           category !== 'book-private-yachts-in-goa'
-            ? this.selectedTime
+            ? this.hotelDetails.timeSlots[0]
             : this.hotelDetails.transport[0].timeSlots[0],
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[0],

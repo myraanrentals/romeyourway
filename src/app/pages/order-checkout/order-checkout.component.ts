@@ -495,6 +495,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       superadminId: '1234567890',
       loginId: '1234567890',
       notes: '',
+      otherPickLocation:'N/A',
+      otherDropLocation:'N/A',
     };
     this.handlePaymentResponse('response', secondPayloadData);
   }

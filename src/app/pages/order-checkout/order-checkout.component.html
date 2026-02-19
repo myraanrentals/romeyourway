@@ -470,11 +470,3 @@
   <app-feature-section [title]="'Why Choose Rome Your Way...'" [features]="features"
     [whatsappNumber]="' +917715959917 '" />
 </section>
-<script>
-  dataLayer.push({
-    event: 'purchase',
-    name: this.travellerDetails.fullName,
-    email: this.travellerDetails.email,
-    phone: this.travellerDetails.countryCode + this.travellerDetails.phone,
-  });
-</script>

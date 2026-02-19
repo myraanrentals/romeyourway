@@ -498,13 +498,6 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       otherPickLocation:'N/A',
       otherDropLocation:'N/A',
     };
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'purchase',
-      name: this.travellerDetails.fullName,
-      email: this.travellerDetails.email,
-      phone: this.travellerDetails.countryCode + this.travellerDetails.phone,
-    });
     this.handlePaymentResponse('response', secondPayloadData);
   }
 

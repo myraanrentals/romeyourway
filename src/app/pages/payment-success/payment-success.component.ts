@@ -29,6 +29,9 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
     private router: Router,
   ) { }
   public amount?: string;
+  public name?: string;
+  public email?: string;
+  public phone?: string;
 
   private formatISTDateTime(istTime?: string): string | undefined {
     if (!istTime) return undefined;
@@ -53,6 +56,13 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     const paymentStatusResponse = sessionStorage.getItem('paymentStatusResponse');
+    const travellerDetails = sessionStorage.getItem('travellerDetails');
+    if (travellerDetails) {
+      const data = JSON.parse(travellerDetails);
+      this.name = data?.fullName;
+      this.email = data?.email;
+      this.phone = data?.countryCode + data?.phone;
+    }
     if (!(paymentStatusResponse)) return;
 
     try {
@@ -190,6 +200,10 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
       value: this.paymentDetails.paymentAmount ?? 0, // GA4 expects number
       transaction_id: this.paymentDetails.cashfreePaymentId ?? '',
       currency: this.paymentDetails.paymentCurrency ?? 'INR',
+      name: this.name ?? '',
+      email: this.email ?? '',
+      phone: this.phone ?? '',
+
     });
   }
 }

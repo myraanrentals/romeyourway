@@ -51,6 +51,7 @@ export class BookingService {
     let payload = {
       payload: {
         bookingId: bookingId,
+        enquirySource: 'ROME_YOUR_WAY',
       },
     };
     return this._apiService.httpPOST(APIROUTES.PAYMENTSTATUS, payload);

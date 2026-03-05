@@ -59,6 +59,33 @@ export class HelperService {
       return hotels;
     }
   }
+  categoryTypeNameParser(category: string): string {
+    let categoryName = category;
+    if (category.startsWith('book-')) {
+      categoryName = category.replace('book-', '');
+    } else if (category.startsWith('best-')) {
+      categoryName = category.replace('best-', '');
+    }
+
+    switch (category) {
+      case 'dinner-cruise-in-goa':
+        return 'Cruises';
+      case 'private-yachts-in-goa':
+        return 'Yacht';
+      case 'watersports-and-scuba-diving-in-goa':
+        return 'Watersports';
+      case 'water-sports-in-goa':
+        return 'Watersports';
+      case 'adventures-in-goa':
+        return 'Adventure';
+      case 'sightseeing-in-goa':
+        return 'Sightseeing';
+      case 'private-parties':
+        return 'Cruises';
+      default:
+        return 'Cruises';
+    }
+  }
 
   getFilterItems(category: string): { label: string; value: string }[] | null {
     // Extract category name after 'book-' or 'best-' prefix

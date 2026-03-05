@@ -497,6 +497,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       notes: '',
       otherPickLocation:'N/A',
       otherDropLocation:'N/A',
+      categoryTypeName:this.HelperService.categoryTypeNameParser(this.category)
     };
     this.handlePaymentResponse('response', secondPayloadData);
   }

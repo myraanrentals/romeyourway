@@ -396,13 +396,13 @@ export const hotels: any[] = [
         {
           category: 'Ticket',
           items: [
-            '2 Hours Cruising on Mandovi River',
+            '1 Hours Cruising on Mandovi River',
             'Dance Performances & Entertainment on Board',
           ],
         },
         {
           category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+          items: ['Snacks and Tea ',],
         },
         {
           category: 'Activities',
@@ -455,7 +455,7 @@ export const hotels: any[] = [
         name: 'Panjim Goa, India',
         image: './assets/images/svg/bolt-ico.svg',
       },
-      { name: 'Meals & Drinks', image: './assets/images/svg/mobile-ico.svg' },
+      { name: 'Snacks and Tea', image: './assets/images/svg/mobile-ico.svg' },
       { name: 'Entertainment', image: './assets/images/svg/bolt-ico.svg' },
     ],
     highlights: [
@@ -477,14 +477,14 @@ export const hotels: any[] = [
       },
     ],
     overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+      'The 1-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
     overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
+      { inclusion1: '1 Hour Mandovi River Cruise' },
+      { inclusion1: '3 Dance Performances' },
+      { inclusion1: 'DJ Music' },
+      { inclusion1: 'Sightseeing' },
+      { inclusion1: 'Hi-Tea ' },
+      { inclusion1: 'Snacks' },
     ],
     thingsToCarry: [
       { exclusion1: 'Parking charges are not included in the package.' },

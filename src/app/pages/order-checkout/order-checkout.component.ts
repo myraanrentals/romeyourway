@@ -420,7 +420,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const adultCount = travellers[0]?.count || 0;
     const childCount = travellers[1]?.count || 0;
     const infantCount = travellers[2]?.count || 0;
-    const totalAmount = (adultCount*adultPrice + kidCount * kidPrice)-this.sessionData?.discountAmount || 0
+    const totalAmount = adultCount*adultPrice + kidCount * kidPrice
     const totalAmountWithGst = Math.floor(totalAmount + totalAmount * 0.18)
     const totalBalanceAmount =  adultCount*adultReportPrice + kidCount * kidReportPrice
     //Patrial Logics
@@ -432,7 +432,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     // full payment
     
     const finalBalanceAmount = paymentType==='full'?totalAmountWithGst-totalAmountWithGst:partialBalanceAmount
-    const finalBookingAmount = partialAmount
+    const finalBookingAmount = paymentType==='full'?partialAmount-this.sessionData?.discountAmount:partialAmount
     //partial payment
     const payToVendor = paymentType==='full'? totalBalanceAmount:0
     const finalTotalAmount =  paymentType==='full'?amountWithGST:partialAmountWithGst+partialBalanceAmount

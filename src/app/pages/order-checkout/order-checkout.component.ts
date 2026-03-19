@@ -448,7 +448,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       dropHub: pickupLocation,
       dropPoint: null,
       activityLocation: null,
-
+      selfPdType :pickupLocation?'pandd':'self',
       // Package Info
       categoryId: 1,
       category: title,

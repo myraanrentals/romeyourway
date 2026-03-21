@@ -122,9 +122,14 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.couponMessage = '';
   }
   findProfit() {
-    const { travellers } = this.sessionData;
-    const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
-    const profit = vehicleQuantity * this.hotelDetails.reportPrice;
+    const { travellers,selectedTransport } = this.sessionData;
+    const adult_count = travellers[0]?.count;
+    const adult_price = selectedTransport?.adultPrice;
+    const kid_count = travellers[1]?.count;
+    const kid_price = selectedTransport?.kidPrice;
+    const adult_report_price = selectedTransport?.adultReportPrice;
+    const kid_report_price = selectedTransport?.kidReportPrice;
+    const profit = adult_count * (adult_price - adult_report_price) + kid_count * (kid_price - kid_report_price);
     return profit;
   }
   async applyCoupon(couponCode: string) {

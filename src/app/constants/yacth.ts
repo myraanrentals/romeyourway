@@ -1,6 +1,7 @@
 export const yacth: any[] = [
   //Mandovi Lounge Yacht
   {
+    superCategory: 'Private Yacht',
     cruiseId: 5,
     whatsappMsg: 'Hello, I would like to enquire about MANDOVI LOUNGE PRIVATE YACHT in Goa!',
     title: 'Mandovi Lounge Yacht',
@@ -189,6 +190,7 @@ export const yacth: any[] = [
   },
   //Wave Rider
   {
+    superCategory: 'Private Yacht',
     cruiseId: 2,
     whatsappMsg: 'Hello, I would like to enquire about WAVE RIDER PRIVATE YACHT in Goa!',
     title: 'Wave Rider',
@@ -370,6 +372,7 @@ oldPrice: '14000',
   },
   //Blue Fin
   {
+    superCategory: 'Private Yacht',
     cruiseId: 1,
     whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
     image: '/assets/Private Yatchs/Blue Fin/i1.webp',
@@ -551,6 +554,7 @@ oldPrice: '15000',
   },
   //Rinker 
   {
+    superCategory: 'Private Yacht',
     cruiseId: 1,
     whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
     image: '/assets/Private Yatchs/Rinker/i1.webp',
@@ -732,6 +736,7 @@ oldPrice: '15000',
   },
   //M. V. Tara 
   {
+    superCategory: 'Private Yacht',
     cruiseId: 1,
     whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
     image: '/assets/Private Yatchs/MV TARA/i1.webp',
@@ -913,6 +918,7 @@ oldPrice: '15000',
   },
   //Prestige 36
   {
+    superCategory: 'Private Yacht',
     cruiseId: 4,
     whatsappMsg: 'Hello, I would like to enquire about PRESTIGE 36 PRIVATE YACHT in Goa!',
     title: 'Prestige 36',
@@ -1094,6 +1100,7 @@ oldPrice: '20000',
   },
   //Manta Ray
   {
+    superCategory: 'Private Yacht',
     cruiseId: 1,
     whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
     image: '/assets/Private Yatchs/Manta Ray/i1.webp',
@@ -1275,6 +1282,7 @@ oldPrice: '18000',
   },
   //Nicolyn
   {
+    superCategory: 'Private Yacht',
     cruiseId: 3,
     whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
     title: 'Nicolyn',
@@ -1456,6 +1464,7 @@ oldPrice: '18000',
   },
   //Solaris
   {
+    superCategory: 'Private Yacht',
     cruiseId: 3,
     whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
     title: 'Solaris',
@@ -1637,6 +1646,7 @@ oldPrice: '18000',
   },
   //Aquamarine
   {
+    superCategory: 'Private Yacht',
     cruiseId: 3,
     whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
     title: 'Aquamarine',
@@ -1818,6 +1828,7 @@ oldPrice: '18000',
   },
   //Sea Ray 330
   {
+    superCategory: 'Private Yacht',
     cruiseId: 7,
     whatsappMsg: 'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
     title: 'Sea Ray 330',
@@ -1999,6 +2010,7 @@ oldPrice: '18000',
   },
   //Sea Ray 400
   {
+    superCategory: 'Private Yacht',
     cruiseId: 7,
     whatsappMsg: 'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
     title: 'Sea Ray 400',
@@ -2180,6 +2192,7 @@ oldPrice: '20000',
   },
   //Majestic II
   {
+    superCategory: 'Private Yacht',
     cruiseId: 3,
     whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
     title: 'Majestic II',
@@ -2361,6 +2374,7 @@ oldPrice: '18000',
   },
   //Dhruv
   {
+    superCategory: 'Private Yacht',
     cruiseId: 3,
     whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
     title: 'Dhruv',
@@ -2542,6 +2556,7 @@ oldPrice: '20000',
   },
   //Funliner
   {
+    superCategory: 'Private Yacht',
     cruiseId: 8,
     whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
     title: 'Funliner',
@@ -2723,6 +2738,7 @@ oldPrice: '20000',
   },
   //Phoenix
   {
+    superCategory: 'Private Yacht',
     cruiseId: 8,
     whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
     title: 'Phoenix',
@@ -2904,6 +2920,7 @@ oldPrice: '20000',
   },
   //Arc 52
   {
+    superCategory: 'Private Yacht',
     cruiseId: 8,
     whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
     title: 'Arc 52',
@@ -3085,6 +3102,7 @@ oldPrice: '20000',
   },
   //Dreamz
   {
+    superCategory: 'Private Yacht',
     cruiseId: 8,
     whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
     title: 'Dreamz',
@@ -3266,6 +3284,7 @@ oldPrice: '20000',
   },
   //Amzonite
   {
+    superCategory: 'Private Yacht',
     cruiseId: 8,
     whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
     title: 'Amzonite',
@@ -3447,6 +3466,7 @@ oldPrice: '25000',
   },
   //Orca
   {
+    superCategory: 'Private Yacht',
     cruiseId: 14,
     whatsappMsg: 'Hello, I would like to enquire about ORCA PRIVATE YACHT in Goa!',
     title: 'Orca',
@@ -3628,6 +3648,7 @@ oldPrice: '25000',
   },
     //Ralston 1
     {
+      superCategory: 'Private Yacht',
       cruiseId: 16,
       whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
       title: 'Ralston 1',
@@ -3809,6 +3830,7 @@ oldPrice: '25000',
   },
   //Ralston 2
   {
+    superCategory: 'Private Yacht',
     cruiseId: 15,
     whatsappMsg: 'Hello, I would like to enquire about RALSTON 1 PRIVATE YACHT in Goa!',
     title: 'Ralston 2',
@@ -3988,9 +4010,9 @@ oldPrice: '25000',
       discountPrice: '19999',
     },
   },
-
   //Taj Exotica
   {
+    superCategory: 'Private Yacht',
     cruiseId: 16,
     whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
     title: 'Taj Exotica',
@@ -4172,6 +4194,7 @@ oldPrice: '36000',
   },
   //Blue Diamond
   {
+    superCategory: 'Private Yacht',
     cruiseId: 16,
     whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
     title: 'Blue Diamond',
@@ -4353,6 +4376,7 @@ oldPrice: '36000',
   },
   //Sunset 42
   {
+    superCategory: 'Private Yacht',
     cruiseId: 16,
     whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
     title: 'Sunset 42',
@@ -4534,6 +4558,7 @@ oldPrice: '30000',
   },
   //Leopard
   {
+    superCategory: 'Private Yacht',
     cruiseId: 16,
     whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
     title: 'Leopard',
@@ -4715,6 +4740,7 @@ oldPrice: '40000',
   },
   //Polaris
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Polaris',
@@ -4896,6 +4922,7 @@ oldPrice: '40000',
   },
   //Ferretti 460
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Ferretti 460',
@@ -5077,6 +5104,7 @@ oldPrice: '50000',
   },
   //Ferretti 550
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Ferretti 550',
@@ -5258,6 +5286,7 @@ oldPrice: '70000',
   },
   //Foxy lady
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Foxy lady',
@@ -5439,6 +5468,7 @@ oldPrice: '80000',
   },
   //Riviera
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Riviera',
@@ -5620,6 +5650,7 @@ oldPrice: '50000',
   },
   //Shantam
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Shantam',
@@ -5801,6 +5832,7 @@ oldPrice: '35000',
   },
   //Shantam Catamaran
   {
+    superCategory: 'Private Yacht',
     cruiseId: 13,
     whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
     title: 'Shantam Catamaran',

@@ -2,6 +2,7 @@ export const hotels: any[] = [
   // Dinner Cruise
   {
     cruiseId: 1,
+    superCategory: 'Dinner Cruise',
     title: 'Dinner Cruise',
     subTile: 'Dinner Cruise',
     category: 'Cruise',
@@ -174,6 +175,7 @@ export const hotels: any[] = [
   },// Premium Dinner Cruise
   {
     cruiseId: 2,
+    superCategory: 'Premium Dinner Cruise',
     title: 'Premium Dinner Cruise',
     subTile: 'Premium Dinner Cruise',
     category: 'Cruise',
@@ -362,6 +364,7 @@ export const hotels: any[] = [
   },
   // Sunset, Party & Hi Tea
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '699',
       discountPrice: '499',
@@ -533,6 +536,7 @@ export const hotels: any[] = [
   },
   // Nauti Amigo (Silver Package)
   {
+    superCategory: 'Luxury Dinner Cruise',
     priceDetails: {
       regularPrice: '3500',
       discountPrice: '2499',
@@ -772,6 +776,7 @@ export const hotels: any[] = [
   },
   // Nauti Amigo (Gold Package)
   {
+    superCategory: 'Luxury Dinner Cruise',
     priceDetails: {
       regularPrice: '4000',
       discountPrice: '2999',
@@ -1013,6 +1018,7 @@ export const hotels: any[] = [
   },
   // Nauti Amigo (Platinum Package)
   {
+    superCategory: 'Luxury Dinner Cruise',
     priceDetails: {
       regularPrice: '5000',
       discountPrice: '3999',
@@ -1254,6 +1260,7 @@ export const hotels: any[] = [
   },
   // Nauti Amigo (Candlelight Package)
   {
+    superCategory: 'Luxury Dinner Cruise',
     priceDetails: {
       regularPrice: '6000',
       discountPrice: '4999',
@@ -1445,6 +1452,7 @@ export const hotels: any[] = [
   },
   // Vihaan Dinner Cruise
   {
+    superCategory: 'Premium Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '1099',
@@ -1634,6 +1642,7 @@ export const hotels: any[] = [
   },
   // Swastik Dinner Cruise
   {
+    superCategory: 'Premium Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '1099',
@@ -1823,6 +1832,7 @@ export const hotels: any[] = [
   },
   // Nirwana Dinner Cruise
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '999',
@@ -2012,6 +2022,7 @@ export const hotels: any[] = [
   },
   // Paradise Dinner Cruise
   {
+    superCategory: 'Premium Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '1099',
@@ -2201,6 +2212,7 @@ export const hotels: any[] = [
   },
   // Coral Queen Dinner Cruise
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '999',
@@ -2390,6 +2402,7 @@ export const hotels: any[] = [
   },
   // Princesa Dinner Cruise
   {
+    superCategory: 'Premium Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '1099',
@@ -2579,6 +2592,7 @@ export const hotels: any[] = [
   },
   // Calma Dinner Cruise
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1800',
       discountPrice: '999',
@@ -2768,6 +2782,8 @@ export const hotels: any[] = [
   },
   // Kapitol Dinner Cruise
   {
+
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1500',
       discountPrice: '1099',
@@ -2957,6 +2973,7 @@ export const hotels: any[] = [
   },
   // Nikhil Dinner Cruise
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1500',
       discountPrice: '999',
@@ -3146,6 +3163,7 @@ export const hotels: any[] = [
   },
   // Ohana Dinner Cruise
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1500',
       discountPrice: '999',
@@ -3335,6 +3353,7 @@ export const hotels: any[] = [
   },
   // Fisherman Dinner Cruise
   {
+    superCategory: 'Dinner Cruise',
     priceDetails: {
       regularPrice: '1500',
       discountPrice: '999',
@@ -3524,6 +3543,7 @@ export const hotels: any[] = [
   },
   // Private Yachts
   {
+    superCategory: 'Private Yacht',
     priceDetails: {
       regularPrice: '15000',
       discountPrice: '11999',
@@ -3713,6 +3733,7 @@ export const hotels: any[] = [
   },
   // Adventure Boat Party
   {
+    superCategory: 'Activity',
     priceDetails: {
       regularPrice: '2000',
       discountPrice: '999',

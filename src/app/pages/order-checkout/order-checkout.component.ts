@@ -382,7 +382,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       pickupLocation,
       selectedTime
     } = this.sessionData;
-    const { title } = this.hotelDetails;
+    const {superCategory, title } = this.hotelDetails;
     const payloadData = {
       vehicleType: 'WATERSPORTS',
       vehicleName: title,
@@ -445,6 +445,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const secondPayloadData = {
       companyName: title,
       enquirySource: 'ROME_YOUR_WAY',
+      superCategory: superCategory,
 
       // Transport & Location
       pickDropHub: pickupLocation,

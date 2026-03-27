@@ -41,7 +41,7 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
 
 
   get shouldShowGstInvoiceDetails(): boolean {
-    return !!this.bookingDetails?.needGstInvoice;
+    return true;
   }
 
   private toNumber(value: any): number {

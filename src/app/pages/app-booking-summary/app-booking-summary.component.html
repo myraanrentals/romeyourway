@@ -26,22 +26,19 @@
     </div>
     <div class="taxDiv">
       <p>TAX CGST 9%</p>
-      <strong> + ₹ {{ finalPayableAmount * 0.09 | number: '1.2-2' }}</strong>
+      <strong> + ₹ {{ discountedAmount * 0.09 | number: '1.2-2' }}</strong>
     </div>
     <div class="taxDiv">
       <p>TAX SGST 9%</p>
-      <strong> + ₹ {{ finalPayableAmount * 0.09 | number: '1.2-2' }}</strong>
+      <strong> + ₹ {{ discountedAmount * 0.09 | number: '1.2-2' }}</strong>
     </div>
     <div>
       <p>{{ paymentType === 'partial' ? 'Partial' : 'Total' }} Payable Amount:</p>
-      <strong>₹ {{ totalAmount + finalPayableAmount * 0.18 | number: '1.0-2' }}</strong>
+      <strong>₹ {{ discountedAmount + discountedAmount * 0.18 | number: '1.0-2' }}</strong>
     </div>
   </div>
 
   <div *ngIf="paymentType !== 'partial'" class="discount-message">
     🎉 Woohoo! You saved ₹ {{ discountAmount }} on this booking!!
-  </div>
-  <div *ngIf="needGstInvoice" class="discount-message">
-    Tax will be applied on total amount of the booking.
   </div>
 </div>

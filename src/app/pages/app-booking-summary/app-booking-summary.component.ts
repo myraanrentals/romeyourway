@@ -20,10 +20,6 @@ export class AppBookingSummaryComponent {
   finalAmount = 0;
   discountedAmount = 0;
   paymentType: string = '';
-  needGstInvoice: boolean = false;
-  finalPayableAmount: number = 0;
-  amountWithGst: number = 0;
-  subtotal: number = 0;
   constructor(
     private bottomSheetRef: MatBottomSheetRef<AppBookingSummaryComponent>,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
@@ -33,9 +29,6 @@ export class AppBookingSummaryComponent {
     this.discountedAmount = this.totalAmount - this.discountAmount;
     this.gstAmount = +(this.totalAmount * this.gstRate).toFixed(2);
     this.finalAmount = +(this.totalAmount + this.gstAmount).toFixed(2);
-    this.needGstInvoice = data.needGstInvoice;
-    this.subtotal = data.subtotal;
-    this.finalPayableAmount = this.needGstInvoice ? this.subtotal : this.discountedAmount;
   }
   ngOnInit(): void {
     const data = sessionStorage.getItem('checkoutSession');

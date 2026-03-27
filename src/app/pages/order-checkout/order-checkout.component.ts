@@ -274,8 +274,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
 
       const partial= travellers[0]?.count * (Number(selectedTransport?.adultPrice)-Number(selectedTransport?.adultReportPrice)) + travellers[1]?.count *(Number(selectedTransport?.kidPrice) - Number(selectedTransport?.kidReportPrice))
 
-      const partialGST =this.travellerDetails.needGstInvoice ? Math.floor(+( subtotal * gstRate)) : +(partial * gstRate).toFixed(2);
-      const amountWithGST = +(partial + partialGST).toFixed(2);
+      const partialGST = +(partial * gstRate).toFixed(2);      const amountWithGST = +(partial + partialGST).toFixed(2);
       this.HelperService.updateSessionStorage({
         payableAmount:+partial.toFixed(2),
         paymentType: option,
@@ -308,10 +307,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.bottomSheet.open(AppBookingSummaryComponent, {
       panelClass: 'custom-bottom-sheet',
       data: {
-        totalAmount: Math.floor(this.sessionData.payableAmount),
-        discountAmount: this.couponCode ? Math.floor(this.sessionData.discountAmount) : 0,
-        needGstInvoice: this.travellerDetails.needGstInvoice,
-        subtotal: Math.floor(this.sessionData.subtotal),
+        totalAmount: this.sessionData.payableAmount,
+        discountAmount: this.couponCode ? this.sessionData.discountAmount : 0,
       },
     });
   }
@@ -319,8 +316,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.showErrors = false;
     this.errors = {};
     sessionStorage.setItem('travellerDetails', JSON.stringify(this.travellerDetails));
-    this.selectPayment(this.selectedPaymentOption);
-  }
+    }
   validateAndSubmit() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{6,15}$/;

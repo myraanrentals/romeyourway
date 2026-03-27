@@ -48,6 +48,10 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     email: '',
     countryCode: '+91',
     phone: '',
+    needGstInvoice: false,
+    customerCompanyName: '',
+    customerCompanyAddress: '',
+    customerCompanyGST: '',
   };
   errors: {
     [key: string]: { hasError: boolean; message: string };
@@ -270,11 +274,10 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
 
       const partial= travellers[0]?.count * (Number(selectedTransport?.adultPrice)-Number(selectedTransport?.adultReportPrice)) + travellers[1]?.count *(Number(selectedTransport?.kidPrice) - Number(selectedTransport?.kidReportPrice))
 
-      const partialGST = +(partial * gstRate).toFixed(2);
+      const partialGST =this.travellerDetails.needGstInvoice ? Math.floor(+( subtotal * gstRate)) : +(partial * gstRate).toFixed(2);
       const amountWithGST = +(partial + partialGST).toFixed(2);
-
       this.HelperService.updateSessionStorage({
-        payableAmount: +partial.toFixed(2),
+        payableAmount:+partial.toFixed(2),
         paymentType: option,
         amountWithGST,
       });
@@ -305,8 +308,10 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.bottomSheet.open(AppBookingSummaryComponent, {
       panelClass: 'custom-bottom-sheet',
       data: {
-        totalAmount: this.sessionData.payableAmount,
-        discountAmount: this.couponCode ? this.sessionData.discountAmount : 0,
+        totalAmount: Math.floor(this.sessionData.payableAmount),
+        discountAmount: this.couponCode ? Math.floor(this.sessionData.discountAmount) : 0,
+        needGstInvoice: this.travellerDetails.needGstInvoice,
+        subtotal: Math.floor(this.sessionData.subtotal),
       },
     });
   }
@@ -314,10 +319,12 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.showErrors = false;
     this.errors = {};
     sessionStorage.setItem('travellerDetails', JSON.stringify(this.travellerDetails));
+    this.selectPayment(this.selectedPaymentOption);
   }
   validateAndSubmit() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{6,15}$/;
+    const gstRegex = /^[0-9A-Z]{15}$/;
 
     this.errors = {
       fullName: {
@@ -343,6 +350,21 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       phoneInvalid: {
         hasError: !!this.travellerDetails.phone && !phoneRegex.test(this.travellerDetails.phone),
         message: 'Phone Number is invalid',
+      },
+      customerCompanyName: {
+        hasError: this.travellerDetails.needGstInvoice && !this.travellerDetails.customerCompanyName?.trim(),
+        message: 'Company Name is required',
+      },
+      customerCompanyAddress: {
+        hasError: this.travellerDetails.needGstInvoice && !this.travellerDetails.customerCompanyAddress?.trim(),
+        message: 'Company Address is required',
+      },
+      customerCompanyGST: {
+        hasError:
+          this.travellerDetails.needGstInvoice &&
+          (!this.travellerDetails.customerCompanyGST?.trim() ||
+            !gstRegex.test(this.travellerDetails.customerCompanyGST.trim().toUpperCase())),
+        message: 'Enter a valid 15-character GST number',
       },
     };
 
@@ -370,7 +392,16 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   }
   
   initiatePayment() {
-    const { fullName, countryCode, phone, email } = this.travellerDetails;
+    const {
+      fullName,
+      countryCode,
+      phone,
+      email,
+      needGstInvoice,
+      customerCompanyName,
+      customerCompanyAddress,
+      customerCompanyGST,
+    } = this.travellerDetails;
     const {
       payableAmount,
       selectedDate,
@@ -488,6 +519,9 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       totalAmount: finalTotalAmount,
       securityAmount: 0,
       actualAmount:amountWithGST,
+      gstAmount:finalTotalAmount,
+      bookingAmountWithGst:finalBookingAmount,
+      balanceAmountWithGst:finalBalanceAmount,
 
       // Discounts & Status
       discountType: 'FLAT',
@@ -503,7 +537,11 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       notes: '',
       otherPickLocation:'N/A',
       otherDropLocation:'N/A',
-      categoryTypeName:this.HelperService.categoryTypeNameParser(this.category)
+      categoryTypeName:this.HelperService.categoryTypeNameParser(this.category),
+      needGstInvoice: needGstInvoice,
+      customerCompanyName: needGstInvoice ? customerCompanyName?.trim() : "",
+      customerCompanyAddress: needGstInvoice ? customerCompanyAddress?.trim() : "",
+      customerCompanyGST: needGstInvoice ? customerCompanyGST?.trim().toUpperCase() : "",
     };
     this.handlePaymentResponse('response', secondPayloadData);
   }

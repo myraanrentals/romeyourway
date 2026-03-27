@@ -43,9 +43,8 @@ export class PaymentStatusComponent implements OnInit {
                 paymentCompletionTime: pgResponseBody?.payment_completion_time,
                 bankReference: pgResponseBody?.bank_reference,
                 paymentGroup: pgResponseBody?.payment_group,
+                bookingId: paymentId,
               }
-
-              console.log({pgResponseBody});
               sessionStorage.setItem('paymentStatusResponse', JSON.stringify(requiredRes));
 
               this.router.navigate(['/payment-success']);

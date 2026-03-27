@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import { BookingService } from '@services/booking.service';
 declare global {
   interface Window {
     dataLayer: any[];
@@ -9,11 +12,12 @@ declare global {
 @Component({
   selector: 'app-payment-success',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './payment-success.component.html',
   styleUrl: './payment-success.component.scss',
 })
 export class PaymentSuccessComponent implements OnInit, AfterViewInit {
+  public bookingDetails: any;
   public paymentDetails: {
     orderId?: string;
     paymentCurrency?: string;
@@ -22,16 +26,57 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
     paymentCompletionTime?: string;
     bankReference?: string;
     paymentGroup?: string;
+    bookingId?: string;
   } = {};
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private _bookingService: BookingService,
   ) { }
   public amount?: string;
   public name?: string;
   public email?: string;
   public phone?: string;
+
+
+  get shouldShowGstInvoiceDetails(): boolean {
+    return !!this.bookingDetails?.needGstInvoice;
+  }
+
+  private toNumber(value: any): number {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }
+
+  get bookingCharges(): number {
+    const quantity = this.toNumber(this.bookingDetails?.quantity);
+    const companyRate = this.toNumber(this.bookingDetails?.companyRate);
+    const vendorRate = this.toNumber(this.bookingDetails?.vendorRate);
+    const kidQuantity = this.toNumber(this.bookingDetails?.kidQuantity);
+    const companyRateForKids = this.toNumber(this.bookingDetails?.companyRateForKids);
+    const vendorRateForKids = this.toNumber(this.bookingDetails?.vendorRateForKids);
+
+    return (quantity * (companyRate - vendorRate)) + (kidQuantity * (companyRateForKids - vendorRateForKids));
+  }
+
+  get cgstAmount(): number {
+    return Math.floor(this.bookingCharges * 0.09);
+  }
+
+  get sgstAmount(): number {
+    return Math.floor(this.bookingCharges * 0.09);
+  }
+
+  get amountReceived(): number {
+    return this.bookingCharges + this.cgstAmount + this.sgstAmount;
+  }
+
+  get receiptNumber(): string {
+    const id = this.bookingDetails?.id || this.paymentDetails?.bookingId || 'NA';
+    const year = new Date().getFullYear();
+    return `RYW${year}${id}`;
+  }
 
   private formatISTDateTime(istTime?: string): string | undefined {
     if (!istTime) return undefined;
@@ -75,6 +120,7 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
       const paymentCompletionTime = this.formatISTDateTime(data?.paymentCompletionTime)
       const bankReference = data?.bankReference
       const paymentGroup = data?.paymentGroup
+      const bookingId = data?.bookingId
 
       this.paymentDetails = {
         orderId,
@@ -84,111 +130,234 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
         paymentCompletionTime,
         bankReference,
         paymentGroup,
+        bookingId,
       };
+    this.getBookingDetails();
     } catch (error) {
       console.error('Error parsing payment status response:', error);
     }
   }
-  downloadReceipt(): void {
-    const doc = new jsPDF();
-    
-    // Set up colors
-    const primaryColorR = 40;
-    const primaryColorG = 167;
-    const primaryColorB = 69; // #28a745
-    const textColorR = 51;
-    const textColorG = 51;
-    const textColorB = 51;
-    const lightGrayR = 245;
-    const lightGrayG = 245;
-    const lightGrayB = 245;
-    
-    // Header
-    doc.setFillColor(primaryColorR, primaryColorG, primaryColorB);
-    doc.rect(0, 0, 210, 40, 'F');
-    
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(24);
-    doc.setFont('helvetica', 'bold');
-    doc.text('Payment Receipt', 105, 25, { align: 'center' });
-    
-    // Reset text color
-    doc.setTextColor(textColorR, textColorG, textColorB);
-    
-    let yPosition = 55;
-    
-    // Company/Service Info (optional - you can customize this)
-    doc.setFontSize(12);
-    doc.setFont('helvetica', 'normal');
-    doc.text('Rome Your Way', 105, yPosition, { align: 'center' });
-    yPosition += 10;
-    doc.setFontSize(10);
-    doc.text('Thank you for your purchase!', 105, yPosition, { align: 'center' });
-    yPosition += 15;
-    
-    // Payment Details Section
-    doc.setFillColor(lightGrayR, lightGrayG, lightGrayB);
-    doc.rect(20, yPosition - 5, 170, 5, 'F');
-    
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.text('Payment Details', 20, yPosition);
-    yPosition += 10;
-    
-    // Details
-    doc.setFontSize(11);
-    doc.setFont('helvetica', 'normal');
-    
-    const details = [
-      { label: 'Order ID', value: this.paymentDetails.orderId || 'N/A' },
-      { label: 'Transaction ID', value: this.paymentDetails.cashfreePaymentId || 'N/A' },
-      { label: 'Payment Amount', value: `${this.paymentDetails.paymentCurrency || 'INR'} ${this.paymentDetails.paymentAmount || '0'}` },
-      { label: 'Payment Completion Time', value: this.paymentDetails.paymentCompletionTime || 'N/A' },
-      { label: 'Bank Reference', value: this.paymentDetails.bankReference || 'N/A' },
-      { label: 'Payment Group', value: this.paymentDetails.paymentGroup || 'N/A' },
-    ];
-    
-    details.forEach((detail, index) => {
-      if (yPosition > 270) {
-        doc.addPage();
-        yPosition = 20;
-      }
-      
-      doc.setFont('helvetica', 'bold');
-      doc.text(`${detail.label}:`, 20, yPosition);
-      doc.setFont('helvetica', 'normal');
-      const textWidth = doc.getTextWidth(detail.value);
-      if (textWidth > 150) {
-        const lines = doc.splitTextToSize(detail.value, 150);
-        doc.text(lines, 90, yPosition);
-        yPosition += (lines.length * 5) + 3;
-      } else {
-        doc.text(detail.value, 90, yPosition);
-        yPosition += 8;
-      }
+  getBookingDetails(): void {
+    const bookingId = this.paymentDetails?.bookingId;
+    if (!bookingId) return;
+    this._bookingService.getBookingDetails(bookingId).subscribe({
+      next: (res) => {
+        console.log({res:res?.listPayload[0]})
+        this.bookingDetails = res?.listPayload[0];
+        this.name = this.bookingDetails?.customeName;
+        this.email = this.bookingDetails?.customerEmailId;
+        this.phone = this.bookingDetails?.countryDialCode + this.bookingDetails?.customerMobile;
+      },
     });
-    
-    yPosition += 10;
-    
-    // Footer
-    if (yPosition > 250) {
-      doc.addPage();
-      yPosition = 20;
+  }
+  downloadReceipt(): void {
+    const balanceAmount = Number(this.bookingDetails?.balanceAmount || 0);
+    if (!(balanceAmount > 0)) {
+      this.downloadInvoiceForZeroBookingAmount();
+      return;
     }
-    
-    doc.setFontSize(9);
-    doc.setTextColor(128, 128, 128);
-    doc.text('This is a computer-generated receipt. No signature required.', 105, yPosition, { align: 'center' });
-    yPosition += 5;
-    doc.text('Please save this receipt for your records.', 105, yPosition, { align: 'center' });
-    
-    // Generate filename
-    const orderId = this.paymentDetails.orderId || 'receipt';
-    const timestamp = new Date().toISOString().split('T')[0];
-    const filename = `Receipt_${orderId}_${timestamp}.pdf`;
-    
-    // Save the PDF
-    doc.save(filename);
+
+    const element = document.getElementById('receipt');
+  
+    if (!element) return;
+  
+    html2canvas(element, {
+      scale: 3,
+      useCORS: true,
+      backgroundColor: "#ffffff",
+      logging: false
+    }).then(canvas => {
+  
+      const imgData = canvas.toDataURL('image/png');
+  
+      const pdf = new jsPDF('p', 'mm', 'a4');
+  
+      const pageWidth = pdf.internal.pageSize.getWidth();
+  
+      const imgWidth = pageWidth;
+  
+      const imgHeight =
+        canvas.height * imgWidth / canvas.width;
+  
+      pdf.addImage(
+        imgData,
+        'PNG',
+        0,
+        0,
+        imgWidth,
+        imgHeight
+      );
+  
+      const orderId =
+        this.paymentDetails.orderId || 'receipt';
+  
+      pdf.save(`Receipt_${orderId}.pdf`);
+  
+    });
+  
+  }
+
+  private downloadInvoiceForZeroBookingAmount(): void {
+    console.log('first')
+    const today = new Date();
+    const dateStr = today.toLocaleDateString('en-IN');
+    const invoiceHtml = this.buildZeroBookingInvoiceHtml(dateStr);
+
+    const tempWrapper = document.createElement('div');
+    tempWrapper.style.position = 'fixed';
+    tempWrapper.style.left = '-10000px';
+    tempWrapper.style.top = '0';
+    tempWrapper.style.width = '920px';
+    tempWrapper.innerHTML = invoiceHtml;
+    document.body.appendChild(tempWrapper);
+
+    html2canvas(tempWrapper, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: '#ffffff',
+      logging: false,
+    }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const imgWidth = pageWidth;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.save(`Invoice_${this.receiptNumber}.pdf`);
+    }).finally(() => {
+      document.body.removeChild(tempWrapper);
+    });
+  }
+
+  private buildZeroBookingInvoiceHtml(dateStr: string): string {
+    const adults = this.toNumber(this.bookingDetails?.quantity);
+    const kids = this.toNumber(this.bookingDetails?.kidQuantity);
+    const infants = this.toNumber(this.bookingDetails?.infantQuantity);
+    const adultPrice = this.toNumber(this.bookingDetails?.companyRate);
+    const kidPrice = this.toNumber(this.bookingDetails?.companyRateForKids);
+    const discountAmount = this.toNumber(this.bookingDetails?.discount);
+    const amountWithoutGst = (adults*adultPrice + kids*kidPrice) - discountAmount;
+    const totalAmount = this.toNumber(this.bookingDetails?.gstAmount);
+    const advanceAmount = this.toNumber(this.bookingDetails?.actualAmount);
+    const balanceAmount = this.toNumber(this.bookingDetails?.balanceAmountWithGst);
+    const status = this.bookingDetails?.status || 'PAID';
+    const pickupDateTime = this.bookingDetails?.pickupDateTime || this.paymentDetails?.paymentCompletionTime || 'N/A';
+    const pickupLocation = this.bookingDetails?.pickupHub || this.bookingDetails?.pickupPoint || 'N/A';
+    const dropLocation = this.bookingDetails?.dropHub || this.bookingDetails?.dropPoint || '';
+    const serviceName = this.bookingDetails?.category || 'Booking Charges';
+    const termsLink = '/terms-and-condition';
+    const businessName = 'Rome Your Way';
+
+    const taxHeaders = this.shouldShowGstInvoiceDetails
+      ? '<th>CGST 9%</th><th>SGST 9%</th>'
+      : '';
+    const taxValues = this.shouldShowGstInvoiceDetails
+      ? `<td>Rs.${Math.floor(amountWithoutGst * 0.09)}</td><td>Rs.${Math.floor(amountWithoutGst * 0.09)}</td>`
+      : '';
+
+    return `
+<style>
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:#f4f6fb;margin:0;padding:22px;color:#1f2937;font-size:12px;line-height:1.45}
+.container{max-width:920px;margin:auto;background:#fff;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,0.08);overflow:hidden}
+.header{background:#0f172a;color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-start;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.brand h1{margin:0;font-size:18px}
+.brand p{margin:6px 0 0;font-size:11px;color:#cbd5f5;line-height:1.55}
+.meta{text-align:right;font-size:11px;line-height:1.75}
+.section{padding:18px 24px;padding-bottom:0}
+.section-title{font-size:14px;font-weight:600;margin-bottom:10px;border-bottom:1px solid #e5e7eb;padding-bottom:5px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#f9fafc;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;font-size:11px}
+.table{width:100%;border-collapse:collapse;margin-top:8px;table-layout:fixed}
+.table th,.table td{border:1px solid #e5e7eb;padding:6px 5px;font-size:10px;word-wrap:break-word;vertical-align:top}
+.table th{background:#f1f5f9;text-align:left;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.table.charges-line th,.table.charges-line td{font-size:9px;padding:5px 4px;text-align:center}
+.badge{display:inline-block;background:#e0f2fe;color:#0369a1;padding:3px 8px;border-radius:10px;font-size:10px;margin-left:4px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.footer{padding:18px 24px;border-top:1px solid #e5e7eb;font-size:11px;color:#6b7280;text-align:center}
+</style>
+<div class="container">
+<div class="header">
+<div class="brand">
+<h1>MYRAAN RENTALS AND ADVENTURES PVT. LTD.</h1>
+<p>
+Company ID : U52291GA2024OPC016682<br>
+Address : Unit No. 71/195/A, Sattari, Ward No. 7, Hathwada, Near Marathi School,<br> Valpoi, North Goa, Goa - 403506<br>
+TAX ID : AASCM2597H<br>
+Phone : +91 88283 75421 | Email : sales@myraanrentals.com<br>
+GSTIN : 30AASCM2597H1Z5<br>
+</p>
+</div>
+<div class="meta">
+<div><strong>Invoice No:</strong> ${this.receiptNumber}</div>
+<div><strong>Invoice Date:</strong> ${dateStr}</div>
+<div><strong>Payment Terms:</strong> PIA</div>
+<div><strong>Due Date:</strong> ${dateStr}</div>
+<div><strong>Place of Supply: </strong> GOA</div>
+<div><strong>Status:</strong> ${status} <span class="badge">${status}</span></div>
+</div>
+</div>
+<div class="section">
+<div class="section-title">Billing Information</div>
+<div class="grid">
+<div class="card"><strong>Customer Name</strong><br>${this.name || 'N/A'}</div>
+<div class="card"><strong>Phone</strong><br>${this.phone || 'N/A'}</div>
+<div class="card"><strong>Company Name &amp; GSTIN</strong><br>${this.bookingDetails?.customerCompanyName || ''} ${this.bookingDetails?.customerCompanyGST || ''}</div>
+<div class="card"><strong>Address &amp; Pincode</strong><br>${this.bookingDetails?.customerCompanyAddress || ''} ${this.bookingDetails?.pincode || ''}</div>
+</div>
+</div>
+<div class="section">
+<div class="section-title">Schedule Details</div>
+<table class="table">
+<tr><th>Activity Date &amp; Time</th><th>Boarding Location</th><th>Total Pax</th></tr>
+<tr>
+<td>${pickupDateTime}</td>
+<td>${pickupLocation} ${dropLocation}</td>
+<td>Adult: ${adults} | Kid: ${kids} | Infant: ${infants}</td>
+</tr>
+</table>
+</div>
+<div class="section">
+<div class="section-title">Charges Breakdown</div>
+<table class="table charges-line">
+<tr>
+<th>Description</th>
+<th>Adults</th>
+<th>Kids</th>
+<th>Discount</th>
+${taxHeaders}
+<th>Total</th>
+<th>Advance Paid</th>
+<th>Balance Due</th>
+</tr>
+<tr>
+<td>${serviceName}</td>
+<td>${adults} X ${adultPrice.toFixed(2)}</td>
+<td>${kids} X ${kidPrice.toFixed(2)}</td>
+<td>Rs.${discountAmount.toFixed(2)}</td>
+${taxValues}
+<td>Rs.${totalAmount.toFixed(2)}</td>
+<td>Rs.${advanceAmount.toFixed(2)}</td>
+<td>Rs.${balanceAmount.toFixed(2)}</td>
+</tr>
+</table>
+</div>
+<div class="section">
+<div class="section-title">Terms &amp; Conditions</div>
+<p style="font-size:11px;line-height:1.65;margin:0">
+• Standard Rental Timings: 09:00 AM - 09:00 AM<br>
+• Valid driving license &amp; one original ID required for renting<br>
+• Vehicle cannot be used for interstate travel<br>
+• Fuel Policy: Reserved To Reserved<br>
+• Total amount is exclusive of any toll &amp; parking charges<br>
+• ‼️ PLEASE CARRY CASH FOR BALANCE PAYMENT 🙏 🚫 NO UPI / 🚫 NO CARD<br>
+• Check additional T&amp;Cs here <a href="${termsLink}" target="_blank" rel="noopener noreferrer">terms-and-condition</a>
+</p>
+</div>
+<div class="footer">
+This is a computer generated invoice and does not require a signature.<br>
+Thank you for choosing ${businessName}.
+</div>
+</div>`;
   }
 
   ngAfterViewInit(): void {

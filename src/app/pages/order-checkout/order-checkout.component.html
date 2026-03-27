@@ -237,6 +237,49 @@
               </span>
             </div>
           </div>
+
+          <div class="form-group gst-checkbox-group">
+            <label for="needGstInvoice" class="gst-checkbox-label">
+              <input id="needGstInvoice" type="checkbox" class="gst-checkbox"
+                [(ngModel)]="travellerDetails.needGstInvoice" name="needGstInvoice"
+                (change)="updateTravellerDetails()" />
+              <span>Need GST invoice</span>
+            </label>
+          </div>
+
+          <div *ngIf="travellerDetails.needGstInvoice">
+            <div class="gst-row">
+              <div class="form-group">
+                <label for="customerCompanyName">Company Name*</label>
+                <input id="customerCompanyName" type="text" placeholder="Enter Company Name"
+                  [(ngModel)]="travellerDetails.customerCompanyName" name="customerCompanyName"
+                  (input)="updateTravellerDetails()" />
+                <span class="error" *ngIf="showErrors && errors?.['customerCompanyName']?.hasError">
+                  {{ errors['customerCompanyName'].message }}
+                </span>
+              </div>
+
+              <div class="form-group">
+                <label for="customerCompanyGST">GST Number*</label>
+                <input id="customerCompanyGST" type="text" placeholder="Enter GST Number"
+                  [(ngModel)]="travellerDetails.customerCompanyGST" name="customerCompanyGST"
+                  (input)="updateTravellerDetails()" />
+                <span class="error" *ngIf="showErrors && errors?.['customerCompanyGST']?.hasError">
+                  {{ errors['customerCompanyGST'].message }}
+                </span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="customerCompanyAddress">Company Address*</label>
+              <input id="customerCompanyAddress" type="text" placeholder="Enter Company Address"
+                [(ngModel)]="travellerDetails.customerCompanyAddress" name="customerCompanyAddress"
+                (input)="updateTravellerDetails()" />
+              <span class="error" *ngIf="showErrors && errors?.['customerCompanyAddress']?.hasError">
+                {{ errors['customerCompanyAddress'].message }}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 

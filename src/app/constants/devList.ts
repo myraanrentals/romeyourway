@@ -1,5 +1,7 @@
-export const DevList: any[] = [   {
+export const DevList: any[] = [     
+  {
   cruiseId: 1,
+  superCategory: 'Dinner Cruise',
   title: 'Dinner Cruise',
   subTile: 'Dinner Cruise',
   category: 'Cruise',
@@ -8,7 +10,8 @@ export const DevList: any[] = [   {
   rating: '4.6',
   reviews: '3.8K',
   mobilePackageDesc: ['2 hours', 'Panjim '],
-
+  timeSlots: ['8pm'],
+  specialEvents: [],
   oldPrice: '1500',
   booked: '4M+',
   buttonText: 'Book this activity & get 20% off',
@@ -140,8 +143,8 @@ export const DevList: any[] = [   {
       regularPrice: '1',
       adultPrice: '1',
       kidPrice: '1',
-      adultReportPrice: '1',
-      kidReportPrice: '1',
+      adultReportPrice: '0',
+      kidReportPrice: '0',
       desc: [
         'Access to lower deck',
         '2-hour cruise in Goa Marina',
@@ -152,14 +155,14 @@ export const DevList: any[] = [   {
     {
       title: 'With Transport',
       isSelected: false,
-      originalamt: '1',
-      discountedamt: '1',
-      kidAmt: '1',
-      regularPrice: '1',
-      adultPrice: '1',
-      kidPrice: '1',
-      adultReportPrice: '1',
-      kidReportPrice: '1',
+      originalamt: '1699',
+      discountedamt: '1099',
+      kidAmt: '899',
+      regularPrice: '1800',
+      adultPrice: '1199',
+      kidPrice: '899',
+      adultReportPrice: '800',
+      kidReportPrice: '800',
       desc: [
         'Access to all decks',
         '2-hour cruise in Goa Marina',
@@ -168,7 +171,7 @@ export const DevList: any[] = [   {
       ],
     },
   ],
-}]
+},]
 
 
     export const cancellationPolicy: string[] = [

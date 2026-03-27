@@ -4,4 +4,5 @@ export const APIROUTES = {
   WATERSPORTSBOOKING: `${API_BASE_URL}registerLead`,
   PAYMENTSTATUS: `${API_BASE_URL}updatePaymentDetails`,
   VALIDATECOUPON: `https://myraanrentals.work/vehicle/validateCouponDetails`,
+  BOOKINGDETAILS: `${API_BASE_URL}getBookingDetailsByBookingId`,
 };

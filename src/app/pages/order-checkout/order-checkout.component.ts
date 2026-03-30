@@ -480,7 +480,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       pickupPoint: pickupLocation,
       dropHub: pickupLocation,
       dropPoint: null,
-      activityLocation: null,
+      activityLocation: 'Panjim Jetty',
       selfPdType :pickupLocation?'pandd':'self',
       // Package Info
       categoryId: 1,

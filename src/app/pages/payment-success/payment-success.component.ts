@@ -99,6 +99,29 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
     }
   }
 
+  /** Formats ISO timestamp / date string to DD-MM-YYYY HH:mm (24h, Asia/Kolkata). */
+  private formatDateTimeDDMMYYYYHHmm(value?: string | number | null): string {
+    if (value === undefined || value === null || value === '') return 'N/A';
+    try {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return String(value);
+      const parts = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Kolkata',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+      }).formatToParts(date);
+      const get = (type: Intl.DateTimeFormatPartTypes) =>
+        parts.find((p) => p.type === type)?.value ?? '';
+      return `${get('day')}-${get('month')}-${get('year')} ${get('hour')}:${get('minute')}`;
+    } catch {
+      return String(value);
+    }
+  }
+
   ngOnInit(): void {
     const paymentStatusResponse = sessionStorage.getItem('paymentStatusResponse');
     const travellerDetails = sessionStorage.getItem('travellerDetails');
@@ -198,7 +221,6 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
   }
 
   private downloadInvoiceForZeroBookingAmount(): void {
-    console.log('first')
     const today = new Date();
     const dateStr = today.toLocaleDateString('en-IN');
     const invoiceHtml = this.buildZeroBookingInvoiceHtml(dateStr);
@@ -242,8 +264,10 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
     const advanceAmount = this.toNumber(this.bookingDetails?.actualAmount);
     const balanceAmount = this.toNumber(this.bookingDetails?.balanceAmountWithGst);
     const status = this.bookingDetails?.status || 'PAID';
-    const pickupDateTime = this.bookingDetails?.pickupDateTime || this.paymentDetails?.paymentCompletionTime || 'N/A';
-    const pickupLocation = this.bookingDetails?.pickupHub || this.bookingDetails?.pickupPoint || 'N/A';
+    const pickupDateTime = this.formatDateTimeDDMMYYYYHHmm(
+      this.bookingDetails?.pickupDateTime ?? this.paymentDetails?.paymentCompletionTime ?? undefined,
+    );
+    const pickupLocation =this.bookingDetails?.activityLocation || this.bookingDetails?.pickupHub || this.bookingDetails?.pickupPoint || 'N/A';
     const dropLocation = this.bookingDetails?.dropHub || this.bookingDetails?.dropPoint || '';
     const serviceName = this.bookingDetails?.category || 'Booking Charges';
     const termsLink = '/terms-and-condition';

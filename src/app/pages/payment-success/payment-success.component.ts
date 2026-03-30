@@ -284,7 +284,7 @@ export class PaymentSuccessComponent implements OnInit, AfterViewInit {
 <style>
 body{font-family:Inter,Arial,Helvetica,sans-serif;background:#f4f6fb;margin:0;padding:22px;color:#1f2937;font-size:12px;line-height:1.45}
 .container{max-width:920px;margin:auto;background:#fff;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,0.08);overflow:hidden}
-.header{background:#0f172a;color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-start;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.header{background:#ff7b52;color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-start;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .brand h1{margin:0;font-size:18px}
 .brand p{margin:6px 0 0;font-size:11px;color:#cbd5f5;line-height:1.55}
 .meta{text-align:right;font-size:11px;line-height:1.75}

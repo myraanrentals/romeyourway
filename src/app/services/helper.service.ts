@@ -10,6 +10,7 @@ import { adventures } from '@constants/adventures';
 import { sightseeing } from '@constants/sightseeing';
 import { privateParties } from '@constants/privateParties';
 import { DevList } from '@constants/devList';
+import { sunsetCruises } from '@constants/sunsetCruises';
 @Injectable({
   providedIn: 'root',
 })
@@ -42,6 +43,8 @@ export class HelperService {
       return hotels;
     } else if (categoryName === 'private-yachts-in-goa') {
       return yacth;
+    } else if (categoryName === 'sunset-cruise-in-goa') {
+      return sunsetCruises;
     } else if (categoryName === 'watersports-and-scuba-diving-in-goa') {
       return scubaList;
     } else if (categoryName === 'water-sports-in-goa') {

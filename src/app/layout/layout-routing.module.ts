@@ -15,6 +15,8 @@ import { AboutUsComponent } from '../pages/about-us/about-us.component';
 import { DetailsPageComponent } from '../pages/details-page/details-page.component';
 import { ProtectRouteGuard } from './auth/protect-route.guard';
 import { PaymentStatusComponent } from '../pages/payment-status/payment-status.component';
+import { BookingReceiptByIdComponent } from '../pages/booking-receipt-by-id/booking-receipt-by-id.component';
+import { BookingEstimateByIdComponent } from '../pages/booking-estimate-by-id/booking-estimate-by-id.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,14 @@ const routes: Routes = [
         path: 'payment-failure',
         component: PaymentFailureComponent,
         // canActivate: [ProtectRouteGuard],
+      },
+      {
+        path: 'r/:bookingID',
+        component: BookingReceiptByIdComponent,
+      },
+      {
+        path: 'estimate/:bookingId',
+        component: BookingEstimateByIdComponent,
       },
 
       {

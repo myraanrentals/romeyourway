@@ -1,0 +1,13 @@
+<div class="page" *ngIf="loadState === 'loading'">
+  <p>Loading boarding pass…</p>
+</div>
+
+<div class="page error" *ngIf="loadState === 'error'">
+  <p>Could not load the booking or generate the PDF. Check the link or try again.</p>
+  <p><a routerLink="/">Go to home</a></p>
+</div>
+
+<div class="page" *ngIf="loadState === 'done'">
+  <p>Your boarding pass PDF has been downloaded.</p>
+  <p><a routerLink="/">Go to home</a></p>
+</div>

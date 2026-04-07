@@ -39,8 +39,10 @@ export class BookingService {
   vehicleBooking(payloadData: any): Observable<any> {
     let payload = {
       payload: {
-        createdBy: 'ONLINE',
+        pgRespUrl: "https://romeyourway.com/payment-status/",
         ...payloadData,
+        createdBy: '7715959917',
+        superadminId: '1234567890',
       },
     };
     return this._apiService.httpPOST(APIROUTES.WATERSPORTSBOOKING, payload);
@@ -49,9 +51,18 @@ export class BookingService {
     let payload = {
       payload: {
         bookingId: bookingId,
+        enquirySource: 'ROME_YOUR_WAY',
       },
     };
     return this._apiService.httpPOST(APIROUTES.PAYMENTSTATUS, payload);
+  }
+  getBookingDetails(bookingId: any): Observable<any> {
+    let payload = {
+      payload: {
+        bookingId: bookingId,
+      },
+    };
+    return this._apiService.httpPOST(APIROUTES.BOOKINGDETAILS, payload);
   }
   updateTotalAmount(bookingDetails: BookingDetails) {
     const { adultCount, childCount, infantCount, singleAdultAmt, singleChildAmt, singleInfantAmt } =

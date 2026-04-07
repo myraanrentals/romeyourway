@@ -25,6 +25,7 @@
 
         <mat-form-field class="hidden-datepicker custom-datepicker">
           <input
+            #datePickerInput
             matInput
             [matDatepicker]="picker"
             [min]="minDate"
@@ -43,16 +44,16 @@
           (click)="toggleSelection(i)"
         >
           <div class="package-header">
-            <span *ngIf="this.category !== 'private-yachts-in-goa'" class="packageTitle">
+            <span *ngIf="this.category !== 'book-private-yachts-in-goa'" class="packageTitle">
               {{ hotelDetails.title }} [{{ package.title }}]
             </span>
-            <span *ngIf="this.category === 'private-yachts-in-goa'" class="packageTitle">
+            <span *ngIf="this.category === 'book-private-yachts-in-goa'" class="packageTitle">
               {{ package.title }} [Capacity: {{ package.capacity }}]
             </span>
             <div class="price">
-              <span class="original-price">INR {{ package.originalamt }}</span>
+              <span class="original-price">₹ {{ package?.regularPrice }}</span>
               <span class="discounted-price"
-                ><strong>INR {{ package.discountedamt }}</strong></span
+                ><strong>₹ {{ package.adultPrice }}</strong></span
               >
             </div>
           </div>
@@ -101,17 +102,29 @@
       <div class="card">
         <label class="section-title">{{ this.sessionData.selectedTransport.header }}</label>
         <mat-form-field
-          *ngIf="this.category !== 'private-yachts-in-goa'"
+          *ngIf="this.category !== 'book-private-yachts-in-goa'"
           appearance="outline"
           class="time-dropdown"
         >
           <mat-select [(ngModel)]="selectedTime" (selectionChange)="updateTime($event.value)">
-            <mat-option value="6pm">Starts at 06:00 PM</mat-option>
-            <mat-option value="7pm">Starts at 07:00 PM</mat-option>
+            <ng-container *ngIf="hotelDetails?.timeSlots && hotelDetails?.timeSlots?.length > 0">
+              <mat-option
+                *ngFor="let timeSlot of hotelDetails.timeSlots"
+                [value]="timeSlot"
+              >
+                Report Time: {{ timeSlot }}
+              </mat-option>
+            </ng-container>
+            <mat-option
+              *ngIf="!hotelDetails?.timeSlots || hotelDetails?.timeSlots?.length === 0"
+              value="8:00pm"
+            >
+              Report Time: 8:00pm
+            </mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field
-          *ngIf="this.category === 'private-yachts-in-goa'"
+          *ngIf="this.category === 'book-private-yachts-in-goa'"
           appearance="outline"
           class="time-dropdown"
         >
@@ -129,8 +142,8 @@
         <div class="traveller-section" *ngFor="let traveller of sessionData.travellers">
           <div>
             <p class="traveller-label">{{ traveller.displayLabel }}</p>
-            <p class="price" *ngIf="this.category === 'private-yachts-in-goa'">
-              <span *ngIf="traveller.label !== 'Actual Pax Count'">INR</span>
+            <p class="price" *ngIf="this.category === 'book-private-yachts-in-goa'">
+              <span *ngIf="traveller.label !== 'Actual Pax Count'">₹</span>
               <span *ngIf="traveller.label !== 'Actual Pax Count'">
                 {{
                   traveller.label === 'Actual Pax Count'
@@ -145,13 +158,13 @@
               <span *ngIf="traveller.label !== 'Actual Pax Count'">/</span>
               {{ traveller.label }}
             </p>
-            <p class="price" *ngIf="this.category !== 'private-yachts-in-goa'">
-              INR
+            <p class="price" *ngIf="this.category !== 'book-private-yachts-in-goa'">
+              ₹
               {{
                 traveller.label === 'Adult'
-                  ? sessionData.selectedTransport?.discountedamt
+                  ? sessionData.selectedTransport?.adultPrice
                   : traveller.label === 'Child (4-10 year old)'
-                    ? sessionData.selectedTransport?.kidAmt || 0
+                    ? sessionData.selectedTransport?.kidPrice || 0
                     : 0
               }}
               /{{ traveller.label.toLowerCase() }}
@@ -167,14 +180,14 @@
         <div class="subtotal-section">
           <p>Sub Total</p>
           <p class="subtotal-amount">
-            INR {{ category === 'private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
+            ₹ {{ category === 'book-private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
           </p>
         </div>
       </div>
 
       <button
         class="pay-btn"
-        [disabled]="category === 'private-yachts-in-goa' ? !getSubtotalForYacth() : !getSubtotal()"
+        [disabled]="category === 'book-private-yachts-in-goa' ? !getSubtotalForYacth() : !getSubtotal()"
         (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
       >
         Proceed To Pay
@@ -183,7 +196,7 @@
         <div class="price-div">
           <span>Total Amount </span>
           <p class="pay-btn-amount">
-            INR {{ category === 'private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
+            ₹ {{ category === 'book-private-yachts-in-goa' ? getSubtotalForYacth() : getSubtotal() }}
           </p>
         </div>
         <button class="offer-button" *ngIf="!showProceedButton" (click)="scrollToTimeSlot()">
@@ -193,7 +206,7 @@
         <button
           class="offer-button"
           [disabled]="
-            category === 'private-yachts-in-goa' ? !getSubtotalForYacth() : !getSubtotal()
+            category === 'book-private-yachts-in-goa' ? !getSubtotalForYacth() : !getSubtotal()
           "
           *ngIf="showProceedButton"
           (click)="navigateToPaymentPage(this.hotelDetails.routingUrl)"
@@ -233,6 +246,35 @@
     <div class="modal-actions">
       <button (click)="closeLocationModal()">Cancel</button>
       <button [disabled]="!selectedLocation" (click)="confirmLocation()">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Special Date Modal -->
+<div class="modal-backdrop" *ngIf="showSpecialDateModal" (click)="closeSpecialDateModal()">
+  <div class="special-event-modal" (click)="$event.stopPropagation()">
+    <div class="modal-content">
+      <p class="modal-title">
+        For {{ selectedSpecialEvent?.title || 'Special Event' }} Bookings, Please get<br />
+        in touch with our Offline team
+      </p>
+      
+      <div class="action-buttons">
+        <button class="phone-button" (click)="callSupport()">
+          <mat-icon class="material-symbols-outlined">phone</mat-icon>
+        </button>
+        <button class="enquire-button" (click)="enquireNow()">
+          <span class="enquire-icon"></span>
+          <span>ENQUIRE NOW</span>
+        </button>
+      </div>
+      
+      <p class="visit-text">To know more, please visit us at</p>
+      
+      <button class="detail-button" (click)="navigateToDetails()" *ngIf="selectedSpecialEvent?.navigateTo">
+        <mat-icon class="material-symbols-outlined">language</mat-icon>
+        <span>{{ selectedSpecialEvent?.title || 'Special Event' }} Detail</span>
+      </button>
     </div>
   </div>
 </div>

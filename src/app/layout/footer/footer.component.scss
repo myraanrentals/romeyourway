@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 20px; /* Distance from bottom */
   right: 20px; /* Distance from right */
-  background-color: #ff7b52;
+  background-color: #66d358;
   color: white;
   border-radius: 50px;
   width: 25%;
@@ -129,13 +129,13 @@
   }
 
   .whatsapp-float {
-    bottom: 40px;
-    right: 5%;
-    width: 170px;
-    height: 35px;
-    font-size: 18px;
-    display: block;
+    width: 126px;
+    height: 34px;
+    display: flex;
     padding: 2px;
+    span{
+      font-size: 11px;
+    }
   }
 }
 

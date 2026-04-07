@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { VideoWrapperComponent } from './video-wrapper/video-wrapper.component';
@@ -13,7 +13,9 @@ import { yacth } from '@constants/yacth';
 import { favChoiceListOne } from '@constants/favChoiceListOne';
 import { favChoiceListTwo } from '@constants/favChoiceListTwo';
 import { scubaList } from '@constants/scuba';
+import { privateParties } from '@constants/privateParties';
 declare var $: any; // Declare jQuery globally
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-homepage',
@@ -31,8 +33,9 @@ declare var $: any; // Declare jQuery globally
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit, AfterViewInit {
   // @ViewChild('heroVideo') videoRef!: ElementRef<HTMLVideoElement>;
+  @ViewChild('carousel', { static: false }) carouselElement!: ElementRef;
 
   hotelList = hotels;
   favListOne = favChoiceListOne;
@@ -41,18 +44,18 @@ export class HomepageComponent implements OnInit {
   yatchlList = yacth;
   
   allowedCruises = [
-    'Nauti Amigo Luxury Dinner Cruise',
-    'Vihaan Dinner Cruise[Family & Couple]',
-    'Nirwana Dinner Cruise',
-    'Paradise Dinner Cruise[FAMILY & COUPLE]',
-    'Swastik Family Dinner Cruise[CURRENTLY NOT AVAILABLE]'
+
+    "Swastik Dinner Cruise",
+    "Nirwana Dinner Cruise",
+    'Vihaan Dinner Cruise',
+    'Nauti Amigo Luxury Cruise'
   ];
 
   allowedYatch = [
-    'Manta Ray : Sail Into Unforgettable Adventures',
-    'Orca : Luxury on Water',
-    'Shantam Catamaran : Indulge in Oceanic Luxury',
-    'Ralston-1 : Explore the Seas',
+    'Manta Ray',
+    'Orca',
+    'Shantam Catamaran',
+    'Ralston Red',
   ];
 
 
@@ -226,7 +229,7 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/watersport.png',
       title: 'Yacht',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'private-yachts-in-goa'
+      redirect: 'book-private-yachts-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
@@ -265,31 +268,31 @@ export class HomepageComponent implements OnInit {
       icon: '/assets/icons/watersport.png',
       title: 'Yacht',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'private-yachts-in-goa'
+      redirect: 'book-private-yachts-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Scuba',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
-      redirect: 'scuba-diving-in-goa'
+      redirect: 'book-watersports-and-scuba-diving-in-goa'
     },
     {
       icon: '/assets/icons/Cruise icon png.png',
       title: 'Watersports',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'best-water-sports-in-goa'
+      redirect: 'book-water-sports-in-goa'
     },
     {
       icon: '/assets/icons/watersport.png',
       title: 'Adventures',
       text: 'Dive into adventure with thrilling watersports in Goa! From scuba diving and jet-skiing to parasailing and kayaking, experience adrenaline-pumping fun on pristine beache.',
-      redirect: 'best-adventures-in-goa'
+      redirect: 'book-adventures-in-goa'
     },
     {
       icon: '/assets/icons/Scuba ic.png',
       title: 'Sightseeing',
       text: 'Discover Goas underwater wonders with exhilarating scuba diving! Explore vibrant reefs and exotic marine life. Perfect for beginners and pros. Dive into adventure.',
-      redirect: 'best-sightseeing-in-goa'
+      redirect: 'book-sightseeing-in-goa'
     },
   ];
   offers = [
@@ -302,7 +305,30 @@ export class HomepageComponent implements OnInit {
       title: 'Bundle and Save',
     },
   ];
+  privateParties = privateParties;
   category: string = '';
+
+  getChunkedPrivateParties(): any[][] {
+    const chunkSize = 2;
+    const chunks: any[][] = [];
+    for (let i = 0; i < this.privateParties.length; i += chunkSize) {
+      chunks.push(this.privateParties.slice(i, i + chunkSize));
+    }
+    return chunks;
+  }
+  
+  // Typing effect properties
+  activeSlideIndex: number = 0;
+  carouselTexts: string[] = [
+    'Thrill. Dive. Sail. Repeat.',//scuba
+    '3… 2… 1… JUMP INTO LEGEND',//bungee jumping
+    'Private Decks & The Only Thing We Share is the View',//private yachts
+    
+  ];
+  displayedTexts: string[] = ['', ''];
+  typingSpeed: number = 100; // milliseconds per character
+  typingTimeouts: any[] = [];
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -310,7 +336,7 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.yatchlList = this._helperService.renderPackageData("private-yachts-in-goa");    
+    this.yatchlList = this._helperService.renderPackageData("book-private-yachts-in-goa");    
     sessionStorage.clear();
     (async () => {
       if (this._helperService.getSessionStorage('travelDetails') !== null) {
@@ -320,15 +346,22 @@ export class HomepageComponent implements OnInit {
         this._helperService.deleteSessionStorage('travellersDetails');
       }
     })();
+    
+    // Start typing effect for first slide
+    setTimeout(() => {
+      this.startTypingEffect(0);
+    }, 500);
   }
 
   callPhoneNumber(phoneNumber: string) {
     window.location.href = `tel:${phoneNumber}`;
   }
 
-  openWhatsApp(phoneNumber: string) {
+  openWhatsApp(phoneNumber: string,msg?: string) {
     const internationalNumber = phoneNumber.startsWith('+') ? phoneNumber : `+${phoneNumber}`;
-    window.location.href = `https://wa.me/${internationalNumber}`;
+    const message = msg && `Hello, I would like to enquire about ${msg} in Goa!`
+    const encodedMessage = message && encodeURIComponent(message);
+    window.location.href = encodedMessage ? `https://wa.me/${internationalNumber}?text=${encodedMessage}` : `https://wa.me/${internationalNumber}`;
   }
 
   goToDetailedPage(hotelDetails: any, offer: any) {
@@ -342,6 +375,45 @@ export class HomepageComponent implements OnInit {
     this.router.navigate([hotelDetails.pageUrl], { relativeTo: this.route });
   }
   ngAfterViewInit() {
+    // Setup carousel event listener for typing effect
+    const carouselEl = document.getElementById('carouselExampleSlidesOnly');
+    if (carouselEl) {
+      carouselEl.addEventListener('slide.bs.carousel', (event: any) => {
+        const toIndex = event.to;
+        this.activeSlideIndex = toIndex;
+        this.displayedTexts[toIndex] = '';
+        
+        // Clear existing timeouts
+        this.typingTimeouts.forEach(timeout => clearTimeout(timeout));
+        this.typingTimeouts = [];
+        
+        // Start typing effect for new slide
+        setTimeout(() => {
+          this.startTypingEffect(toIndex);
+        }, 300);
+      });
+      
+      carouselEl.addEventListener('slid.bs.carousel', (event: any) => {
+        // Ensure typing effect starts after slide transition completes
+        const activeIndex = event.to;
+        if (!this.displayedTexts[activeIndex]) {
+          setTimeout(() => {
+            this.startTypingEffect(activeIndex);
+          }, 100);
+        }
+      });
+    }
+    
+    // Initialize itinerary carousel with auto-slide
+    const itineraryCarouselEl = document.getElementById('itinerary-carousel');
+    if (itineraryCarouselEl && typeof bootstrap !== 'undefined') {
+      const carousel = new bootstrap.Carousel(itineraryCarouselEl, {
+        interval: 3000,
+        ride: 'carousel',
+        wrap: true
+      });
+    }
+    
     // const v = this.videoRef.nativeElement;
 
     // ensure attributes are set before play
@@ -370,6 +442,22 @@ export class HomepageComponent implements OnInit {
       autoplay: true,
       autoplaySpeed: 2000,
     });
+    $('#private-parties-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      customPaging: function() {
+        return '<span class="slick-line"></span>';
+      },
+      centerMode: false,
+      infinite: false,
+      draggable: true, 
+      swipe: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
+
     $('#slick-slider, #slick-slider-yachts, #slick-slider-dinner').slick({
       slidesToShow: 1,
       centerMode: false,
@@ -396,6 +484,9 @@ export class HomepageComponent implements OnInit {
       ]
     });
     
+    // Add padding-bottom to slick-list elements
+    $('#slick-slider .slick-list, #slick-slider-yachts .slick-list, #slick-slider-dinner .slick-list').css('padding-bottom', '12px');
+    
 
     $('#slick-slider').on('afterChange', (event: any, slick: any, currentSlide: number) => {
       // Remove the highlighted class from all slides
@@ -408,6 +499,8 @@ export class HomepageComponent implements OnInit {
 
     $(window).on('resize', function () {
       $('#slick-slider').slick('setPosition');
+      // Reapply padding-bottom after resize
+      $('#slick-slider .slick-list, #slick-slider-yachts .slick-list, #slick-slider-dinner .slick-list').css('padding-bottom', '12px');
     });
   }
 
@@ -417,12 +510,31 @@ export class HomepageComponent implements OnInit {
   }
   goToServiceYath(link: string) {
     const category = this.route.snapshot.paramMap.get('category');
-    this.router.navigate([`/private-yachts-in-goa/details/${link}`]);
+    this.router.navigate([`/book-private-yachts-in-goa/details/${link}`]);
   }
   navigateTo(route: string) {
-    console.log(route,"route");
     
     this.router.navigate([`/${route}`]);
+  }
+  
+  navigateToPrivateParty(routingUrl: string) {
+    this.router.navigate([`/private-parties/details/${routingUrl}`]);
+  }
+  
+  startTypingEffect(slideIndex: number) {
+    const fullText = this.carouselTexts[slideIndex];
+    this.displayedTexts[slideIndex] = '';
+    
+    for (let i = 0; i <= fullText.length; i++) {
+      const timeout = setTimeout(() => {
+        this.displayedTexts[slideIndex] = fullText.substring(0, i);
+      }, i * this.typingSpeed);
+      this.typingTimeouts.push(timeout);
+    }
+  }
+  
+  getTypingText(slideIndex: number): string {
+    return this.displayedTexts[slideIndex] || '';
   }
   
 }

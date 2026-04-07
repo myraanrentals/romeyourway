@@ -1,17 +1,30 @@
 <section>
-  <div
-    id="carouselExampleSlidesOnly"
-    class="carousel slide carousel-fade"
-    data-bs-ride="carousel"
-    data-bs-interval="2000"
-  >
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+    data-bs-interval="4000">
     <div class="carousel-inner">
+      <!-- <div class="carousel-item active">
+        <img class="d-block w-100 carousel-img" src="/assets/banners/portrait-scuba-diver-sea-water-with-marine-life.jpg" alt="First slide" />
+        <div class="carousel-caption typing-container">
+          <h2 class="typing-text" [class.typing]="activeSlideIndex === 0">
+            {{ getTypingText(0) }}
+          </h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 carousel-img" src="/assets/banners/bungeeJumping.png" alt="Second slide" />
+        <div class="carousel-caption typing-container">
+          <h2 class="typing-text" [class.typing]="activeSlideIndex === 1">
+            {{ getTypingText(1) }}
+          </h2>
+        </div>
+      </div> -->
       <div class="carousel-item active">
-        <img
-          class="d-block w-100 carousel-img"
-          src="/assets/banners/Cruise-01.svg"
-          alt="First slide"
-        />
+        <img class="d-block w-100 carousel-img" src="/assets/banners/privateYacht.png" alt="Second slide" />
+        <div class="carousel-caption typing-container">
+          <h2 class="typing-text" [class.typing]="activeSlideIndex === 2">
+            {{ getTypingText(2) }}
+          </h2>
+        </div>
       </div>
     </div>
   </div>
@@ -20,23 +33,19 @@
 
   <section>
     <div class="container things-todo">
-      <div class="flex innerContainer" >
-        <h2 class="offers-title">Things to Do...</h2>
+      <div class="flex innerContainer">
+        <h2 class="offers-title things-to-do-title">Things to Do...</h2>
         <div class="featuresContainer">
           @for (feature of mobFeatures; track feature) {
-            <div class="card-main" (click)="navigateTo(feature.redirect)">
-              <div>
-                <img
-                  [ngStyle]="{ width: '68px', height: '68px' }"
-                  [src]="feature.icon"
-                  alt="Icon"
-                  class="card-main-img"
-                />
-              </div>
-              <div class="info">
-                <h4 class="featureTitle">{{ feature.title }}</h4>
-              </div>
+          <div class="card-main" (click)="navigateTo(feature.redirect)">
+            <div>
+              <img [ngStyle]="{ width: '68px', height: '68px' }" [src]="feature.icon" alt="Icon"
+                class="card-main-img" />
             </div>
+            <div class="info">
+              <h4 class="featureTitle">{{ feature.title }}</h4>
+            </div>
+          </div>
           }
         </div>
       </div>
@@ -54,11 +63,11 @@
         </div>
       </div>
 
-        <div class="offers-wrappers">
-            <img src="/assets/homepageImages/offerForYou2.png" class="offer-image" width="100%"/>
-            <img src="/assets/homepageImages/offerForYou2.png" class="offer-image" width="100%"/>
-            <img src="/assets/homepageImages/offerForYou1.png" class="offer-image" width="100%"/>
-        </div>
+      <div class="offers-wrappers">
+        <img src="/assets/homepageImages/offerForYou2.png" class="offer-image" width="100%" />
+        <img src="/assets/homepageImages/offerForYou2.png" class="offer-image" width="100%" />
+        <img src="/assets/homepageImages/offerForYou1.png" class="offer-image" width="100%" />
+      </div>
 
     </div>
   </section>
@@ -70,33 +79,37 @@
 
     <div class="travelers-wrapper" id="slick-slider">
       <div *ngFor="let offer of favListOne">
-      <mat-card class="traveller-card" >
-        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
-        <div class="offer-content">
-          <div>
-            <p class="category">{{ offer.category }}</p>
-            <h3 class="title">{{ offer.subTile }}</h3>
-            <p class="confirmation">Instant confirmation</p>
-            <p class="rating">
-              ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
-            </p>
-            <p class="price">
-              <span class="current-price">INR {{ offer.currentPrice }}</span>
-              <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
-            </p>
-          </div>
-          <!-- <button
+        <mat-card class="traveller-card">
+          <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%" />
+          <div class="offer-content">
+            <div>
+              <p class="category">{{ offer.category }}</p>
+              <h3 class="title">{{ offer.subTile }}</h3>
+              <p class="confirmation">Instant confirmation</p>
+              <p class="rating">
+                ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
+              </p>
+              <p class="price">
+                <span class="current-price">₹ {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
+              </p>
+            </div>
+            <!-- <button
             mat-button
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
           > -->
-          <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
-            {{ offer.buttonText }}
-          </button>
-        </div>
+            <button mat-button class="offer-button" (click)="goToService(offer?.routingUrl)">
+              {{ offer.buttonText }}
+            </button>
+            <button class="secondary-button" (click)="openWhatsApp('+917715959917')">
+              <img [src]="'assets/whatsapp_icon.png'" alt="WhatsApp icon" class="whatsapp-icon" />
+              ENQUIRE NOW
+            </button>
+          </div>
 
-      </mat-card>
-    </div>
+        </mat-card>
+      </div>
 
     </div>
   </div>
@@ -113,7 +126,7 @@
     <div class="travelers-wrapper" id="slick-slider">
       <div *ngFor="let offer of filteredHotelList">
         <mat-card class="traveller-card">
-          <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
+          <img mat-card-image [src]="offer.image" alt="offer image" height="200" />
           <div class="offer-content">
             <div>
               <p class="category">{{ offer.category }}</p>
@@ -123,8 +136,8 @@
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
               </p>
               <p class="price">
-                <span class="current-price">INR {{ offer.currentPrice }}</span>
-                <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
+                <span class="current-price">₹ {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
               </p>
             </div>
             <button mat-button class="offer-button" (click)="goToService(offer?.routingUrl)">
@@ -134,9 +147,9 @@
         </mat-card>
       </div>
     </div>
-    
+
   </div>
-  
+
   <!-- View All Button -->
   <button class="seeMoreBtn" (click)="navigateTo('book-dinner-cruise-in-goa')">
     Explore all Popular Cruises >
@@ -148,36 +161,36 @@
     <h2>Scuba & Water Sports Combos</h2>
     <div class="travelers-wrapper" id="slick-slider">
       <div *ngFor="let offer of scubaList">
-      <mat-card class="traveller-card">
-        <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%"/>
-        <div class="offer-content">
-          <div>
-            <p class="category">{{ offer.category }}</p>
-            <h3 class="title">{{ offer.title }}</h3>
-            <p class="confirmation">Instant confirmation</p>
-            <p class="rating">
-              ⭐ dummy booked
-            </p>
-            <p class="price">
-              <span class="current-price">{{ offer.currentPrice }}</span>
-              <span class="old-price" >{{ offer.oldPrice }}</span>
-            </p>
-            <button mat-button class="offer-button" (click)="navigateTo('scuba-diving-in-goa')">
-              Book this activity & get 20% off 
-            </button>
-          </div>
-          <!-- <button
+        <mat-card class="traveller-card">
+          <img mat-card-image [src]="offer.image" alt="offer image" height="200" width="100%" />
+          <div class="offer-content">
+            <div>
+              <p class="category">{{ offer.category }}</p>
+              <h3 class="title">{{ offer.title }}</h3>
+              <p class="confirmation">Instant confirmation</p>
+              <p class="rating">
+                ⭐ dummy booked
+              </p>
+              <p class="price">
+                <span class="current-price">{{ offer.currentPrice }}</span>
+                <span class="old-price">{{ offer.oldPrice }}</span>
+              </p>
+              <button mat-button class="offer-button" (click)="navigateTo('book-watersports-and-scuba-diving-in-goa')">
+                Book this activity & get 20% off
+              </button>
+            </div>
+            <!-- <button
             mat-button
             class="offer-button"
             (click)="goToService(offer?.routingUrl)"
           > -->
-        
-        </div>
-      </mat-card>
-    </div>
+
+          </div>
+        </mat-card>
+      </div>
     </div>
   </div>
-  <button class="seeMoreBtn" (click)="navigateTo('scuba-diving-in-goa')">
+  <button class="seeMoreBtn" (click)="navigateTo('book-watersports-and-scuba-diving-in-goa')">
     Explore all Water Activities >
   </button>
 </section>
@@ -197,8 +210,8 @@
                 ⭐ dummy booked
               </p>
               <p class="price">
-                <span class="current-price">INR 1200</span>
-                <span class="old-price" >INR 300</span>
+                <span class="current-price">₹ 1200</span>
+                <span class="old-price" >₹ 300</span>
               </p>
               <button mat-button class="offer-button" (click)="navigateTo('book-dinner-cruise-in-goa')">
                 Book this activity & get 20% off 
@@ -226,7 +239,7 @@
     <div class="travelers-wrapper" id="slick-slider">
       <div *ngFor="let offer of filteredYatchList">
         <mat-card class="traveller-card ">
-          <img mat-card-image [src]="offer.image" alt="offer image" height="200"/>
+          <img mat-card-image [src]="offer.image" alt="offer image" height="200" />
           <div class="offer-content">
             <div>
               <p class="category">{{ offer.category }}</p>
@@ -236,8 +249,8 @@
                 ⭐ {{ offer.rating }} ({{ offer.reviews }}) • {{ offer.booked }} booked
               </p>
               <p class="price">
-                <span class="current-price">INR {{ offer.currentPrice }}</span>
-                <span class="old-price" *ngIf="offer.oldPrice">INR {{ offer.oldPrice }}</span>
+                <span class="current-price">₹ {{ offer.currentPrice }}</span>
+                <span class="old-price" *ngIf="offer.oldPrice">₹ {{ offer.oldPrice }}</span>
               </p>
             </div>
             <button mat-button class="offer-button" (click)="goToServiceYath(offer?.routingUrl)">
@@ -250,30 +263,42 @@
 
 
   </div>
-  <button class="seeMoreBtn" (click)="navigateTo('private-yachts-in-goa')">
+  <button class="seeMoreBtn" (click)="navigateTo('book-private-yachts-in-goa')">
     Explore all yachts >
   </button>
 </section>
 
 <section>
-  <div class="custom-card-container">
-    <div *ngFor="let card of cardDataList" class="custom-card">
-      <h2 class="custom-card-title">
-        <span class="custom-card-text">{{ card.title }}</span>
-      </h2>
-      <hr class="custom-divider" />
-
-      <div class="custom-card-items">
-        <div *ngFor="let place of card.places; let i = index" class="custom-card-item">
-          <div class="custom-image-wrapper">
-            <!-- <span class="custom-badge">{{ i + 1 }}</span> -->
-            <img [src]="place.image" alt="Place Image" class="custom-card-image" />
-          </div>
-          <div class="custom-card-content">
-            <h3 class="custom-place-title">{{ place.name }}</h3>
-            <p class="custom-place-description">🔥 {{ place.description }}</p>
+  <div class="itinerary-container">
+    <h2 class="inspiration">Private Parties</h2>
+    <div id="itinerary-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        @for (chunk of getChunkedPrivateParties(); track $index; let isFirst = $first) {
+        <div class="carousel-item" [class.active]="isFirst">
+          <div class="cards">
+            @for (party of chunk; track party.cruiseId) {
+            <div class="card" [style.background-image]="'url(' + party.image + ')'" (click)="navigateToPrivateParty(party.routingUrl)" style="cursor: pointer;">
+              <div class="overlay"></div>
+              <div class="card-content">
+                <div>
+                  <h3>{{ party.title }}</h3>
+                  <p>{{ party.subTile }}</p>
+                </div>
+                <button class="custom-btn" (click)="openWhatsApp('+917715959917',party.title); $event.stopPropagation()">Enquire Now</button>
+              </div>
+            </div>
+            }
+            @if (chunk.length === 1 && $index === 0) {
+            <div class="card empty-card"></div>
+            }
           </div>
         </div>
+        }
+      </div>
+      <div class="carousel-indicators itinerary-dots">
+        @for (chunk of getChunkedPrivateParties(); track $index) {
+        <button type="button" [attr.data-bs-target]="'#itinerary-carousel'" [attr.data-bs-slide-to]="$index" [class.active]="$first" [attr.aria-current]="$first ? 'true' : null" [attr.aria-label]="'Slide ' + ($index + 1)"></button>
+        }
       </div>
     </div>
   </div>
@@ -281,32 +306,33 @@
 
 <section>
   <div class="itinerary-container">
-    <h2 class="inspiration">Inspiration for your itinerary</h2>
-    <div class="cards">
-      <div class="card" style="background-image: url('/assets/detailimages/DUD.webp')">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <div>
-            <h3>Best staycation deals</h3>
-            <p>Enjoy these cool staycation promotions in Goa</p>
-          </div>
-          <button class="custom-btn">See activities</button>
-        </div>
-      </div>
+    <h2 class="inspiration text-center">Inspiration for your itinerary </h2>
+    <div class="custom-card-container">
 
-      <div class="card" style="background-image: url('/assets/detailimages/KAP05.webp')">
-        <div class="overlay"></div>
-        <div class="card-content">
-          <div>
-            <h3>All Time Favourite Activities in Goa</h3>
-            <p>Don't forget to check out these activities while you're here</p>
+      <div *ngFor="let card of cardDataList" class="custom-card">
+        <h2 class="custom-card-title">
+          <span class="custom-card-text">{{ card.title }}</span>
+        </h2>
+        <hr class="custom-divider" />
+
+        <div class="custom-card-items">
+          <div *ngFor="let place of card.places; let i = index" class="custom-card-item">
+            <div class="custom-image-wrapper">
+              <!-- <span class="custom-badge">{{ i + 1 }}</span> -->
+              <img [src]="place.image" alt="Place Image" class="custom-card-image" />
+            </div>
+            <div class="custom-card-content">
+              <h3 class="custom-place-title">{{ place.name }}</h3>
+              <p class="custom-place-description">🔥 {{ place.description }}</p>
+            </div>
           </div>
-          <button class="custom-btn">See activities</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 <!-- <section>
   <div class="offer-card">
     <section id="listing-wrapper">

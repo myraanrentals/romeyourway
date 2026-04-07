@@ -31,7 +31,6 @@ export class PackageCardComponent implements AfterViewInit, OnInit {
 
   isMobileView = false;
   ngOnInit(): void {
-    console.log({ tes: this.hotelDetails, test2: this.sessionData });
   }
   constructor(private cdr: ChangeDetectorRef) {
     this.checkScreenSize();

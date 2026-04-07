@@ -1,0 +1,133 @@
+.page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+.page.error {
+  color: #b91c1c;
+}
+.page a {
+  color: #ff5722;
+}
+
+#receipt {
+  width: 794px;
+  background: white;
+  font-family: Poppins, sans-serif;
+}
+
+.receipt-page {
+  padding: 20px;
+  background: white;
+}
+
+.receipt-border {
+  border: 2px solid #ff5722;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.receipt-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  background: #ff5722;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.brand h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.brand p {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.watermark {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-size: 120px;
+  font-weight: bold;
+  color: rgba(255, 87, 34, 0.08);
+  pointer-events: none;
+}
+
+.content {
+  padding: 20px;
+}
+
+.title {
+  color: #ff5722;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.mt {
+  margin-top: 20px;
+}
+
+.box {
+  width: 48%;
+}
+
+.label {
+  font-size: 12px;
+  color: #666;
+}
+
+.value {
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  color: #777;
+}
+
+td {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: 10px;
+  font-size: 11px;
+  color: #777;
+}
+
+.pdf-hidden {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 794px;
+  background: white;
+  z-index: -1;
+}

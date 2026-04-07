@@ -32,13 +32,12 @@ export class AppBookingSummaryComponent {
   }
   ngOnInit(): void {
     const data = sessionStorage.getItem('checkoutSession');
-
     if (data) {
       const parsedData = JSON.parse(data);
       this.bookingDetails = parsedData?.travellers;
       this.selectedTransport = parsedData?.selectedTransport;
       this.paymentType = parsedData.paymentType;
-      console.log({ parsedData });
+
     } else {
       this.bookingDetails = null;
     }

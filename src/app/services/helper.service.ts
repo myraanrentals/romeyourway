@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { hotels, getTravellers } from '../constants/hotels';
+import { hotels, getTravellers, items as hotelsItems } from '../constants/hotels';
 import { dinnerCruise } from '../constants/dinnerCruise';
-import { yacth } from '../constants/yacth';
+import { yacth, items as yacthItems } from '../constants/yacth';
 import { formatDate } from '@angular/common';
 import { Router } from '@angular/router';
-import { scubaList } from '@constants/scuba';
-import { watersports } from '@constants/watersports';
+import { scubaList, items as scubaItems } from '@constants/scuba';
+import { watersports, items as watersportsItems } from '@constants/watersports';
 import { adventures } from '@constants/adventures';
 import { sightseeing } from '@constants/sightseeing';
+import { privateParties } from '@constants/privateParties';
+import { DevList } from '@constants/devList';
+import { sunsetCruises } from '@constants/sunsetCruises';
 @Injectable({
   providedIn: 'root',
 })
@@ -28,20 +31,94 @@ export class HelperService {
     }
   }
   renderPackageData(category: string) {
-    if (category === 'book-dinner-cruise-in-goa') {
+    // Extract category name after 'book-' or 'best-' prefix
+    let categoryName = category;
+    if (category.startsWith('book-')) {
+      categoryName = category.replace('book-', '');
+    } else if (category.startsWith('best-')) {
+      categoryName = category.replace('best-', '');
+    }
+
+    if (categoryName === 'dinner-cruise-in-goa') {
       return hotels;
-    } else if (category === 'private-yachts-in-goa') {
+    } else if (categoryName === 'private-yachts-in-goa') {
       return yacth;
-    } else if (category === 'scuba-diving-in-goa') {
+    } else if (categoryName === 'sunset-cruise-in-goa') {
+      return sunsetCruises;
+    } else if (categoryName === 'watersports-and-scuba-diving-in-goa') {
       return scubaList;
-    } else if (category === 'best-water-sports-in-goa') {
+    } else if (categoryName === 'water-sports-in-goa') {
       return watersports;
-    } else if (category === 'best-adventures-in-goa') {
+    } else if (categoryName === 'adventures-in-goa') {
       return adventures;
-    } else if (category === 'best-sightseeing-in-goa') {
+    } else if (categoryName === 'sightseeing-in-goa') {
       return sightseeing;
-    } else {
+    }else if (categoryName === 'private-parties') {
+      return privateParties; 
+    }
+    else if (categoryName === 'private-dev-kratagya') {
+      return DevList; }
+      else {
       return hotels;
+    }
+  }
+  categoryTypeNameParser(category: string): string {
+    let categoryName = category;
+    if (category.startsWith('book-')) {
+      categoryName = category.replace('book-', '');
+    } else if (category.startsWith('best-')) {
+      categoryName = category.replace('best-', '');
+    }
+
+    switch (category) {
+      case 'dinner-cruise-in-goa':
+        return 'Cruises';
+      case 'private-yachts-in-goa':
+        return 'Yacht';
+      case 'watersports-and-scuba-diving-in-goa':
+        return 'Watersports';
+      case 'water-sports-in-goa':
+        return 'Watersports';
+      case 'adventures-in-goa':
+        return 'Adventure';
+      case 'sightseeing-in-goa':
+        return 'Sightseeing';
+      case 'private-parties':
+        return 'Cruises';
+      default:
+        return 'Cruises';
+    }
+  }
+
+  getFilterItems(category: string): { label: string; value: string }[] | null {
+    // Extract category name after 'book-' or 'best-' prefix
+    let categoryName = category;
+    if (category.startsWith('book-')) {
+      categoryName = category.replace('book-', '');
+    } else if (category.startsWith('best-')) {
+      categoryName = category.replace('best-', '');
+    }
+
+    if (categoryName === 'dinner-cruise-in-goa') {
+      return hotelsItems || null;
+    } else if (categoryName === 'private-yachts-in-goa') {
+      return yacthItems || null;
+    } else if (categoryName === 'watersports-and-scuba-diving-in-goa') {
+      return scubaItems || null;
+    } else if (categoryName === 'water-sports-in-goa') {
+      return watersportsItems || null;
+    } else if (categoryName === 'adventures-in-goa') {
+      // No items exported, return null to hide dropdown
+      return null;
+    } else if (categoryName === 'sightseeing-in-goa') {
+      // No items exported, return null to hide dropdown
+      return null;
+    } else if (categoryName === 'private-parties') {
+      // No items exported, return null to hide dropdown
+      return null;
+    } else {
+      // Default to dinner cruise items if available
+      return hotelsItems || null;
     }
   }
   deleteSessionStorage(key: string) {
@@ -119,14 +196,11 @@ export class HelperService {
   updateSessionStorage(updatedData: Partial<typeof this.defaultSessionPayload> = {}) {
     const storedSession = sessionStorage.getItem('checkoutSession');
     const sessionPackagePrice = sessionStorage.getItem('packagePrice');
-    const { adultPrice, kidPrice } = sessionPackagePrice && JSON.parse(sessionPackagePrice);
-
     const currentSession = storedSession
       ? JSON.parse(storedSession)
       : sessionPackagePrice
         ? {
             ...this.defaultSessionPayload,
-            travellers: getTravellers(adultPrice, kidPrice),
           }
         : { ...this.defaultSessionPayload };
 

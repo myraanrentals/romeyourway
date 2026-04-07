@@ -1,0 +1,107 @@
+<div class="page" *ngIf="loadState === 'loading'">
+  <p>Loading receipt…</p>
+</div>
+
+<div class="page error" *ngIf="loadState === 'error'">
+  <p>Could not load booking. Check the link or booking ID.</p>
+  <p><a routerLink="/">Go to home</a></p>
+</div>
+
+<div class="page" *ngIf="loadState === 'done'">
+  <p>Your receipt download should start automatically.</p>
+  <p><a routerLink="/">Go to home</a></p>
+</div>
+
+<div class="pdf-hidden" *ngIf="bookingDetails">
+  <div id="receipt">
+    <div class="receipt-page">
+      <div class="receipt-border">
+        <div class="receipt-container">
+          <div class="watermark">PAID</div>
+          <div class="header">
+            <div class="brand">
+              <h3>Rome Your Way LLP</h3>
+              <p>
+                Unit No. 71/195/A, Sattari, Ward No. 7, Hathwada, Near Marathi School,<br />
+                Valpoi, North Goa, Goa - 403506<br />
+                Phone : +91 771-5959917<br />
+                Email : sales&#64;romeyourway.com<br />
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="title">SERVICE RECEIPT – BOOKING CHARGES</h3>
+            <div class="grid">
+              <div class="box">
+                <div class="label">Receipt No</div>
+                <div class="value">{{ receiptNumber }}</div>
+              </div>
+              <div class="box">
+                <div class="label">Date</div>
+                <div class="value">{{ paymentDetails.paymentCompletionTime }}</div>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="box">
+                <div class="label">Customer</div>
+                <div class="value">{{ name }}</div>
+                <div class="value">{{ phone }}</div>
+              </div>
+              <div class="box">
+                <div class="label">Booking</div>
+                <div class="value">{{ bookingDetails?.category }} | {{ bookingDetails?.subCategory }}</div>
+              </div>
+            </div>
+            <div class="grid" *ngIf="shouldShowGstInvoiceDetails">
+              <div class="box">
+                <div class="label">Company Name</div>
+                <div class="value">{{ bookingDetails?.customerCompanyName || 'N/A' }}</div>
+              </div>
+              <div class="box">
+                <div class="label">Company GST</div>
+                <div class="value">{{ bookingDetails?.customerCompanyGST || 'N/A' }}</div>
+              </div>
+            </div>
+            <div class="grid" *ngIf="shouldShowGstInvoiceDetails">
+              <div class="box">
+                <div class="label">Company Address</div>
+                <div class="value">{{ bookingDetails?.customerCompanyAddress || 'N/A' }}</div>
+              </div>
+            </div>
+            <table>
+              <tr>
+                <th>Description</th>
+                <th>Amount (₹)</th>
+              </tr>
+              <tr>
+                <td>Booking Charges</td>
+                <td>{{ bookingCharges | number: '1.2-2' }}</td>
+              </tr>
+              <tr>
+                <td class="total">Amount Received</td>
+                <td class="total">{{ this.bookingDetails?.actualAmount | number: '1.2-2' }}</td>
+              </tr>
+            </table>
+            <div class="grid mt">
+              <div class="box">
+                <div class="label">Payment Mode</div>
+                <div class="value">{{ paymentDetails.paymentGroup }}</div>
+              </div>
+              <div class="box">
+                <div class="label">Transaction ID</div>
+                <div class="value">{{ paymentDetails.cashfreePaymentId }}</div>
+              </div>
+              <div class="box">
+                <div class="label">Booking ID</div>
+                <div class="value">{{ bookingDetails?.bookingId }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            • This receipt reflects only booking charges • GST applied as per regulations • This is not the full service invoice
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

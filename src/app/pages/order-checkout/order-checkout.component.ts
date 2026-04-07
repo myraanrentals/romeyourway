@@ -28,7 +28,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   ) {}
 
   selectedPaymentOption: 'partial' | 'full' = 'full';
-
+  confirmPaymentLoading = false;
   contact = {
     firstName: 'Arshad',
     lastName: 'M',
@@ -44,11 +44,14 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   hotelList = hotels;
   hotelDetails: any;
   travellerDetails = {
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
     countryCode: '+91',
     phone: '',
+    needGstInvoice: false,
+    customerCompanyName: '',
+    customerCompanyAddress: '',
+    customerCompanyGST: '',
   };
   errors: {
     [key: string]: { hasError: boolean; message: string };
@@ -62,20 +65,20 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
   showCouponModal: boolean = false;
   availableCoupons = [
     {
-      title: 'Get 10% off',
-      code: 'DIGISMART',
-      description: 'Applicable with Standard Chartered cards. Max ₹200 off.',
+      title: 'Get ₹500 off',
+      code: 'RYWVDS500',
+      description: 'Applicable on full payment. Max ₹500 off.',
     },
-    {
-      title: 'Up to ₹100 Cashback',
-      code: 'PHONEPERUPAYCC',
-      description: 'Valid on PhonePe with Rupay Credit Cards.',
-    },
-    {
-      title: 'Flat ₹200 Cashback',
-      code: 'PAYTMUPI',
-      description: 'Valid on Paytm UPI above ₹150.',
-    },
+    // {
+    //   title: 'Up to ₹100 Cashback',
+    //   code: 'PHONEPERUPAYCC',
+    //   description: 'Valid on PhonePe with Rupay Credit Cards.',
+    // },
+    // {
+    //   title: 'Flat ₹200 Cashback',
+    //   code: 'PAYTMUPI',
+    //   description: 'Valid on Paytm UPI above ₹150.',
+    // },
   ];
 
   ngOnInit() {
@@ -123,10 +126,14 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.couponMessage = '';
   }
   findProfit() {
-    const { travellers } = this.sessionData;
-
-    const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
-    const profit = vehicleQuantity * this.hotelDetails.reportPrice;
+    const { travellers,selectedTransport } = this.sessionData;
+    const adult_count = travellers[0]?.count;
+    const adult_price = selectedTransport?.adultPrice;
+    const kid_count = travellers[1]?.count;
+    const kid_price = selectedTransport?.kidPrice;
+    const adult_report_price = selectedTransport?.adultReportPrice;
+    const kid_report_price = selectedTransport?.kidReportPrice;
+    const profit = adult_count * (adult_price - adult_report_price) + kid_count * (kid_price - kid_report_price);
     return profit;
   }
   async applyCoupon(couponCode: string) {
@@ -159,7 +166,6 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         18,
         result.couponDiscount
       ).finalTotal;
-  
       this.couponCode = result.couponCode;
       this.couponMessage = `Coupon applied! You saved ₹${result.couponDiscount}`;
   
@@ -210,8 +216,8 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     return {
       basePrice: parseFloat(basePrice.toFixed(2)),
       discountedBase: parseFloat(discountedBase.toFixed(2)),
-      taxAmount: parseFloat(taxAmount.toFixed(2)),
-      finalTotal: parseFloat(finalTotal.toFixed(2)),
+      taxAmount: Math.floor(parseFloat(taxAmount.toFixed(2))),
+      finalTotal: Math.floor(parseFloat(finalTotal.toFixed(2))),
     };
   }
 
@@ -258,21 +264,19 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         amountWithGST,
       });
     } else {
-      const isYacht = this.category === 'private-yachts-in-goa';
+      const isYacht = this.category === 'book-private-yachts-in-goa';
       const { travellers, selectedTransport } = this.sessionData;
-      const vehicleQuantity = travellers[0]?.count + travellers[1]?.count;
+      const nonYachtSubtotal = travellers[0]?.count * selectedTransport?.adultReportPrice + travellers[1]?.count * selectedTransport?.kidReportPrice;
+
       const finalReportPrice = isYacht
         ? this.calculatePrice()
-        : selectedTransport?.title === 'With Transport'
-          ? subtotal - vehicleQuantity * reportPriceWithTransport 
-          : subtotal - vehicleQuantity * reportPrice;
-      const partialSubtotal = finalReportPrice;
+        : nonYachtSubtotal
 
-      const partialGST = +(partialSubtotal * gstRate).toFixed(2);
-      const amountWithGST = +(partialSubtotal + partialGST).toFixed(2);
+      const partial= travellers[0]?.count * (Number(selectedTransport?.adultPrice)-Number(selectedTransport?.adultReportPrice)) + travellers[1]?.count *(Number(selectedTransport?.kidPrice) - Number(selectedTransport?.kidReportPrice))
 
+      const partialGST = +(partial * gstRate).toFixed(2);      const amountWithGST = +(partial + partialGST).toFixed(2);
       this.HelperService.updateSessionStorage({
-        payableAmount: +partialSubtotal.toFixed(2),
+        payableAmount:+partial.toFixed(2),
         paymentType: option,
         amountWithGST,
       });
@@ -312,19 +316,16 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     this.showErrors = false;
     this.errors = {};
     sessionStorage.setItem('travellerDetails', JSON.stringify(this.travellerDetails));
-  }
+    }
   validateAndSubmit() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{6,15}$/;
+    const gstRegex = /^[0-9A-Z]{15}$/;
 
     this.errors = {
-      firstName: {
-        hasError: !this.travellerDetails.firstName,
-        message: 'First Name is required',
-      },
-      lastName: {
-        hasError: !this.travellerDetails.lastName,
-        message: 'Last Name is required',
+      fullName: {
+        hasError: !this.travellerDetails.fullName,
+        message: 'Full Name is required',
       },
       emailRequired: {
         hasError: !this.travellerDetails.email,
@@ -346,6 +347,21 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
         hasError: !!this.travellerDetails.phone && !phoneRegex.test(this.travellerDetails.phone),
         message: 'Phone Number is invalid',
       },
+      customerCompanyName: {
+        hasError: this.travellerDetails.needGstInvoice && !this.travellerDetails.customerCompanyName?.trim(),
+        message: 'Company Name is required',
+      },
+      customerCompanyAddress: {
+        hasError: this.travellerDetails.needGstInvoice && !this.travellerDetails.customerCompanyAddress?.trim(),
+        message: 'Company Address is required',
+      },
+      customerCompanyGST: {
+        hasError:
+          this.travellerDetails.needGstInvoice &&
+          (!this.travellerDetails.customerCompanyGST?.trim() ||
+            !gstRegex.test(this.travellerDetails.customerCompanyGST.trim().toUpperCase())),
+        message: 'Enter a valid 15-character GST number',
+      },
     };
 
     this.showErrors = Object.values(this.errors).some((e) => e.hasError);
@@ -354,9 +370,34 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       this.initiatePayment();
     }
   }
+  convertToUTC(dateStr: string, timeStr: string): string {
+    const [year, month, day] = dateStr.split('-').map(Number);
 
+  const match = timeStr.toLowerCase().match(/(\d+)(am|pm)/);
+  if (!match) throw new Error('Invalid time format');
+
+  let hour = Number(match[1]);
+  const period = match[2];
+
+  if (period === 'pm' && hour !== 12) hour += 12;
+  if (period === 'am' && hour === 12) hour = 0;
+
+  const utcDate = new Date(Date.UTC(year, month - 1, day, hour, 0, 0));
+
+  return utcDate.toISOString().slice(0, 19);
+  }
+  
   initiatePayment() {
-    const { firstName, lastName, countryCode, phone, email } = this.travellerDetails;
+    const {
+      fullName,
+      countryCode,
+      phone,
+      email,
+      needGstInvoice,
+      customerCompanyName,
+      customerCompanyAddress,
+      customerCompanyGST,
+    } = this.travellerDetails;
     const {
       payableAmount,
       selectedDate,
@@ -365,9 +406,10 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       paymentType,
       selectedTransport,
       amountWithGST,
-      location,
+      pickupLocation,
+      selectedTime
     } = this.sessionData;
-    const { title } = this.hotelDetails;
+    const {superCategory, title } = this.hotelDetails;
     const payloadData = {
       vehicleType: 'WATERSPORTS',
       vehicleName: title,
@@ -387,7 +429,7 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       totalAmountForChild: travellers[1]?.price * travellers[1]?.count,
       totalAmountForInfant: travellers[2]?.price * travellers[2]?.count,
       toDate: selectedDate?.dateFormat,
-      customerName: `${firstName} ${lastName}`,
+      customerName: fullName,
       email,
       totalAmount: amountWithGST,
       discountedTotalAmount: subtotal,
@@ -397,6 +439,11 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       selectedPackage: selectedTransport,
       location,
     };
+    const adultPrice = Number(selectedTransport?.adultPrice)
+    const kidPrice = Number(selectedTransport?.kidPrice)
+    const adultReportPrice = Number(selectedTransport?.adultReportPrice)
+    const kidReportPrice = Number(selectedTransport?.kidReportPrice)
+    const kidCount = travellers[1]?.count || 0;
     const isTransportIncluded = !!location;
     const reportPrice = isTransportIncluded
       ? this.hotelDetails?.reportPriceWithTransport
@@ -405,48 +452,72 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
     const adultCount = travellers[0]?.count || 0;
     const childCount = travellers[1]?.count || 0;
     const infantCount = travellers[2]?.count || 0;
-
+    const totalAmount = adultCount*adultPrice + kidCount * kidPrice
+    const totalAmountWithGst = Math.floor(totalAmount + totalAmount * 0.18)
+    const totalBalanceAmount =  adultCount*adultReportPrice + kidCount * kidReportPrice
+    //Patrial Logics
+    const partialAmount = adultCount*(adultPrice-adultReportPrice) + kidCount * (kidPrice-kidReportPrice)
+    const partialAmountWithGst = Math.floor(partialAmount + partialAmount * 0.18)
+    const partialBalanceAmount =  totalAmount - partialAmount
+    
+    
+    // full payment
+    
+    const finalBalanceAmount = paymentType==='full'?totalAmountWithGst-totalAmountWithGst:partialBalanceAmount
+    const finalBookingAmount = paymentType==='full'?partialAmount-this.sessionData?.discountAmount:partialAmount
+    //partial payment
+    const payToVendor = paymentType==='full'? totalBalanceAmount:0
+    const finalTotalAmount =  paymentType==='full'?amountWithGST:partialAmountWithGst+partialBalanceAmount
+    
     const secondPayloadData = {
       companyName: title,
-      enquirySource: 'WEBSITE',
+      enquirySource: 'ROME_YOUR_WAY',
+      superCategory: superCategory,
 
       // Transport & Location
-      pickDropHub: location,
-      pickupHub: location,
-      pickupPoint: location,
-      dropHub: location,
+      pickDropHub: pickupLocation,
+      pickupHub: pickupLocation,
+      pickupPoint: pickupLocation,
+      dropHub: pickupLocation,
       dropPoint: null,
-      activityLocation: null,
-
+      activityLocation: 'Panjim Jetty',
+      selfPdType :pickupLocation?'pandd':'self',
       // Package Info
       categoryId: 1,
       category: title,
 
       // Timing
-      pickupDateTime: selectedDate?.dateFormat || null,
-      dropDateTime: selectedDate?.dateFormat || null,
+      pickupDateTime: this.convertToUTC(selectedDate?.dateFormat, selectedTime) || null,
+      dropDateTime: this.convertToUTC(selectedDate?.dateFormat, selectedTime) || null,
 
       // Customer Info
-      customeName: `${firstName || ''} ${lastName || ''}`.trim(),
+      customeName: fullName,
       countryDialCode: countryCode,
       customerMobile: phone,
       customerEmailId: email,
+      subCategory:'Activity',
 
       // People Info
-      totalDays: 1,
-      quantity: adultCount + childCount + infantCount,
-      childrenQuantity: travellers[1]?.count || 0,
-      infantQuantity: travellers[2]?.count || 0,
+      quantity: adultCount,
+      kidQuantity: childCount || 0,
+      infantQuantity: infantCount || 0,
+      startTime: selectedTime,
 
       // Pricing Info
-      vendorRate: reportPrice,
-      payToVendor: reportPrice,
+      vendorRate: selectedTransport?.adultReportPrice || 0,
+      vendorRateForKids: selectedTransport?.kidReportPrice || 0,
+      payToVendor: payToVendor,
       companyRate: travellers[0]?.price || 0,
+      companyRateForKids: travellers[1]?.price || 0,
       payToCompany: 0,
-      bookingAmount: amountWithGST || 0,
-      balanceAmount: (subtotal || 0) - (payableAmount || 0),
-      totalAmount: (subtotal || 0) * 1.18,
+      bookingAmount: finalBookingAmount,
+      balanceAmount: finalBalanceAmount,
+      totalAmount: finalTotalAmount,
       securityAmount: 0,
+      actualAmount:amountWithGST,
+      gstAmount:finalTotalAmount,
+      bookingAmountWithGst:finalBookingAmount,
+      balanceAmountWithGst:finalBalanceAmount,
 
       // Discounts & Status
       discountType: 'FLAT',
@@ -456,45 +527,45 @@ export class OrderCheckoutComponent implements OnInit, AfterViewInit {
       // Source
       leadOrigine: 'WEBSITE',
       leadType: 'New',
-      createdBy: 'ONLINE',
-      loginId: phone,
+      createdBy: '7715959917',
+      superadminId: '1234567890',
+      loginId: '7715959917',
       notes: '',
+      otherPickLocation:'N/A',
+      otherDropLocation:'N/A',
+      categoryTypeName:this.HelperService.categoryTypeNameParser(this.category),
+      needGstInvoice: needGstInvoice,
+      customerCompanyName: needGstInvoice ? customerCompanyName?.trim() : "",
+      customerCompanyAddress: needGstInvoice ? customerCompanyAddress?.trim() : "",
+      customerCompanyGST: needGstInvoice ? customerCompanyGST?.trim().toUpperCase() : "",
     };
     this.handlePaymentResponse('response', secondPayloadData);
-    const options = {
-      key: razorpay_key,
-      amount: 1,
-      currency: 'INR',
-      expire_by: 1750346930,
-      reference_id: phone,
-      name: 'Myraan Adventures',
-      description: 'Booking Payment',
-      handler: (response: any) => {
-        this.handlePaymentResponse(response, secondPayloadData);
-      },
-      prefill: { name: `${firstName} ${lastName}`, email, contact: phone },
-      theme: { color: '#3399cc' },
-    };
   }
 
   handlePaymentResponse(response: any, payloadData: any) {
+    this.confirmPaymentLoading = true;
     this._bookingService.vehicleBooking(payloadData).subscribe({
       next: (res: any) => {
         if (res?.responseCode === 200 && res?.responseMessage === 'SUCCESS') {
           const payLink = res?.payload?.paymentUrl;
           sessionStorage.setItem('paymentResponse', res?.payload?.bookingId);
-          console.log({ res });
           this.bookingPay(payLink);
         } else {
+          this.confirmPaymentLoading = false;
         }
       },
       error: (err: any) => {
         console.error('Booking failed', err);
+        this.confirmPaymentLoading = false;
       },
+      complete: () => {
+        this.confirmPaymentLoading = false;
+      }
     });
   }
   bookingPay(paymentLink: string) {
     window.location.href = paymentLink;
+    this.confirmPaymentLoading = false;
   }
   async validateCoupon(
     coupon: string,

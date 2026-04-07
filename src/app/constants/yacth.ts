@@ -1,25 +1,29 @@
 export const yacth: any[] = [
+  //Mandovi Lounge Yacht
   {
+    superCategory: 'Private Yacht',
     cruiseId: 5,
     whatsappMsg: 'Hello, I would like to enquire about MANDOVI LOUNGE PRIVATE YACHT in Goa!',
-    title: 'Mandovi Lounge Boat : Discover Serenity',
-    subTile: 'Mandovi Lounge Boat',
+    title: 'Mandovi Lounge Yacht',
+    subTile: 'Mandovi Lounge Yacht',
     category: 'Premium Dinner Cruise in Goa',
-    routingUrl: 'book-mandovi-lounge-boat-discover-serenity-in-goa',
+    type: 'mostfavourite',
+    routingUrl: 'book-mandovi-lounge-yacht-in-goa',
     rating: '4.9',
     reviews: '5877',
-    oldPrice: '11500',
+    mobilePackageDesc:['2 hours','8 pax'],
+    oldPrice: '12000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '10350',
-    image: '/assets/dinnercruise/Mandovi Lounge.avif',
+    reportPrice: 6500,
+    currentPrice: '8799',
+    image: '/assets/Private Yatchs/Mandovi/i1.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Mandovi/i2.webp',
+      '/assets/Private Yatchs/Mandovi/i3.webp',
+      '/assets/Private Yatchs/Mandovi/i4.webp',
+      '/assets/Private Yatchs/Mandovi/i5.webp',
+      '/assets/Private Yatchs/Mandovi/i6.webp',
     ],
     topFeatures: [
       {
@@ -65,6 +69,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -127,8 +135,8 @@ export const yacth: any[] = [
         capacity: 8,
         timeSlots: ['7:00 AM to 3:30 PM'],
         isSelected: true,
-        originalamt: '1700',
-        discountedamt: '7000',
+        originalamt: '12000',
+        discountedamt: '8799',
         actualPaxCount: 8,
         cruising: 7000,
         anchoring: 3000,
@@ -148,8 +156,8 @@ export const yacth: any[] = [
         timeSlots: ['4:00 PM to 11:00 PM'],
         capacity: 8,
         isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
+        originalamt: '12000',
+        discountedamt: '8799',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -164,8 +172,8 @@ export const yacth: any[] = [
         timeSlots: ['7:00 AM - 11:00 PM'],
         capacity: 8,
         isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
+        originalamt: '12000',
+        discountedamt: '8799',
         kidAmt: '700',
         desc: [
           'Access to all decks',
@@ -175,28 +183,36 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '12000',
+      discountPrice: '8799',
+    },
   },
+  //Wave Rider
   {
+    superCategory: 'Private Yacht',
     cruiseId: 2,
     whatsappMsg: 'Hello, I would like to enquire about WAVE RIDER PRIVATE YACHT in Goa!',
-    title: 'Wave Rider : Your Exclusive Ocean Escape',
+    title: 'Wave Rider',
     subTile: 'Wave Rider',
-    image: '/assets/dinnercruise/Wave Rider.avif',
+    image: '/assets/Private Yatchs/Wave Rider/i1.webp',
     category: 'Yacht in Goa',
+    type: 'mostfavourite',
     routingUrl: 'book-wave-rider-your-exclusive-ocean-escape-in-goa',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '12499',
+    mobilePackageDesc:['2 hours','6 pax '],
+oldPrice: '14000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '11999',
+    currentPrice: '10999',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Wave Rider/i2.webp',
+      '/assets/Private Yatchs/Wave Rider/i3.webp',
+      '/assets/Private Yatchs/Wave Rider/i4.webp',
+      '/assets/Private Yatchs/Wave Rider/i5.webp',
+      '/assets/Private Yatchs/Wave Rider/i6.webp',
     ],
     topFeatures: [
       {
@@ -240,6 +256,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -345,28 +365,36 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '10999',
+    },
   },
+  //Blue Fin
   {
+    superCategory: 'Private Yacht',
     cruiseId: 1,
     whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
-    image: '/assets/dinnercruise/DC03.jpeg',
-    routingUrl: 'book-blue-fin-luxury-beyond-the-horizon-in-goa',
-    title: 'Blue Fin : Luxury Beyond the Horizon',
+    image: '/assets/Private Yatchs/Blue Fin/i1.webp',
+    routingUrl: 'book-blue-fin-in-goa',
+    title: 'Blue Fin',
     subTile: 'Blue Fin',
     category: 'Yacht in Goa',
+    type: 'mostfavourite',
     rating: '4.8',
     reviews: '3867',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '14500',
-    oldPrice: '15000',
+    currentPrice: '11999',
+    mobilePackageDesc:['2 hours','6 pax '],
+oldPrice: '15000',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Blue Fin/i2.webp',
+      '/assets/Private Yatchs/Blue Fin/i3.webp',
+      '/assets/Private Yatchs/Blue Fin/i4.webp',
+      '/assets/Private Yatchs/Blue Fin/i5.webp',
+      '/assets/Private Yatchs/Blue Fin/i6.webp',
     ],
     topFeatures: [
       {
@@ -410,6 +438,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -515,28 +547,36 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '11999',
+    },
   },
+  //Rinker 
   {
-    cruiseId: 3,
-    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
-    title: 'Manta Ray : Sail Into Unforgettable Adventures',
-    subTile: 'Manta Ray',
-    category: 'Dolphin Seightseeing in Goa',
-    routingUrl: 'book-manta-ray-sail-into-unforgettable-adventures-in-goa',
+    superCategory: 'Private Yacht',
+    cruiseId: 1,
+    whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
+    image: '/assets/Private Yatchs/Rinker/i1.webp',
+    routingUrl: 'book-rinker-in-goa',
+    title: 'Rinker',
+    subTile: 'Rinker',
+    category: 'Yacht in Goa',
+    type: 'mostfavourite',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '17750',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '17250',
-    image: '/assets/dinnercruise/Manta Ray.avif',
+    currentPrice: '11999',
+    mobilePackageDesc:['2 hours','7 pax '],
+oldPrice: '15000',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Rinker/i2.webp',
+      '/assets/Private Yatchs/Rinker/i3.webp',
+      '/assets/Private Yatchs/Rinker/i4.webp',
+      '/assets/Private Yatchs/Rinker/i5.webp',
+      '/assets/Private Yatchs/Rinker/i6.webp',
     ],
     topFeatures: [
       {
@@ -558,20 +598,20 @@ export const yacth: any[] = [
     mustKnow: [
       {
         about1:
-          'The Manta Ray’s cabin is a sanctuary of comfort and style. Equipped with plush seating and modern amenities...',
+          'This exquisite vessel is the perfect choice for discerning travelers seeking an unforgettable experience along  ...',
       },
       {
         about1:
-          'Comfort is paramount on the Manta Ray. The yacht features a meticulously designed seating arrangement...',
+          'The Blue Fin Yacht offers an intimate setting for a variety of occasions, from birthday celebrations to  ...',
       },
       {
         about1:
-          'Music lovers will appreciate the yacht’s state-of-the-art music system. Perfect for setting the mood,  ...',
+          'Indulge in the ultimate luxury experience with the New Ocean Color Blue Fin Yacht and create memories that will  ...',
       },
     ],
     features: [
       {
-        name: 'Capacity: Upto 8 Pax',
+        name: 'Capacity: Upto 4 Pax',
         image: './assets/images/svg/cancellation-ico.svg',
       },
       {
@@ -580,6 +620,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -602,7 +646,7 @@ export const yacth: any[] = [
       },
     ],
     overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+      'The 2-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
     overview: [
       { inclusion1: '2-hour mandovi cruise' },
       { inclusion1: 'Buffet dinner' },
@@ -685,28 +729,36 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '20000',
+      discountPrice: '11999',
+    },
   },
+  //M. V. Tara 
   {
-    cruiseId: 7,
-    whatsappMsg: 'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
-    title: 'Sea Ray 330 : Elegant Sailing, Unmatched Views',
-    subTile: 'Sea Ray 330',
-    category: 'Luxury Dinner Cruise',
-    routingUrl: 'book-sea-ray-330-elegant-sailing-unmatched-views-in-goa',
-    rating: '4.7',
-    reviews: '3980',
-    oldPrice: '20500',
+    superCategory: 'Private Yacht',
+    cruiseId: 1,
+    whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
+    image: '/assets/Private Yatchs/MV TARA/i1.webp',
+    routingUrl: 'book-m-v-tara-in-goa',
+    title: 'M. V. Tara',
+    subTile: 'M. V. Tara',
+    category: 'Yacht in Goa',
+    type: 'mostfavourite',
+    rating: '4.8',
+    reviews: '3867',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '19750',
-    image: '/assets/dinnercruise/Sea Ray 330.avif',
+    currentPrice: '11999',
+    mobilePackageDesc:['2 hours','10 pax '],
+oldPrice: '15000',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/MV TARA/i2.webp',
+      '/assets/Private Yatchs/MV TARA/i3.webp',
+      '/assets/Private Yatchs/MV TARA/i4.webp',
+      '/assets/Private Yatchs/MV TARA/i5.webp',
+      '/assets/Private Yatchs/MV TARA/i6.webp',
     ],
     topFeatures: [
       {
@@ -728,20 +780,20 @@ export const yacth: any[] = [
     mustKnow: [
       {
         about1:
-          '                                                                                                                                            offers a quintessential yachting experience combining luxury, comfort, and...',
+          'This exquisite vessel is the perfect choice for discerning travelers seeking an unforgettable experience along  ...',
       },
       {
         about1:
-          'The cabin of the Searay 330 yacht in Goa is designed for comfort and privacy. It provides a cozy space to relax, ...',
+          'The Blue Fin Yacht offers an intimate setting for a variety of occasions, from birthday celebrations to  ...',
       },
       {
         about1:
-          'The sundeck offers a spacious area for sunbathing and enjoying the scenic views. It’s an ideal spot ...',
+          'Indulge in the ultimate luxury experience with the New Ocean Color Blue Fin Yacht and create memories that will  ...',
       },
     ],
     features: [
       {
-        name: 'Capacity: Upto 10 Pax',
+        name: 'Capacity: Upto 4 Pax',
         image: './assets/images/svg/cancellation-ico.svg',
       },
       {
@@ -750,6 +802,10 @@ export const yacth: any[] = [
       },
       {
         name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -772,7 +828,7 @@ export const yacth: any[] = [
       },
     ],
     overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+      'The 2-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
     overview: [
       { inclusion1: '2-hour mandovi cruise' },
       { inclusion1: 'Buffet dinner' },
@@ -855,28 +911,36 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '12999',
+    },
   },
+  //Prestige 36
   {
+    superCategory: 'Private Yacht',
     cruiseId: 4,
     whatsappMsg: 'Hello, I would like to enquire about PRESTIGE 36 PRIVATE YACHT in Goa!',
-    title: 'Prestige 36 : A Journey in Pure Luxury',
+    title: 'Prestige 36',
     subTile: 'Prestige 36',
     category: 'Dinner Cruise in Goa',
-    routingUrl: 'book-prestige-36-a-journey-in-pure-luxury-in-goa',
+    routingUrl: 'book-prestige-36-in-goa',
+    type: 'mostfavourite',
     rating: '4.8',
     reviews: '3867',
-    oldPrice: '21500',
+    mobilePackageDesc:['2 hours','8 pax '],
+oldPrice: '20000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '20700',
-    image: '/assets/dinnercruise/Prestige 360.avif',
+    currentPrice: '16999',
+    image: '/assets/Private Yatchs/Prestige 36/i1.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Prestige 36/i2.webp',
+      '/assets/Private Yatchs/Prestige 36/i3.webp',
+      '/assets/Private Yatchs/Prestige 36/i4.webp',
+      '/assets/Private Yatchs/Prestige 36/i5.webp',
+      '/assets/Private Yatchs/Prestige 36/i6.webp',
     ],
     topFeatures: [
       {
@@ -922,6 +986,10 @@ export const yacth: any[] = [
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
       },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
     ],
     highlights: [
       {
@@ -1025,28 +1093,1492 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '20000',
+      discountPrice: '16999',
+    },
   },
+  //Manta Ray
   {
-    cruiseId: 8,
-    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
-    title: 'Funliner : Explore the Seas in Style',
-    subTile: 'Funliner',
-    category: 'Sunset Cruise in Goa',
-    routingUrl: 'book-funliner-explore-the-seas-in-style-in-goa',
-    rating: '4.7',
-    reviews: '3980',
-    oldPrice: '21499',
+    superCategory: 'Private Yacht',
+    cruiseId: 1,
+    whatsappMsg: 'Hello, I would like to enquire about BLUE FIN PRIVATE YACHT in Goa!',
+    image: '/assets/Private Yatchs/Manta Ray/i1.webp',
+    routingUrl: 'book-manta-ray-in-goa',
+    title: 'Manta Ray',
+    subTile: 'Manta Ray',
+    category: 'Yacht in Goa',
+    type: 'mostfavourite',
+    rating: '4.8',
+    reviews: '3867',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '20700',
-    image: '/assets/dinnercruise/Funliner.avif',
+    currentPrice: '14999',
+    mobilePackageDesc:['2 hours','8 pax '],
+oldPrice: '18000',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Manta Ray/i2.webp',
+      '/assets/Private Yatchs/Manta Ray/i3.webp',
+      '/assets/Private Yatchs/Manta Ray/i4.webp',
+      '/assets/Private Yatchs/Manta Ray/i5.webp',
+      '/assets/Private Yatchs/Manta Ray/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'This exquisite vessel is the perfect choice for discerning travelers seeking an unforgettable experience along  ...',
+      },
+      {
+        about1:
+          'The Blue Fin Yacht offers an intimate setting for a variety of occasions, from birthday celebrations to  ...',
+      },
+      {
+        about1:
+          'Indulge in the ultimate luxury experience with the New Ocean Color Blue Fin Yacht and create memories that will  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 4 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '14999',
+    },
+  },
+  //Nicolyn
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 3,
+    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
+    title: 'Nicolyn',
+    subTile: 'Nicolyn',
+    category: 'Dolphin Seightseeing in Goa',
+    routingUrl: 'book-nicolyn-in-goa',
+    rating: '4.8',
+    type: 'mostfavourite',
+    reviews: '3867',
+    mobilePackageDesc:['2 hours','10 pax '],
+oldPrice: '18000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '13999',
+    image: '/assets/Private Yatchs/Nicolyn/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Nicolyn/i2.webp',
+      '/assets/Private Yatchs/Nicolyn/i3.webp',
+      '/assets/Private Yatchs/Nicolyn/i4.webp',
+      '/assets/Private Yatchs/Nicolyn/i5.webp',
+      '/assets/Private Yatchs/Nicolyn/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Manta Ray’s cabin is a sanctuary of comfort and style. Equipped with plush seating and modern amenities...',
+      },
+      {
+        about1:
+          'Comfort is paramount on the Manta Ray. The yacht features a meticulously designed seating arrangement...',
+      },
+      {
+        about1:
+          'Music lovers will appreciate the yacht’s state-of-the-art music system. Perfect for setting the mood,  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 8 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '12999',
+    },
+  },
+  //Solaris
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 3,
+    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
+    title: 'Solaris',
+    subTile: 'Solaris',
+    category: 'Dolphin Seightseeing in Goa',
+    type: 'premium',
+    routingUrl: 'book-solaris-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    mobilePackageDesc:['2 hours','10 pax '],
+oldPrice: '18000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '12999',
+    image: '/assets/Private Yatchs/Solaris/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Solaris/i2.webp',
+      '/assets/Private Yatchs/Solaris/i3.webp',
+      '/assets/Private Yatchs/Solaris/i4.webp',
+      '/assets/Private Yatchs/Solaris/i5.webp',
+      '/assets/Private Yatchs/Solaris/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Manta Ray’s cabin is a sanctuary of comfort and style. Equipped with plush seating and modern amenities...',
+      },
+      {
+        about1:
+          'Comfort is paramount on the Manta Ray. The yacht features a meticulously designed seating arrangement...',
+      },
+      {
+        about1:
+          'Music lovers will appreciate the yacht’s state-of-the-art music system. Perfect for setting the mood,  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 8 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '12999',
+    },
+  },
+  //Aquamarine
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 3,
+    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
+    title: 'Aquamarine',
+    subTile: 'Aquamarine',
+    category: 'Dolphin Seightseeing in Goa',
+    type: 'premium',
+    routingUrl: 'book-aquamarine-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    mobilePackageDesc:['2 hours','10 pax '],
+oldPrice: '18000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '12999',
+    image: '/assets/Private Yatchs/Aquamarine/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Aquamarine/i2.webp',
+      '/assets/Private Yatchs/Aquamarine/i3.webp',
+      '/assets/Private Yatchs/Aquamarine/i4.webp',
+      '/assets/Private Yatchs/Aquamarine/i5.webp',
+      '/assets/Private Yatchs/Aquamarine/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Manta Ray’s cabin is a sanctuary of comfort and style. Equipped with plush seating and modern amenities...',
+      },
+      {
+        about1:
+          'Comfort is paramount on the Manta Ray. The yacht features a meticulously designed seating arrangement...',
+      },
+      {
+        about1:
+          'Music lovers will appreciate the yacht’s state-of-the-art music system. Perfect for setting the mood,  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 8 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '18000',
+      discountPrice: '12999',
+    },
+  },
+  //Sea Ray 330
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 7,
+    whatsappMsg: 'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
+    title: 'Sea Ray 330',
+    subTile: 'Sea Ray 330',
+    category: 'Luxury Dinner Cruise',
+    routingUrl: 'book-sea-ray-330-in-goa',
+    type: 'premium',
+    rating: '4.7',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','10 pax '],
+oldPrice: '18000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '12999',
+    image: '/assets/Private Yatchs/Sea Ray 330/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Sea Ray 330/i2.webp',
+      '/assets/Private Yatchs/Sea Ray 330/i3.webp',
+      '/assets/Private Yatchs/Sea Ray 330/i4.webp',
+      '/assets/Private Yatchs/Sea Ray 330/i5.webp',
+      '/assets/Private Yatchs/Sea Ray 330/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          '                                                                                                                                            offers a quintessential yachting experience combining luxury, comfort, and...',
+      },
+      {
+        about1:
+          'The cabin of the Searay 330 yacht in Goa is designed for comfort and privacy. It provides a cozy space to relax, ...',
+      },
+      {
+        about1:
+          'The sundeck offers a spacious area for sunbathing and enjoying the scenic views. It’s an ideal spot ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 10 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '22000',
+      discountPrice: '15999',
+    },
+  },
+  //Sea Ray 400
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 7,
+    whatsappMsg: 'Hello, I would like to enquire about SEA RAY 330 PRIVATE YACHT in Goa!',
+    title: 'Sea Ray 400',
+    subTile: 'Sea Ray 400',
+    category: 'Luxury Dinner Cruise',
+    routingUrl: 'book-sea-ray-400-in-goa',
+    rating: '4.7',
+    type: 'premium',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','10 pax '],
+oldPrice: '20000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '15999',
+    image: '/assets/Private Yatchs/Sea Ray 400/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Sea Ray 400/i2.webp',
+      '/assets/Private Yatchs/Sea Ray 400/i3.webp',
+      '/assets/Private Yatchs/Sea Ray 400/i4.webp',
+      '/assets/Private Yatchs/Sea Ray 400/i5.webp',
+      '/assets/Private Yatchs/Sea Ray 400/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          '                                                                                                                                            offers a quintessential yachting experience combining luxury, comfort, and...',
+      },
+      {
+        about1:
+          'The cabin of the Searay 330 yacht in Goa is designed for comfort and privacy. It provides a cozy space to relax, ...',
+      },
+      {
+        about1:
+          'The sundeck offers a spacious area for sunbathing and enjoying the scenic views. It’s an ideal spot ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 10 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '25000',
+      discountPrice: '15999',
+    },
+  },
+  //Majestic II
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 3,
+    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
+    title: 'Majestic II',
+    subTile: 'Majestic II',
+    category: 'Dolphin Seightseeing in Goa',
+    type: 'premium',
+    routingUrl: 'book-majestic-ii-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    mobilePackageDesc:['2 hours','12 pax '],
+oldPrice: '18000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '14999',
+    image: '/assets/Private Yatchs/Majestic II/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Majestic II/i2.webp',
+      '/assets/Private Yatchs/Majestic II/i3.webp',
+      '/assets/Private Yatchs/Majestic II/i4.webp',
+      '/assets/Private Yatchs/Majestic II/i5.webp',
+      '/assets/Private Yatchs/Majestic II/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Manta Ray’s cabin is a sanctuary of comfort and style. Equipped with plush seating and modern amenities...',
+      },
+      {
+        about1:
+          'Comfort is paramount on the Manta Ray. The yacht features a meticulously designed seating arrangement...',
+      },
+      {
+        about1:
+          'Music lovers will appreciate the yacht’s state-of-the-art music system. Perfect for setting the mood,  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 8 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '25000',
+      discountPrice: '15999',
+    },
+  },
+  //Dhruv
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 3,
+    whatsappMsg: 'Hello, I would like to enquire about MANTA RAY PRIVATE YACHT in Goa!',
+    title: 'Dhruv',
+    subTile: 'Dhruv',
+    category: 'Dolphin Seightseeing in Goa',
+    type: 'premium',
+    routingUrl: 'book-dhruv-in-goa',
+    rating: '4.8',
+    reviews: '3867',
+    mobilePackageDesc:['2 hours','12 pax '],
+oldPrice: '20000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '15999',
+    image: '/assets/Private Yatchs/Dhruv/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Dhruv/i2.webp',
+      '/assets/Private Yatchs/Dhruv/i3.webp',
+      '/assets/Private Yatchs/Dhruv/i4.webp',
+      '/assets/Private Yatchs/Dhruv/i5.webp',
+      '/assets/Private Yatchs/Dhruv/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Manta Ray’s cabin is a sanctuary of comfort and style. Equipped with plush seating and modern amenities...',
+      },
+      {
+        about1:
+          'Comfort is paramount on the Manta Ray. The yacht features a meticulously designed seating arrangement...',
+      },
+      {
+        about1:
+          'Music lovers will appreciate the yacht’s state-of-the-art music system. Perfect for setting the mood,  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 8 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '25000',
+      discountPrice: '15999',
+    },
+  },
+  //Funliner
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 8,
+    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
+    title: 'Funliner',
+    subTile: 'Funliner',
+    category: 'Sunset Cruise in Goa',
+    routingUrl: 'book-funliner-in-goa',
+    type: 'premium',
+    rating: '4.7',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','12 pax '],
+oldPrice: '20000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '15999',
+    image: '/assets/Private Yatchs/Funliner/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Funliner/i2.webp',
+      '/assets/Private Yatchs/Funliner/i3.webp',
+      '/assets/Private Yatchs/Funliner/i4.webp',
+      '/assets/Private Yatchs/Funliner/i5.webp',
+      '/assets/Private Yatchs/Funliner/i6.webp',
     ],
     topFeatures: [
       {
@@ -1092,6 +2624,10 @@ export const yacth: any[] = [
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
       },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
     ],
     highlights: [
       {
@@ -1195,28 +2731,764 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '22000',
+      discountPrice: '16999',
+    },
   },
+  //Phoenix
   {
-    cruiseId: 14,
-    whatsappMsg: 'Hello, I would like to enquire about ORCA PRIVATE YACHT in Goa!',
-    title: 'Orca : Luxury on Water',
-    subTile: 'Orca',
-    category: 'Ohana Dinner Cruise in Goa',
-    routingUrl: 'book-orca-luxury-on-water-in-goa',
-    rating: '4.3',
-    reviews: '1290',
-    oldPrice: '26000',
+    superCategory: 'Private Yacht',
+    cruiseId: 8,
+    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
+    title: 'Phoenix',
+    subTile: 'Phoenix',
+    category: 'Sunset Cruise in Goa',
+    type: 'special',
+    routingUrl: 'book-phoenix-in-goa',
+    rating: '4.7',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','15 pax '],
+oldPrice: '20000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '25300',
-    image: '/assets/dinnercruise/Orca.avif',
+    currentPrice: '16999',
+    image: '/assets/Private Yatchs/Phoenix/i1.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Phoenix/i2.webp',
+      '/assets/Private Yatchs/Phoenix/i3.webp',
+      '/assets/Private Yatchs/Phoenix/i4.webp',
+      '/assets/Private Yatchs/Phoenix/i5.webp',
+      '/assets/Private Yatchs/Phoenix/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'When you think of luxury and adventure on the seas, Funliner is the premier yacht in Goa that comes to mind.',
+      },
+      {
+        about1:
+          'It offers unparalleled experiences and promises unforgettable memories against the backdrop of Goa’s...',
+      },
+      {
+        about1:
+          'Aboard Funliner yacht in goa, every moment is crafted to perfection. From sunset cruises to private parties, ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 12 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '25000',
+      discountPrice: '16999',
+    },
+  },
+  //Arc 52
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 8,
+    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
+    title: 'Arc 52',
+    subTile: 'Arc 52',
+    category: 'Sunset Cruise in Goa',
+    routingUrl: 'book-arc-52-in-goa',
+    type: 'special',
+    rating: '4.7',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','12 pax '],
+oldPrice: '20000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '16999',
+    image: '/assets/Private Yatchs/Arc 52/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Arc 52/i2.webp',
+      '/assets/Private Yatchs/Arc 52/i3.webp',
+      '/assets/Private Yatchs/Arc 52/i4.webp',
+      '/assets/Private Yatchs/Arc 52/i5.webp',
+      '/assets/Private Yatchs/Arc 52/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'When you think of luxury and adventure on the seas, Funliner is the premier yacht in Goa that comes to mind.',
+      },
+      {
+        about1:
+          'It offers unparalleled experiences and promises unforgettable memories against the backdrop of Goa’s...',
+      },
+      {
+        about1:
+          'Aboard Funliner yacht in goa, every moment is crafted to perfection. From sunset cruises to private parties, ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 12 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '25000',
+      discountPrice: '16999',
+    },
+  },
+  //Dreamz
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 8,
+    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
+    title: 'Dreamz',
+    subTile: 'Dreamz',
+    category: 'Sunset Cruise in Goa',
+    routingUrl: 'book-dreamz-in-goa',
+    type: 'special',
+    rating: '4.7',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','16 pax '],
+oldPrice: '20000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '16999',
+    image: '/assets/Private Yatchs/Dreamz/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Dreamz/i2.webp',
+      '/assets/Private Yatchs/Dreamz/i3.webp',
+      '/assets/Private Yatchs/Dreamz/i4.webp',
+      '/assets/Private Yatchs/Dreamz/i5.webp',
+      '/assets/Private Yatchs/Dreamz/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'When you think of luxury and adventure on the seas, Funliner is the premier yacht in Goa that comes to mind.',
+      },
+      {
+        about1:
+          'It offers unparalleled experiences and promises unforgettable memories against the backdrop of Goa’s...',
+      },
+      {
+        about1:
+          'Aboard Funliner yacht in goa, every moment is crafted to perfection. From sunset cruises to private parties, ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 12 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '25000',
+      discountPrice: '16999',
+    },
+  },
+  //Amzonite
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 8,
+    whatsappMsg: 'Hello, I would like to enquire about FUNLINER PRIVATE YACHT in Goa!',
+    title: 'Amzonite',
+    subTile: 'Amzonite',
+    category: 'Sunset Cruise in Goa',
+    routingUrl: 'book-Amzonite-in-goa',
+    rating: '4.7',
+    reviews: '3980',
+    mobilePackageDesc:['2 hours','16 pax '],
+oldPrice: '25000',
+    type: 'special',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '21999',
+    image: '/assets/Private Yatchs/Amzonite/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Amzonite/i2.webp',
+      '/assets/Private Yatchs/Amzonite/i3.webp',
+      '/assets/Private Yatchs/Amzonite/i4.webp',
+      '/assets/Private Yatchs/Amzonite/i5.webp',
+      '/assets/Private Yatchs/Amzonite/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'When you think of luxury and adventure on the seas, Funliner is the premier yacht in Goa that comes to mind.',
+      },
+      {
+        about1:
+          'It offers unparalleled experiences and promises unforgettable memories against the backdrop of Goa’s...',
+      },
+      {
+        about1:
+          'Aboard Funliner yacht in goa, every moment is crafted to perfection. From sunset cruises to private parties, ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 12 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '28000',
+      discountPrice: '19999',
+    },
+  },
+  //Orca
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 14,
+    whatsappMsg: 'Hello, I would like to enquire about ORCA PRIVATE YACHT in Goa!',
+    title: 'Orca',
+    subTile: 'Orca',
+    category: 'Ohana Dinner Cruise in Goa',
+    routingUrl: 'book-orca-in-goa',
+    type: 'ultrapremium',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','17 pax '],
+oldPrice: '25000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '20999',
+    image: '/assets/Private Yatchs/Orca/i3.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Orca/i2.webp',
+      '/assets/Private Yatchs/Orca/i3.webp',
+      '/assets/Private Yatchs/Orca/i4.webp',
+      '/assets/Private Yatchs/Orca/i5.webp',
+      '/assets/Private Yatchs/Orca/i6.webp',
     ],
     topFeatures: [
       {
@@ -1262,174 +3534,8 @@ export const yacth: any[] = [
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
       },
-    ],
-    highlights: [
       {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'OFF-PEAK SLOTS',
-        capacity: 8,
-        timeSlots: ['7:00 AM to 3:30 PM'],
-        isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'PEAK SLOTS',
-        timeSlots: ['4:00 PM to 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'CUSTOM SLOTS',
-        timeSlots: ['7:00 AM - 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 13,
-    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
-    title: 'Shantam Catamaran : Indulge in Oceanic Luxury',
-    subTile: 'Shantam Catamaran ',
-    category: 'Vihaan Dinner Cruise in Goa',
-    routingUrl: 'book-shantam-catamaran-indulge-in-oceanic-luxury-in-goa',
-    rating: '4.3',
-    reviews: '1290',
-    oldPrice: '36000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '34500',
-    image: '/assets/dinnercruise/Shantam Cat.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
-      },
-      {
-        about1:
-          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
-      },
-      {
-        about1:
-          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
-      },
-    ],
-    features: [
-      {
-        name: 'Capacity: Upto 16 Pax',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Duration: 1+1 Hour ',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -1535,368 +3641,218 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '28000',
+      discountPrice: '21999',
+    },
   },
-  {
-    cruiseId: 13,
-    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
-    title: 'Shantam Catamaran : Indulge in Oceanic Luxury',
-    subTile: 'Shantam Catamaran ',
-    category: 'Vihaan Dinner Cruise in Goa',
-    routingUrl: 'book-shantam-catamaran-indulge-in-oceanic-luxury-in-goa',
-    rating: '4.3',
-    reviews: '1290',
-    oldPrice: '36000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '34500',
-    image: '/assets/dinnercruise/Shantam Cat.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
-      },
-      {
-        about1:
-          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
-      },
-      {
-        about1:
-          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
-      },
-    ],
-    features: [
-      {
-        name: 'Capacity: Upto 16 Pax',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Duration: 1+1 Hour ',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/mobile-ico.svg',
-      },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'OFF-PEAK SLOTS',
-        capacity: 8,
-        timeSlots: ['7:00 AM to 3:30 PM'],
-        isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
+    //Ralston 1
+    {
+      superCategory: 'Private Yacht',
+      cruiseId: 16,
+      whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
+      title: 'Ralston 1',
+      subTile: 'Ralston 1 ',
+      category: 'Aarushi Dinner Cruise in Goa',
+      routingUrl: 'book-ralston-1-in-goa',
+      rating: '4.3',
+      type: 'ultrapremium',
+      reviews: '1290',
+      mobilePackageDesc:['2 hours','17 pax '],
+  oldPrice: '25000',
+      booked: '4M+',
+      buttonText: 'Book this activity & get 20% off',
+      reportPrice: 700,
+      currentPrice: '20999',
+      image: '/assets/Private Yatchs/Ralston 1/i1.webp',
+      bannerImgs: [
+        '/assets/Private Yatchs/Ralston 1/i2.webp',
+        '/assets/Private Yatchs/Ralston 1/i3.webp',
+        '/assets/Private Yatchs/Ralston 1/i4.webp',
+        '/assets/Private Yatchs/Ralston 1/i5.webp',
+        '/assets/Private Yatchs/Ralston 1/i6.webp',
+      ],
+      topFeatures: [
+        {
+          icon: 'event_available',
+          title: 'Instant Confirmation',
+          description: 'Get your tickets mailed right away',
+        },
+        {
+          icon: 'free_cancellation',
+          title: 'Free Cancellation',
+          description: 'Up to 48 hours before the experience starts',
+        },
+        {
+          icon: 'local_activity',
+          title: 'Mobile Tickets',
+          description: 'Get tickets delivered to your Inbox',
+        },
+      ],
+      mustKnow: [
+        {
+          about1:
+            'The Ralston 2 yacht, also known as the Ralston Yacht, is a popular private yacht available for hire in Goa. It is  ...',
+        },
+        {
+          about1:
+            'The yacht is known for its luxurious features and is frequently booked for special occasions like birthdays ...',
+        },
+        {
+          about1:
+            'With its double-deck design, the yacht offers panoramic views of the stunning Goan coastline, providing an  ...',
+        },
+      ],
+      features: [
+        {
+          name: 'Capacity: Upto 16 Pax',
+          image: './assets/images/svg/cancellation-ico.svg',
+        },
+        {
+          name: 'Duration: 1+1 Hour ',
+          image: './assets/images/svg/bolt-ico.svg',
+        },
+        {
+          name: 'Panjim Goa, India',
+          image: './assets/images/svg/mobile-ico.svg',
+        },
+        {
+          name: 'Skipper included',
+          image: './assets/images/svg/mobile-ico.svg',
+        },
+      ],
+      highlights: [
+        {
+          highlights1:
+            'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+        },
+        {
+          highlights1:
+            'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+        },
+        {
+          highlights1:
+            'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+        },
+        {
+          highlights1:
+            'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+        },
+      ],
+      overviewDesc:
+        'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+      overview: [
+        { inclusion1: '2-hour mandovi cruise' },
+        { inclusion1: 'Buffet dinner' },
+        { inclusion1: 'Welcome drinks' },
+        { inclusion1: 'Soft drinks & water' },
+        { inclusion1: 'Goan dance show' },
+        { inclusion1: 'Hotel transfers (optional upgrade)' },
+      ],
+      thingsToCarry: [
+        { exclusion1: 'Parking charges are not included in the package.' },
+        {
+          exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+        },
+        {
+          exclusion1:
+            'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+        },
+      ],
+      needToKnows: [
+        {
+          needToKnow:
+            'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+        },
+        {
+          needToKnow:
+            'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+        },
+        {
+          needToKnow:
+            'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+        },
+      ],
+      transport: [
+        {
+          title: 'Mandovi Lounge Boat : Discover Serenity',
+          header: 'OFF-PEAK SLOTS',
+          capacity: 8,
+          timeSlots: ['7:00 AM to 3:30 PM'],
+          isSelected: true,
+          originalamt: '1700',
+          discountedamt: '1200',
+          kidAmt: '900',
+          desc: [
+            'Access to lower deck',
+            '2-hour cruise in Goa Marina',
+            'Goan buffet dinner.',
+            'Goan dance show',
+          ],
+        },
+        {
+          title: 'Mandovi Lounge Boat : Discover Serenity',
+          header: 'PEAK SLOTS',
+          timeSlots: ['4:00 PM to 11:00 PM'],
+          capacity: 8,
+          isSelected: false,
+          originalamt: '1500',
+          discountedamt: '1000',
+          kidAmt: '700',
+          desc: [
+            'Access to all decks',
+            '2-hour cruise in Goa Marina',
+            'Goan buffet dinner.',
+            'Goan dance show',
+          ],
+        },
+        {
+          title: 'Mandovi Lounge Boat : Discover Serenity',
+          header: 'CUSTOM SLOTS',
+          timeSlots: ['7:00 AM - 11:00 PM'],
+          capacity: 8,
+          isSelected: false,
+          originalamt: '1500',
+          discountedamt: '1000',
+          kidAmt: '700',
+          desc: [
+            'Access to all decks',
+            '2-hour cruise in Goa Marina',
+            'Goan buffet dinner.',
+            'Goan dance show',
         ],
       },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'PEAK SLOTS',
-        timeSlots: ['4:00 PM to 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'CUSTOM SLOTS',
-        timeSlots: ['7:00 AM - 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
     ],
+    priceDetails: {
+      regularPrice: '28000',
+      discountPrice: '19999',
+    },
   },
+  //Ralston 2
   {
-    cruiseId: 17,
-    whatsappMsg: 'Hello, I would like to enquire about POLARIS PRIVATE YACHT in Goa!',
-    title: 'Polaris : Adventure Awaits Here',
-    subTile: 'Polaris ',
-    category: 'River Party Cruise in Goa',
-    routingUrl: 'book-polaris-adventure-awaits-here-in-goa',
-    rating: '4.7',
-    reviews: '15890',
-    oldPrice: '36000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '34500',
-    image: '/assets/dinnercruise/PolaRis.avif',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'The Polaris is a luxury yacht, offering a blend of elegance and comfort for various events and occasions, making ...',
-      },
-      {
-        about1:
-          'Its a popular choice for parties, sunset cruises, and other celebrations, accommodating up to 20 guests comfortably  ...',
-      },
-      {
-        about1:
-          'It features a spacious double-deck design, providing ample space for mingling, dancing, or enjoying the views while  ...',
-      },
-    ],
-    features: [
-      {
-        name: 'Capacity: Upto 20 Pax',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Duration: 1+1 Hour ',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: './assets/images/svg/mobile-ico.svg',
-      },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'OFF-PEAK SLOTS',
-        capacity: 8,
-        timeSlots: ['7:00 AM to 3:30 PM'],
-        isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'PEAK SLOTS',
-        timeSlots: ['4:00 PM to 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'CUSTOM SLOTS',
-        timeSlots: ['7:00 AM - 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
+    superCategory: 'Private Yacht',
     cruiseId: 15,
     whatsappMsg: 'Hello, I would like to enquire about RALSTON 1 PRIVATE YACHT in Goa!',
-    title: 'Ralston-1 : Explore the Seas',
-    subTile: 'Ralston-1 ',
+    title: 'Ralston 2',
+    subTile: 'Ralston 2 ',
     category: 'Azul Barco Dinner Cruise in Goa',
-    routingUrl: 'book-ralston-1-explore-the-seas-in-goa',
+    routingUrl: 'book-ralston-2-in-goa',
     rating: '4.3',
+    type: 'ultrapremium',
     reviews: '1290',
-    oldPrice: '27000',
+    mobilePackageDesc:['2 hours','17 pax '],
+oldPrice: '25000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 700,
-    currentPrice: '25000',
-    image: '/assets/dinnercruise/Ralston.avif',
+    currentPrice: '20999',
+    image: '/assets/Private Yatchs/Ralston 2/i1.webp',
     bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
+      '/assets/Private Yatchs/Ralston 2/i2.webp',
+      '/assets/Private Yatchs/Ralston 2/i3.webp',
+      '/assets/Private Yatchs/Ralston 2/i4.webp',
+      '/assets/Private Yatchs/Ralston 2/i5.webp',
+      '/assets/Private Yatchs/Ralston 2/i6.webp',
     ],
     topFeatures: [
       {
@@ -1942,174 +3898,8 @@ export const yacth: any[] = [
         name: 'Panjim Goa, India',
         image: './assets/images/svg/mobile-ico.svg',
       },
-    ],
-    highlights: [
       {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'OFF-PEAK SLOTS',
-        capacity: 8,
-        timeSlots: ['7:00 AM to 3:30 PM'],
-        isSelected: true,
-        originalamt: '1700',
-        discountedamt: '1200',
-        kidAmt: '900',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'PEAK SLOTS',
-        timeSlots: ['4:00 PM to 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'Mandovi Lounge Boat : Discover Serenity',
-        header: 'CUSTOM SLOTS',
-        timeSlots: ['7:00 AM - 11:00 PM'],
-        capacity: 8,
-        isSelected: false,
-        originalamt: '1500',
-        discountedamt: '1000',
-        kidAmt: '700',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  {
-    cruiseId: 16,
-    whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
-    title: 'Ralston-2 : Sail in Style',
-    subTile: 'Ralston-2 ',
-    category: 'Aarushi Dinner Cruise in Goa',
-    routingUrl: 'book-ralston-2-sail-in-style-in-goa',
-    rating: '4.3',
-    reviews: '1290',
-    oldPrice: '27000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 700,
-    currentPrice: '25000',
-    image: '/assets/dinnercruise/DC13.jpeg',
-    bannerImgs: [
-      '/assets/detailimages/Adventure-01.webp',
-      '/assets/detailimages/Adventure-02.webp',
-      '/assets/detailimages/Adventure-03.webp',
-      '/assets/detailimages/Adventure-04.webp',
-      '/assets/detailimages/Adventure-05.webp',
-    ],
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'The Ralston 2 yacht, also known as the Ralston Yacht, is a popular private yacht available for hire in Goa. It is  ...',
-      },
-      {
-        about1:
-          'The yacht is known for its luxurious features and is frequently booked for special occasions like birthdays ...',
-      },
-      {
-        about1:
-          'With its double-deck design, the yacht offers panoramic views of the stunning Goan coastline, providing an  ...',
-      },
-    ],
-    features: [
-      {
-        name: 'Capacity: Upto 16 Pax',
-        image: './assets/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Duration: 1+1 Hour ',
-        image: './assets/images/svg/bolt-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
+        name: 'Skipper included',
         image: './assets/images/svg/mobile-ico.svg',
       },
     ],
@@ -2215,309 +4005,2013 @@ export const yacth: any[] = [
         ],
       },
     ],
+    priceDetails: {
+      regularPrice: '28000',
+      discountPrice: '19999',
+    },
   },
-   {
-  "cruiseId": 4,
-  "title": "Private Events on Cruise in Goa",
-  "subTile": "Celebrate Special Moments on a Private Cruise",
-  "category": "Luxury & Private Experiences",
-  "routingUrl": "private-events-cruise-goa",
-  "rating": "4.8",
-  "reviews": "1500",
-  "oldPrice": "200000",
-  "booked": "250K+",
-  "buttonText": "Book your private cruise celebration now",
-  "reportPrice": 105000,
-  "reportPriceWithTransport": 105000,
-  "currentPrice": "150000",
-  "image": "/assets/detailimages/CAL.webp",
-  "bannerImgs": [
-    "/assets/detailimages/CAL01.webp",
-    "/assets/detailimages/CAL02.webp",
-    "/assets/detailimages/CAL03.webp",
-    "/assets/detailimages/CAL04.webp",
-    "/assets/detailimages/CAL.webp"
-  ],
-
-  "priceIncludes": {
-    "title": "Price Includes",
-    "sections": [
+  //Taj Exotica
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 16,
+    whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
+    title: 'Taj Exotica',
+    subTile: 'Taj Exotica ',
+    category: 'Aarushi Dinner Cruise in Goa',
+    routingUrl: 'book-taj-exotica-in-goa',
+    rating: '4.3',
+    type: 'ultrapremium',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','20 pax '],
+oldPrice: '36000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '29999',
+    image: '/assets/Private Yatchs/Taj Exotica/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Taj Exotica/i2.webp',
+      '/assets/Private Yatchs/Taj Exotica/i3.webp',
+      '/assets/Private Yatchs/Taj Exotica/i4.webp',
+      '/assets/Private Yatchs/Taj Exotica/i5.webp',
+      '/assets/Private Yatchs/Taj Exotica/i6.webp',
+    ],
+    topFeatures: [
       {
-        "category": "Cruise Experience",
-        "items": [
-          "Private 2 to 3-hour cruise on Mandovi River or coastal route",
-          "Decorated deck with seating arrangements"
-        ]
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
       },
       {
-        "category": "Inclusions",
-        "items": [
-          "Welcome drinks (soft beverages/juices)",
-          "Snacks or buffet meals (customizable packages)"
-        ]
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
-        "category": "Entertainment",
-        "items": [
-          "DJ music setup or Bluetooth speaker system",
-          "Dance floor and mood lighting"
-        ]
-      }
-    ]
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Ralston 2 yacht, also known as the Ralston Yacht, is a popular private yacht available for hire in Goa. It is  ...',
+      },
+      {
+        about1:
+          'The yacht is known for its luxurious features and is frequently booked for special occasions like birthdays ...',
+      },
+      {
+        about1:
+          'With its double-deck design, the yacht offers panoramic views of the stunning Goan coastline, providing an  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '36000',
+      discountPrice: '29999',
+    },
   },
-
-  "topFeatures": [
-    {
-      "icon": "event_available",
-      "title": "Instant Confirmation",
-      "description": "Get booking confirmation instantly via email"
-    },
-    {
-      "icon": "free_cancellation",
-      "title": "Free Cancellation",
-      "description": "Cancel up to 72 hours in advance for a full refund"
-    },
-    {
-      "icon": "local_activity",
-      "title": "Mobile Tickets",
-      "description": "Show your phone ticket to board your private cruise"
-    }
-  ],
-
-  "mustKnow": [
-    {
-      "about1": "Private cruise ideal for birthdays, anniversaries, corporate events, and special celebrations."
-    },
-    {
-      "about1": "Cruise duration typically 2–3 hours with customizable start time."
-    },
-    {
-      "about1": "Choose from multiple yacht or cruise sizes based on group size (10 to 100+ guests)."
-    },
-    {
-      "about1": "Special add-ons like cakes, decorations, and live performances can be arranged on request."
-    }
-  ],
-
-  "features": [
-    {
-      "name": "Duration 2–3 Hours",
-      "image": "./assets/images/svg/cancellation-ico.svg"
-    },
-    {
-      "name": "Mandovi River or Coastal Goa",
-      "image": "./assets/images/svg/bolt-ico.svg"
-    },
-    {
-      "name": "Fully Private Cruise",
-      "image": "./assets/images/svg/mobile-ico.svg"
-    },
-    {
-      "name": "Custom Packages Available",
-      "image": "./assets/images/svg/transfer-ico.svg"
-    }
-  ],
-
-  "overviewDesc": "Celebrate life’s biggest moments with elegance on a private cruise in Goa. Whether it's a birthday bash, romantic anniversary, pre-wedding party, or a corporate gathering, our luxury cruises offer the perfect blend of comfort, scenery, and entertainment. Fully customizable and privately booked for you and your guests.",
-
-  "overview": [
-    { "inclusion1": "Private yacht or cruise booking (2–3 hours)" },
-    { "inclusion1": "Welcome drinks and light snacks" },
-    { "inclusion1": "Decorated venue with seating" },
-    { "inclusion1": "Onboard music system or DJ setup" },
-    { "inclusion1": "Optional cake, flowers, and photography" },
-    { "inclusion1": "Professional crew and safety equipment" }
-  ],
-
-  "thingsToCarry": [
-    { "exclusion1": "Carry valid ID proof for all attendees." },
-    {
-      "exclusion1": "You may bring custom decorations with prior permission."
-    },
-    {
-      "exclusion1": "Outside food/alcohol may not be allowed unless agreed in advance."
-    }
-  ],
-
-  "needToKnows": [
-    {
-      "needToKnow": "Cruise options vary from open decks to luxury AC cabins with washrooms."
-    },
-    {
-      "needToKnow": "Custom timings, menus, and themes available on request."
-    },
-    {
-      "needToKnow": "Best to book at least 3–5 days in advance for guaranteed availability."
-    }
-  ],
-
-  "transport": [
-    {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "200000",
-      "discountedamt": "150000",
-      "kidAmt": "0",
-      "desc": [
-        "Self-report at jetty point in Panjim or Nerul",
-        "Private cruise with crew, music & snacks",
-        "Ideal for groups up to 25–50 depending on vessel",
-        "No hotel pickup or drop included"
-      ]
-    }
-  ]
-},
-{
-  "cruiseId": 5,
-  "title": "RA11 Private Cruise Goa",
-  "subTile": "Exclusive Celebrations on the Luxurious RA11 Cruise",
-  "category": "Luxury & Private Experiences",
-  "routingUrl": "ra11-private-cruise-goa",
-  "rating": "4.9",
-  "reviews": "1800",
-  "oldPrice": "28999",
-  "booked": "300K+",
-  "buttonText": "Book RA11 for Private Celebrations",
-  "reportPrice": 400000,
-  "reportPriceWithTransport": 400000,
-  "currentPrice": "500000",
-  "image": "/assets/detailimages/NAU.webp",
-  "bannerImgs": [
-    "/assets/detailimages/NAU01.webp",
-    "/assets/detailimages/NAU02.webp",
-    "/assets/detailimages/NAU03.webp",
-    "/assets/detailimages/NAU04.webp",
-    "/assets/detailimages/NAU05.webp"
-  ],
-
-  "priceIncludes": {
-    "title": "Price Includes",
-    "sections": [
+  //Blue Diamond
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 16,
+    whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
+    title: 'Blue Diamond',
+    subTile: 'Blue Diamond ',
+    category: 'Aarushi Dinner Cruise in Goa',
+    routingUrl: 'book-blue-diamond-in-goa',
+    type: 'ultrapremium',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','18 pax '],
+oldPrice: '36000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '29999',
+    image: '/assets/Private Yatchs/Blue Diamond/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Blue Diamond/i2.webp',
+      '/assets/Private Yatchs/Blue Diamond/i3.webp',
+      '/assets/Private Yatchs/Blue Diamond/i4.webp',
+      '/assets/Private Yatchs/Blue Diamond/i5.webp',
+      '/assets/Private Yatchs/Blue Diamond/i6.webp',
+    ],
+    topFeatures: [
       {
-        "category": "Cruise Experience",
-        "items": [
-          "Private 3-hour cruise on the RA11 vessel",
-          "Fully decorated space with customizable setup"
-        ]
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
       },
       {
-        "category": "Food & Beverages",
-        "items": [
-          "Welcome drinks (mocktails/soft drinks)",
-          "Buffet or snacks (custom menu options available)"
-        ]
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
       },
       {
-        "category": "Entertainment",
-        "items": [
-          "Live DJ or Bluetooth music system",
-          "Dance floor, lighting & host on request"
-        ]
-      }
-    ]
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Ralston 2 yacht, also known as the Ralston Yacht, is a popular private yacht available for hire in Goa. It is  ...',
+      },
+      {
+        about1:
+          'The yacht is known for its luxurious features and is frequently booked for special occasions like birthdays ...',
+      },
+      {
+        about1:
+          'With its double-deck design, the yacht offers panoramic views of the stunning Goan coastline, providing an  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '36000',
+      discountPrice: '27999',
+    },
   },
-
-  "topFeatures": [
-    {
-      "icon": "event_available",
-      "title": "Instant Confirmation",
-      "description": "Booking confirmation via email & WhatsApp within minutes"
+  //Sunset 42
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 16,
+    whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
+    title: 'Sunset 42',
+    subTile: 'Sunset 42 ',
+    category: 'Aarushi Dinner Cruise in Goa',
+    routingUrl: 'book-sunset-42-in-goa',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','15 pax '],
+oldPrice: '30000',
+    type: 'luxury',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '27999',
+    image: '/assets/Private Yatchs/Sunset 42/Sunset 42 (1).webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Sunset 42/i2.webp',
+      '/assets/Private Yatchs/Sunset 42/i3.webp',
+      '/assets/Private Yatchs/Sunset 42/i4.webp',
+      '/assets/Private Yatchs/Sunset 42/i5.webp',
+      '/assets/Private Yatchs/Sunset 42/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Ralston 2 yacht, also known as the Ralston Yacht, is a popular private yacht available for hire in Goa. It is  ...',
+      },
+      {
+        about1:
+          'The yacht is known for its luxurious features and is frequently booked for special occasions like birthdays ...',
+      },
+      {
+        about1:
+          'With its double-deck design, the yacht offers panoramic views of the stunning Goan coastline, providing an  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '30000',
+      discountPrice: '27999',
     },
-    {
-      "icon": "free_cancellation",
-      "title": "Free Cancellation",
-      "description": "Cancel up to 72 hours before for a full refund"
+  },
+  //Leopard
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 16,
+    whatsappMsg: 'Hello, I would like to enquire about RALSTON 2 PRIVATE YACHT in Goa!',
+    title: 'Leopard',
+    subTile: 'Leopard ',
+    type: 'luxury',
+    category: 'Aarushi Dinner Cruise in Goa',
+    routingUrl: 'book-sunset-42-in-goa',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','15 pax '],
+oldPrice: '40000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '32000',
+    image: '/assets/Private Yatchs/Leopard/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Leopard/i2.webp',
+      '/assets/Private Yatchs/Leopard/i3.webp',
+      '/assets/Private Yatchs/Leopard/i4.webp',
+      '/assets/Private Yatchs/Leopard/i5.webp',
+      '/assets/Private Yatchs/Leopard/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'The Ralston 2 yacht, also known as the Ralston Yacht, is a popular private yacht available for hire in Goa. It is  ...',
+      },
+      {
+        about1:
+          'The yacht is known for its luxurious features and is frequently booked for special occasions like birthdays ...',
+      },
+      {
+        about1:
+          'With its double-deck design, the yacht offers panoramic views of the stunning Goan coastline, providing an  ...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '40000',
+      discountPrice: '31999',
     },
-    {
-      "icon": "local_activity",
-      "title": "Mobile Tickets",
-      "description": "Show your e-ticket on phone to board the cruise"
-    }
-  ],
-
-  "mustKnow": [
-    {
-      "about1": "Celebrate birthdays, anniversaries, and corporate events on your own private luxury cruise."
+  },
+  //Polaris
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Polaris',
+    subTile: 'Polaris ',
+    type: 'luxury',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-polaris-in-goa',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','20 pax '],
+oldPrice: '40000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '35000',
+    image: '/assets/Private Yatchs/Polaris/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Polaris/i2.webp',
+      '/assets/Private Yatchs/Polaris/i3.webp',
+      '/assets/Private Yatchs/Polaris/i4.webp',
+      '/assets/Private Yatchs/Polaris/i5.webp',
+      '/assets/Private Yatchs/Polaris/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '38000',
+      discountPrice: '32499',
     },
-    {
-      "about1": "RA11 offers flexible time slots and customizable decoration themes."
+  },
+  //Ferretti 460
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Ferretti 460',
+    subTile: 'Ferretti 460 ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-ferretti-460-in-goa',
+    type: 'luxury',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','15 pax '],
+oldPrice: '50000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '45000',
+    image: '/assets/Private Yatchs/Ferretti 460/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Ferretti 460/i2.webp',
+      '/assets/Private Yatchs/Ferretti 460/i3.webp',
+      '/assets/Private Yatchs/Ferretti 460/i4.webp',
+      '/assets/Private Yatchs/Ferretti 460/i5.webp',
+      '/assets/Private Yatchs/Ferretti 460/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '50000',
+      discountPrice: '44999',
     },
-    {
-      "about1": "Sound system, lights, and onboard crew included for a seamless experience."
+  },
+  //Ferretti 550
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Ferretti 550',
+    subTile: 'Ferretti 550 ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-Ferretti-550-in-goa',
+    type: 'luxury',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','15 pax '],
+oldPrice: '70000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '55000',
+    image: '/assets/Private Yatchs/Ferretti 550/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Ferretti 550/i2.webp',
+      '/assets/Private Yatchs/Ferretti 550/i3.webp',
+      '/assets/Private Yatchs/Ferretti 550/i4.webp',
+      '/assets/Private Yatchs/Ferretti 550/i5.webp',
+      '/assets/Private Yatchs/Ferretti 550/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '70000',
+      discountPrice: '54999',
     },
-    {
-      "about1": "Optional add-ons: cakes, photographers, live performers, and more."
-    }
-  ],
-
-  "features": [
-    {
-      "name": "Duration 3 Hours",
-      "image": "./assets/images/svg/cancellation-ico.svg"
+  },
+  //Foxy lady
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Foxy lady',
+    subTile: 'Foxy lady ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-foxy-lady-in-goa',
+    type: 'luxury',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','25 pax '],
+oldPrice: '80000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '65000',
+    image: '/assets/Private Yatchs/Foxy lady/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Foxy lady/i2.webp',
+      '/assets/Private Yatchs/Foxy lady/i3.webp',
+      '/assets/Private Yatchs/Foxy lady/i4.webp',
+      '/assets/Private Yatchs/Foxy lady/i5.webp',
+      '/assets/Private Yatchs/Foxy lady/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '80000',
+      discountPrice: '67999',
     },
-    {
-      "name": "RA11 Cruise – Mandovi River",
-      "image": "./assets/images/svg/bolt-ico.svg"
+  },
+  //Riviera
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Riviera',
+    subTile: 'Riviera ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-riviera-in-goa',
+    type: 'luxury',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','30 pax '],
+oldPrice: '50000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '37000',
+    image: '/assets/Private Yatchs/Riviera/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Riviera/i2.webp',
+      '/assets/Private Yatchs/Riviera/i3.webp',
+      '/assets/Private Yatchs/Riviera/i4.webp',
+      '/assets/Private Yatchs/Riviera/i5.webp',
+      '/assets/Private Yatchs/Riviera/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '50000',
+      discountPrice: '36999',
     },
-    {
-      "name": "Private Celebrations",
-      "image": "./assets/images/svg/mobile-ico.svg"
+  },
+  //Shantam
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Shantam',
+    subTile: 'Shantam ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-shantam-in-goa',
+    type: 'luxury',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','30 pax '],
+oldPrice: '35000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '30000',
+    image: '/assets/Private Yatchs/Shantam/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Shantam/i2.webp',
+      '/assets/Private Yatchs/Shantam/i3.webp',
+      '/assets/Private Yatchs/Shantam/i4.webp',
+      '/assets/Private Yatchs/Shantam/i5.webp',
+      '/assets/Private Yatchs/Shantam/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '35000',
+      discountPrice: '29999',
     },
-    {
-      "name": "Custom Packages & Add-ons",
-      "image": "./assets/images/svg/transfer-ico.svg"
-    }
-  ],
-
-  "overviewDesc": "Celebrate life’s biggest moments aboard the iconic RA11 private cruise in Goa. Whether it’s a milestone birthday, dreamy proposal, pre-wedding bash, or corporate celebration — RA11 delivers the perfect blend of luxury, comfort, and unforgettable views across the Mandovi River. Fully customizable with food, music, and decor.",
-
-  "overview": [
-    { "inclusion1": "Exclusive RA11 cruise booking for 3 hours" },
-    { "inclusion1": "Decorated venue with optional themes" },
-    { "inclusion1": "Welcome drinks and snacks or buffet" },
-    { "inclusion1": "DJ or music system with dance area" },
-    { "inclusion1": "Professional onboard crew & safety gear" },
-    { "inclusion1": "Optional add-ons: cake, photographer, anchor" }
-  ],
-
-  "thingsToCarry": [
-    { "exclusion1": "Valid photo ID is mandatory for entry." },
-    {
-      "exclusion1": "Inform in advance for any special setup or décor items."
+  },
+  //Shantam Catamaran
+  {
+    superCategory: 'Private Yacht',
+    cruiseId: 13,
+    whatsappMsg: 'Hello, I would like to enquire about SHANTAM CATAMARAN PRIVATE YACHT in Goa!',
+    title: 'Shantam Catamaran',
+    subTile: 'Shantam Catamaran ',
+    category: 'Vihaan Dinner Cruise in Goa',
+    routingUrl: 'book-shantam-catamaran-in-goa',
+    type: 'luxury',
+    rating: '4.3',
+    reviews: '1290',
+    mobilePackageDesc:['2 hours','30 pax '],
+oldPrice: '37000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 700,
+    currentPrice: '34000',
+    image: '/assets/Private Yatchs/Shantam/i1.webp',
+    bannerImgs: [
+      '/assets/Private Yatchs/Shantam/i2.webp',
+      '/assets/Private Yatchs/Shantam/i3.webp',
+      '/assets/Private Yatchs/Shantam/i4.webp',
+      '/assets/Private Yatchs/Shantam/i5.webp',
+      '/assets/Private Yatchs/Shantam/i6.webp',
+    ],
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'With the capacity to accommodate 25 guests, a cabin, a state-of-the-art music system, and a washroom...',
+      },
+      {
+        about1:
+          'The Shantam Catamaran in Goa is a luxurious yacht that cruises through the serene waters of Goa, providing ...',
+      },
+      {
+        about1:
+          'The cabin on the Shantam Catamaran in Goa is designed to provide a cozy retreat. It is equipped with comfortable seating...',
+      },
+    ],
+    features: [
+      {
+        name: 'Capacity: Upto 16 Pax',
+        image: './assets/images/svg/cancellation-ico.svg',
+      },
+      {
+        name: 'Duration: 1+1 Hour ',
+        image: './assets/images/svg/bolt-ico.svg',
+      },
+      {
+        name: 'Panjim Goa, India',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+      {
+        name: 'Skipper included',
+        image: './assets/images/svg/mobile-ico.svg',
+      },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'OFF-PEAK SLOTS',
+        capacity: 8,
+        timeSlots: ['7:00 AM to 3:30 PM'],
+        isSelected: true,
+        originalamt: '1700',
+        discountedamt: '1200',
+        kidAmt: '900',
+        desc: [
+          'Access to lower deck',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'PEAK SLOTS',
+        timeSlots: ['4:00 PM to 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+      {
+        title: 'Mandovi Lounge Boat : Discover Serenity',
+        header: 'CUSTOM SLOTS',
+        timeSlots: ['7:00 AM - 11:00 PM'],
+        capacity: 8,
+        isSelected: false,
+        originalamt: '1500',
+        discountedamt: '1000',
+        kidAmt: '700',
+        desc: [
+          'Access to all decks',
+          '2-hour cruise in Goa Marina',
+          'Goan buffet dinner.',
+          'Goan dance show',
+        ],
+      },
+    ],
+    priceDetails: {
+      regularPrice: '37000',
+      discountPrice: '33999',
     },
-    {
-      "exclusion1": "Avoid high heels; boat surfaces can be slippery."
-    }
-  ],
-
-  "needToKnows": [
-    {
-      "needToKnow": "Boarding begins 20–30 mins before departure from Panjim jetty."
-    },
-    {
-      "needToKnow": "Event slots are limited — book at least 4–5 days in advance."
-    },
-    {
-      "needToKnow": "Alcoholic beverages allowed only with pre-approval and valid ID (18+)."
-    }
-  ],
-
-  "transport": [
-    {
-      "title": "Without Transport",
-      "isSelected": true,
-      "originalamt": "700000",
-      "discountedamt": "500000",
-      "kidAmt": "0",
-      "desc": [
-        "Self-report at Panjim/Nerul jetty",
-        "RA11 private cruise with all arrangements",
-        "Decor, food, and entertainment included",
-        "No hotel transport provided"
-      ]
-    }
-  ]
-}
+  },
 ];
 
 export const cancellationPolicy: string[] = [
@@ -2535,3 +6029,12 @@ export const travellers = [
 
 export const razorpay_key = 'rzp_live_udlCDMeLep9nk2';
 export const key_secret = 'S0z7n1X96xlkCKURtlxmqoGn';
+
+export const items = [
+  { label: 'All', value: 'all' },
+  { label: 'Most favorites', value: 'mostfavourite' },
+  { label: 'Premium', value: 'premium' },
+  { label: 'Special', value: 'special' },
+  { label: 'Ultra Premium', value: 'ultrapremium' },
+  { label: 'Luxury', value: 'luxury' },
+];

@@ -6,10 +6,10 @@
     <div class="person-row" *ngFor="let item of filteredBookingDetails">
       <div class="person-label">{{ item.count }} x {{ item.displayLabel }}</div>
       <div class="person-price">
-        INR
+        ₹
         {{
           item.count *
-            (selectedTransport?.title === 'With Transport' ? item.price + 200 : item.price)
+          item.price
         }}
       </div>
     </div>
@@ -18,27 +18,27 @@
   <div class="total-section">
     <div>
       <p>{{ paymentType === 'partial' ? 'Partial' : 'Total' }} Amount:</p>
-      <strong>INR {{ totalAmount }}</strong>
+      <strong>₹ {{ totalAmount }}</strong>
     </div>
     <div *ngIf="paymentType !== 'partial'">
-      <p>Coupon Discount(INR {{ discountAmount }})</p>
-      <strong>INR {{ totalAmount - discountAmount }}</strong>
+      <p>Coupon Discount(₹ {{ discountAmount }})</p>
+      <strong>₹ {{ totalAmount - discountAmount }}</strong>
     </div>
     <div class="taxDiv">
       <p>TAX CGST 9%</p>
-      <strong> + INR {{ discountedAmount * 0.09 }}</strong>
+      <strong> + ₹ {{ discountedAmount * 0.09 | number: '1.2-2' }}</strong>
     </div>
     <div class="taxDiv">
       <p>TAX SGST 9%</p>
-      <strong> + INR {{ discountedAmount * 0.09 }}</strong>
+      <strong> + ₹ {{ discountedAmount * 0.09 | number: '1.2-2' }}</strong>
     </div>
     <div>
       <p>{{ paymentType === 'partial' ? 'Partial' : 'Total' }} Payable Amount:</p>
-      <strong>INR {{ discountedAmount + discountedAmount * 0.18 | number: '1.0-2' }}</strong>
+      <strong>₹ {{ discountedAmount + discountedAmount * 0.18 | number: '1.0-2' }}</strong>
     </div>
   </div>
 
   <div *ngIf="paymentType !== 'partial'" class="discount-message">
-    🎉 Woohoo! You saved INR {{ discountAmount }} on this booking!!
+    🎉 Woohoo! You saved ₹ {{ discountAmount }} on this booking!!
   </div>
 </div>

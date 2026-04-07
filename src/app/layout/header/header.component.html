@@ -1,6 +1,6 @@
 <header>
   <div class="container">
-    <div class="flex flex-justify-between">
+    <div class="flex header-section  ">
       <div routerLink="">
         <img src="./assets/images/Logo1.png" class="logo" alt="Myraan" />
       </div>
@@ -18,24 +18,26 @@
             </button>
             <ul class="dropdown-menu" [class.show]="dropdownOpen">
               <li (click)="navigateTo('book-dinner-cruise-in-goa')">Dinner Cruises</li>
-              <li (click)="navigateTo('private-yachts-in-goa')">Private Yachts</li>
-              <li (click)="navigateTo('scuba-diving-in-goa')">Scuba Diving</li>
-              <li (click)="navigateTo('best-water-sports-in-goa')">Water Sports</li>
-              <li (click)="navigateTo('best-adventures-in-goa')">Adventures</li>
-              <li (click)="navigateTo('best-sightseeing-in-goa')">Sightseeings</li>
+              <li (click)="navigateTo('best-private-yachts-in-goa')">Private Yachts</li>
+              <li (click)="navigateTo('book-watersports-and-scuba-diving-in-goa')">Scuba Diving</li>
+              <li (click)="navigateTo('book-water-sports-in-goa')">Water Sports</li>
+              <li (click)="navigateTo('book-adventures-in-goa')">Adventures</li>
+              <li (click)="navigateTo('book-sightseeing-in-goa')">Sightseeings</li>
+              <li (click)="navigateTo('private-parties')">Private Parties</li>
             </ul>
           </li>
           <li (click)="toggleMegaMenu()">
             <a routerLink="/contact-us">Contact Us</a>
           </li>
           <li class="web" style="height: 24px; width: 24px; white-space: nowrap">
-            <img src="./assets/icons/telephone.png" alt="Phone" style="vertical-align: middle" />
+            <mat-icon>phone</mat-icon>
+
             <a
               href="tel:+917715959917"
               class="phone-no"
               style="color: inherit; text-decoration: none; margin-left: 6px"
             >
-              +91 77159 59917
+              77159 59917
             </a>
           </li>
         </ul>
@@ -48,7 +50,8 @@
               [href]="'tel:' + phone"
               aria-label="Call"
             >
-              <img src="./assets/icons/call-header.png" width="28" />
+            <mat-icon style="color: #444;">phone</mat-icon>
+
             </a>
           </div>
           <div class="hamburger" [class.open]="isVisible" id="hamburger" (click)="toggleMegaMenu()">

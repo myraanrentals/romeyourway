@@ -415,7 +415,7 @@ section {
     display: none;
   } // mobile hide
   .d-ele {
-    display: block;
+    display: block !important;
   } // desktop show
 }
 @media screen and (max-width: 767px) {
@@ -426,7 +426,7 @@ section {
     display: block;
   } // mobile show
   .d-ele {
-    display: none;
+    display: none !important;
   } // desktop hide
   h2 {
     font-size: 18px !important;

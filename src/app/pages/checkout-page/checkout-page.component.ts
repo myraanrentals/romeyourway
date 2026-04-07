@@ -46,6 +46,7 @@ interface SessionData {
 })
 export class CheckoutPageComponent implements OnInit {
   @ViewChild('timeSlotContainer') timeSlotContainer!: ElementRef;
+  @ViewChild('datePickerInput') datePickerInput!: ElementRef<HTMLInputElement>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -70,6 +71,8 @@ export class CheckoutPageComponent implements OnInit {
   selectedLocation: string | null = null;
   category: string = '';
   public showProceedButton = false;
+  showSpecialDateModal = false;
+  selectedSpecialEvent: { date: string; title: string; navigateTo: string } | null = null;
 
   ngOnInit() {
     this.generateDates(new Date());
@@ -83,20 +86,27 @@ export class CheckoutPageComponent implements OnInit {
       this.hotelList = this.HelperService.renderPackageData(category);
       this.hotelDetails = this.HelperService.getHotelByID(id, this.hotelList);
       this.features = this.HelperService.getFeatureList(this.hotelDetails);
+      if (this.hotelDetails?.transport && this.hotelDetails.transport.length > 0) {
+        this.hotelDetails.transport.forEach((t: any, index: number) => {
+          t.isSelected = index === 0;
+        });
+      }
+      this.generateDates(new Date());
+      this.selectedTime = this.hotelDetails.timeSlots[0] ?? '8pm';
       this.sessionData = {
         ...this.HelperService.defaultSessionPayload,
         selectedTime:
-          category !== 'private-yachts-in-goa'
-            ? this.selectedTime
+          category !== 'book-private-yachts-in-goa'
+            ? this.hotelDetails.timeSlots[0]
             : this.hotelDetails.transport[0].timeSlots[0],
         cruiseId: this.hotelDetails.cruiseId,
         selectedTransport: this.hotelDetails.transport[0],
-        subtotal: this.hotelDetails.transport[0].discountedamt,
+        subtotal: this.hotelDetails.transport[0].adultPrice,
         travellers:
-          this.category !== 'private-yachts-in-goa'
+          this.category !== 'book-private-yachts-in-goa'
             ? getTravellers(
-                Number(this.hotelDetails.transport[0].discountedamt),
-                Number(this.hotelDetails.transport[0].kidAmt),
+                Number(this.hotelDetails.transport[0].adultPrice),
+                Number(this.hotelDetails.transport[0].kidPrice),
               )
             : getTravellersForYacth(
                 Number(this.hotelDetails.transport[0].actualPaxCount),
@@ -107,11 +117,11 @@ export class CheckoutPageComponent implements OnInit {
       this.HelperService.updateSessionStorage(this.sessionData);
     });
     this.travellers = getTravellers(
-      this.sessionData.selectedTransport?.discountedamt,
-      this.sessionData.selectedTransport?.kidAmt,
+      this.sessionData.selectedTransport?.adultPrice,
+      this.sessionData.selectedTransport?.kidPrice,
     );
     this.selectedTime =
-      category !== 'private-yachts-in-goa'
+      category !== 'book-private-yachts-in-goa'
         ? this.selectedTime
         : this.sessionData.selectedTransport.timeSlots[0];
   }
@@ -122,8 +132,9 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   increaseCount(traveller: any): void {
+    
     const isActualPaxCount = traveller.label === 'Actual Pax Count';
-    const isYacht = this.category === 'private-yachts-in-goa';
+    const isYacht = this.category === 'book-private-yachts-in-goa';
 
     const maxCount = isYacht ? (isActualPaxCount ? traveller.price : Infinity) : Infinity;
 
@@ -137,7 +148,7 @@ export class CheckoutPageComponent implements OnInit {
 
   decreaseCount(traveller: any) {
     const isAdult = traveller.label === 'Adult';
-    const isYacth = this.category === 'private-yachts-in-goa';
+    const isYacth = this.category === 'book-private-yachts-in-goa';
     const minCount = isAdult || isYacth ? 1 : 0;
 
     if (traveller.count > minCount) {
@@ -154,16 +165,16 @@ export class CheckoutPageComponent implements OnInit {
   getTravellerPrice(traveller: any): number {
     // same logic as template
     if (traveller.label === 'Adult') {
-      return this.sessionData.selectedTransport?.discountedamt || 0;
+      return this.sessionData.selectedTransport?.adultPrice || 0;
     } else if (traveller.label === 'Child (4-10 year old)') {
-      return this.sessionData.selectedTransport?.kidAmt || 0;
+      return this.sessionData.selectedTransport?.kidPrice || 0;
     } else {
       return 0;
     }
   }
 
   getSubtotal(): number {
-    const isYacth = this.category === 'private-yachts-in-goa';
+    const isYacth = this.category === 'book-private-yachts-in-goa';
     if (isYacth) return 0;
     const subtotal = this.sessionData.travellers.reduce(
       (total: number, traveller: any) =>
@@ -172,15 +183,15 @@ export class CheckoutPageComponent implements OnInit {
     );
     const gstRate = 0.18;
     const gstAmount = +(subtotal * gstRate).toFixed(2);
-    const amountWithGST = +(subtotal + gstAmount).toFixed(2);
+    const amountWithGST = Math.floor(+(subtotal + gstAmount).toFixed(2));
 
     this.HelperService.updateSessionStorage({
-      subtotal: +subtotal.toFixed(2),
-      payableAmount: +subtotal.toFixed(2),
+      subtotal: Math.floor(+subtotal.toFixed(2)),
+      payableAmount: Math.floor(+subtotal.toFixed(2)),
       amountWithGST,
     });
 
-    return +subtotal.toFixed(2);
+    return Math.floor(+subtotal.toFixed(2));
   }
 
   getSubtotalForYacth(): number {
@@ -231,12 +242,20 @@ export class CheckoutPageComponent implements OnInit {
 
     this.sessionData.travellers;
     this.sessionData.selectedTransport = selectedTransport;
-    this.HelperService.updateSessionStorage({
+    const slectedTravellers  = getTravellers(
+      Number(selectedTransport.adultPrice),
+      Number(selectedTransport.kidPrice),
+    )
+    const updateData = {
       selectedTransport: selectedTransport || null,
       cruiseId: this.hotelDetails.cruiseId,
-    });
+      travellers: slectedTravellers,
+    };
+    this.sessionData = { ...this.sessionData, ...updateData };
+    this.HelperService.updateSessionStorage(updateData);
+    
     this.selectedTime =
-      this.category !== 'private-yachts-in-goa'
+      this.category !== 'book-private-yachts-in-goa'
         ? this.selectedTime
         : this.sessionData.selectedTransport.timeSlots[0];
     this.updateTime(this.selectedTime);
@@ -256,11 +275,21 @@ export class CheckoutPageComponent implements OnInit {
     for (let i = 0; i < 6; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
+      const dateFormat = formatDate(date, 'yyyy-MM-dd', 'en');
+      const specialEvent = this.hotelDetails?.specialEvents && 
+                          Array.isArray(this.hotelDetails.specialEvents) && 
+                          this.hotelDetails.specialEvents.length > 0
+                          ? this.hotelDetails.specialEvents.find((event: any) => event.date === dateFormat)
+                          : null;
+      const isDisabled = !!specialEvent;
+      
       this.dates.push({
         day: date.getDate().toString(),
         label: formatDate(date, 'MMM dd', 'en'),
-        dateFormat: formatDate(date, 'yyyy-MM-dd', 'en'),
-        selected: i === 0,
+        dateFormat: dateFormat,
+        selected: i === 0 && !isDisabled,
+        disabled: isDisabled,
+        specialEvent: specialEvent,
       });
     }
   }
@@ -272,6 +301,11 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   selectDate(date: any) {
+    if (date.disabled && date.specialEvent) {
+      this.selectedSpecialEvent = date.specialEvent;
+      this.showSpecialDateModal = true;
+      return;
+    }
     this.dates.forEach((d) => (d.selected = false));
     date.selected = true;
     this.HelperService.updateSessionStorage({ selectedDate: date });
@@ -279,6 +313,28 @@ export class CheckoutPageComponent implements OnInit {
 
   onDateSelected(event: any) {
     const selectedDate = event.value;
+    if (!selectedDate) {
+      return;
+    }
+    
+    const dateFormat = formatDate(selectedDate, 'yyyy-MM-dd', 'en');
+    const specialEvent = this.hotelDetails?.specialEvents && 
+                        Array.isArray(this.hotelDetails.specialEvents) && 
+                        this.hotelDetails.specialEvents.length > 0
+                        ? this.hotelDetails.specialEvents.find((event: any) => event.date === dateFormat)
+                        : null;
+    
+    if (specialEvent) {
+      this.selectedSpecialEvent = specialEvent;
+      this.showSpecialDateModal = true;
+      setTimeout(() => {
+        if (this.datePickerInput?.nativeElement) {
+          this.datePickerInput.nativeElement.value = '';
+        }
+      }, 0);
+      return;
+    }
+    
     if (selectedDate >= this.minDate) {
       this.generateDates(selectedDate);
     }
@@ -291,6 +347,20 @@ export class CheckoutPageComponent implements OnInit {
       },
     });
   }
+
+  dateFilter = (date: Date | null): boolean => {
+    if (!date) {
+      return false;
+    }
+    
+    if (this.hotelDetails?.specialEvents && Array.isArray(this.hotelDetails.specialEvents) && this.hotelDetails.specialEvents.length > 0) {
+      const dateString = formatDate(date, 'yyyy-MM-dd', 'en');
+      const specialEvent = this.hotelDetails.specialEvents.find((event: any) => event.date === dateString);
+      return !specialEvent;
+    }
+    
+    return true;
+  };
 
   goBack() {
     this.router.navigate(['/']);
@@ -318,6 +388,33 @@ export class CheckoutPageComponent implements OnInit {
         pickupLocation: this.selectedLocation,
       });
       this.showLocationModal = false;
+    }
+  }
+
+  closeSpecialDateModal() {
+    this.showSpecialDateModal = false;
+    this.selectedSpecialEvent = null;
+  }
+
+  callSupport() {
+    window.location.href = 'tel:+917715959917';
+  }
+
+  enquireNow() {
+    // Open WhatsApp with pre-filled message
+    const message = encodeURIComponent(`Hi, I would like to enquire about ${this.selectedSpecialEvent?.title || 'special event'} bookings.`);
+    window.open(`https://wa.me/917715959917?text=${message}`, '_blank');
+  }
+
+  navigateToDetails() {
+    if (this.selectedSpecialEvent?.navigateTo) {
+      // Check if it's a full URL or a route path
+      const url = this.selectedSpecialEvent.navigateTo.startsWith('http://') || 
+                  this.selectedSpecialEvent.navigateTo.startsWith('https://')
+        ? this.selectedSpecialEvent.navigateTo
+        : `${window.location.origin}${this.selectedSpecialEvent.navigateTo.startsWith('/') ? '' : '/'}${this.selectedSpecialEvent.navigateTo}`;
+      window.open(url, '_blank');
+      this.closeSpecialDateModal();
     }
   }
 }

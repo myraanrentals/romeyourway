@@ -23,6 +23,12 @@ hr {
 .traveller-card:hover {
   transform: translateY(-5px);
 }
+.rating-count{
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
 .clientSlider {
   display: flex;
   overflow-x: auto;
@@ -102,6 +108,18 @@ mat-card-image {
   font-size: 14px;
   margin-left: 8px;
 }
+
+.negotiable-badge {
+  display: inline-block;
+  background-color: #ff5722;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
 .offer-button {
   background-color: #ff5722;
   margin-top: 12px;
@@ -112,6 +130,24 @@ mat-card-image {
   width: 100%;
   border-radius: 6px;
   border-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &.whatsapp-button {
+    background-color: #25d366;
+    
+    &:hover {
+      background-color: #20ba5a;
+    }
+  }
+
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
 }
 .travelers-container {
   padding: 0;
@@ -280,38 +316,113 @@ mat-card-image {
     width: 100%;
     background: white;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 12px;
     padding-bottom: 12px;
-    text-align: center;
+    text-align: left;
     z-index: 10000 !important;
+    gap: 12px;
 
-    h3 {
-      font-size: 18px;
-      margin: 0;
+    .desktop-price {
+      display: none;
     }
-    .price-div {
-      display: flex;
-      flex-direction: column-reverse;
+
+    .desktop-old-price {
+      display: none;
+    }
+
+    .desktop-button {
+      display: none;
+    }
+
+    .mobile-price {
+      font-size: 20px;
+      white-space: nowrap;
+      font-weight: bold;
+      margin: 0;
+      color: #333;
+      line-height: 1.2;
+
       span {
-        display: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: #666;
       }
     }
+
+    .price-div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
     .old-price {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 14px;
-      margin-bottom: 0px;
+      display: none;
     }
 
     .rating {
       display: none;
     }
 
+    .mobile-buttons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .phone-icon-button {
+      min-width: 48px;
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      border: 1.5px solid #ff5722;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff5722;
+
+      mat-icon {
+        color: #ff5722;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        background: #fff5f2;
+      }
+    }
+
+    .callback-button {
+      background-color: #ff5722;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1.5px solid #ff5722;
+      white-space: nowrap;
+      min-width: 140px;
+      color: #fff;
+
+      &:hover {
+        background-color: #e64a19;
+      }
+    }
+
     .offer-button {
       background-color: #f37002;
       color: white;
       width: 50%;
+
+      &.whatsapp-button {
+        background-color: #25d366;
+        
+        &:hover {
+          background-color: #20ba5a;
+        }
+      }
     }
   }
   .tab-content li {
@@ -326,10 +437,18 @@ mat-card-image {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    overflow: visible;
   }
 
   mat-expansion-panel-header {
     padding: 0;
+    padding-right: 24px; // Ensure space for arrow icon
+    overflow: visible;
+  }
+
+  ::ng-deep .mat-expansion-indicator {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
   }
 
   mat-panel-title {
@@ -489,6 +608,7 @@ mat-card-image {
 
   .cruise-content {
     width: 70%;
+    padding-right: 12px;
   }
 
   .features {
@@ -593,6 +713,26 @@ mat-card-image {
     border-radius: 10px;
     position: sticky;
     top: 120px;
+
+    .mobile-price {
+      display: none;
+    }
+
+    .mobile-buttons {
+      display: none;
+    }
+
+    .desktop-price {
+      display: block;
+    }
+
+    .desktop-old-price {
+      display: block;
+    }
+
+    .desktop-button {
+      display: block;
+    }
   }
 
   .price-box h3 {
@@ -621,10 +761,18 @@ mat-card-image {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    overflow: visible;
   }
 
   mat-expansion-panel-header {
     padding: 0;
+    padding-right: 24px; // Ensure space for arrow icon
+    overflow: visible;
+  }
+
+  ::ng-deep .mat-expansion-indicator {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
   }
 
   mat-panel-title {

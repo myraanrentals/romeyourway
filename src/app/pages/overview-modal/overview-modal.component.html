@@ -1,14 +1,24 @@
-<h2 mat-dialog-title>Overview</h2>
-<mat-dialog-content>
-  <p>
-    {{ data.overviewDesc }}
-  </p>
-  <ul>
-    <li *ngFor="let item of data.overview">
-      {{ item.inclusion1 }}
-    </li>
-  </ul>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
-</mat-dialog-actions>
+<div class="modal-container">
+  <div class="modal-header">
+    <h2 mat-dialog-title class="modal-title">{{ data.title }}</h2>
+  </div>
+  
+  <mat-dialog-content class="modal-content">
+    <p class="overview-description" *ngIf="data.overviewDesc">
+      {{ data.overviewDesc }}
+    </p>
+    <ul class="overview-list" *ngIf="data.overviewPara && data.overviewPara.length > 0">
+      <li *ngFor="let item of data.overviewPara" class="list-item">
+        <mat-icon class="list-icon">check_circle</mat-icon>
+        <span>{{ item }}</span>
+      </li>
+    </ul>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions class="modal-actions">
+    <button mat-raised-button class="close-btn" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+      Close
+    </button>
+  </mat-dialog-actions>
+</div>
